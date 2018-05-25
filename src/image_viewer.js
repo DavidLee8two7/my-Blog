@@ -1,7 +1,9 @@
 import '../styles/image_viewer.css';
 import picture from '../assets/yacht.jpg';
 
-const image = document.createElement('img');
-image.src = picture;
+export default () => {
+  const image = document.createElement('img');
+  image.src = picture;
 
-document.body.appendChild(image);
+  document.body.appendChild(image);
+};
