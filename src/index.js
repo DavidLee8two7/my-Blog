@@ -1,9 +1,16 @@
-const button = document.createElement('button');
-button.innerText = 'Click me';
-button.onclick = () => {
-  System.import('./image_viewer').then((module) => {
-    module.default();
-  });
-};
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import './image_viewer';
+import Header1 from './component/header-1';
 
-document.body.appendChild(button);
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Header1 />
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<App />, document.querySelector('.header-1'));
