@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './image_viewer';
-import Header1 from './component/header-1';
+import AboutMe from './components/navbar/aboutMe';
+import Navbar from './components/navbar/navbar';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <Header1 />
+      <div className="container">
+        <AboutMe />
+        <Navbar />
       </div>
     );
   }
 }
 
-ReactDOM.render(<App />, document.querySelector('.header-1'));
+ReactDOM.render(<App />, document.querySelector('.body'));
