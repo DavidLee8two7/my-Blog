@@ -13,6 +13,7 @@ const config = {
       {
         use: 'babel-loader',
         test: /\.js$/,
+        exclude: /node_modules/,
       },
       {
         loader: ExtractTextPlugin.extract({
