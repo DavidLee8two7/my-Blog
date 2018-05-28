@@ -15,7 +15,8 @@ body {
   display: grid;
   margin: auto;
   grid-gap: 10px;
-  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  grid-template-columns: minmax(400px, auto) minmax(400px, auto);
   grid-template-rows:
     75px repeat(2, minmax(350px, auto))
     minmax(300px, auto) 600px;
