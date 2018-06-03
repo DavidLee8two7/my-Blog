@@ -5,6 +5,10 @@ const webpackConfig = require('../webpack.config.js');
 
 const app = express();
 
+app.get('/', () => {
+  console.log('GET request');
+});
+
 app.use(webpackMiddleware(webpack(webpackConfig)));
 
 app.listen(3050, () => console.log('listening to 3050'));
