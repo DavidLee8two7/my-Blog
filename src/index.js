@@ -5,6 +5,10 @@ import AboutMe from './components/navbar/aboutMe';
 import Navbar from './components/navbar/navbar';
 import Main1 from './components/main/main1';
 import Main2 from './components/main/main2';
+import Middle1 from './components/middle/middle1';
+import Sidebar1 from './components/sidebar/sidebar1';
+import Sidebar2 from './components/sidebar/sidebar2';
+import Ending from './components/ending/ending';
 
 class App extends Component {
   render() {
@@ -14,6 +18,10 @@ class App extends Component {
         <Navbar />
         <Main1 />
         <Main2 />
+        <Middle1 />
+        <Sidebar1 />
+        <Sidebar2 />
+        <Ending />
       </div>
     );
   }

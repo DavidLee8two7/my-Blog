@@ -5,8 +5,8 @@ const webpackConfig = require('../webpack.config.js');
 
 const app = express();
 
-app.get('/', () => {
-  console.log('GET request');
+app.get('/', (req, res) => {
+  res.send({ hi: 'HI' });
 });
 
 app.use(webpackMiddleware(webpack(webpackConfig)));
