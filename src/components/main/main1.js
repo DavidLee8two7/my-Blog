@@ -2,7 +2,7 @@ import React from 'react';
 
 const Main1 = () => {
   return (
-    <div class="main1">
+    <div className="main1">
       <h1>A world that works for you</h1>
       <p>
         IFTTT is the free way to get all your apps and devices talking to each
