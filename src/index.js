@@ -18,9 +18,9 @@ class App extends Component {
         <Navbar />
         <Main1 />
         <Main2 />
-        <Middle1 />
-        <Sidebar1 />
         <Sidebar2 />
+        <Sidebar1 />
+        <Middle1 />
         <Ending />
       </div>
     );

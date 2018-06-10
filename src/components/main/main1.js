@@ -3,12 +3,15 @@ import React from 'react';
 const Main1 = () => {
   return (
     <div className="main1">
-      <h1>A world that works for you</h1>
+      <h1>Neverending learning story</h1>
       <p>
-        IFTTT is the free way to get all your apps and devices talking to each
-        other. Not everything on the internet plays nice, so we're on a mission
-        to build a more connected world.
+        There no rehearsal in life.<br />
+        Everyone has opinion on how one should live.<br />
       </p>
+      <h4>
+        Be the author of your own life story.<br />
+      </h4>
+      <h3>author: David Lee</h3>
     </div>
   );
 };

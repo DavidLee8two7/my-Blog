@@ -14,10 +14,13 @@ body {
 .container {
   display: grid;
   margin: auto;
-  grid-gap: 10px;
-  grid-template-columns: minmax(400px, auto) minmax(400px, auto);
+  grid-gap: 5px;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows:
-    85px minmax(350px, auto)
+    65px
+    minmax(450px, auto)
+    minmax(450px, auto)
+    minmax(450px, auto)
     auto;
 }
 
@@ -39,7 +42,7 @@ body {
 }
 
 .main2 img {
-  max-width: 100%;
+  width: 650px;
   max-height: 100%;
 }
 
@@ -48,6 +51,10 @@ body {
   justify-self: center;
   text-align: center;
   font-family: 'Dosis', sans-serif;
+}
+
+.middle1 img {
+  max-height: 400px;
 }
 
 button {
@@ -59,10 +66,6 @@ button {
   border-color: var(--black);
   background-color: var(--black);
   color: var(--white);
-}
-
-.middle1 img {
-  max-height: 150px;
 }
 
 .articles {
