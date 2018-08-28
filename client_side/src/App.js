@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 
 import './App.scss';
 
+import Sidebar from '../src/components/Sidebar';
+
 class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<h1>my blog</h1>
+				<Sidebar />
 			</div>
 		);
 	}
