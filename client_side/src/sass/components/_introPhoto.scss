@@ -1,14 +1,17 @@
-.introPhoto {
+.profile {
 	background-image: linear-gradient(
-		rgba($color-secondary-dark, 0.73),
-		rgba($color-secondary-dark, 0.83)
+		to bottom,
+		rgba($color-secondary-light, 0.9),
+		rgba($color-tertiary-dark, 1)
 	);
 	grid-column: col-start 7 / -1;
 
 	display: grid;
-	grid-template-rows: 60% 1fr;
+	grid-template-rows: 75% 1fr;
 	justify-items: center;
+	align-items: center;
 	grid-gap: 2rem;
+	opacity: 100;
 
 	&__img {
 		padding: 2rem;
@@ -19,7 +22,8 @@
 	}
 
 	&__name {
-		color: $color-primary-dark;
+		color: $color-white;
 		font-weight: 900;
+		font-size: 8rem;
 	}
 }

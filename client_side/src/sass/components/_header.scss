@@ -5,14 +5,46 @@
 	background-size: cover;
 	background-position: center;
 	text-align: center;
-	padding: 8rem;
+	padding: 7rem;
 	padding-top: 10rem;
 
 	display: grid;
-	grid-template-rows: 1fr minmax(6rem, min-content) 1fr;
+	grid-template-rows: 88% min-content 1fr;
 	grid-template-columns: minmax(min-content, max-content);
 
 	&--title {
 		color: $color-white;
+	}
+
+	&__contact {
+		display: grid;
+		grid-template-columns: 1fr max-content 1fr;
+		grid-column-gap: 1.5rem;
+		align-items: center;
+		font-size: 1.6rem;
+		color: #aaa;
+
+		&-text::before,
+		&-text::after {
+			content: '';
+			height: 1px;
+			display: block;
+			background-color: currentColor;
+		}
+	}
+
+	&__contact-logos {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-column-gap: 3rem;
+		justify-items: center;
+		align-items: center;
+		padding-top: 3rem;
+
+		img {
+			max-height: 2.5rem;
+			max-width: 100%;
+			filter: brightness(70%);
+		}
 	}
 }

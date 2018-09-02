@@ -4,13 +4,9 @@ import facePhoto from '../img/face-photo.jpeg';
 class IntroPhoto extends Component {
 	render() {
 		return (
-			<div className="introPhoto">
-				<img
-					src={facePhoto}
-					alt="David Lee's pic"
-					className="introPhoto__img"
-				/>
-				<p className="introPhoto__name heading-1">David Lee</p>
+			<div className="profile">
+				<img src={facePhoto} alt="David Lee's pic" className="profile__img" />
+				<h1 className="profile__name heading-1">David Lee</h1>
 			</div>
 		);
 	}
