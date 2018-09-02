@@ -3,30 +3,27 @@
 	font-weight: 400;
 	text-transform: uppercase;
 	color: $color-black;
+	line-height: 1;
 }
 
 .heading-1 {
 	@extend %heading;
 	font-size: 5.5rem;
-	line-height: 1;
 }
 
 .heading-2 {
 	@extend %heading;
 	font-size: 4rem;
-	line-height: 1;
 }
 
 .heading-3 {
 	@extend %heading;
 	font-size: 1.9rem;
-	line-height: 1;
 }
 
 .heading-4 {
 	@extend %heading;
 	font-size: 1.6rem;
-	line-height: 1;
 }
 
 .btn {

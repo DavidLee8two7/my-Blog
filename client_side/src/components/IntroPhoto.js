@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
+import facePhoto from '../img/face-photo.jpeg';
 
 class IntroPhoto extends Component {
 	render() {
 		return (
 			<div className="introPhoto">
 				<img
-					src="../img/IntroPhoto.jpg"
+					src={facePhoto}
 					alt="David Lee's pic"
-					className="IntroPhoto__img"
+					className="introPhoto__img"
 				/>
-				<div className="Introduction">
-					<h4 className="heading-4">David Lee</h4>
-					<p>Frontend Developer</p>
-				</div>
+				<p className="introPhoto__name heading-1">David Lee</p>
 			</div>
 		);
 	}

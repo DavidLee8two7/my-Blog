@@ -1,12 +1,16 @@
 .header {
 	background-color: $color-grey;
 	grid-column: full-start / col-end 6;
-	background-image: url(../src/img/black-laptop.jpg);
+	background-image: url(../src/img/mountains-1280x640.png);
 	background-size: cover;
 	background-position: center;
-
+	text-align: center;
 	padding: 8rem;
 	padding-top: 10rem;
+
+	display: grid;
+	grid-template-rows: 1fr minmax(6rem, min-content) 1fr;
+	grid-template-columns: minmax(min-content, max-content);
 
 	&--title {
 		color: $color-white;

@@ -1,4 +1,25 @@
 .introPhoto {
-	background-color: blue;
+	background-image: linear-gradient(
+		rgba($color-secondary-dark, 0.73),
+		rgba($color-secondary-dark, 0.83)
+	);
 	grid-column: col-start 7 / -1;
+
+	display: grid;
+	grid-template-rows: 60% 1fr;
+	justify-items: center;
+	grid-gap: 2rem;
+
+	&__img {
+		padding: 2rem;
+		width: 65%;
+		border-radius: 50%;
+		object-fit: cover;
+		display: block;
+	}
+
+	&__name {
+		color: $color-primary-dark;
+		font-weight: 900;
+	}
 }
