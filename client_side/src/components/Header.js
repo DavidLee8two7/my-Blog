@@ -7,7 +7,7 @@ class Header extends Component {
 			<div className="header">
 				<header>
 					<h1 className="header--title heading-1">
-						fullstack javaScript developer
+						front-end javaScript developer
 					</h1>
 				</header>
 				<div className="header__contact header__contact-text">Contact me</div>
