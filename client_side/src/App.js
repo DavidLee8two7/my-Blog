@@ -5,6 +5,8 @@ import './App.scss';
 import Sidebar from '../src/components/Sidebar';
 import Header from '../src/components/Header';
 import IntroPhoto from '../src/components/IntroPhoto';
+import Slider from '../src/components/Slider';
+import AboutMe from '../src/components/AboutMe';
 
 class App extends Component {
 	render() {
@@ -13,6 +15,8 @@ class App extends Component {
 				<Sidebar />
 				<Header />
 				<IntroPhoto />
+				<AboutMe />
+				<Slider />
 			</div>
 		);
 	}

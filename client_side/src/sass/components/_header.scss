@@ -1,7 +1,7 @@
 .header {
 	background-color: $color-grey;
-	grid-column: full-start / col-end 6;
-	background-image: url(../src/img/mountains-1280x640.png);
+	grid-column: full-start / full-end;
+	background-image: url(../src/img/mountains-1980x960.png);
 	background-size: cover;
 	background-position: center;
 	text-align: center;
@@ -10,9 +10,11 @@
 
 	display: grid;
 	grid-template-rows: 88% min-content 1fr;
-	grid-template-columns: minmax(min-content, max-content);
+	grid-template-columns: 1fr;
 
 	&--title {
+		font-size: 8rem;
+		font-weight: 900;
 		color: $color-white;
 	}
 
@@ -21,7 +23,7 @@
 		grid-template-columns: 1fr max-content 1fr;
 		grid-column-gap: 1.5rem;
 		align-items: center;
-		font-size: 1.6rem;
+		font-size: 3rem;
 		color: #aaa;
 
 		&-text::before,
