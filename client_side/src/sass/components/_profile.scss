@@ -1,16 +1,24 @@
 .profile {
-	grid-column: full-start / col-end 3;
+	background-color: $color-secondary-light;
+
+	grid-column: center-start / center-end;
 
 	display: grid;
+	grid-template-columns: 1fr 1fr;
 	justify-items: center;
 	align-items: center;
 	opacity: 100;
 
 	&__img {
 		padding: 2rem;
-		width: 50%;
+		width: 60%;
 		border-radius: 50%;
 		object-fit: cover;
 		display: block;
+	}
+
+	&__text {
+		padding: 1rem;
+		font-size: 2rem;
 	}
 }
