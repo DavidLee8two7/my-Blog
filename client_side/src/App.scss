@@ -1,13 +1,9 @@
 @import 'sass/abstracts/variables';
-@import 'sass/abstracts/mixins';
 
 @import 'sass/base/animations';
 @import 'sass/base/base';
 @import 'sass/base/typography';
-@import 'sass/base/utilities';
 
 @import 'sass/components/sidebar';
 @import 'sass/components/header';
-@import 'sass/components/introPhoto';
-@import 'sass/components/aboutMe';
-@import 'sass/components/slider';
+@import 'sass/components/profile';

@@ -6,9 +6,7 @@ class Header extends Component {
 		return (
 			<div className="header">
 				<header>
-					<h1 className="header--title heading-1">
-						front-end javaScript developer
-					</h1>
+					<h1 className="header--title heading-1">front-end developer</h1>
 				</header>
 				<div className="header__contact header__contact-text">Contact me</div>
 				<div className="header__contact-logos">
@@ -22,3 +20,5 @@ class Header extends Component {
 }
 
 export default Header;
+
+// Looking at myself as if I were an

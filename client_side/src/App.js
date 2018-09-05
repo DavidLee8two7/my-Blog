@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-
 import './App.scss';
 
 import Sidebar from '../src/components/Sidebar';
 import Header from '../src/components/Header';
-import IntroPhoto from '../src/components/IntroPhoto';
-import Slider from '../src/components/Slider';
-import AboutMe from '../src/components/AboutMe';
+import Profile from '../src/components/Profile';
+import Skills from '../src/components/Skills';
 
 class App extends Component {
 	render() {
@@ -14,9 +12,8 @@ class App extends Component {
 			<div className="App">
 				<Sidebar />
 				<Header />
-				<IntroPhoto />
-				<AboutMe />
-				<Slider />
+				<Profile />
+				<Skills />
 			</div>
 		);
 	}
