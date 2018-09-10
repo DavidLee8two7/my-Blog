@@ -12,8 +12,8 @@ html {
 }
 
 body {
-	font-family: $font-primary;
-	color: $color-black;
+	font-family: var(--font-primary);
+	color: var(--color-black);
 	font-weight: 300;
 	line-height: 1.6;
 }
@@ -22,7 +22,7 @@ body {
 	display: grid;
 	grid-template-rows: 100vh 50vh 40vw repeat(3, min-content);
 	grid-template-columns:
-		[sidebar-start] 10rem [sidebar-end full-start] minmax(6rem, 1fr)
+		[sidebar-start] 15rem [sidebar-end full-start] minmax(6rem, 1fr)
 		[center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
 		[center-end] minmax(6rem, 1fr)
 		[full-end];
