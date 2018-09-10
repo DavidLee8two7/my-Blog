@@ -1,52 +1,174 @@
 .header {
-	background-color: $color-grey;
 	grid-column: full-start / full-end;
-	background-image: url(../src/img/mountains-1980x960.png);
+	background-image: url(/img/mountains-1980x960.png);
 	background-size: cover;
 	background-position: center;
-	text-align: center;
 	padding: 7rem;
 	padding-top: 10rem;
 
 	display: grid;
-	grid-template-rows: 88% min-content 1fr;
+	grid-template-rows: 80% 1fr 1fr;
 	grid-template-columns: 1fr;
 
-	&--title {
-		font-size: 8rem;
-		font-weight: 900;
-		color: $color-white;
+	span {
+		color: var(--color-secondary-dark);
+	}
+
+	&__title {
+		display: flex;
+		justify-content: center;
+
+		&--name {
+			margin: 0 3rem;
+		}
+		&--quotation {
+			display: inline-block;
+			padding: 1rem;
+			text-align: left;
+		}
+	}
+
+	@media only screen and (max-width: $bp-largest) {
+		&__title {
+			&--name {
+				font-size: 6.3rem;
+			}
+			&--quotation {
+				font-size: 2.4rem;
+			}
+		}
+	}
+
+	@media only screen and (max-width: $bp-larger) {
+		&__title {
+			&--name {
+				font-size: 5rem;
+			}
+			&--quotation {
+				font-size: 2rem;
+			}
+		}
+	}
+
+	@media only screen and (max-width: $bp-large) {
+		&__title {
+			&--name {
+				font-size: 4rem;
+			}
+			&--quotation {
+				font-size: 1.8rem;
+				color: currentColor;
+			}
+		}
+	}
+
+	@media only screen and (max-width: $bp-medium) {
+		&__title {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			&--name {
+				font-size: 5rem;
+				text-align: center;
+			}
+			&--quotation {
+				font-size: 2rem;
+				text-align: center;
+			}
+		}
+	}
+
+	@media only screen and (max-width: $bp-small) {
+		&__title {
+			&--name {
+				font-size: 4.5rem;
+			}
+			&--quotation {
+				margin-top: 2rem;
+				font-size: 1.8rem;
+			}
+		}
+	}
+
+	@media only screen and (max-width: $bp-smaller) {
+		&__title {
+			&--name {
+				font-size: 8rem;
+			}
+			&--quotation {
+				display: none;
+			}
+		}
 	}
 
 	&__contact {
-		display: grid;
-		grid-template-columns: 1fr max-content 1fr;
-		grid-column-gap: 1.5rem;
-		align-items: center;
-		font-size: 3rem;
-		color: #aaa;
+		padding: 3rem;
+		transition: all 0.2s;
 
-		&-text::before,
-		&-text::after {
-			content: '';
-			height: 1px;
-			display: block;
-			background-color: currentColor;
+		&--text {
+			display: grid;
+			grid-template-columns: 1fr max-content 1fr;
+			grid-gap: 1.5rem;
+			align-items: center;
+			font-size: 2.5rem;
+
+			&::before,
+			&::after {
+				content: '';
+				height: 2px;
+				display: block;
+				background-color: currentColor;
+			}
+		}
+
+		@media only screen and (max-width: $bp-largest) {
+			&--text {
+				font-size: 2rem;
+			}
+		}
+
+		@media only screen and (max-width: $bp-larger) {
+			&--text {
+				font-size: 1.8rem;
+			}
+		}
+
+		&--logos {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-column-gap: 3rem;
+			justify-items: center;
+			align-items: center;
+			padding-top: 1.5rem;
+		}
+		&--logo {
+			width: 8rem;
+			height: 8rem;
+		}
+		@media only screen and (max-width: $bp-largest) {
+			&--logo {
+				width: 6rem;
+				height: 6rem;
+			}
+		}
+
+		@media only screen and (max-width: $bp-larger) {
+			&--logo {
+				width: 5rem;
+				height: 5rem;
+			}
 		}
 	}
+}
 
-	&__contact-logos {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-column-gap: 3rem;
-		justify-items: center;
-		align-items: center;
-		padding-top: 3rem;
+#gmail {
+	fill: #d14836;
+}
 
-		img {
-			max-height: 2.5rem;
-			max-width: 100%;
-			filter: brightness(70%);
-		}
-	}
+#linkedin {
+	fill: #0077b5;
+}
+
+#github {
+	fill: var(--color-black);
 }

@@ -1,6 +1,4 @@
 .profile {
-	background-color: $color-secondary-light;
-
 	grid-column: center-start / center-end;
 
 	display: grid;
@@ -11,7 +9,8 @@
 
 	&__img {
 		padding: 2rem;
-		width: 60%;
+		width: 35rem;
+		height: 35rem;
 		border-radius: 50%;
 		object-fit: cover;
 		display: block;

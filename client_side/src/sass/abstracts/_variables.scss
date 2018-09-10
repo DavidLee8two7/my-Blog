@@ -1,23 +1,26 @@
-// COLORS
-$color-primary-light: #c69963;
-$color-primary-dark: #b28451;
+:root {
+	--color-primary-light: #c69963;
+	--color-primary-dark: #b28451;
 
-$color-secondary-light: #f8a5c2;
-$color-secondary-dark: #ff7730;
+	--color-secondary-light: #ff7730;
+	--color-secondary-dark: #eb2f64;
 
-$color-tertiary-light: #2998ff;
-$color-tertiary-dark: #5643fa;
+	--color-tertiary-light: #2998ff;
+	--color-tertiary-dark: #5643fa;
 
-$color-white: #fff;
-$color-black: #000;
-$color-grey: #aaa;
+	--color-white: #faf9f9;
+	--color-grey: #ccc;
+	--color-black: #101d2c;
 
-// FONT VARIABLES
-$font-primary: 'Nunito', sans-serif;
-$font-display: 'Josefin Sans', sans-serif;
+	--font-primary: 'Nunito', sans-serif;
+	--font-display: 'Josefin Sans', sans-serif;
+}
 
 // RESPONSIVE BREAKPOINTS
-$bp-largest: 75em; // 1200px
-$bp-large: 62.5em; // 1000px
-$bp-medium: 50em; // 800px;
-$bp-small: 37.5em; // 600px;
+$bp-largest: 1200px;
+$bp-larger: 1100px;
+$bp-large: 1000px;
+$bp-medium: 900px;
+$bp-small: 800px;
+$bp-smaller: 700px;
+$bp-smallest: 500px;
