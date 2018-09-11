@@ -17,3 +17,5 @@ I feels weird. Its comfortable and it leaves a scary? feeling behind.
   instead write your own value about smiling due to the picture.
 
 - Animation of bird flying ^^ or something flying
+
+- Use a many filter, animation, transform and transition with JavaScript

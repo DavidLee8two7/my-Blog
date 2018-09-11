@@ -19,11 +19,13 @@ body {
 }
 
 .App {
+	max-width: 150rem;
+	margin: 0 auto;
 	display: grid;
-	grid-template-rows: 100vh 50vh 40vw repeat(3, min-content);
+	grid-template-rows: 100vh 100vh repeat(3, min-content);
 	grid-template-columns:
-		[sidebar-start] 15rem [sidebar-end full-start] minmax(6rem, 1fr)
+		[sidebar-start] 15rem [sidebar-end full-start] minmax(15rem, 1fr)
 		[center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
-		[center-end] minmax(6rem, 1fr)
+		[center-end] minmax(15rem, 1fr)
 		[full-end];
 }
