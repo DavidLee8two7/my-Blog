@@ -4,7 +4,7 @@ import './App.scss';
 
 import Header from '../src/components/Header';
 import Sidebar from '../src/components/Sidebar';
-import Profile from '../src/components/Profile';
+import AboutMe from '../src/components/AboutMe';
 
 class App extends Component {
 	render() {
@@ -12,7 +12,7 @@ class App extends Component {
 			<div className="App">
 				<Header />
 				<Sidebar />
-				<Profile />
+				<AboutMe />
 			</div>
 		);
 	}
