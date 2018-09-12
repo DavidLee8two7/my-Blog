@@ -4,6 +4,9 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: inherit;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: grayscale;
 }
 
 html {
@@ -13,19 +16,27 @@ html {
 
 body {
 	font-family: var(--font-primary);
-	color: var(--color-black);
+	color: var(--color-primary);
 	font-weight: 300;
 	line-height: 1.6;
 }
 
+::-moz-selection {
+	background: var(--color-secondary);
+	color: white;
+}
+
+::selection {
+	background: var(--color-secondary);
+	color: white;
+}
+
 .App {
-	max-width: 150rem;
-	margin: 0 auto;
 	display: grid;
-	grid-template-rows: 100vh 100vh repeat(3, min-content);
+	grid-template-rows: repeat(3, min-content) 80vh 40vw;
 	grid-template-columns:
-		[sidebar-start] 15rem [sidebar-end full-start] minmax(15rem, 1fr)
+		[full-start] minmax(6rem, 1fr)
 		[center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
-		[center-end] minmax(15rem, 1fr)
+		[center-end] minmax(6rem, 1fr)
 		[full-end];
 }

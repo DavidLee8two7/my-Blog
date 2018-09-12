@@ -1,19 +1,10 @@
 :root {
-	--color-primary-light: #c69963;
-	--color-primary-dark: #b28451;
+	--color-primary: #3b3a3a;
+	--color-secondary: #63d488;
+	--color-tertiary: #ff3366;
 
-	--color-secondary-light: #ff7730;
-	--color-secondary-dark: #eb2f64;
-
-	--color-tertiary-light: #2998ff;
-	--color-tertiary-dark: #5643fa;
-
-	--color-white: #faf9f9;
-	--color-grey: #ccc;
-	--color-black: #101d2c;
-
-	--font-primary: 'Nunito', sans-serif;
-	--font-display: 'Josefin Sans', sans-serif;
+	--font-primary: 'Josefin Sans', sans-serif;
+	--font-display: 'Nunito', sans-serif;
 }
 
 // RESPONSIVE BREAKPOINTS
