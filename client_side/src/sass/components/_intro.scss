@@ -1,0 +1,22 @@
+.intro {
+	grid-column: center-start / center-end;
+	margin: 6rem auto 0 auto;
+	padding: 2rem;
+	backface-visibility: hidden;
+	transition: all 1s;
+
+	span {
+		color: var(--color-secondary);
+	}
+
+	&--name {
+		display: block;
+		animation: moveInLeft 1s ease-out;
+	}
+
+	&--location {
+		display: block;
+		margin-top: 2rem;
+		animation: moveInRight 1s ease-out;
+	}
+}

@@ -1,192 +1,90 @@
 .header {
+	position: relative;
 	grid-column: full-start / full-end;
-	background-image: url(/img/mountains-1980x960.png);
-	background-size: cover;
-	background-position: center;
-	padding: 7rem;
-	text-align: center;
 
+	&__line {
+		background-color: var(--color-secondary);
+		height: 2px;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+.navbar {
+	margin: 0 6rem;
+	padding: 4em 0;
 	display: grid;
-	grid-template-rows: min-content 1fr;
-	grid-template-columns: 1fr;
+	grid-template-columns: 1fr 1fr;
 
-	span {
-		color: var(--color-secondary-dark);
-	}
-
-	&__title {
+	&__logo--frame {
+		vertical-align: middle;
+		overflow: visible;
+		margin-left: 10rem;
+		width: 5rem;
+		height: 5rem;
 		display: inline-block;
-		background-image: linear-gradient(
-			to right,
-			rgba(#eb2f64, 0.3),
-			rgba(#eb2f64, 0.9)
-		);
-		letter-space: 0.2rem;
-		-webkit-background-clip: text;
-		background-clip: text;
-		color: transparent;
-		transition: all 0.2s;
+		border: 5px solid var(--color-secondary);
+		position: relative;
+		transform: retate(0deg);
+		transition: transform 0.4s ease-in-out;
+	}
+	&__logo--frame &__logo--text {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) rotate(0deg);
+		transition: transform 0.4s ease-in-out;
+	}
+	&__logo--frame:hover &__logo--text {
+		transform: translate(-50%, -50%) rotate(90deg);
+		transform-origin: center;
+		transition: transform 0.4s ease-in-out;
+	}
+	&__logo--frame:hover {
+		transform: rotate(-90deg);
+		transition: transform 0.4s ease-in-out;
 	}
 
-	&__intro {
+	&__features {
+		margin: auto;
 		display: flex;
-		justify-content: center;
-		padding: 3rem;
+		justify-content: flex-end;
+		align-items: center;
+		list-style: none;
+	}
 
-		&--name {
-			margin: 0 3rem;
-		}
-		&--quotation {
-			display: inline-block;
-			padding: 1rem;
-			text-align: left;
+	&__feature {
+		position: relative;
+		&--item {
+			margin: 0 1.5rem;
+			font-size: 2rem;
+			font-weight: bold;
+			color: var(--color-primary);
+			text-decoration: none;
 		}
 	}
 
-	@media only screen and (max-width: $bp-largest) {
-		&__intro {
-			&--name {
-				font-size: 6.3rem;
-			}
-			&--quotation {
-				font-size: 2.4rem;
-			}
-		}
+	&__feature::before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 2px;
+		width: 2px;
+		background-color: var(--color-secondary);
+		transform: scaleY(0);
+		-webkit-transform: scaleY(0);
+		transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+			background-color 0.1s;
+		-webkit-transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+			background-color 0.1s;
 	}
 
-	@media only screen and (max-width: $bp-larger) {
-		&__intro {
-			&--name {
-				font-size: 5rem;
-			}
-			&--quotation {
-				font-size: 2rem;
-			}
-		}
+	&__feature:hover::before {
+		transform: scaleY(1);
+		-webkit-transform: scaleY(1);
+		width: 100%;
 	}
-
-	@media only screen and (max-width: $bp-large) {
-		&__intro {
-			&--name {
-				font-size: 4rem;
-			}
-			&--quotation {
-				font-size: 1.8rem;
-				color: currentColor;
-			}
-		}
-	}
-
-	@media only screen and (max-width: $bp-medium) {
-		&__intro {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			&--name {
-				font-size: 5rem;
-				text-align: center;
-			}
-			&--quotation {
-				font-size: 2rem;
-				text-align: center;
-			}
-		}
-	}
-
-	@media only screen and (max-width: $bp-small) {
-		&__intro {
-			&--name {
-				font-size: 4.5rem;
-			}
-			&--quotation {
-				margin-top: 2rem;
-				font-size: 1.8rem;
-			}
-		}
-	}
-
-	@media only screen and (max-width: $bp-smaller) {
-		&__intro {
-			&--name {
-				font-size: 8rem;
-			}
-			&--quotation {
-				display: none;
-			}
-		}
-	}
-
-	&__contact {
-		padding: 3rem;
-		align-self: end;
-		transition: all 0.2s;
-
-		&--text {
-			display: grid;
-			grid-template-columns: 1fr max-content 1fr;
-			grid-gap: 1.5rem;
-			align-items: center;
-			font-size: 2.5rem;
-
-			&::before,
-			&::after {
-				content: '';
-				height: 2px;
-				display: block;
-				background-color: currentColor;
-			}
-		}
-
-		@media only screen and (max-width: $bp-largest) {
-			&--text {
-				font-size: 2rem;
-			}
-		}
-
-		@media only screen and (max-width: $bp-larger) {
-			&--text {
-				font-size: 1.8rem;
-			}
-		}
-
-		&--logos {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			grid-column-gap: 3rem;
-			justify-items: center;
-			align-items: center;
-			padding-top: 1.5rem;
-		}
-		&--logo {
-			width: 7rem;
-			height: 7rem;
-			cursor: url(http://www.javascriptkit.com/dhtmltutors/cursor-hand.gif),
-				auto;
-		}
-		@media only screen and (max-width: $bp-largest) {
-			&--logo {
-				width: 6rem;
-				height: 6rem;
-			}
-		}
-
-		@media only screen and (max-width: $bp-larger) {
-			&--logo {
-				width: 5rem;
-				height: 5rem;
-			}
-		}
-	}
-}
-
-#gmail {
-	fill: #d14836;
-}
-
-#linkedin {
-	fill: #0077b5;
-}
-
-#github {
-	fill: var(--color-black);
 }

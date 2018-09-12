@@ -5,7 +5,7 @@
 	}
 
 	80% {
-		transform: translateX(1rem);
+		transform: translateX(1.5rem);
 	}
 
 	100% {
@@ -21,7 +21,7 @@
 	}
 
 	80% {
-		transform: translateX(-1rem);
+		transform: translateX(-1.5rem);
 	}
 
 	100% {
@@ -39,22 +39,5 @@
 	100% {
 		opacity: 1;
 		transform: translate(0);
-	}
-}
-
-@keyframes rotation {
-	0% {
-		filter: brightness(0.7);
-		transform: rotate(0deg);
-	}
-
-	50% {
-		filter: brightness(0.9);
-		transform: rotate(180deg);
-	}
-
-	100% {
-		filter: brightness(1.1);
-		transform: rotate(360deg);
 	}
 }
