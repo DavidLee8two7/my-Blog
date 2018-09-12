@@ -14,37 +14,37 @@
 
 .navbar {
 	margin: 0 6rem;
-	padding: 4em 0;
+	padding: 3rem 0 0 0;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 
 	&__logo--frame {
 		vertical-align: middle;
 		overflow: visible;
-		margin-left: 10rem;
+		margin-left: 6rem;
 		width: 5rem;
 		height: 5rem;
 		display: inline-block;
 		border: 5px solid var(--color-secondary);
 		position: relative;
 		transform: retate(0deg);
-		transition: transform 0.4s ease-in-out;
+		transition: transform 0.7s ease-in-out;
 	}
 	&__logo--frame &__logo--text {
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%) rotate(0deg);
-		transition: transform 0.4s ease-in-out;
+		transition: transform 0.7s ease-in-out;
 	}
 	&__logo--frame:hover &__logo--text {
 		transform: translate(-50%, -50%) rotate(90deg);
 		transform-origin: center;
-		transition: transform 0.4s ease-in-out;
+		transition: transform 0.7s ease-in-out;
 	}
 	&__logo--frame:hover {
 		transform: rotate(-90deg);
-		transition: transform 0.4s ease-in-out;
+		transition: transform 0.7s ease-in-out;
 	}
 
 	&__features {
