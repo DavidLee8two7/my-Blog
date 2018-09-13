@@ -1,0 +1,43 @@
+.about {
+	background-color: #f9f7f6;
+	position: relative;
+	display: block;
+	grid-column: full-start / full-end;
+	margin-top: 8rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__title {
+		position: relative;
+		margin-top: 2rem;
+		text-align: center;
+		padding: 2px;
+		font-weight: 800;
+		color: currentColor;
+	}
+	&__title::before {
+		content: '\0160';
+		font-weight: 400;
+		position: absolute;
+		left: 0;
+		color: currentColor;
+	}
+	&__title::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 2.5px;
+		width: 100%;
+		background-color: currentColor;
+	}
+
+	&__paragraph {
+		margin-top: 2rem;
+		text-align: left;
+		max-width: 70rem;
+		line-height: 1.2;
+	}
+}
