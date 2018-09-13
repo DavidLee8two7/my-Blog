@@ -19,3 +19,5 @@ I feels weird. Its comfortable and it leaves a scary? feeling behind.
 - Animation of bird flying ^^ or something flying
 
 - Use a many filter, animation, transform and transition with JavaScript
+
+- Add reference guide like Jonas

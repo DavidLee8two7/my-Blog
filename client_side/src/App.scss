@@ -4,6 +4,9 @@
 @import 'sass/base/base';
 @import 'sass/base/typography';
 
-@import 'sass/components/header';
-@import 'sass/components/intro';
-@import 'sass/components/gallery';
+@import 'sass/components/header/header';
+@import 'sass/components/header/intro';
+@import 'sass/components/header/gallery';
+
+@import 'sass/components/main/about';
+@import 'sass/components/main/skills';
