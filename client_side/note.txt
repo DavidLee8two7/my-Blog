@@ -21,3 +21,5 @@ I feels weird. Its comfortable and it leaves a scary? feeling behind.
 - Use a many filter, animation, transform and transition with JavaScript
 
 - Add reference guide like Jonas
+
+- experience in days using props or API
