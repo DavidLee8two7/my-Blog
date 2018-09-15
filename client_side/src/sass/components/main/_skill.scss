@@ -1,0 +1,56 @@
+.skills {
+  background-color: gray;
+  grid-column: center-start / center-end;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-content: center;
+
+  &__frame {
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-content: center;
+    grid-gap: 3rem;
+  }
+
+  &__icon {
+    margin-top: 2rem;
+    width: 5.5rem;
+  }
+
+  &__top {
+    background-color: pink;
+
+    &--title {
+    }
+
+    &--text {
+    }
+  }
+
+  &__middle {
+    background-color: yellow;
+
+    &--title {
+    }
+
+    &--text {
+    }
+  }
+
+  &__bottom {
+    background-color: green;
+
+    &--title {
+    }
+
+    &--list {
+    }
+  }
+
+  &--list {
+    list-style: none;
+  }
+}

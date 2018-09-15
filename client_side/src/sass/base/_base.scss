@@ -1,52 +1,63 @@
 *,
 *::before,
 *::after {
-	margin: 0;
-	padding: 0;
-	box-sizing: inherit;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: grayscale;
 }
 
 html {
-	box-sizing: border-box;
-	font-size: 62.5%;
+  box-sizing: border-box;
+  font-size: 62.5%;
 }
 
 body {
-	background-color: var(--color-white);
-	font-family: var(--font-primary);
-	color: var(--color-primary);
-	font-weight: 300;
-	line-height: 1.6;
+  background-color: var(--color-white);
+  font-family: var(--font-primary);
+  color: var(--color-primary);
+  font-weight: 300;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  user-select: none;
 }
 
-::-moz-selection {
-	background: var(--color-secondary);
-	color: var(--color-primary);
+body::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: #3b3a3a;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #63d488;
 }
 
 ::selection {
-	background: var(--color-secondary);
-	color: var(--color-primary);
+  background: var(--color-secondary);
+  color: var(--color-primary);
+}
+::-moz-selection {
+  background: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 .App {
-	display: grid;
-	grid-template-rows: repeat(4, min-content) 80vh 40vh;
-	grid-template-columns:
-		[full-start] minmax(6rem, 1fr)
-		[center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
-		[center-end] minmax(6rem, 1fr)
-		[full-end];
+  display: grid;
+  grid-template-rows: repeat(4, min-content) 60vh 40vw;
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr)
+    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end] minmax(6rem, 1fr)
+    [full-end];
 }
 
 .start-line {
-	background-color: var(--color-secondary);
-	height: 2px;
-	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
+  background-color: var(--color-secondary);
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
