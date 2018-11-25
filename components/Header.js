@@ -1,7 +1,8 @@
 import Link from "next/link";
+import Nav from "./Nav";
 import styled from "styled-components";
-import NProgress from "nprogress";
 import Router from "next/router";
+import NProgress from "nprogress";
 
 Router.onRouteChangeStart = () => {
   NProgress.start();
@@ -15,15 +16,13 @@ Router.onRouteChangeError = () => {
 
 const Logo = styled.h1`
   font-size: 4rem;
+  font-family: ${props => props.theme.fontDisplay};
   margin-left: 2rem;
   position: relative;
   z-index: 2;
-  transform: skew(-7deg);
   a {
     padding: 0.5rem 1rem;
-    background: ${props => props.theme.navy};
-    color: white;
-    text-transform: uppercase;
+    color: ${props => props.theme.blue};
     text-decoration: none;
   }
   @media (max-width: 1300px) {
@@ -34,7 +33,7 @@ const Logo = styled.h1`
 
 const StyleHeader = styled.header`
   .bar {
-    border-bottom: 10px solid ${props => props.theme.black};
+    border-bottom: 4px solid ${props => props.theme.orange};
     display: grid;
     grid-template-columns: auto 1fr;
     justify-content: space-between;
@@ -44,6 +43,17 @@ const StyleHeader = styled.header`
       justify-content: center;
     }
   }
+  .short-text {
+    display: none;
+  }
+  @media (max-width: 1200px) {
+    .short-text {
+      display: inline-block;
+    }
+    .full-text {
+      display: none;
+    }
+  }
 `;
 
 const Header = () => (
@@ -51,9 +61,13 @@ const Header = () => (
     <div className="bar">
       <Logo>
         <Link href="/">
-          <a>David Lee's Website</a>
+          <a>
+            <span className="full-text">Full Stack JavaScript Developer</span>
+            <span className="short-text">JavaScript Developer</span>
+          </a>
         </Link>
       </Logo>
+      <Nav />
     </div>
   </StyleHeader>
 );
