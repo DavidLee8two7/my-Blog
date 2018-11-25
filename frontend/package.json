@@ -1,7 +1,7 @@
 {
-  "name": "blog",
+  "name": "blog-frontend",
   "version": "1.0.0",
-  "description": "new blog",
+  "description": "updating blog with next.js",
   "main": "index.js",
   "scripts": {
     "dev": "next -p 3333",
