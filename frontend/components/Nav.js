@@ -3,8 +3,8 @@ import NavStyles from "./styles/NavStyles";
 
 const Nav = () => (
   <NavStyles>
-    <Link href="/story">
-      <a>story</a>
+    <Link href="/home">
+      <a>home</a>
     </Link>
     <Link href="/techstack">
       <a>tech stack</a>
@@ -14,6 +14,9 @@ const Nav = () => (
     </Link>
     <Link href="/blog">
       <a>blog</a>
+    </Link>
+    <Link href="/photos">
+      <a>photos</a>
     </Link>
   </NavStyles>
 );
