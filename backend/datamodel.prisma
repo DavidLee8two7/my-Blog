@@ -3,3 +3,12 @@ type User {
   name: String!
   email: String!
 }
+
+type Skill {
+  id: ID! @unique
+  title: String!
+  description: String!
+  image: String
+  largeImage: String
+  # user: User!
+}
