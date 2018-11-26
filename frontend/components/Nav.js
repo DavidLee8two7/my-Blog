@@ -3,11 +3,11 @@ import NavStyles from "./styles/NavStyles";
 
 const Nav = () => (
   <NavStyles>
-    <Link href="/home">
+    <Link href="/index">
       <a>home</a>
     </Link>
-    <Link href="/techstack">
-      <a>tech stack</a>
+    <Link href="/skills">
+      <a>skills</a>
     </Link>
     <Link href="/projects">
       <a>projects</a>
