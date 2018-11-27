@@ -4,20 +4,20 @@ import NavStyles from "./styles/NavStyles";
 const Nav = () => (
   <NavStyles>
     <Link href="/index">
-      <a>home</a>
-    </Link>
-    <Link href="/skills">
-      <a>skills</a>
+      <a>about</a>
     </Link>
     <Link href="/projects">
       <a>projects</a>
     </Link>
-    <Link href="/blog">
-      <a>blog</a>
+    <Link href="/skills">
+      <a>skills</a>
     </Link>
-    <Link href="/photos">
-      <a>photos</a>
+    <Link href="/skills">
+      <a>contact</a>
     </Link>
+    {/* <Link href="/admin">
+      <a>admin</a>
+    </Link> */}
   </NavStyles>
 );
 

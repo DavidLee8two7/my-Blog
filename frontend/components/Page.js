@@ -6,8 +6,10 @@ import Meta from "./Meta";
 const theme = {
   blue: "#2164f4",
   lightblue: "#00d8ff",
+  lightgray: "#E1E1E1",
   orange: "#ff6600",
   yellow: "#f7df1e",
+  green: "#6cc24a",
   black: "#393939",
   offWhite: "#EDEDED",
   maxWidth: "1000px",

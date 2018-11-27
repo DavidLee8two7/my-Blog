@@ -1,3 +1,10 @@
-const Home = props => <div>Home</div>;
+import Link from "next/link";
+import Home from "../components/Home";
 
-export default Home;
+const Index = props => (
+  <div>
+    <Home />
+  </div>
+);
+
+export default Index;

@@ -7,7 +7,7 @@ type User {
 type Skill {
   id: ID! @unique
   title: String!
-  description: String!
+  tech: [String]!
   image: String
   largeImage: String
   # user: User!

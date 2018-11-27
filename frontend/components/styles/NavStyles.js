@@ -18,7 +18,7 @@ const NavStyles = styled.ul`
     background: none;
     border: 0;
     cursor: pointer;
-    color: ${props => props.theme.black};
+    color: ${props => props.theme.blue};
     font-weight: 800;
     @media (max-width: 700px) {
       font-size: 10px;
@@ -26,7 +26,7 @@ const NavStyles = styled.ul`
     }
     &:before {
       content: "";
-      width: 2px;
+      width: 1.5px;
       background: ${props => props.theme.orange};
       height: 100%;
       left: 0;
@@ -36,7 +36,7 @@ const NavStyles = styled.ul`
       bottom: 0;
     }
     &:after {
-      height: 2px;
+      height: 1.5px;
       background: ${props => props.theme.lightblue};
       content: "";
       width: 0;
@@ -56,7 +56,7 @@ const NavStyles = styled.ul`
     }
   }
   @media (max-width: 1300px) {
-    border-top: 1px solid ${props => props.theme.orange};
+    border-top: 1.5px solid ${props => props.theme.orange};
     width: 100%;
     justify-content: center;
     font-size: 1.5rem;

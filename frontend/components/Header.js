@@ -33,7 +33,7 @@ const Logo = styled.h1`
 
 const StyleHeader = styled.header`
   .bar {
-    border-bottom: 2px solid ${props => props.theme.orange};
+    border-bottom: 1.5px solid ${props => props.theme.orange};
     display: grid;
     grid-template-columns: auto 1fr;
     justify-content: space-between;
