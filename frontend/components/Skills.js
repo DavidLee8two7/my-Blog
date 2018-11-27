@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import { Query, Mutation } from "react-apollo";
-import { TOGGLE_CARD_MUTATION } from "../components/skillsPage/ReactStack";
+import { TOGGLE_CARD_REACT } from "../components/skillsPage/ReactStack";
+import { TOGGLE_CARD_NODE } from "../components/skillsPage/NodeStack";
 import gql from "graphql-tag";
 import styled from "styled-components";
 import Skill from "./skillsPage/Skill";
 import ReactStack from "./skillsPage/ReactStack";
+import NodeStack from "./skillsPage/NodeStack";
 import Title from "./styles/Title";
 import StyledButton from "./styles/StyledButton";
 
@@ -50,22 +52,31 @@ class Skills extends Component {
           return (
             <SkillsContainer>
               <MyStack>
-                <Mutation mutation={TOGGLE_CARD_MUTATION}>
-                  {toggleCard => (
+                <Mutation mutation={TOGGLE_CARD_REACT}>
+                  {toggleReact => (
                     <StyledButton
-                      onClick={toggleCard}
+                      onClick={toggleReact}
                       style={{ backgroundColor: "#2164f4" }}
                     >
                       Apollo fullstack
                     </StyledButton>
                   )}
                 </Mutation>
+                <ReactStack />
 
-                <StyledButton style={{ backgroundColor: "#6cc24a" }}>
-                  Pug & Node fullstack
-                </StyledButton>
+                <Mutation mutation={TOGGLE_CARD_NODE}>
+                  {toggleNode => (
+                    <StyledButton
+                      onClick={toggleNode}
+                      style={{ backgroundColor: "#green" }}
+                    >
+                      Node fullstack
+                    </StyledButton>
+                  )}
+                </Mutation>
+                <NodeStack />
               </MyStack>
-              <ReactStack />
+
               {data.skills.map(skill => (
                 <SkillCatetory key={skill.id}>
                   <Title>

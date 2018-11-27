@@ -5,34 +5,33 @@ import ReactStyles from "../styles/ReactStyles";
 import CloseButton from "../styles/CloseButton";
 import StyledButton from "../styles/StyledButton";
 
-const LOCAL_STATE_QUERY = gql`
+const LOCAL_STATE_REACT = gql`
   query {
-    cardOpen @client
+    cardReact @client
   }
 `;
 
-const TOGGLE_CARD_MUTATION = gql`
+const TOGGLE_CARD_REACT = gql`
   mutation {
-    toggleCard @client
+    toggleReact @client
   }
 `;
 
 const ReactStack = () => {
   return (
-    <Mutation mutation={TOGGLE_CARD_MUTATION}>
-      {toggleCard => (
-        <Query query={LOCAL_STATE_QUERY}>
+    <Mutation mutation={TOGGLE_CARD_REACT}>
+      {toggleReact => (
+        <Query query={LOCAL_STATE_REACT}>
           {({ data }) => (
-            <ReactStyles open={data.cardOpen}>
+            <ReactStyles open={data.cardReact}>
               <header>
-                <CloseButton onClick={toggleCard} title="close">
+                <CloseButton onClick={toggleReact} title="close">
                   &times;
                 </CloseButton>
                 <p>React and GraphQL stack</p>
               </header>
-
               <footer>
-                <StyledButton onClick={toggleCard}>Close</StyledButton>
+                <StyledButton onClick={toggleReact}>Close</StyledButton>
               </footer>
             </ReactStyles>
           )}
@@ -43,4 +42,4 @@ const ReactStack = () => {
 };
 
 export default ReactStack;
-export { LOCAL_STATE_QUERY, TOGGLE_CARD_MUTATION };
+export { LOCAL_STATE_REACT, TOGGLE_CARD_REACT };

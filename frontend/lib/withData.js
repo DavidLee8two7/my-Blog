@@ -1,7 +1,8 @@
 import withApollo from "next-with-apollo";
 import ApolloClient from "apollo-boost";
 import { endpoint } from "../config";
-import { LOCAL_STATE_QUERY } from "../components/skillsPage/ReactStack";
+import { LOCAL_STATE_REACT } from "../components/skillsPage/ReactStack";
+import { LOCAL_STATE_NODE } from "../components/skillsPage/NodeStack";
 
 function createClient({ headers }) {
   return new ApolloClient({
@@ -18,12 +19,22 @@ function createClient({ headers }) {
     clientState: {
       resolvers: {
         Mutation: {
-          toggleCard(_, variables, { cache }) {
-            const { cardOpen } = cache.readQuery({
-              query: LOCAL_STATE_QUERY
+          toggleReact(_, variables, { cache }) {
+            const { cardReact } = cache.readQuery({
+              query: LOCAL_STATE_REACT
             });
             const data = {
-              data: { cardOpen: !cardOpen }
+              data: { cardReact: !cardReact }
+            };
+            cache.writeData(data);
+            return data;
+          },
+          toggleNode(_, variables, { cache }) {
+            const { cardNode } = cache.readQuery({
+              query: LOCAL_STATE_NODE
+            });
+            const data = {
+              data: { cardNode: !cardNode }
             };
             cache.writeData(data);
             return data;
@@ -31,7 +42,8 @@ function createClient({ headers }) {
         }
       },
       defaults: {
-        cardOpen: false
+        cardReact: false,
+        cardNode: false
       }
     }
   });
