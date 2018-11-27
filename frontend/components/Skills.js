@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Query } from "react-apollo";
+import { Query, Mutation } from "react-apollo";
+import { TOGGLE_CARD_MUTATION } from "../components/skillsPage/ReactStack";
 import gql from "graphql-tag";
 import styled from "styled-components";
 import Skill from "./skillsPage/Skill";
@@ -49,9 +50,17 @@ class Skills extends Component {
           return (
             <SkillsContainer>
               <MyStack>
-                <StyledButton style={{ backgroundColor: "#2164f4" }}>
-                  Apollo fullstack
-                </StyledButton>
+                <Mutation mutation={TOGGLE_CARD_MUTATION}>
+                  {toggleCard => (
+                    <StyledButton
+                      onClick={toggleCard}
+                      style={{ backgroundColor: "#2164f4" }}
+                    >
+                      Apollo fullstack
+                    </StyledButton>
+                  )}
+                </Mutation>
+
                 <StyledButton style={{ backgroundColor: "#6cc24a" }}>
                   Pug & Node fullstack
                 </StyledButton>

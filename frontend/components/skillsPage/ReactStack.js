@@ -11,24 +11,36 @@ const LOCAL_STATE_QUERY = gql`
   }
 `;
 
+const TOGGLE_CARD_MUTATION = gql`
+  mutation {
+    toggleCard @client
+  }
+`;
+
 const ReactStack = () => {
   return (
-    <Query query={LOCAL_STATE_QUERY}>
-      {({ data }) => (
-        <ReactStyles open={data.cardOpen}>
-          <header>
-            <CloseButton title="close">&times;</CloseButton>
-            <p>React and GraphQL stack</p>
-          </header>
+    <Mutation mutation={TOGGLE_CARD_MUTATION}>
+      {toggleCard => (
+        <Query query={LOCAL_STATE_QUERY}>
+          {({ data }) => (
+            <ReactStyles open={data.cardOpen}>
+              <header>
+                <CloseButton onClick={toggleCard} title="close">
+                  &times;
+                </CloseButton>
+                <p>React and GraphQL stack</p>
+              </header>
 
-          <footer>
-            <StyledButton>Close</StyledButton>
-          </footer>
-        </ReactStyles>
+              <footer>
+                <StyledButton onClick={toggleCard}>Close</StyledButton>
+              </footer>
+            </ReactStyles>
+          )}
+        </Query>
       )}
-    </Query>
+    </Mutation>
   );
 };
 
 export default ReactStack;
-export { LOCAL_STATE_QUERY };
+export { LOCAL_STATE_QUERY, TOGGLE_CARD_MUTATION };
