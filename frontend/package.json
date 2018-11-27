@@ -1,7 +1,7 @@
 {
-  "name": "blog",
+  "name": "blog-frontend",
   "version": "1.0.0",
-  "description": "new blog",
+  "description": "updating blog with next.js",
   "main": "index.js",
   "scripts": {
     "dev": "next -p 3333",
@@ -22,6 +22,7 @@
     "downshift": "^2.2.3",
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
+    "eslint": "^5.9.0",
     "graphql": "^14.0.2",
     "graphql-tag": "^2.9.2",
     "lodash.debounce": "^4.0.8",

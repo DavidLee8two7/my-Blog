@@ -4,14 +4,18 @@ import Header from "./Header";
 import Meta from "./Meta";
 
 const theme = {
-  red: "#FF0000",
-  navy: "#003366",
+  blue: "#2164f4",
+  lightblue: "#00d8ff",
+  lightgray: "#E1E1E1",
+  orange: "#ff6600",
+  yellow: "#f7df1e",
+  green: "#6cc24a",
   black: "#393939",
-  grey: "#3A3A3A",
-  lightgrey: "#E1E1E1",
   offWhite: "#EDEDED",
   maxWidth: "1000px",
-  bs: "0 12px 24px 0 rgba(0, 0, 0, 0.09)"
+  bs: "0 12px 24px 0 rgba(0, 0, 0, 0.09)",
+  fontDisplay: "'Playfair Display SC', serif",
+  fontPrimary: "'Roboto', sans-serif"
 };
 
 const StyledPage = styled.div`
@@ -26,13 +30,6 @@ const Inner = styled.div`
 `;
 
 injectGlobal`
-  @font-face {
-    font-family: 'radnika_next';
-    src: url()('/static/radnikanext-medium-webfont.woff2')
-    format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
   html {
     box-sizing: border-box;
     font-size: 10px;
@@ -45,7 +42,7 @@ injectGlobal`
     margin: 0;
     font-size: 1.5rem;
     line-height: 2;
-    font-family: 'radnika_next';
+    font-family: ${theme.fontPrimary};
   }
   a {
     text-decoration: none;

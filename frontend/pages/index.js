@@ -1,10 +1,9 @@
 import Link from "next/link";
+import Home from "../components/Home";
 
 const Index = props => (
   <div>
-    <Link href="/home">
-      <a>home</a>
-    </Link>
+    <Home />
   </div>
 );
 

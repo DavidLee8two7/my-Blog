@@ -1,0 +1,14 @@
+# import * from './generated/prisma.graphql'
+
+type Mutation {
+  createSkill(
+    title: String
+    tech: String
+    image: String
+    largeImage: String
+  ): Skill!
+}
+
+type Query {
+  skills: [Skill]!
+}
