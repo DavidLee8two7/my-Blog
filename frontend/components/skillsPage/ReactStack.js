@@ -4,6 +4,14 @@ import gql from "graphql-tag";
 import ReactStyles from "../styles/ReactStyles";
 import CloseButton from "../styles/CloseButton";
 import StyledButton from "../styles/StyledButton";
+import {
+  ReactSide,
+  TechType,
+  TechIcon,
+  TechDescription,
+  TechImg,
+  TechName
+} from "../styles/StackList";
 
 const LOCAL_STATE_REACT = gql`
   query {
@@ -30,6 +38,36 @@ const ReactStack = () => {
                 </CloseButton>
                 <p>React and GraphQL stack</p>
               </header>
+              <ReactSide>
+                <TechType>
+                  <TechIcon>
+                    <TechImg />
+                    <TechName />
+                  </TechIcon>
+                  <TechDescription />
+                </TechType>
+                <TechType>
+                  <TechIcon>
+                    <TechImg />
+                    <TechName />
+                  </TechIcon>
+                  <TechDescription />
+                </TechType>
+                <TechType>
+                  <TechIcon>
+                    <TechImg />
+                    <TechName />
+                  </TechIcon>
+                  <TechDescription />
+                </TechType>
+                <TechType>
+                  <TechIcon>
+                    <TechImg />
+                    <TechName />
+                  </TechIcon>
+                  <TechDescription />
+                </TechType>
+              </ReactSide>
               <footer>
                 <StyledButton onClick={toggleReact}>Close</StyledButton>
               </footer>

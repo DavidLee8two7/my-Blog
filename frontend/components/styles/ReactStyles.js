@@ -3,7 +3,7 @@ import styled from "styled-components";
 const ReactStyles = styled.div`
   padding: 20px;
   position: relative;
-  background: white;
+  background: ${props => props.theme.offWhite};
   position: fixed;
   height: 100%;
   top: 0;
@@ -19,17 +19,16 @@ const ReactStyles = styled.div`
   grid-template-rows: auto 1fr auto;
   ${props => props.open && `transform: translateX(0);`};
   header {
-    border-bottom: 5px solid ${props => props.theme.blue};
+    border-bottom: 5px solid ${props => props.theme.lightblue};
     margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    font-family: ${props => props.theme.fontDisplay};
-    font-size: 24px;
+    font-family: ${props => props.theme.fontPrimary};
+    font-size: 30px;
     font-weight: 800;
     line-height: 2;
-    color: ${props => props.theme.blue};
+    color: black;
   }
   footer {
-    border-top: 10px double ${props => props.theme.blue};
+    border-top: 10px double ${props => props.theme.lightblue};
     margin-top: 2rem;
     padding-top: 2rem;
     display: grid;

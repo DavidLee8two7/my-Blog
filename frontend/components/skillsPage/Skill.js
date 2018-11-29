@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import styled, { consolidateStreamedStyles } from "styled-components";
-import SVGIcon from "../../static/SVGIcon";
+import styled from "styled-components";
+import SVGIcon from "../../lib/SVGIcon";
 
 const SkillDiv = styled.div`
   display: flex;

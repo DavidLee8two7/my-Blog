@@ -24,6 +24,9 @@ const Logo = styled.h1`
     padding: 0.5rem 1rem;
     color: ${props => props.theme.black};
     text-decoration: none;
+    .javascript {
+      color: ${props => props.theme.orange};
+    }
   }
   @media (max-width: 1300px) {
     margin: 0;
@@ -62,8 +65,13 @@ const Header = () => (
       <Logo>
         <Link href="/">
           <a>
-            <span className="full-text">Full Stack JavaScript Developer</span>
-            <span className="short-text">JavaScript Developer</span>
+            <span className="full-text">
+              Full Stack <span className="javascript">JavaScript</span>{" "}
+              Developer
+            </span>
+            <span className="short-text">
+              <span className="javascript">JavaScript</span> Developer
+            </span>
           </a>
         </Link>
       </Logo>

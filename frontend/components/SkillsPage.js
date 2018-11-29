@@ -63,7 +63,6 @@ class Skills extends Component {
                   )}
                 </Mutation>
                 <ReactStack />
-
                 <Mutation mutation={TOGGLE_CARD_NODE}>
                   {toggleNode => (
                     <StyledButton
@@ -76,7 +75,6 @@ class Skills extends Component {
                 </Mutation>
                 <NodeStack />
               </MyStack>
-
               {data.skills.map(skill => (
                 <SkillCatetory key={skill.id}>
                   <Title>
@@ -94,4 +92,3 @@ class Skills extends Component {
 }
 
 export default Skills;
-export { ALL_SKILLS_QUERY };
