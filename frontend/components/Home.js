@@ -16,26 +16,15 @@ class Home extends Component {
             <h2 className="lee">Lee</h2>
           </div>
           <div className="greeting">
-            <p>I want to help building the better future.</p>
+            <p>I want to help building the better world.</p>
           </div>
         </Introduction>
 
         <About>
           <h2>About Me</h2>
           <p>
-            imsep Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Minima id dolores consequatur fugit laboriosam, animi aspernatur
-            numquam voluptate enim. At, accusantium suscipit voluptate qui
-            eligendi optio aut quidem aliquam nam.
-          </p>
-          <p>
-            imsep Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Minima id dolores consequatur fugit laboriosam, animi aspernatur
-            numquam voluptate enim. At, accusantium suscipit voluptate qui
-            eligendi optio aut quidem aliquam nam. Minima id dolores consequatur
-            fugit laboriosam, animi aspernatur numquam voluptate enim. At,
-            accusantium suscipit voluptate qui eligendi optio aut quidem aliquam
-            nam.
+            Get to know me as a person. You can find out about my background,
+            experience and more below.
           </p>
         </About>
       </HomeStyles>
