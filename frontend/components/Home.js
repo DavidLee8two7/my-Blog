@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { HomeStyles, TitleDiv, About } from "./homePage/HomeStyles";
+import { HomeStyles, TitleDiv, Who } from "./homePage/HomeStyles";
 import Head from "next/head";
-import Intro from "./homePage/Intro";
-import Experience from "./homePage/Experience";
-import ProjectSamples from "./homePage/ProjectSamples";
+import AboutSection from "./homePage/AboutSection";
+import SkillsSection from "./homePage/SkillsSection";
+import ProjectSection from "./homePage/ProjectSection";
 
 class Home extends Component {
   render() {
@@ -18,20 +18,20 @@ class Home extends Component {
             <h2 className="jaehoon">jaehoon</h2>
             <h2 className="lee">Lee</h2>
           </div>
-          <div className="greeting">
-            <p>What I don't know is more important than what I know.</p>
+          <div className="messages">
+            <p>What We don't know is more important than what We know.</p>
           </div>
         </TitleDiv>
-        <About>
-          <h2>Who Am I?</h2>
+        <Who>
+          <h2>How can I help?</h2>
           <p>
             Get to know me as a person. You can find out about my background,
             experience and more below.
           </p>
-        </About>
-        <Intro />
-        <Experience />
-        <ProjectSamples />
+        </Who>
+        <AboutSection />
+        <SkillsSection />
+        <ProjectSection />
       </HomeStyles>
     );
   }

@@ -19,13 +19,14 @@ const Logo = styled.h1`
   font-family: ${props => props.theme.fontDisplay};
   margin-left: 2rem;
   position: relative;
-  z-index: 2;
+  text-shadow: ${props => props.theme.ts};
   a {
     padding: 0.5rem 1rem;
     color: ${props => props.theme.black};
     text-decoration: none;
     .javascript {
       color: ${props => props.theme.orange};
+      text-shadow: 0.15px 0.15px 0.3px ${props => props.theme.orange};
     }
   }
   @media (max-width: 1300px) {
@@ -36,6 +37,7 @@ const Logo = styled.h1`
 
 const StyleHeader = styled.header`
   .bar {
+    z-index: 3;
     border-bottom: 1.5px solid ${props => props.theme.orange};
     display: grid;
     grid-template-columns: auto 1fr;

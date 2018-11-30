@@ -15,8 +15,8 @@ const HomeStyles = styled.div`
 `;
 
 const TitleDiv = styled.div`
-  display: inline-block;
-  margin: 6rem 0;
+  z-index: 2;
+  margin: 9rem auto;
   grid-row: 1;
   grid-column: 1 / span 4;
   text-align: center;
@@ -25,20 +25,20 @@ const TitleDiv = styled.div`
   border-bottom: 1.5px solid ${props => props.theme.orange};
   h2 {
     font-family: ${props => props.theme.fontDisplay};
-    font-size: 4.4rem;
-  }
-  p {
-    font-size: 2.8rem;
-    font-weight: 500;
+    font-size: 5.4rem;
+    text-shadow: 0.25px 0.25px 0.5px ${props => props.theme.orange};
   }
   .david {
-    transform: translateX(-18rem);
+    transform: translateX(-26rem);
   }
   .lee {
-    transform: translateX(15rem);
+    transform: translateX(22rem);
   }
-  .greeting {
-    margin-top: 10rem;
+  .messages {
+    margin-top: 20rem;
+    font-size: 2.4rem;
+    font-weight: 400;
+    text-shadow: ${props => props.theme.ts};
   }
   @media (max-width: 1200px) {
     border-bottom: none;
@@ -59,19 +59,19 @@ const TitleDiv = styled.div`
   }
 `;
 
-const About = styled.div`
+const Who = styled.div`
+  z-index: 2;
   grid-row: 2;
   grid-column: 1 / span 4;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   h2 {
-    font-size: 2.8rem;
+    font-size: 3.2rem;
     text-align: center;
   }
   p {
-    font-size: 1.8rem;
-    margin-left: 3rem;
+    font-size: 2.3rem;
     text-align: center;
   }
 `;
 
-export { HomeStyles, TitleDiv, About };
+export { HomeStyles, TitleDiv, Who };

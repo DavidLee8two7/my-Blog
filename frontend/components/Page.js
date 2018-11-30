@@ -14,6 +14,7 @@ const theme = {
   offWhite: "#EDEDED",
   maxWidth: "100%",
   bs: "0 12px 24px 0 rgba(0, 0, 0, 0.09)",
+  ts: "0.15px 0.15px 0.30px rgba(0, 0, 0, 0.09)",
   fontDisplay: "'Playfair Display SC', serif",
   fontPrimary: "'Roboto', sans-serif"
 };
