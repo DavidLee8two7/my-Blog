@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 const SamplesDiv = styled.div`
-  grid-row: 4;
+  grid-row: 5;
   grid-column: 1 / span 4;
   width: 100%;
   height: 400px;

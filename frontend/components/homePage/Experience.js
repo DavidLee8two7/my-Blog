@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 const ExperienceDiv = styled.div`
-  width: 100%;
+  grid-row: 4;
+  grid-column: 1 / span 4;
+  height: 400px;
 `;
 
 class Experience extends Component {

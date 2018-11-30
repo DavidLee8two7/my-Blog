@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { HomeStyles, TitleDiv, About } from "./homePage/HomeStyles";
-import Intro from "./homePage/Intro";
-import ProjectSamples from "./homePage/ProjectSamples";
 import Head from "next/head";
+import Intro from "./homePage/Intro";
+import Experience from "./homePage/Experience";
+import ProjectSamples from "./homePage/ProjectSamples";
 
 class Home extends Component {
   render() {
@@ -18,7 +19,7 @@ class Home extends Component {
             <h2 className="lee">Lee</h2>
           </div>
           <div className="greeting">
-            <p>I want to help building the better world.</p>
+            <p>What I don't know is more important than what I know.</p>
           </div>
         </TitleDiv>
         <About>
@@ -29,6 +30,7 @@ class Home extends Component {
           </p>
         </About>
         <Intro />
+        <Experience />
         <ProjectSamples />
       </HomeStyles>
     );
