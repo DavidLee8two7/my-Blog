@@ -1,7 +1,7 @@
 import React from "react";
 import { Query, Mutation } from "react-apollo";
 import gql from "graphql-tag";
-import ReactStyles from "../styles/ReactStyles";
+import ReactStyles from "./ReactStyles";
 import CloseButton from "../styles/CloseButton";
 import StyledButton from "../styles/StyledButton";
 import {

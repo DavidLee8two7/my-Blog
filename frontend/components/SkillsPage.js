@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Query, Mutation } from "react-apollo";
+import Head from "next/head";
 import { TOGGLE_CARD_REACT } from "../components/skillsPage/ReactStack";
 import { TOGGLE_CARD_NODE } from "../components/skillsPage/NodeStack";
 import gql from "graphql-tag";
@@ -51,6 +52,9 @@ class Skills extends Component {
           if (error) return <p>Error: {error.message}</p>;
           return (
             <SkillsContainer>
+              <Head>
+                <title>David Lee | Experience & Skills</title>
+              </Head>
               <MyStack>
                 <Mutation mutation={TOGGLE_CARD_REACT}>
                   {toggleReact => (

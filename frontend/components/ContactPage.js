@@ -1,8 +1,16 @@
-import React from "react";
+import React, { Component } from "react";
+import Head from "next/head";
 
-class ContactPage extends React.Component {
+class ContactPage extends Component {
   render() {
-    return <div>ContactPage</div>;
+    return (
+      <div>
+        <Head>
+          <title>David Lee | Contact & Resume</title>
+        </Head>
+        ContactPage
+      </div>
+    );
   }
 }
 

@@ -3,32 +3,32 @@ import styled from "styled-components";
 const HomeStyles = styled.div`
   background: linear-gradient(
       rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.7)
+      rgba(255, 255, 255, 0.5)
     ),
-    url("../../static/img/whale.jpg") no-repeat center center fixed;
+    url("/static/img/whale.jpg") no-repeat center center fixed;
   background-size: cover;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   align-items: center;
   width: 100%;
 `;
 
-const Introduction = styled.div`
+const TitleDiv = styled.div`
   display: inline-block;
-  margin: 4rem 0;
+  margin: 6rem 0;
   grid-row: 1;
-  grid-column: 1 / 3;
+  grid-column: 1 / span 4;
   text-align: center;
   text-transform: uppercase;
   line-height: 1rem;
   border-bottom: 1.5px solid ${props => props.theme.orange};
   h2 {
     font-family: ${props => props.theme.fontDisplay};
-    font-size: 3.6rem;
+    font-size: 4.4rem;
   }
   p {
-    font-size: 2.2rem;
+    font-size: 2.8rem;
     font-weight: 500;
   }
   .david {
@@ -52,24 +52,26 @@ const Introduction = styled.div`
       transform: translateX(0);
     }
   }
-  @media (max-width: 550px) {
+  @media (max-width: 650px) {
     p {
-      font-size: 1.8rem;
+      font-size: 2rem;
     }
   }
 `;
 
 const About = styled.div`
   grid-row: 2;
-  grid-column: 1 / 3;
+  grid-column: 1 / span 4;
+  margin-bottom: 5rem;
   h2 {
-    font-size: 2.2rem;
+    font-size: 2.8rem;
     text-align: center;
   }
   p {
+    font-size: 1.8rem;
     margin-left: 3rem;
     text-align: center;
   }
 `;
 
-export { HomeStyles, Introduction, About };
+export { HomeStyles, TitleDiv, About };

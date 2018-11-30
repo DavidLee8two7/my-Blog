@@ -1,15 +1,17 @@
 import React, { Component } from "react";
-import {
-  HomeStyles,
-  Introduction,
-  About
-} from "../components/styles/HomeStyles";
+import { HomeStyles, TitleDiv, About } from "./homePage/HomeStyles";
+import Intro from "./homePage/Intro";
+import ProjectSamples from "./homePage/ProjectSamples";
+import Head from "next/head";
 
 class Home extends Component {
   render() {
     return (
       <HomeStyles>
-        <Introduction>
+        <Head>
+          <title>David Lee | JavaScript Dev.</title>
+        </Head>
+        <TitleDiv>
           <div>
             <h2 className="david">David</h2>
             <h2 className="jaehoon">jaehoon</h2>
@@ -18,15 +20,16 @@ class Home extends Component {
           <div className="greeting">
             <p>I want to help building the better world.</p>
           </div>
-        </Introduction>
-
+        </TitleDiv>
         <About>
-          <h2>About Me</h2>
+          <h2>Who Am I?</h2>
           <p>
             Get to know me as a person. You can find out about my background,
             experience and more below.
           </p>
         </About>
+        <Intro />
+        <ProjectSamples />
       </HomeStyles>
     );
   }
