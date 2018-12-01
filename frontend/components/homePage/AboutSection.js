@@ -69,7 +69,7 @@ class AboutMe extends Component {
           <p>
             As a web developer, I enjoy using my obsessive attention to detail,
             my unequivocal love for making things, and my mission-driven work
-            ethic to literally change the world. I’ve always sought out
+            ethic to build better future for our kids. I’ve always sought out
             opportunities and challenges that are meaningful to me. Although my
             professional path has taken many twists and turns - from ERP system
             developer, Supply Change Manager for corporations, business
