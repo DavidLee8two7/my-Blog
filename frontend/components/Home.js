@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { HomeStyles, TitleDiv, Who } from "./homePage/HomeStyles";
+import { HomeStyles, TitleDiv, Who } from "./styles/HomeStyles";
 import Head from "next/head";
 import AboutSection from "./homePage/AboutSection";
 import TechSection from "./homePage/TechSection";
-import ProjectSection from "./homePage/ProjectSection";
+import ExperienceSection from "./homePage/ExperienceSection";
 
 class Home extends Component {
   render() {
@@ -31,7 +31,7 @@ class Home extends Component {
         </Who>
         <AboutSection />
         <TechSection />
-        <ProjectSection />
+        <ExperienceSection />
       </HomeStyles>
     );
   }
