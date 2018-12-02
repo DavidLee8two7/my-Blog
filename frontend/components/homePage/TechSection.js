@@ -19,12 +19,13 @@ const CurrentFocus = styled.div`
   grid-row: 1;
   grid-column: 1 / span 4;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 400;
   text-align: center;
   background-color: ${props => props.theme.lightblue};
 `;
 
 const IconsDiv = styled.div`
+  z-index: 3;
   margin: 5rem auto;
   grid-row: 2;
   grid-column: 1 / span 4;
@@ -78,7 +79,10 @@ class TechSection extends Component {
       <TechDiv>
         <CurrentFocus>
           <a href="/skills">
-            <p>Current Focus: React & Apollo Client ↔️ GraphQL Yoga & Prisma</p>
+            <p>
+              Current Focus: React & Apollo Client ↔️ GraphQL Yoga & Prisma. you
+              can find more tech i like here
+            </p>
           </a>
         </CurrentFocus>
         <IconsDiv>

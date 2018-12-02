@@ -37,7 +37,7 @@ const Logo = styled.h1`
 
 const StyleHeader = styled.header`
   .bar {
-    z-index: 3;
+    z-index: 4;
     border-bottom: 1.5px solid ${props => props.theme.orange};
     display: grid;
     grid-template-columns: auto 1fr;

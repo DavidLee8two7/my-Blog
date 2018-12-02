@@ -4,6 +4,7 @@ import Head from "next/head";
 import AboutSection from "./homePage/AboutSection";
 import TechSection from "./homePage/TechSection";
 import ExperienceSection from "./homePage/ExperienceSection";
+import ProjectSection from "./homePage/ProjectSection";
 
 class Home extends Component {
   render() {
@@ -32,6 +33,7 @@ class Home extends Component {
         <AboutSection />
         <TechSection />
         <ExperienceSection />
+        <ProjectSection />
       </HomeStyles>
     );
   }

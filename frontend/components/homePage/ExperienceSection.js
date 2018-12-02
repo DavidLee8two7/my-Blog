@@ -1,72 +1,45 @@
 import React, { Component } from "react";
-import styled from "styled-components";
+import { ExperienceDiv, Experience } from "../styles/ExperienceStyles";
 
-const ExperienceDiv = styled.div`
-  grid-row: 5;
-  grid-column: 1 / span 4;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-`;
-
-const TitleDiv = styled.div`
-  grid-row: 1;
-  grid-column: 1 / span 3;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-  align-items: center;
-  width: 100%;
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-  }
-  h2 {
-    font-size: 2.8rem;
-    text-align: center;
-  }
-  p {
-    font-size: 1.8rem;
-    margin-left: 3rem;
-    text-align: center;
-  }
-`;
-
-class Experience extends Component {
+class ExperienceSection extends Component {
   render() {
     return (
       <ExperienceDiv>
-        <TitleDiv>
-          <a href="">
-            <img src="/static/CJ.jpeg" alt="company logo" />
-          </a>
-          <a href="">CJ Foods, Inc.</a>
-          <p>Food-stack software developer</p>
-        </TitleDiv>
-        <div>
-          <p>story of work</p>
-          <p>duty of work</p>
-          <ul>
-            <li>lonked</li>
-            <li>i did one</li>
-            <li>i did one</li>
-            <li>i did one</li>
-            <li>i did one</li>
-          </ul>
-          <p>accomplishments</p>
-          <ul>
-            <li>i did one</li>
-            <li>i did one</li>
-            <li>i did one</li>
-            <li>i did one</li>
-            <li>i did one</li>
-          </ul>
-          <p>period </p>
-        </div>
+        <Experience>
+          <div className="company__shape">
+            <img src="/static/img/CJ.jpeg" alt="CJ" className="company__img" />
+            <div className="company__caption">CJ</div>
+          </div>
+          <div className="company__text">
+            <h3>experience</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
+              ipsum sapiente aspernatur libero repellat quis consequatur ducimus
+              quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente
+              aspernatur libero repellat quis consequatur ducimus quam nisi
+              exercitationem omnis earum qui.
+            </p>
+          </div>
+        </Experience>
+        <Experience>
+          <div className="company__shape">
+            <img src="/static/img/CJ.jpeg" alt="CJ" className="company__img" />
+            <div className="company__caption">CJ</div>
+          </div>
+          <div className="company__text">
+            <h3>experience</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
+              ipsum sapiente aspernatur libero repellat quis consequatur ducimus
+              quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente
+              aspernatur libero repellat quis consequatur ducimus quam nisi
+              exercitationem omnis earum qui.
+            </p>
+          </div>
+        </Experience>
       </ExperienceDiv>
     );
   }
 }
 
-export default Experience;
+export default ExperienceSection;
