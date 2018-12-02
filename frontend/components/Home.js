@@ -5,6 +5,8 @@ import AboutSection from "./homePage/AboutSection";
 import TechSection from "./homePage/TechSection";
 import ExperienceSection from "./homePage/ExperienceSection";
 import ProjectSection from "./homePage/ProjectSection";
+import ContactSection from "./homePage/ContactSection";
+import FooterSection from "./homePage/FooterSection";
 
 class Home extends Component {
   render() {
@@ -34,6 +36,8 @@ class Home extends Component {
         <TechSection />
         <ExperienceSection />
         <ProjectSection />
+        <ContactSection />
+        <FooterSection />
       </HomeStyles>
     );
   }

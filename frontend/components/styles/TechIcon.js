@@ -8,6 +8,7 @@ const TechDiv = styled.div`
   width: 50%;
   height: auto;
   color: white;
+  transition: transform 0.3s;
   p {
     font-size: 2.8rem;
     font-weight: 800;
@@ -22,7 +23,8 @@ const TechDiv = styled.div`
     color: black;
     padding: 5px;
   }
-  svg {
+  &:hover {
+    transform: translateY(-1.5rem) scale(1.03);
   }
 `;
 

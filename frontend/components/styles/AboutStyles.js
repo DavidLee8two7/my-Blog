@@ -5,7 +5,7 @@ const IntroDiv = styled.div`
   box-shadow: ${props => props.theme.bs};
   grid-row: 3;
   grid-column: 1 / span 4;
-  background-color: white;
+  background-color: ${props => props.theme.offWhite};
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;

@@ -1,10 +1,15 @@
 import React, { Component } from "react";
-import { ExperienceDiv, Experience } from "../styles/ExperienceStyles";
+import {
+  ExperienceDiv,
+  Experience,
+  ExperienceTitle
+} from "../styles/ExperienceStyles";
 
 class ExperienceSection extends Component {
   render() {
     return (
       <ExperienceDiv>
+        <ExperienceTitle>ExperienceTitle</ExperienceTitle>
         <Experience>
           <div className="company__shape">
             <img src="/static/img/CJ.jpeg" alt="CJ" className="company__img" />

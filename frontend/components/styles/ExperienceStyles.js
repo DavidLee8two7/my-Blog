@@ -1,22 +1,35 @@
 import styled from "styled-components";
 
 const ExperienceDiv = styled.div`
-  grid-row: 5;
+  z-index: 2;
+  grid-row: 6;
   grid-column: 1 / span 4;
   width: 100%;
   justify-items: center;
   align-items: center;
-  background-color: orange;
+  background: linear-gradient(rgba(33, 100, 244, 0.5), rgba(33, 100, 244, 0.5));
+`;
+
+const ExperienceTitle = styled.div`
+  z-index: 3;
+  width: 100%;
+  grid-row: 1;
+  grid-column: 1 / span 4;
+  padding: 2rem;
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+  background-color: ${props => props.theme.offWhite};
 `;
 
 const Experience = styled.div`
-  width: 85%;
-  margin: 6rem auto;
-  background-color: white;
+  z-index: 3;
+  width: 65%;
+  margin: 10rem auto;
+  background-color: ${props => props.theme.offWhite};
   border-radius: 3px;
-  padding: 6rem;
+  padding: 4rem;
   transform: skewX(-12deg);
-
   .company__shape {
     width: 15rem;
     height: 15rem;
@@ -69,4 +82,4 @@ const Experience = styled.div`
   }
 `;
 
-export { ExperienceDiv, Experience };
+export { ExperienceDiv, ExperienceTitle, Experience };

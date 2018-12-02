@@ -43,6 +43,7 @@ const StyleHeader = styled.header`
     grid-template-columns: auto 1fr;
     justify-content: space-between;
     align-items: stretch;
+    background: ${props => props.theme.offWhite};
     @media (max-width: 1300px) {
       grid-template-columns: 1fr;
       justify-content: center;
