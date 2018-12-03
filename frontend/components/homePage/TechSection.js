@@ -5,10 +5,10 @@ import { TechDiv, TechTitle, IconsDiv, FrontDiv, BackDiv } from "./TechStyles";
 
 const tech = {
   visible: {
-    desc: "🚣 Currently focusing on React & GraphQL Fullstack."
+    desc: "Currently focusing on 💻 React & GraphQL Fullstack"
   },
   invisible: {
-    desc: "Please click to find more information! 🚣"
+    desc: "Please click to find more information!"
   },
   react: {
     title: "react",

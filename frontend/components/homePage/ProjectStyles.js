@@ -9,7 +9,7 @@ const ProjectDiv = styled.div`
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   align-items: center;
-  grid-gap: 2px;
+  grid-gap: 10px;
   background-color: ${props => props.theme.offWhite};
 `;
 

@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import { ExperienceDiv, Experience, ExperienceTitle } from "./ExperienceStyles";
+import SectionTitle from "../styles/SectionTitle";
 
 class ExperienceSection extends Component {
   render() {
     return (
       <ExperienceDiv>
-        <ExperienceTitle>ExperienceTitle</ExperienceTitle>
+        <ExperienceTitle>
+          <a href="/skills">
+            <SectionTitle visible={"Experience 📽️"} invisible={"You can find more samples by clicking here!"} />
+          </a></ExperienceTitle>
         <Experience>
           <div className="company__shape">
             <img src="/static/img/CJ.jpeg" alt="CJ" className="company__img" />

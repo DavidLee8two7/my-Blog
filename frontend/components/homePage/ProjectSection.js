@@ -8,7 +8,7 @@ class ProjectSection extends Component {
       <ProjectDiv>
         <ProjectTitle>
           <a href="/skills">
-            <SectionTitle visible={"Here are some of sample projects 😀"} invisible={"You can find more by clicking here!"} />
+            <SectionTitle visible={"Here are some of sample projects 📽️"} invisible={"You can find more samples by clicking here!"} />
           </a>
         </ProjectTitle>
         <Project>
@@ -18,28 +18,28 @@ class ProjectSection extends Component {
               src="/static/img/CJ.jpeg"
               alt="company logo"
             />
-          </a>
           <div className="shade">Food-stack software developer</div>
+          </a>
         </Project>
         <Project>
-          <a>
+          <a href="/skills">
             <img
               className="project"
               src="/static/img/CJ.jpeg"
               alt="company logo"
             />
-          </a>
           <div className="shade">Food-stack software developer</div>
+          </a>
         </Project>
         <Project>
-          <a>
+          <a href="/skills">
             <img
               className="project"
               src="/static/img/CJ.jpeg"
               alt="company logo"
             />
-          </a>
           <div className="shade">Food-stack software developer</div>
+          </a>
         </Project>
       </ProjectDiv>
     );

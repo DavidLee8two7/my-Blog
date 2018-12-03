@@ -9,16 +9,12 @@ const ContactDiv = styled.div`
   align-items: center;
 `;
 
-const ContactTitle = styled.div`
+const ContactTitle = styled.div`z
   z-index: 3;
   width: 100%;
   grid-row: 1;
   grid-column: 1 / span 4;
-  padding: 2rem;
-  font-size: 2rem;
-  font-weight: 400;
   text-align: center;
-  background-color: ${props => props.theme.offWhite};
 `;
 
 const Contact = styled.div`

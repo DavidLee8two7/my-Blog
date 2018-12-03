@@ -1,16 +1,17 @@
 import React, { Component } from "react";
 import { ContactDiv, ContactTitle, Contact } from "./ContactStyles";
+import SectionTitle from "../styles/SectionTitle";
 
 class ContactSection extends Component {
   render() {
     return (
       <ContactDiv>
-        <ContactTitle>Contact title</ContactTitle>
+        <ContactTitle>
+          <a href="/contact">
+            <SectionTitle visible={"Contact 📽️"} invisible={"You can find more samples by clicking here!"} />
+          </a>
+        </ContactTitle>
         <Contact>
-          <div className="company__shape">
-            <img src="/static/img/CJ.jpeg" alt="CJ" className="company__img" />
-            <div className="company__caption">CJ</div>
-          </div>
           <div className="company__text">
             <h3>experience</h3>
             <p>

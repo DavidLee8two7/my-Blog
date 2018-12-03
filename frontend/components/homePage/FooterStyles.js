@@ -5,8 +5,10 @@ const FooterDiv = styled.div`
   grid-row: 8;
   grid-column: 1 / span 4;
   width: 100%;
+  min-height: 60rem;
   justify-items: center;
   align-items: center;
+  background-color: ${props => props.theme.offWhite};
 `;
 
 const FooterTitle = styled.div`
@@ -14,94 +16,76 @@ const FooterTitle = styled.div`
   width: 100%;
   grid-row: 1;
   grid-column: 1 / span 4;
-  padding: 2rem;
-  font-size: 2rem;
-  font-weight: 400;
   text-align: center;
-  background-color: ${props => props.theme.offWhite};
 `;
 
-const Footer = styled.div`
+const Footer = styled.footer`
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   z-index: 3;
-  width: 85%;
-  .footer {
-    background-color: orange;
-    padding: 10rem 0;
-    font-size: 1.4rem;
-    color: white;
+  width: 100%;
+`;
 
-    @include respond(tab-port) {
-      padding: 8rem 0;
+const FooterNav = styled.div`
+  display: inline-block;
+  text-align: center;
+  ul {
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 1.5rem;
     }
-
-    &__logo-box {
-      text-align: center;
-      margin-bottom: 8rem;
-
-      @include respond(tab-port) {
-        margin-bottom: 6rem;
-      }
-    }
-
-    &__logo {
-      width: 15rem;
-      height: auto;
-    }
-
-    &__navigation {
-      border-top: 1px solid gray;
-      padding-top: 2rem;
+  }
+  a {
+    &:link,
+    &:visited {
+      color: gray;
+      text-decoration: none;
+      text-transform: uppercase;
       display: inline-block;
-
-      @include respond(tab-port) {
-        width: 100%;
-        text-align: center;
-      }
+      transition: all 0.2s;
     }
 
-    &__list {
-      list-style: none;
-    }
-
-    &__item {
-      display: inline-block;
-
-      &:not(:last-child) {
-        margin-right: 1.5rem;
-      }
-    }
-
-    &__link {
-      &:link,
-      &:visited {
-        color: gray;
-        background-color: orange;
-        text-decoration: none;
-        text-transform: uppercase;
-        display: inline-block;
-        transition: all 0.2s;
-      }
-
-      &:hover,
-      &:active {
-        color: white;
-        box-shadow: 0 1rem 2rem rgba(black, 0.4);
-        transform: rotate(5deg) scale(1.3);
-      }
-    }
-
-    &__copyright {
-      border-top: 1px solid gray;
-      padding-top: 2rem;
-      width: 80%;
-      float: right;
-
-      @include respond(tab-port) {
-        width: 100%;
-        float: none;
-      }
+    &:hover,
+    &:active {
+      color: white;
+      box-shadow: 0 1rem 2rem rgba(black, 0.4);
+      transform: rotate(5deg) scale(1.3);
     }
   }
 `;
 
-export { FooterDiv, FooterTitle, Footer };
+const LogoDiv = styled.div`
+  text-align: center;
+  img {
+    width: 15rem;
+    height: auto;
+  }
+`;
+
+const CopyRight = styled.div`
+  width: 100%;
+  text-align: center;
+  a {
+    &:link,
+    &:visited {
+      color: gray;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+
+    &:hover,
+    &:active {
+      color: white;
+      box-shadow: 0 1rem 2rem rgba(black, 0.4);
+      transform: rotate(5deg) scale(1.3);
+    }
+  }
+`;
+
+export { FooterDiv, FooterTitle, Footer, FooterNav, LogoDiv, CopyRight };

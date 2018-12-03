@@ -14,11 +14,7 @@ const ExperienceTitle = styled.div`
   width: 100%;
   grid-row: 1;
   grid-column: 1 / span 4;
-  padding: 2rem;
-  font-size: 2rem;
-  font-weight: 400;
   text-align: center;
-  background-color: ${props => props.theme.offWhite};
 `;
 
 const Experience = styled.div`

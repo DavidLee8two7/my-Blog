@@ -1,69 +1,54 @@
 import React, { Component } from "react";
-import { FooterDiv, FooterTitle, Footer } from "./FooterStyles";
+import {
+  FooterDiv,
+  FooterTitle,
+  Footer,
+  FooterNav,
+  LogoDiv,
+  CopyRight
+} from "./FooterStyles";
+import SectionTitle from "../styles/SectionTitle";
 
 class FooterSection extends Component {
   render() {
     return (
       <FooterDiv>
-        <FooterTitle>Footer title</FooterTitle>
-        <Footer>
-          <footer className="footer">
-            <div className="footer__logo-box">
-              <picture className="footer__logo">
-                <source src="" media="" />
-                <img src="" alt="" src="" />
-              </picture>
-            </div>
-            <div className="row">
-              <div className="col-1-of-2">
-                <div className="footer__navigation">
-                  <ul className="footer__list">
-                    <li className="footer__item">
-                      <a href="#" className="footer__link">
-                        Company
-                      </a>
-                    </li>
-                    <li className="footer__item">
-                      <a href="#" className="footer__link">
-                        Contact us
-                      </a>
-                    </li>
-                    <li className="footer__item">
-                      <a href="#" className="footer__link">
-                        Carrers
-                      </a>
-                    </li>
-                    <li className="footer__item">
-                      <a href="#" className="footer__link">
-                        Privacy policy
-                      </a>
-                    </li>
-                    <li className="footer__item">
-                      <a href="#" className="footer__link">
-                        Terms
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="col-1-of-2">
-                <p className="footer__copyright">
-                  Built by{" "}
-                  <a href="#" className="footer__link">
-                    David Lee
-                  </a>{" "}
-                  for his online course{" "}
-                  <a href="#" className="footer__link">
-                    Advanced CSS and Sass
-                  </a>
-                  . Copyright &copy; by David Lee. You are 100% allowed to use
-                  this webpage for both personal and commercial use, but NOT to
-                  claim it as your own design. A credit to the original author,
-                  David Lee, is of course highly appreciated!
-                </p>
-              </div>
-            </div>
-          </footer>
+        <FooterTitle>
+          <a href="/contact">
+            <SectionTitle
+              visible={"footer 📽️"}
+              invisible={"You can find more samples by clicking here!"}
+            />
+          </a>
+        </FooterTitle>
+        <Footer className="footer">
+          <FooterNav>
+            <ul>
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/projects">Projects</a>
+              </li>
+              <li>
+                <a href="/skills">Skills</a>
+              </li>
+              <li className="/contact">
+                <a href="/contact">Contact</a>
+              </li>
+            </ul>
+          </FooterNav>
+
+          <LogoDiv>
+            <img src="/static/img/apollo.png" alt="" src="" />
+          </LogoDiv>
+
+          <CopyRight>
+            <p>
+              Hire <a href="/contact">David Lee</a> Copyright &copy; by David
+              Lee.
+            </p>
+          </CopyRight>
         </Footer>
       </FooterDiv>
     );
