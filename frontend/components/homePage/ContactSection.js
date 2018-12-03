@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ContactDiv, ContactTitle, Contact } from "../styles/ContactStyles";
+import { ContactDiv, ContactTitle, Contact } from "./ContactStyles";
 
 class ContactSection extends Component {
   render() {

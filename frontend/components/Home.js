@@ -34,10 +34,8 @@ class Home extends Component {
         </Who>
         <AboutSection />
         <TechSection />
-        <ExperienceSection />
         <ProjectSection />
-        <ContactSection />
-        <FooterSection />
+        <ExperienceSection />
       </HomeStyles>
     );
   }

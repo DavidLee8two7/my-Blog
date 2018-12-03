@@ -17,13 +17,23 @@ const IntroDiv = styled.div`
     text-shadow: ${props => props.theme.ts};
   }
   p {
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     margin-left: 3rem;
   }
   span {
     font-weight: bold;
-    color: ${props => props.theme.orange};
+  }
+  .loc {
     border-bottom: 1.5px solid ${props => props.theme.orange};
+    &:hover,
+    &:active {
+      color: ${props => props.theme.orange};
+    }
+  }
+  @media (max-width: 1600px) {
+    p {
+      font-size: 2rem;
+    }
   }
 `;
 
@@ -46,4 +56,20 @@ const Picture = styled.div`
   }
 `;
 
-export { IntroDiv, Picture };
+const AboutDiv = styled.span`
+  display: inline-block;
+  .visible {
+    display: inline-block;
+  }
+  .invisible {
+    display: none;
+  }
+  &:hover .visible {
+    display: none;
+  }
+  &:hover .invisible {
+    display: inline-block;
+  }
+`;
+
+export { IntroDiv, Picture, AboutDiv };

@@ -1,16 +1,15 @@
 import styled from "styled-components";
 
-const ContactDiv = styled.div`
+const ExperienceDiv = styled.div`
   z-index: 2;
-  grid-row: 7;
+  grid-row: 6;
   grid-column: 1 / span 4;
   width: 100%;
   justify-items: center;
   align-items: center;
-  background: linear-gradient(rgba(33, 100, 244, 0.5), rgba(33, 100, 244, 0.5));
 `;
 
-const ContactTitle = styled.div`
+const ExperienceTitle = styled.div`
   z-index: 3;
   width: 100%;
   grid-row: 1;
@@ -22,19 +21,19 @@ const ContactTitle = styled.div`
   background-color: ${props => props.theme.offWhite};
 `;
 
-const Contact = styled.div`
+const Experience = styled.div`
   z-index: 3;
-  width: 85%;
-  height: 50vh;
-  margin: 6rem auto;
+  width: 65%;
+  margin: 10rem auto;
   background-color: ${props => props.theme.offWhite};
   border-radius: 3px;
   padding: 4rem;
+  transform: skewX(-12deg);
   .company__shape {
     width: 15rem;
     height: 15rem;
     float: left;
-    transform: translateX(-2rem);
+    transform: translateX(-2rem) skewX(12deg);
     position: relative;
     overflow: hidden;
     border-radius: 50%;
@@ -48,9 +47,13 @@ const Contact = styled.div`
 
   .company__img {
     height: 100%;
-    transform: scale(1.4);
+    transform: translateX(-4rem) scale(1.4);
     backface-visibility: hidden;
     transition: all 0.5s;
+  }
+
+  .company__text {
+    transform: skewX(12deg);
   }
 
   .company__caption {
@@ -78,4 +81,4 @@ const Contact = styled.div`
   }
 `;
 
-export { ContactDiv, ContactTitle, Contact };
+export { ExperienceDiv, ExperienceTitle, Experience };

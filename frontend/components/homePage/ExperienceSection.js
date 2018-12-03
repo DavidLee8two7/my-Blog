@@ -1,9 +1,5 @@
 import React, { Component } from "react";
-import {
-  ExperienceDiv,
-  Experience,
-  ExperienceTitle
-} from "../styles/ExperienceStyles";
+import { ExperienceDiv, Experience, ExperienceTitle } from "./ExperienceStyles";
 
 class ExperienceSection extends Component {
   render() {

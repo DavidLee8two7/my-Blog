@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { FooterDiv, FooterTitle, Footer } from "../styles/FooterStyles";
+import { FooterDiv, FooterTitle, Footer } from "./FooterStyles";
 
 class FooterSection extends Component {
   render() {
@@ -7,60 +7,53 @@ class FooterSection extends Component {
       <FooterDiv>
         <FooterTitle>Footer title</FooterTitle>
         <Footer>
-          <footer class="footer">
-            <div class="footer__logo-box">
-              <picture class="footer__logo">
-                <source
-                  srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
-                  media="(max-width: 37.5em)"
-                />
-                <img
-                  srcset="/static/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
-                  alt="Full logo"
-                  src="img/logo-green-2x.png"
-                />
+          <footer className="footer">
+            <div className="footer__logo-box">
+              <picture className="footer__logo">
+                <source src="" media="" />
+                <img src="" alt="" src="" />
               </picture>
             </div>
-            <div class="row">
-              <div class="col-1-of-2">
-                <div class="footer__navigation">
-                  <ul class="footer__list">
-                    <li class="footer__item">
-                      <a href="#" class="footer__link">
+            <div className="row">
+              <div className="col-1-of-2">
+                <div className="footer__navigation">
+                  <ul className="footer__list">
+                    <li className="footer__item">
+                      <a href="#" className="footer__link">
                         Company
                       </a>
                     </li>
-                    <li class="footer__item">
-                      <a href="#" class="footer__link">
+                    <li className="footer__item">
+                      <a href="#" className="footer__link">
                         Contact us
                       </a>
                     </li>
-                    <li class="footer__item">
-                      <a href="#" class="footer__link">
+                    <li className="footer__item">
+                      <a href="#" className="footer__link">
                         Carrers
                       </a>
                     </li>
-                    <li class="footer__item">
-                      <a href="#" class="footer__link">
+                    <li className="footer__item">
+                      <a href="#" className="footer__link">
                         Privacy policy
                       </a>
                     </li>
-                    <li class="footer__item">
-                      <a href="#" class="footer__link">
+                    <li className="footer__item">
+                      <a href="#" className="footer__link">
                         Terms
                       </a>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div class="col-1-of-2">
-                <p class="footer__copyright">
+              <div className="col-1-of-2">
+                <p className="footer__copyright">
                   Built by{" "}
-                  <a href="#" class="footer__link">
+                  <a href="#" className="footer__link">
                     David Lee
                   </a>{" "}
                   for his online course{" "}
-                  <a href="#" class="footer__link">
+                  <a href="#" className="footer__link">
                     Advanced CSS and Sass
                   </a>
                   . Copyright &copy; by David Lee. You are 100% allowed to use

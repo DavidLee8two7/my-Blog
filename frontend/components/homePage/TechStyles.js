@@ -4,12 +4,10 @@ const TechDiv = styled.div`
   z-index: 2;
   grid-row: 4;
   grid-column: 1 / span 4;
-  width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   align-items: center;
-  background: linear-gradient(rgba(33, 100, 244, 0.5), rgba(33, 100, 244, 0.5));
 `;
 
 const TechTitle = styled.div`
@@ -17,10 +15,8 @@ const TechTitle = styled.div`
   width: 100%;
   grid-row: 1;
   grid-column: 1 / span 4;
-  font-size: 2rem;
-  font-weight: 400;
   text-align: center;
-  background-color: ${props => props.theme.offWhite};
+  border-radius: 3px;
 `;
 
 const IconsDiv = styled.div`

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { IntroDiv, Picture } from "../styles/AboutStyles";
+import { IntroDiv, Picture, AboutDiv } from "./AboutStyles";
 
 class AboutMe extends Component {
   render() {
@@ -12,13 +12,16 @@ class AboutMe extends Component {
         <div>
           <h2>About Me</h2>
           <p>
-            My name is <span>David Lee</span>. I'm a web developer based in
-            <a
-              target="_blank"
-              href="https://www.google.com/maps/place/Buena+Park,+CA/@33.852734,-118.0418032,13z/data=!3m1!4b1!4m5!3m4!1s0x80dd2bf413605d2b:0xcd9feee5cde8fe25!8m2!3d33.8674044!4d-117.9981387"
-            >
-              <span> Buena Park, CA, USA</span>
-            </a>
+            Hi, My name is <span>David Lee</span>. I'm a web developer based in{" "}
+            <AboutDiv>
+              <a
+                target="_blank"
+                href="https://www.google.com/maps/place/Buena+Park,+CA/@33.850486,-118.0580578,10.29z/data=!4m5!3m4!1s0x80dd2bf413605d2b:0xcd9feee5cde8fe25!8m2!3d33.8674044!4d-117.9981387"
+              >
+                <span className="loc visible"> Buena Park, CA, USA</span>
+                <span className="loc invisible"> Show it in Google Map!</span>
+              </a>
+            </AboutDiv>
           </p>
           <p>
             As a web developer, I enjoy using my obsessive attention to detail,

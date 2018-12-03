@@ -7,7 +7,6 @@ const FooterDiv = styled.div`
   width: 100%;
   justify-items: center;
   align-items: center;
-  background: linear-gradient(rgba(33, 100, 244, 0.5), rgba(33, 100, 244, 0.5));
 `;
 
 const FooterTitle = styled.div`

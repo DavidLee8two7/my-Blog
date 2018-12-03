@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import TechIcon from "../styles/TechIcon";
-import {
-  TechDiv,
-  TechTitle,
-  IconsDiv,
-  FrontDiv,
-  BackDiv
-} from "../styles/TechStyles";
+import SectionTitle from "../styles/SectionTitle";
+import { TechDiv, TechTitle, IconsDiv, FrontDiv, BackDiv } from "./TechStyles";
 
 const tech = {
+  visible: {
+    desc: "🚣 Currently focusing on React & GraphQL Fullstack."
+  },
+  invisible: {
+    desc: "Please click to find more information! 🚣"
+  },
   react: {
     title: "react",
     src: ""
@@ -29,15 +30,12 @@ const tech = {
 
 class TechSection extends Component {
   render() {
-    const { react, apollo, graphql, prisma } = tech;
+    const { react, apollo, graphql, prisma, visible, invisible } = tech;
     return (
       <TechDiv>
         <TechTitle>
           <a href="/skills">
-            <p>
-              Current Focus: React & Apollo Client GraphQL Yoga & Prisma. you
-              can find more tech i like here
-            </p>
+            <SectionTitle visible={visible.desc} invisible={invisible.desc} />
           </a>
         </TechTitle>
         <IconsDiv>
