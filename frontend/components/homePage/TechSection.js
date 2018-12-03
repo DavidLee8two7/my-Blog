@@ -10,27 +10,42 @@ const tech = {
   invisible: {
     desc: "Please click to find more information!"
   },
-  react: {
+  firstTech: {
     title: "react",
-    src: ""
+    src: "",
+    viewBox: "",
+    href: "https://reactjs.org/"
   },
-  apollo: {
+  secondTech: {
     title: "apollo",
-    src: "/static/img/apollo.png"
+    src: "",
+    viewBox: "0 0 256 256",
+    href: "https://www.apollographql.com/docs/?no-cache=1"
   },
-  graphql: {
+  thirdTech: {
     title: "graphql",
-    src: ""
+    src: "",
+    viewBox: "",
+    href: "https://graphql.org/learn/"
   },
-  prisma: {
+  fourthTech: {
     title: "prisma",
-    src: ""
+    src: "",
+    viewBox: "",
+    href: "https://www.prisma.io/"
   }
 };
 
 class TechSection extends Component {
   render() {
-    const { react, apollo, graphql, prisma, visible, invisible } = tech;
+    const {
+      firstTech,
+      secondTech,
+      thirdTech,
+      fourthTech,
+      visible,
+      invisible
+    } = tech;
     return (
       <TechDiv>
         <TechTitle>
@@ -40,16 +55,33 @@ class TechSection extends Component {
         </TechTitle>
         <IconsDiv>
           <FrontDiv>
-            <TechIcon title={react.title} src={react.src} />
-            <TechIcon img title={apollo.title} src={apollo.src} />
+            <a href={firstTech.href} target="_blank">
+              <TechIcon title={firstTech.title} />
+            </a>
+            <a href={secondTech.href} target="_blank">
+              <TechIcon title={secondTech.title} viewBox={secondTech.viewBox} />
+            </a>
+            <a href={firstTech.href} target="_blank">
+              <p>{firstTech.title}</p>
+            </a>
+            <a href={secondTech.href} target="_blank">
+              <p>{secondTech.title}</p>
+            </a>
           </FrontDiv>
+
           <BackDiv>
-            <TechIcon title={graphql.title} src={graphql.src} />
-            <TechIcon
-              className="prisma"
-              title={prisma.title}
-              src={prisma.src}
-            />
+            <a href={thirdTech.href} target="_blank">
+              <TechIcon title={thirdTech.title} />
+            </a>
+            <a href={fourthTech.href} target="_blank">
+              <TechIcon title={fourthTech.title} />
+            </a>
+            <a href={thirdTech.href} target="_blank">
+              <p>{thirdTech.title}</p>
+            </a>
+            <a href={fourthTech.href} target="_blank">
+              <p>{fourthTech.title}</p>
+            </a>
           </BackDiv>
         </IconsDiv>
       </TechDiv>

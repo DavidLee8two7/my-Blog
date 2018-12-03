@@ -26,11 +26,12 @@ class AboutMe extends Component {
           <p>
             As a web developer, I enjoy using my obsessive attention to detail,
             my unequivocal love for making things, and my mission-driven work
-            ethic to build better future for our kids. I’ve always sought out
-            opportunities and challenges that are meaningful to me. Although my
-            professional path has taken many twists and turns - from ERP system
-            developer, Supply chain management, business consulting - I've never
-            stopped engaging my passion to help others and solve problems.
+            ethic to build better future for our children and seniors. I’ve
+            always sought out opportunities and challenges that are meaningful
+            to me. Although my professional path has taken many twists and turns
+            - from ERP system developer, Supply chain management, business
+            consulting - I've never stopped engaging my passion to help others
+            and solve problems.
           </p>
         </div>
       </IntroDiv>
