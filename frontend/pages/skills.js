@@ -1,7 +1,5 @@
-import Skills from "../components/Skills";
-
 const skills = () => {
-  return <Skills />;
+  return <div>skills</div>;
 };
 
 export default skills;

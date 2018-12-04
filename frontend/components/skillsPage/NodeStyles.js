@@ -21,12 +21,11 @@ const NodeStyles = styled.div`
   header {
     border-bottom: 5px solid ${props => props.theme.orange};
     margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    font-family: ${props => props.theme.fontDisplay};
-    font-size: 24px;
+    font-family: ${props => props.theme.fontPrimary};
+    font-size: 30px;
     font-weight: 800;
     line-height: 2;
-    color: ${props => props.theme.orange};
+    color: black;
   }
   footer {
     border-top: 10px double ${props => props.theme.orange};

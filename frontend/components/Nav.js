@@ -12,12 +12,9 @@ const Nav = () => (
     <Link href="/skills">
       <a>skills</a>
     </Link>
-    <Link href="/skills">
+    <Link href="/contact">
       <a>contact</a>
     </Link>
-    {/* <Link href="/admin">
-      <a>admin</a>
-    </Link> */}
   </NavStyles>
 );
 

@@ -18,25 +18,14 @@ const NavStyles = styled.ul`
     background: none;
     border: 0;
     cursor: pointer;
-    color: ${props => props.theme.blue};
+    color: ${props => props.theme.black};
     font-weight: 800;
     @media (max-width: 700px) {
       font-size: 10px;
       padding: 0 10px;
     }
-    &:before {
-      content: "";
-      width: 1.5px;
-      background: ${props => props.theme.orange};
-      height: 100%;
-      left: 0;
-      position: absolute;
-      transform: skew(-20deg);
-      top: 0;
-      bottom: 0;
-    }
     &:after {
-      height: 1.5px;
+      height: 2px;
       background: ${props => props.theme.lightblue};
       content: "";
       width: 0;

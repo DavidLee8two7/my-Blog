@@ -1,9 +1,15 @@
 import React from "react";
 import { Query, Mutation } from "react-apollo";
 import gql from "graphql-tag";
-import NodeStyles from "../styles/NodeStyles";
+import NodeStyles from "./NodeStyles";
 import CloseButton from "../styles/CloseButton";
 import StyledButton from "../styles/StyledButton";
+import {
+  ReactSide,
+  TechType,
+  TechIcon,
+  TechDescription
+} from "../styles/StackList";
 
 const LOCAL_STATE_NODE = gql`
   query {
@@ -29,6 +35,24 @@ const NodeStack = () => {
                 </CloseButton>
                 <p>Node full Stack</p>
               </header>
+              <ReactSide>
+                <TechType>
+                  <TechIcon />
+                  <TechDescription />
+                </TechType>
+                <TechType>
+                  <TechIcon />
+                  <TechDescription />
+                </TechType>
+                <TechType>
+                  <TechIcon />
+                  <TechDescription />
+                </TechType>
+                <TechType>
+                  <TechIcon />
+                  <TechDescription />
+                </TechType>
+              </ReactSide>
               <footer>
                 <StyledButton onClick={toggleNode}>Close</StyledButton>
               </footer>

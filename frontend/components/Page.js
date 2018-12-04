@@ -9,11 +9,12 @@ const theme = {
   lightgray: "#E1E1E1",
   orange: "#ff6600",
   yellow: "#f7df1e",
-  green: "#6cc24a",
+  green: "#215732",
   black: "#393939",
   offWhite: "#EDEDED",
-  maxWidth: "1000px",
+  maxWidth: "100%",
   bs: "0 12px 24px 0 rgba(0, 0, 0, 0.09)",
+  ts: "0.15px 0.15px 0.30px rgba(0, 0, 0, 0.09)",
   fontDisplay: "'Playfair Display SC', serif",
   fontPrimary: "'Roboto', sans-serif"
 };
@@ -26,7 +27,6 @@ const StyledPage = styled.div`
 const Inner = styled.div`
   max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
-  padding: 2rem;
 `;
 
 injectGlobal`
