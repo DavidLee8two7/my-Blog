@@ -1,6 +1,16 @@
 import React, { Component } from "react";
 import SectionTitle from "../styles/SectionTitle";
-import { ProjectDiv, ProjectTitle, Project } from "./ProjectStyles";
+import {
+  ProjectDiv,
+  ProjectTitle,
+  Card,
+  CardFront,
+  CardBack,
+  PictureDiv,
+  Details,
+  BackDetails,
+  Price
+} from "./ProjectStyles";
 
 class ProjectSection extends Component {
   render() {
@@ -8,39 +18,84 @@ class ProjectSection extends Component {
       <ProjectDiv>
         <ProjectTitle>
           <a href="/skills">
-            <SectionTitle visible={"Here are some of sample projects 📽️"} invisible={"You can find more samples by clicking here!"} />
+            <SectionTitle
+              visible={"Projects 📽️"}
+              invisible={"You can find more samples by clicking here!"}
+            />
           </a>
         </ProjectTitle>
-        <Project>
-          <a href="/skills">
-            <img
-              className="project"
-              src="/static/img/CJ.jpeg"
-              alt="company logo"
-            />
-          <div className="shade">Food-stack software developer</div>
-          </a>
-        </Project>
-        <Project>
-          <a href="/skills">
-            <img
-              className="project"
-              src="/static/img/CJ.jpeg"
-              alt="company logo"
-            />
-          <div className="shade">Food-stack software developer</div>
-          </a>
-        </Project>
-        <Project>
-          <a href="/skills">
-            <img
-              className="project"
-              src="/static/img/CJ.jpeg"
-              alt="company logo"
-            />
-          <div className="shade">Food-stack software developer</div>
-          </a>
-        </Project>
+        <Card>
+          <CardFront className="front">
+            <PictureDiv>&nbsp;</PictureDiv>
+            <h4>
+              <span>Korean FoodNet</span>
+            </h4>
+            <Details>
+              <ul>
+                <li>Receipes</li>
+                <li>Restaurants</li>
+              </ul>
+            </Details>
+          </CardFront>
+
+          <CardBack className="back">
+            <BackDetails>
+              <Price>
+                <p className="title">title</p>
+                <p className="desc">desc</p>
+              </Price>
+              <a href="/projects">visit</a>
+            </BackDetails>
+          </CardBack>
+        </Card>
+        <Card>
+          <CardFront className="front">
+            <PictureDiv>&nbsp;</PictureDiv>
+            <h4>
+              <span>Korean FoodNet</span>
+            </h4>
+            <Details>
+              <ul>
+                <li>Receipes</li>
+                <li>Restaurants</li>
+              </ul>
+            </Details>
+          </CardFront>
+
+          <CardBack className="back">
+            <BackDetails>
+              <Price>
+                <p className="title">title</p>
+                <p className="desc">desc</p>
+              </Price>
+              <a href="/projects">visit</a>
+            </BackDetails>
+          </CardBack>
+        </Card>
+        <Card>
+          <CardFront className="front">
+            <PictureDiv>&nbsp;</PictureDiv>
+            <h4>
+              <span>Korean FoodNet</span>
+            </h4>
+            <Details>
+              <ul>
+                <li>Receipes</li>
+                <li>Restaurants</li>
+              </ul>
+            </Details>
+          </CardFront>
+
+          <CardBack className="back">
+            <BackDetails>
+              <Price>
+                <p className="title">title</p>
+                <p className="desc">desc</p>
+              </Price>
+              <a href="/projects">visit</a>
+            </BackDetails>
+          </CardBack>
+        </Card>
       </ProjectDiv>
     );
   }

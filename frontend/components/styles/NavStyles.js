@@ -25,7 +25,7 @@ const NavStyles = styled.ul`
       padding: 0 10px;
     }
     &:after {
-      height: 1.5px;
+      height: 2px;
       background: ${props => props.theme.lightblue};
       content: "";
       width: 0;

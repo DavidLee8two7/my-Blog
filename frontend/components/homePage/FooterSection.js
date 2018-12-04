@@ -7,20 +7,11 @@ import {
   LogoDiv,
   CopyRight
 } from "./FooterStyles";
-import SectionTitle from "../styles/SectionTitle";
 
 class FooterSection extends Component {
   render() {
     return (
       <FooterDiv>
-        <FooterTitle>
-          <a href="/contact">
-            <SectionTitle
-              visible={"footer 📽️"}
-              invisible={"You can find more samples by clicking here!"}
-            />
-          </a>
-        </FooterTitle>
         <Footer className="footer">
           <FooterNav>
             <ul>
@@ -40,13 +31,14 @@ class FooterSection extends Component {
           </FooterNav>
 
           <LogoDiv>
-            <img src="/static/img/apollo.png" alt="" src="" />
+            <a href="/contact">
+              <span>📞</span>
+            </a>
           </LogoDiv>
 
           <CopyRight>
             <p>
-              Hire <a href="/contact">David Lee</a> Copyright &copy; by David
-              Lee.
+              Copyright &copy; by <a href="/contact">David Lee</a>
             </p>
           </CopyRight>
         </Footer>
