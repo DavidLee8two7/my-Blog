@@ -9,7 +9,7 @@ import {
   PictureDiv,
   Details,
   BackDetails,
-  Price
+  Text
 } from "./ProjectStyles";
 
 class ProjectSection extends Component {
@@ -19,7 +19,9 @@ class ProjectSection extends Component {
         <ProjectTitle>
           <a href="/skills">
             <SectionTitle
-              visible={"Projects 📽️"}
+              visible={
+                "Here are couple samples for React & GraphQL : PUG & Node"
+              }
               invisible={"You can find more samples by clicking here!"}
             />
           </a>
@@ -28,7 +30,7 @@ class ProjectSection extends Component {
           <CardFront className="front">
             <PictureDiv>&nbsp;</PictureDiv>
             <h4>
-              <span>Korean FoodNet</span>
+              <span>Clothing Company's WebSite</span>
             </h4>
             <Details>
               <ul>
@@ -37,61 +39,12 @@ class ProjectSection extends Component {
               </ul>
             </Details>
           </CardFront>
-
           <CardBack className="back">
             <BackDetails>
-              <Price>
+              <Text>
                 <p className="title">title</p>
                 <p className="desc">desc</p>
-              </Price>
-              <a href="/projects">visit</a>
-            </BackDetails>
-          </CardBack>
-        </Card>
-        <Card>
-          <CardFront className="front">
-            <PictureDiv>&nbsp;</PictureDiv>
-            <h4>
-              <span>Korean FoodNet</span>
-            </h4>
-            <Details>
-              <ul>
-                <li>Receipes</li>
-                <li>Restaurants</li>
-              </ul>
-            </Details>
-          </CardFront>
-
-          <CardBack className="back">
-            <BackDetails>
-              <Price>
-                <p className="title">title</p>
-                <p className="desc">desc</p>
-              </Price>
-              <a href="/projects">visit</a>
-            </BackDetails>
-          </CardBack>
-        </Card>
-        <Card>
-          <CardFront className="front">
-            <PictureDiv>&nbsp;</PictureDiv>
-            <h4>
-              <span>Korean FoodNet</span>
-            </h4>
-            <Details>
-              <ul>
-                <li>Receipes</li>
-                <li>Restaurants</li>
-              </ul>
-            </Details>
-          </CardFront>
-
-          <CardBack className="back">
-            <BackDetails>
-              <Price>
-                <p className="title">title</p>
-                <p className="desc">desc</p>
-              </Price>
+              </Text>
               <a href="/projects">visit</a>
             </BackDetails>
           </CardBack>

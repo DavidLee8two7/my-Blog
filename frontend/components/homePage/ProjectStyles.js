@@ -5,7 +5,8 @@ const ProjectDiv = styled.div`
   grid-column: 1 / -1;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 30% 1fr 30%;
+  background: ${props => props.theme.offWhite};
 `;
 
 const ProjectTitle = styled.div`
@@ -20,20 +21,22 @@ const Card = styled.div`
   perspective: 150rem;
   position: relative;
   height: 52rem;
-  @media only screen and (max-width: 600px), only screen and (hover: none) {
-    height: auto;
-    border-radius: 3px;
-    background-color: $color-white;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
-    &:hover .front {
-      transform: rotateY(0);
-    }
-  }
   &:hover .front {
     transform: rotateY(-180deg);
   }
   &:hover .back {
     transform: rotateY(0);
+  }
+  @media only screen and (max-width: 600px), only screen and (hover: none) {
+    height: auto;
+    border-radius: 3px;
+    background-color: white;
+    box-shadow: 0 1.5rem 4rem rgba(black, 0.15);
+  }
+  @media only screen and (max-width: 600px), only screen and (hover: none) {
+    &:hover .front {
+      transform: rotateY(0deg);
+    }
   }
 `;
 
@@ -47,8 +50,9 @@ const CardFront = styled.div`
   backface-visibility: hidden;
   border-radius: 3px;
   overflow: hidden;
-  box-shadow: 0 1.5rem 4rem rgba(black, 0.15);
+  box-shadow: 0 1.5rem 4rem rgba(orange, 0.15);
   background-color: white;
+  color: ${props => props.theme.black};
   h4 {
     font-size: 2.8rem;
     font-weight: 300;
@@ -146,7 +150,7 @@ const BackDetails = styled.div`
   }
 `;
 
-const Price = styled.div`
+const Text = styled.div`
   text-align: center;
   color: white;
   margin-bottom: 8rem;
@@ -175,5 +179,5 @@ export {
   PictureDiv,
   Details,
   BackDetails,
-  Price
+  Text
 };

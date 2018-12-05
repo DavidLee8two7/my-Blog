@@ -1,19 +1,8 @@
 import styled from "styled-components";
 
-const ExperienceDiv = styled.div`
-  z-index: 2;
-  grid-row: 6;
-  grid-column: 1 / span 4;
-  width: 100%;
-  justify-items: center;
-  align-items: center;
-`;
-
 const ExperienceTitle = styled.div`
   z-index: 3;
   width: 100%;
-  grid-row: 1;
-  grid-column: 1 / span 4;
   text-align: center;
 `;
 
@@ -77,4 +66,4 @@ const Experience = styled.div`
   }
 `;
 
-export { ExperienceDiv, ExperienceTitle, Experience };
+export { ExperienceTitle, Experience };

@@ -112,4 +112,4 @@ const CopyRight = styled.div`
   }
 `;
 
-export { FooterDiv, FooterTitle, Footer, FooterNav, LogoDiv, CopyRight };
+export { FooterDiv, Footer, FooterNav, LogoDiv, CopyRight };

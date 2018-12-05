@@ -1,34 +1,23 @@
 import styled from "styled-components";
 
-const TechDiv = styled.div`
-  z-index: 2;
-  grid-row: 4;
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
-  align-items: center;
-  background: ${props => props.theme.offWhite};
-`;
-
 const TechTitle = styled.div`
   z-index: 3;
   width: 100%;
-  grid-row: 1;
-  grid-column: 1 / -1;
   text-align: center;
-  border-radius: 3px;
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
 `;
 
 const IconsDiv = styled.div`
-  margin: 4rem 0;
+  margin-top: 6rem;
+  margin-bottom: 4rem;
   width: 100%;
-  grid-row: 2;
-  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   align-items: center;
+  grid-column-gap: 15rem;
   p {
     text-transform: uppercase;
     font-size: 2.4rem;
@@ -45,23 +34,24 @@ const IconsDiv = styled.div`
 `;
 
 const FrontDiv = styled.div`
-  width: 80%;
+  margin-left: 4rem;
+  width: 100%;
   grid-column: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   align-items: center;
-  grid-column-gap: 15rem;
+  grid-column-gap: 10rem;
 `;
 
 const BackDiv = styled.div`
-  width: 80%;
+  width: 100%;
   grid-column: 2;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   align-items: center;
-  grid-column-gap: 15rem;
+  grid-column-gap: 10rem;
 `;
 
-export { TechDiv, TechTitle, IconsDiv, FrontDiv, BackDiv };
+export { TechTitle, IconsDiv, FrontDiv, BackDiv };

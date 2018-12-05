@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import {
   FooterDiv,
-  FooterTitle,
   Footer,
   FooterNav,
   LogoDiv,

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { HomeStyles, TitleDiv, Who } from "./styles/HomeStyles";
 import Head from "next/head";
+import { HomeStyles, TitleDiv, Who } from "./styles/HomeStyles";
 import AboutSection from "./homePage/AboutSection";
 import TechSection from "./homePage/TechSection";
 import ExperienceSection from "./homePage/ExperienceSection";
@@ -25,7 +25,7 @@ class Home extends Component {
           </div>
         </TitleDiv>
         <Who>
-          <h2>How can I help? 😍 I love Coding 😆 </h2>
+          <h2>How can I help? 😍 I love Coding!</h2>
           <p>
             Get to know me as a person. You can find out about my background,
             experience and more below.

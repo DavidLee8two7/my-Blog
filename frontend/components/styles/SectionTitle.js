@@ -17,7 +17,7 @@ const StyledBtn = styled.button`
     display: inline-block;
     height: 100%;
     width: 100%;
-    transition: all 0.2s;
+    transition: all 0.3s;
   }
 
   .visible {
