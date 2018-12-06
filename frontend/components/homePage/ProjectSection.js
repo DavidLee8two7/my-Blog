@@ -1,27 +1,26 @@
 import React, { Component } from "react";
 import SectionTitle from "../styles/SectionTitle";
+import SVGIcon from "../styles/SVGIcon";
+import { ProjectDiv, ProjectTitle, InfoDiv } from "./ProjectStyles";
 import {
-  ProjectDiv,
-  ProjectTitle,
   Card,
   CardFront,
   CardBack,
   PictureDiv,
-  Details,
-  BackDetails,
-  Text
-} from "./ProjectStyles";
+  FrontDesc,
+  BackDesc,
+  ProjectInfo,
+  ProjectLink
+} from "../styles/FlipCard";
 
 class ProjectSection extends Component {
   render() {
     return (
       <ProjectDiv>
         <ProjectTitle>
-          <a href="/skills">
+          <a href="/projects">
             <SectionTitle
-              visible={
-                "Here are couple samples for React & GraphQL : PUG & Node"
-              }
+              visible={"Samples for React & GraphQL"}
               invisible={"You can find more samples by clicking here!"}
             />
           </a>
@@ -30,23 +29,137 @@ class ProjectSection extends Component {
           <CardFront className="front">
             <PictureDiv>&nbsp;</PictureDiv>
             <h4>
-              <span>Clothing Company's WebSite</span>
+              <span>T-shirts Factory, CA</span>
             </h4>
-            <Details>
+            <FrontDesc>
               <ul>
-                <li>Receipes</li>
-                <li>Restaurants</li>
+                <li>User Account Manage</li>
+                <li>Sending Email</li>
+                <li>Shopping Cart</li>
+                <li>Pagination</li>
+                <li>Credit Card Checkout</li>
               </ul>
-            </Details>
+            </FrontDesc>
           </CardFront>
           <CardBack className="back">
-            <BackDetails>
-              <Text>
-                <p className="title">title</p>
-                <p className="desc">desc</p>
-              </Text>
-              <a href="/projects">visit</a>
-            </BackDetails>
+            <BackDesc>
+              <ProjectInfo>
+                <h4>
+                  <span>React Fullstack</span>
+                </h4>
+                <ul>
+                  <li>
+                    <strong>Ruby on Rails</strong> backend
+                  </li>
+                  <li>
+                    <strong>Materialize CSS</strong> frontend
+                  </li>
+                  <li>
+                    User <strong>authentication</strong> via Devise
+                  </li>
+                  <li>
+                    Implemented <strong>liking functionality</strong>
+                  </li>
+                  <li>
+                    <strong>Client-side rendering</strong> via AJAX
+                  </li>
+                </ul>
+              </ProjectInfo>
+              <ProjectLink>
+                <div className="icon">
+                  <a
+                    clasName="icon"
+                    aria-label="project"
+                    href="https://github.com"
+                    target="_blank"
+                  >
+                    <SVGIcon name={"github"} />
+                  </a>
+                </div>
+                <div className="icon">
+                  <a aria-label="website" href="" target="_blank">
+                    <SVGIcon name={"external"} viewBox={"0 0 28 28"} />
+                  </a>
+                </div>
+              </ProjectLink>
+            </BackDesc>
+          </CardBack>
+        </Card>
+        <InfoDiv>
+          <h4>
+            <span>Korean Food Network</span>
+          </h4>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Necessitatibus quaerat atque eligendi ullam totam, qui deserunt aut
+            fugiat omnis doloribus iste excepturi! Ex corporis fuga ducimus
+            dolor neque ratione deleniti?
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Necessitatibus quaerat atque eligendi ullam totam, qui deserunt aut
+            fugiat omnis doloribus iste excepturi! Ex corporis fuga ducimus
+            dolor neque ratione deleniti?
+          </p>
+        </InfoDiv>
+        <Card>
+          <CardFront className="front">
+            <PictureDiv>&nbsp;</PictureDiv>
+            <h4>
+              <span>Korean Food Network</span>
+            </h4>
+            <FrontDesc>
+              <ul>
+                <li>User Permission Manage</li>
+                <li>Image Uploading</li>
+                <li>Password Reset</li>
+                <li>Search Bar</li>
+                <li>Google Map</li>
+              </ul>
+            </FrontDesc>
+          </CardFront>
+          <CardBack className="back">
+            <BackDesc>
+              <ProjectInfo>
+                <h4>
+                  <span>Node Fullstack</span>
+                </h4>
+                <ul>
+                  <li>
+                    <strong>Ruby on Rails</strong> backend
+                  </li>
+                  <li>
+                    <strong>Materialize CSS</strong> frontend
+                  </li>
+                  <li>
+                    User <strong>authentication</strong> via Devise
+                  </li>
+                  <li>
+                    Implemented <strong>liking functionality</strong>
+                  </li>
+                  <li>
+                    <strong>Client-side rendering</strong> via AJAX
+                  </li>
+                </ul>
+              </ProjectInfo>
+              <ProjectLink>
+                <div className="icon">
+                  <a
+                    clasName="icon"
+                    aria-label="project"
+                    href="https://github.com"
+                    target="_blank"
+                  >
+                    <SVGIcon name={"github"} />
+                  </a>
+                </div>
+                <div className="icon">
+                  <a aria-label="website" href="" target="_blank">
+                    <SVGIcon name={"external"} viewBox={"0 0 28 28"} />
+                  </a>
+                </div>
+              </ProjectLink>
+            </BackDesc>
           </CardBack>
         </Card>
       </ProjectDiv>

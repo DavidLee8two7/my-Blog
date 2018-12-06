@@ -2,15 +2,17 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledBtn = styled.button`
+  z-index: 3;
   width: 100%;
   position: relative;
   overflow: hidden;
   border: none;
-  border-radius: 0.3rem;
-  background-image: linear-gradient(to right, #f7df1e, #f7df1e);
-  font-size: 3rem;
-  font-weight: 600;
-  color: black;
+  background: ${props => props.theme.offWhite};
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: ${props => props.theme.black};
+  box-shadow: ${props => props.theme.sbs};
+  font-family: ${props => props.theme.fontDisplay};
   cursor: pointer;
 
   & > * {
@@ -34,9 +36,12 @@ const StyledBtn = styled.button`
   }
 
   &:hover {
-    background-image: linear-gradient(to left, #f7df1e, #f7df1e);
+    background-image: linear-gradient(
+      to left,
+      rgb(247, 223, 30),
+      rgb(247, 223, 30)
+    );
   }
-
   &:hover .visible {
     transform: translateY(100%);
   }

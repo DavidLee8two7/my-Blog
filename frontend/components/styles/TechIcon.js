@@ -6,11 +6,12 @@ const TechDiv = styled.div`
   width: 100%;
   height: auto;
   transition: all 0.3s;
-  img {
-    width: 100%;
-    height: auto;
-    color: black;
-  }
+  box-shadow: ${props => props.theme.bbs};
+  margin-right: 0;
+  margin-left: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
   &:hover {
     transform: translateY(-1rem) scale(1.02);
   }

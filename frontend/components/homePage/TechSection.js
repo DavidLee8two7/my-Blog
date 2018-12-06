@@ -38,14 +38,14 @@ class TechSection extends Component {
       fourthTech: {
         title: "prisma",
         src: "",
-        viewBox: "",
+        viewBox: "-3.5 0 32 32",
         href: "https://www.prisma.io/"
       }
     };
 
     return (
       <Zoom
-        fraction={0.9}
+        fraction={0.7}
         onReveal={() => {
           this.setState({ show: true });
         }}
@@ -55,7 +55,8 @@ class TechSection extends Component {
             zIndex: "2",
             gridRow: "4",
             gridColumn: "1 / -1",
-            width: "100%"
+            width: "100%",
+            background: `${props => props.theme.offWhite}`
           }}
         >
           <TechTitle>
@@ -71,17 +72,13 @@ class TechSection extends Component {
             <FrontDiv>
               <a href={tech.firstTech.href} target="_blank">
                 <TechIcon title={tech.firstTech.title} />
+                <p>{tech.firstTech.title}</p>
               </a>
               <a href={tech.secondTech.href} target="_blank">
                 <TechIcon
                   title={tech.secondTech.title}
                   viewBox={tech.secondTech.viewBox}
                 />
-              </a>
-              <a href={tech.firstTech.href} target="_blank">
-                <p>{tech.firstTech.title}</p>
-              </a>
-              <a href={tech.secondTech.href} target="_blank">
                 <p>{tech.secondTech.title}</p>
               </a>
             </FrontDiv>
@@ -89,14 +86,13 @@ class TechSection extends Component {
             <BackDiv>
               <a href={tech.thirdTech.href} target="_blank">
                 <TechIcon title={tech.thirdTech.title} />
-              </a>
-              <a href={tech.fourthTech.href} target="_blank">
-                <TechIcon title={tech.fourthTech.title} />
-              </a>
-              <a href={tech.thirdTech.href} target="_blank">
                 <p>{tech.thirdTech.title}</p>
               </a>
               <a href={tech.fourthTech.href} target="_blank">
+                <TechIcon
+                  title={tech.fourthTech.title}
+                  viewBox={tech.fourthTech.viewBox}
+                />
                 <p>{tech.fourthTech.title}</p>
               </a>
             </BackDiv>

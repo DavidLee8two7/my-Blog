@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Query, Mutation } from "react-apollo";
 import Head from "next/head";
-import { TOGGLE_CARD_REACT } from "../components/skillsPage/ReactStack";
-import { TOGGLE_CARD_NODE } from "../components/skillsPage/NodeStack";
+import { TOGGLE_CARD_REACT } from "./skillsPage/ReactStack";
+import { TOGGLE_CARD_NODE } from "./skillsPage/NodeStack";
 import gql from "graphql-tag";
 import styled from "styled-components";
 import Skill from "./skillsPage/Skill";

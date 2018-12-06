@@ -14,31 +14,33 @@ const HomeStyles = styled.div`
   width: 100%;
 `;
 
-const TitleDiv = styled.div`
+const NameDiv = styled.div`
   z-index: 2;
-  margin: 9rem auto;
+  margin: 6rem 0;
+  padding: 2rem;
   grid-row: 1;
-  grid-column: 1 / span 4;
+  grid-column: 1 / -1;
   text-align: center;
   text-transform: uppercase;
-  line-height: 1rem;
-  border-bottom: 1.5px solid ${props => props.theme.orange};
+  line-height: 1.4rem;
   h2 {
     font-family: ${props => props.theme.fontDisplay};
     font-size: 5.4rem;
-    text-shadow: 0.25px 0.25px 0.5px ${props => props.theme.orange};
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px ${props => props.theme.orange};
   }
   .david {
-    transform: translateX(-26rem);
+    transform: translateX(-20rem);
   }
   .lee {
-    transform: translateX(22rem);
+    transform: translateX(17rem);
   }
   .messages {
     margin-top: 20rem;
     font-size: 2.4rem;
     font-weight: 400;
     text-shadow: ${props => props.theme.ts};
+    border-bottom: 1.5px solid ${props => props.theme.orange};
   }
   @media (max-width: 1200px) {
     border-bottom: none;
@@ -59,13 +61,13 @@ const TitleDiv = styled.div`
   }
 `;
 
-const Who = styled.div`
+const GreetingDiv = styled.div`
   z-index: 2;
   grid-row: 2;
-  grid-column: 1 / span 4;
+  grid-column: 1 / -1;
   margin-bottom: 3rem;
   h2 {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     text-align: center;
   }
   p {
@@ -74,4 +76,4 @@ const Who = styled.div`
   }
 `;
 
-export { HomeStyles, TitleDiv, Who };
+export { HomeStyles, NameDiv, GreetingDiv };
