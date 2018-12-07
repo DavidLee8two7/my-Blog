@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import {
   FooterDiv,
-  FooterTitle,
   Footer,
   FooterNav,
+  ContactDiv,
   LogoDiv,
   CopyRight
 } from "./FooterStyles";
@@ -13,34 +13,37 @@ class FooterSection extends Component {
     return (
       <FooterDiv>
         <Footer className="footer">
-          <FooterNav>
-            <ul>
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="/projects">Projects</a>
-              </li>
-              <li>
-                <a href="/skills">Skills</a>
-              </li>
-              <li className="/contact">
-                <a href="/contact">Contact</a>
-              </li>
-            </ul>
-          </FooterNav>
-
           <LogoDiv>
             <a href="/contact">
-              <span>📞</span>
+              <img src="/static/img/myLogo.png" />
             </a>
           </LogoDiv>
-
-          <CopyRight>
-            <p>
-              Copyright &copy; by <a href="/contact">David Lee</a>
-            </p>
-          </CopyRight>
+          <ContactDiv>
+            <FooterNav>
+              <ul>
+                <li>
+                  <a href="/">Home</a>
+                </li>
+                <li>
+                  <a href="/projects">Projects</a>
+                </li>
+                <li>
+                  <a href="/talents">Know-how</a>
+                </li>
+                <li>
+                  <a href="/resource">Resource</a>
+                </li>
+                <li>
+                  <a href="/contact">Contact</a>
+                </li>
+              </ul>
+            </FooterNav>
+            <CopyRight>
+              <p>
+                Copyright &copy; by <a href="/contact">David Lee</a>
+              </p>
+            </CopyRight>
+          </ContactDiv>
         </Footer>
       </FooterDiv>
     );

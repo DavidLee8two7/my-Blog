@@ -8,6 +8,7 @@ const NavStyles = styled.ul`
   font-size: 2rem;
   a,
   button {
+    text-shadow: 0.5px 0.5px 0.5px ${props => props.theme.orange};
     padding: 1rem 3rem;
     display: flex;
     align-items: center;
@@ -26,7 +27,7 @@ const NavStyles = styled.ul`
     }
     &:after {
       height: 2px;
-      background: ${props => props.theme.lightblue};
+      background: ${props => props.theme.lightBlue};
       content: "";
       width: 0;
       position: absolute;

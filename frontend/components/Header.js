@@ -15,18 +15,17 @@ Router.onRouteChangeError = () => {
 };
 
 const Logo = styled.h1`
-  font-size: 3.6rem;
+  font-size: 4.2rem;
   font-family: ${props => props.theme.fontDisplay};
   margin-left: 2rem;
   position: relative;
-  text-shadow: ${props => props.theme.ts};
+  text-shadow: 0.5px 0.5px 0.5px ${props => props.theme.orange};
   a {
     padding: 0.5rem 1rem;
     color: ${props => props.theme.black};
     text-decoration: none;
     .javascript {
       color: ${props => props.theme.orange};
-      text-shadow: 0.15px 0.15px 0.3px ${props => props.theme.orange};
     }
   }
   @media (max-width: 1300px) {
@@ -37,14 +36,14 @@ const Logo = styled.h1`
 
 const StyleHeader = styled.header`
   .bar {
-    z-index: 4;
-    border-bottom: 1.5px solid ${props => props.theme.orange};
+    z-index: 5;
+    border-bottom: 2px solid ${props => props.theme.orange};
     display: inline-block;
     display: grid;
     grid-template-columns: auto 1fr;
     justify-content: space-between;
     align-items: stretch;
-    background: ${props => props.theme.offWhite};
+    background: ${props => props.theme.white};
     @media (max-width: 1300px) {
       grid-template-columns: 1fr;
       justify-content: center;

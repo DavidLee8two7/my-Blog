@@ -1,22 +1,23 @@
 import styled from "styled-components";
 
 const FooterDiv = styled.div`
-  padding: 2rem 0;
+  padding: 1rem 0;
   z-index: 2;
   grid-row: 7;
   grid-column: 1 / span 4;
   width: 100%;
   justify-items: center;
   align-items: center;
-  background-color: ${props => props.theme.offWhite};
+  background: ${props => props.theme.white};
+  font-size: 1.8rem;
 `;
 
 const Footer = styled.footer`
-  grid-row: 2;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   z-index: 3;
   width: 100%;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-items: center;
   align-items: center;
 `;
@@ -29,9 +30,7 @@ const FooterNav = styled.div`
   }
   li {
     display: inline-block;
-    &:not(:last-child) {
-      margin-right: 1.5rem;
-    }
+    margin-right: 2.5rem;
   }
   a {
     color: gray;
@@ -54,45 +53,35 @@ const FooterNav = styled.div`
   }
 `;
 
+const ContactDiv = styled.div`
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+`;
+
 const LogoDiv = styled.div`
   text-align: center;
-  color: ${props => props.theme.black};
-  a {
-    width: 6.1rem;
-    height: 6.1rem;
-    display: inline-block;
-    overflow: hidden;
-    border: 5px solid ${props => props.theme.orange};
-    position: relative;
-    transform: rotate(0deg);
-    transition: transform 0.5s;
-    font-weight: 800;
-    color: ${props => props.theme.orange};
-    span {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(0deg);
-      transition: transform 0.5s;
-    }
-    &:hover span {
-      transform: translate(-50%, -50%) rotate(90deg);
-      transform-origin: center;
-      transition: transform 0.5s;
-    }
+  width: 25rem;
+  transform: scale(1);
+  transition: all 0.4s;
+  img {
+    width: 100%;
+    transition: all 0.4s;
     &:hover {
-      transform: rotate(-90deg);
-      transition: transform 0.5s;
+      transform: scale(1.07);
     }
+  }
+  &:hover img {
+    transform: scale(1.07);
   }
 `;
 
 const CopyRight = styled.div`
   width: 100%;
   text-align: center;
-  color: gray;
+  color: ${props => props.theme.black};
+  font-size: 1.8rem;
   a {
-    font-size: 1.5rem;
     &:link,
     &:visited {
       color: ${props => props.theme.black};
@@ -112,4 +101,4 @@ const CopyRight = styled.div`
   }
 `;
 
-export { FooterDiv, FooterTitle, Footer, FooterNav, LogoDiv, CopyRight };
+export { FooterDiv, Footer, FooterNav, ContactDiv, LogoDiv, CopyRight };
