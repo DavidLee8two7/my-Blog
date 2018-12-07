@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Experience = styled.div`
   z-index: 3;
   width: 85%;
-  margin: 4rem auto;
+  margin: 6rem auto;
   background-color: ${props => props.theme.white};
   border-radius: 3px;
   padding: 6rem;

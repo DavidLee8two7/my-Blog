@@ -9,7 +9,7 @@ const Nav = () => (
     <Link href="/projects">
       <a>projects</a>
     </Link>
-    <Link href="/talents">
+    <Link href="/skills">
       <a>Know-how</a>
     </Link>
     <Link href="/resources">

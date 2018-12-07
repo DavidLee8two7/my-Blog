@@ -28,7 +28,7 @@ class FooterSection extends Component {
                   <a href="/projects">Projects</a>
                 </li>
                 <li>
-                  <a href="/talents">Know-how</a>
+                  <a href="/skills">Know-how</a>
                 </li>
                 <li>
                   <a href="/resource">Resource</a>

@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import { Query, Mutation } from "react-apollo";
 import Head from "next/head";
-import { TOGGLE_CARD_REACT } from "./skillsPage/ReactStack";
-import { TOGGLE_CARD_NODE } from "./skillsPage/NodeStack";
 import gql from "graphql-tag";
 import styled from "styled-components";
+import { TOGGLE_CARD_REACT } from "./skillsPage/ReactStack";
+import { TOGGLE_CARD_NODE } from "./skillsPage/NodeStack";
 import Skill from "./skillsPage/Skill";
-import ReactStack from "./skillsPage/ReactStack";
-import NodeStack from "./skillsPage/NodeStack";
-import Title from "./styles/Title";
+import ReactStack from "./skillsPage/ReactStyles";
+import NodeStack from "./skillsPage/NodeStyles";
+import Title from "./styles/SectionTitle";
 import StyledButton from "./styles/StyledButton";
 
 const ALL_SKILLS_QUERY = gql`
