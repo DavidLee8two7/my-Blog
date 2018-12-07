@@ -4,11 +4,11 @@ type User {
   email: String!
 }
 
-type Skill {
+type Memo {
   id: ID! @unique
-  title: String!
-  tech: [String]!
-  image: String
-  largeImage: String
+  name: String!
+  email: String!
+  subject: String!
+  message: String!
   # user: User!
 }
