@@ -109,7 +109,7 @@ class ProjectSection extends Component {
               <h4>
                 <span>How can I help?</span>
               </h4>
-              <p>OOP, Functional, modual, resualablity, etc</p>
+              <p>OOP, Functional, modual, resualablity, accessibility etc</p>
               <p>
                 A web developer's role is to combine design and business logic
                 to achieve a user-facing product. To do this successfully, a
