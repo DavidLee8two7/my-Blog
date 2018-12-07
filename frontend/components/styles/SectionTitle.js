@@ -9,7 +9,7 @@ const StyledBtn = styled.button`
   border: none;
   background: ${props => props.theme.offWhite};
   font-size: 2.6rem;
-  font-weight: 400;
+  font-weight: 600;
   color: ${props => props.theme.black};
   box-shadow: ${props => props.theme.sbs};
   font-family: ${props => props.theme.fontDisplay};
@@ -38,8 +38,8 @@ const StyledBtn = styled.button`
   &:hover {
     background-image: linear-gradient(
       to left,
-      rgb(247, 223, 30),
-      rgb(247, 223, 30)
+      rgba(0, 216, 255, 0.35),
+      rgba(0, 216, 255, 0.35)
     );
   }
   &:hover .visible {

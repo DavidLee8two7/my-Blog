@@ -45,7 +45,7 @@ class TechSection extends Component {
 
     return (
       <Zoom
-        fraction={0.7}
+        fraction={0.6}
         onReveal={() => {
           this.setState({ show: true });
         }}
@@ -55,8 +55,7 @@ class TechSection extends Component {
             zIndex: "2",
             gridRow: "4",
             gridColumn: "1 / -1",
-            width: "100%",
-            background: `${props => props.theme.offWhite}`
+            width: "100%"
           }}
         >
           <TechTitle>

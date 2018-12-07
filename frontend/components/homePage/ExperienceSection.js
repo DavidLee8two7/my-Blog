@@ -1,15 +1,32 @@
 import React, { Component } from "react";
-import { Experience, ExperienceTitle } from "./ExperienceStyles";
-import SectionTitle from "../styles/SectionTitle";
 import Reveal from "react-reveal/Reveal";
+import SectionTitle from "../styles/SectionTitle";
+import {
+  Experience,
+  ExperienceTitle,
+  ShapeDiv,
+  StyledImg,
+  TextDiv,
+  CaptionDiv,
+  DetailsDiv
+} from "./ExperienceStyles";
 
 class ExperienceSection extends Component {
+  state = {
+    show: false
+  };
+
   render() {
     return (
-      <Reveal bottom>
+      <Reveal
+        bottom
+        fraction={0.6}
+        onReveal={() => {
+          this.setState({ show: true });
+        }}
+      >
         <div
           style={{
-            zIndex: "2",
             gridRow: "6",
             gridColumn: "1 / -1",
             width: "100%",
@@ -18,52 +35,71 @@ class ExperienceSection extends Component {
           }}
         >
           <ExperienceTitle>
-            <a href="/skills">
+            <a href="/talents">
               <SectionTitle
                 visible={"Experience 📽️"}
-                invisible={"You can find more samples by clicking here!"}
+                invisible={"You can find more information here!"}
               />
             </a>
           </ExperienceTitle>
           <Experience>
-            <div className="company__shape">
-              <img
-                src="/static/img/CJ.jpeg"
-                alt="CJ"
-                className="company__img"
+            <ShapeDiv>
+              <StyledImg
+                src="/static/img/face.jpeg"
+                alt="profile"
+                className="image"
               />
-              <div className="company__caption">CJ</div>
-            </div>
-            <div className="company__text">
-              <h3>experience</h3>
+              <CaptionDiv className="caption">🐵</CaptionDiv>
+            </ShapeDiv>
+            <TextDiv>
+              <h4>
+                Software Developer / ERP(SAP) System consultant / Supply Chain
+                Management
+              </h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aperiam, ipsum sapiente aspernatur libero repellat quis
-                consequatur ducimus quam nisi exercitationem omnis earum qui.
-                Aperiam, ipsum sapiente aspernatur libero repellat quis
-                consequatur ducimus quam nisi exercitationem omnis earum qui.
+                I can help the client to create responsive websites that work on
+                a wide range of devices Assist with production of clean and
+                functional design Bridge communication gap between designers and
+                developers Integrate your website into an easy to use content
+                management system.
               </p>
-            </div>
-          </Experience>
-          <Experience>
-            <div className="company__shape">
-              <img
-                src="/static/img/CJ.jpeg"
-                alt="CJ"
-                className="company__img"
-              />
-              <div className="company__caption">CJ</div>
-            </div>
-            <div className="company__text">
-              <h3>experience</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aperiam, ipsum sapiente aspernatur libero repellat quis
-                consequatur ducimus quam nisi exercitationem omnis earum qui.
-                Aperiam, ipsum sapiente aspernatur libero repellat quis
-                consequatur ducimus quam nisi exercitationem omnis earum qui.
-              </p>
-            </div>
+            </TextDiv>
+            <DetailsDiv>
+              <div>
+                <h4>Projects</h4>
+                <ul>
+                  <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4>Accomplishments</h4>
+                <ul>
+                  <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </li>
+                </ul>
+              </div>
+            </DetailsDiv>
           </Experience>
         </div>
       </Reveal>

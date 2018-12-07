@@ -1,12 +1,9 @@
 import styled from "styled-components";
 
 const ProjectDiv = styled.div`
-  grid-row: 5;
-  grid-column: 1 / -1;
   width: 100%;
   display: grid;
   grid-template-columns: 30% 1fr 30%;
-  background: ${props => props.theme.white};
 `;
 
 const ProjectTitle = styled.div`
@@ -17,7 +14,9 @@ const ProjectTitle = styled.div`
 `;
 
 const InfoDiv = styled.div`
-  margin-top: 1rem;
+  z-index: 3;
+  margin: 3rem 0;
+  padding: 1rem;
   width: 100%;
   background: ${props => props.theme.white};
   box-shadow: 0 0 1.5rem rgba(126, 126, 126, 0.75);
@@ -42,8 +41,7 @@ const InfoDiv = styled.div`
     );
   }
   p {
-    padding: 3rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 `;
 

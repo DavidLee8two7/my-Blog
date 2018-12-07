@@ -21,11 +21,11 @@ class Home extends Component {
             <h2 className="lee">Lee</h2>
           </div>
           <div className="messages">
-            <p>What We don't know is more important than what We know 📑</p>
+            <p>What We don't know is more important than what We know 📚</p>
           </div>
         </NameDiv>
         <GreetingDiv>
-          <h2>How can I help? 😍 I love Coding!</h2>
+          <h2>How can I help? 😍</h2>
           <p>
             Get to know me as a person. You can find out about my background,
             experience and more below.

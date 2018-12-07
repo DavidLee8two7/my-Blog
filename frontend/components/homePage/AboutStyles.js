@@ -4,14 +4,14 @@ const IntroDiv = styled.div`
   z-index: 2;
   grid-row: 3;
   grid-column: 1 / span 4;
-  padding: 1rem 0;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   align-items: start;
-  background-color: ${props => props.theme.white};
-  box-shadow: ${props => props.theme.bbs};
+  margin-top: 1rem;
+  padding: 4rem;
+  background: ${props => props.theme.white};
   h2 {
     font-size: 3.2rem;
     text-align: center;
@@ -71,7 +71,6 @@ const IntroDiv = styled.div`
 
 const Picture = styled.div`
   width: 100%;
-  margin-left: 1rem;
   position: relative;
   box-shadow: ${props => props.theme.sbs};
   img {

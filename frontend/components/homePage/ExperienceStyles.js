@@ -1,69 +1,106 @@
 import styled from "styled-components";
 
-const ExperienceTitle = styled.div`
-  z-index: 3;
-  width: 100%;
-  text-align: center;
-`;
-
 const Experience = styled.div`
   z-index: 3;
-  width: 65%;
-  margin: 10rem auto;
-  background-color: ${props => props.theme.offWhite};
+  width: 85%;
+  margin: 4rem auto;
+  background-color: ${props => props.theme.white};
   border-radius: 3px;
-  padding: 4rem;
+  padding: 6rem;
   transform: skewX(-12deg);
-  .company__shape {
-    width: 15rem;
-    height: 15rem;
-    float: left;
-    transform: translateX(-2rem) skewX(12deg);
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-
-    @supports (clip-path: polygon(0 0)) {
-      clip-path: circle(50% at 50% 50%);
-      shape-outside: circle(50% at 50% 50%);
-      border-radius: none;
-    }
+  h4 {
+    width: 100%;
+    margin-left: 1rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-align: left;
   }
-
-  .company__img {
-    height: 100%;
-    transform: translateX(-4rem) scale(1.4);
-    backface-visibility: hidden;
-    transition: all 0.5s;
-  }
-
-  .company__text {
-    transform: skewX(12deg);
-  }
-
-  .company__caption {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 20%);
-    color: orange;
-    text-transform: uppercase;
-    font-size: 1.7rem;
-    text-align: center;
-    opacity: 0;
-    transition: all 0.5s;
-    backface-visibility: hidden;
-  }
-
-  &:hover .company__caption {
+  &:hover .caption {
     opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-
-  &:hover .company__img {
-    transform: translateX(-4rem) scale(1);
-    filter: blur(3px) brightness(80%);
+    transform: translate(-50%, -50%) scale(3.5);
   }
 `;
 
-export { ExperienceTitle, Experience };
+const ExperienceTitle = styled.div`
+  width: 100%;
+`;
+
+const ShapeDiv = styled.div`
+  width: 15rem;
+  height: 15rem;
+  float: left;
+  transform: translateX(-2rem) skewX(12deg);
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  @supports (clip-path: polygon(0 0)) {
+    clip-path: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    border-radius: none;
+  }
+`;
+
+const StyledImg = styled.img`
+  height: 100%;
+  backface-visibility: hidden;
+  transition: all 0.5s;
+  transform: scale(1.15);
+`;
+
+const TextDiv = styled.div`
+  transform: skewX(12deg);
+`;
+
+const CaptionDiv = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: ${props => props.theme.orange};
+  text-transform: uppercase;
+  font-size: 2.7rem;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.5s;
+  backface-visibility: hidden;
+  opacity: 0;
+  transform: translate(-50%, 20%);
+`;
+
+const DetailsDiv = styled.div`
+  border-top: 1px solid ${props => props.theme.lightGray};
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: start;
+  align-items: center;
+  transform: skewX(12deg);
+  h4 {
+    width: 100%;
+    margin-left: 1rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: left;
+  }
+  ul {
+    width: 100%;
+    margin: 0 auto;
+    li {
+      text-align: left;
+      font-size: 1.5rem;
+      padding: 0.5rem;
+      &:not(:last-child) {
+        border-bottom: 1px solid ${props => props.theme.lightGray};
+      }
+    }
+  }
+`;
+
+export {
+  Experience,
+  ExperienceTitle,
+  ShapeDiv,
+  StyledImg,
+  TextDiv,
+  CaptionDiv,
+  DetailsDiv
+};

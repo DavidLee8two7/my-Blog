@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 const Card = styled.div`
-  margin: 1rem;
+  margin: 3rem 2rem;
   perspective: 150rem;
   position: relative;
-  height: 58rem;
+  height: 56rem;
   &:hover .front {
     transform: rotateY(-180deg);
   }
@@ -25,7 +25,7 @@ const Card = styled.div`
 `;
 
 const CardFront = styled.div`
-  height: 58rem;
+  height: 56rem;
   transition: all 0.8s ease;
   position: absolute;
   top: 0;
@@ -93,7 +93,7 @@ const FrontDesc = styled.div`
       font-weight: 500;
       padding: 1rem;
       &:not(:last-child) {
-        border-bottom: 1px solid ${props => props.theme.lightgray};
+        border-bottom: 1px solid ${props => props.theme.lightGray};
       }
     }
   }
@@ -103,7 +103,7 @@ const FrontDesc = styled.div`
 `;
 
 const CardBack = styled.div`
-  height: 58rem;
+  height: 56rem;
   transition: all 0.8s ease;
   position: absolute;
   top: 0;
@@ -184,7 +184,7 @@ const ProjectInfo = styled.div`
       font-weight: 500;
       padding: 1rem;
       &:not(:last-child) {
-        border-bottom: 1px solid ${props => props.theme.lightgray};
+        border-bottom: 1px solid ${props => props.theme.lightGray};
       }
     }
   }

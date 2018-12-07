@@ -37,14 +37,13 @@ const Logo = styled.h1`
 const StyleHeader = styled.header`
   .bar {
     z-index: 5;
-    border-bottom: 4px solid ${props => props.theme.orange};
+    border-bottom: 2px solid ${props => props.theme.orange};
     display: inline-block;
     display: grid;
     grid-template-columns: auto 1fr;
     justify-content: space-between;
     align-items: stretch;
-    background: ${props => props.theme.offWhite};
-    box-shadow: ${props => props.theme.bbs};
+    background: ${props => props.theme.white};
     @media (max-width: 1300px) {
       grid-template-columns: 1fr;
       justify-content: center;
