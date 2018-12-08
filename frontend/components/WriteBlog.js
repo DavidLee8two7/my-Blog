@@ -5,30 +5,36 @@ import Router from "next/router";
 import Form from "./styles/Form";
 import Error from "./styles/ErrorMessage";
 
-const CREATE_MEMO_MUTATION = gql`
-  mutation CREATE_MEMO_MUTATION(
+const CREATE_BLOG_MUTATION = gql`
+  mutation CREATE_BLOG_MUTATION(
     $name: String!
     $email: String!
     $subject: String!
     $message: String!
+    $image: String
+    $largeImage: String
   ) {
-    createMemo(
+    createBlog(
       name: $name
       email: $email
       subject: $subject
       message: $message
+      image: $image
+      largeImage: $largeImage
     ) {
       id
     }
   }
 `;
 
-class CreateMemo extends Component {
+class WriteBlog extends Component {
   state = {
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
+    name: "test",
+    email: "hi@gmail.com",
+    subject: "subject",
+    message: "message",
+    image: "",
+    largeImage: ""
   };
 
   handleChange = e => {
@@ -37,23 +43,60 @@ class CreateMemo extends Component {
     this.setState({ [name]: val });
   };
 
+  uploadFile = async e => {
+    const files = e.target.files;
+    const data = new FormData();
+    data.append("file", files[0]);
+    data.append("upload_preset", "sickfits");
+
+    const res = await fetch(
+      "https://api.cloudinary.com/v1_1/davidlee8two7/image/upload",
+      {
+        method: "POST",
+        body: data
+      }
+    );
+    const file = await res.json();
+    this.setState({
+      image: file.secure_url,
+      largeImage: file.eager[0].secure_url
+    });
+  };
+
   render() {
     return (
-      <Mutation mutation={CREATE_MEMO_MUTATION} variables={this.state}>
-        {(createMemo, { loading, error }) => (
+      <Mutation mutation={CREATE_BLOG_MUTATION} variables={this.state}>
+        {(createBlog, { loading, error }) => (
           <Form
-            data-test="form"
             onSubmit={async e => {
               e.preventDefault();
-              const res = await createMemo();
+              const res = await createBlog();
               Router.push({
-                pathname: "/thanks",
-                query: { id: res.data.createMemo.id }
+                pathname: "/blogs",
+                query: { id: res.data.createBlog.id }
               });
             }}
           >
             <Error error={error} />
             <fieldset disabled={loading} aria-busy={loading}>
+              <label htmlFor="file">
+                Image
+                <input
+                  type="file"
+                  id="file"
+                  name="file"
+                  placeholder="Upload an image"
+                  required
+                  onChange={this.uploadFile}
+                />
+                {this.state.image && (
+                  <img
+                    width="200"
+                    src={this.state.image}
+                    alt="Upload Preview"
+                  />
+                )}
+              </label>
               <label htmlFor="name">
                 Name
                 <input
@@ -111,5 +154,4 @@ class CreateMemo extends Component {
   }
 }
 
-export default CreateMemo;
-export { CREATE_MEMO_MUTATION };
+export default WriteBlog;

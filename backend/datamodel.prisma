@@ -4,11 +4,13 @@ type User {
   email: String!
 }
 
-type Memo {
+type Blog {
   id: ID! @unique
   name: String!
   email: String!
   subject: String!
   message: String!
+  image: String
+  largeImage: String
   # user: User!
 }

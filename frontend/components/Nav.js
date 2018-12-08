@@ -15,6 +15,12 @@ const Nav = () => (
     <Link href="/resources">
       <a>resource</a>
     </Link>
+    <Link href="/blogs">
+      <a>blogs</a>
+    </Link>
+    <Link href="/writeblog">
+      <a>write blog</a>
+    </Link>
     <Link href="/contact">
       <a>contact</a>
     </Link>

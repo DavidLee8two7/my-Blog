@@ -1,7 +1,7 @@
 # source: https://eu1.prisma.sh/david-lee-9a8d2d/dlblog/dev
-# timestamp: Fri Dec 07 2018 13:49:18 GMT-0800 (Pacific Standard Time)
+# timestamp: Sat Dec 08 2018 13:26:04 GMT-0800 (Pacific Standard Time)
 
-type AggregateMemo {
+type AggregateBlog {
   count: Int!
 }
 
@@ -14,47 +14,45 @@ type BatchPayload {
   count: Long!
 }
 
-"""
-The `Long` scalar type represents non-fractional signed whole numeric values.
-Long can represent values between -(2^63) and 2^63 - 1.
-"""
-scalar Long
-
-type Memo implements Node {
+type Blog implements Node {
   id: ID!
   name: String!
   email: String!
   subject: String!
   message: String!
+  image: String
+  largeImage: String
 }
 
 """A connection to a list of items."""
-type MemoConnection {
+type BlogConnection {
   """Information to aid in pagination."""
   pageInfo: PageInfo!
 
   """A list of edges."""
-  edges: [MemoEdge]!
-  aggregate: AggregateMemo!
+  edges: [BlogEdge]!
+  aggregate: AggregateBlog!
 }
 
-input MemoCreateInput {
+input BlogCreateInput {
   name: String!
   email: String!
   subject: String!
   message: String!
+  image: String
+  largeImage: String
 }
 
 """An edge in a connection."""
-type MemoEdge {
+type BlogEdge {
   """The item at the end of the edge."""
-  node: Memo!
+  node: Blog!
 
   """A cursor for use in pagination."""
   cursor: String!
 }
 
-enum MemoOrderByInput {
+enum BlogOrderByInput {
   id_ASC
   id_DESC
   name_ASC
@@ -65,36 +63,42 @@ enum MemoOrderByInput {
   subject_DESC
   message_ASC
   message_DESC
+  image_ASC
+  image_DESC
+  largeImage_ASC
+  largeImage_DESC
   updatedAt_ASC
   updatedAt_DESC
   createdAt_ASC
   createdAt_DESC
 }
 
-type MemoPreviousValues {
+type BlogPreviousValues {
   id: ID!
   name: String!
   email: String!
   subject: String!
   message: String!
+  image: String
+  largeImage: String
 }
 
-type MemoSubscriptionPayload {
+type BlogSubscriptionPayload {
   mutation: MutationType!
-  node: Memo
+  node: Blog
   updatedFields: [String!]
-  previousValues: MemoPreviousValues
+  previousValues: BlogPreviousValues
 }
 
-input MemoSubscriptionWhereInput {
+input BlogSubscriptionWhereInput {
   """Logical AND on all given filters."""
-  AND: [MemoSubscriptionWhereInput!]
+  AND: [BlogSubscriptionWhereInput!]
 
   """Logical OR on all given filters."""
-  OR: [MemoSubscriptionWhereInput!]
+  OR: [BlogSubscriptionWhereInput!]
 
   """Logical NOT on all given filters combined by AND."""
-  NOT: [MemoSubscriptionWhereInput!]
+  NOT: [BlogSubscriptionWhereInput!]
 
   """
   The subscription event gets dispatched when it's listed in mutation_in
@@ -115,32 +119,36 @@ input MemoSubscriptionWhereInput {
   The subscription event gets only dispatched when some of the field names included in this list have been updated
   """
   updatedFields_contains_some: [String!]
-  node: MemoWhereInput
+  node: BlogWhereInput
 }
 
-input MemoUpdateInput {
+input BlogUpdateInput {
   name: String
   email: String
   subject: String
   message: String
+  image: String
+  largeImage: String
 }
 
-input MemoUpdateManyMutationInput {
+input BlogUpdateManyMutationInput {
   name: String
   email: String
   subject: String
   message: String
+  image: String
+  largeImage: String
 }
 
-input MemoWhereInput {
+input BlogWhereInput {
   """Logical AND on all given filters."""
-  AND: [MemoWhereInput!]
+  AND: [BlogWhereInput!]
 
   """Logical OR on all given filters."""
-  OR: [MemoWhereInput!]
+  OR: [BlogWhereInput!]
 
   """Logical NOT on all given filters combined by AND."""
-  NOT: [MemoWhereInput!]
+  NOT: [BlogWhereInput!]
   id: ID
 
   """All values that are not equal to given value."""
@@ -341,25 +349,111 @@ input MemoWhereInput {
 
   """All values not ending with the given string."""
   message_not_ends_with: String
+  image: String
+
+  """All values that are not equal to given value."""
+  image_not: String
+
+  """All values that are contained in given list."""
+  image_in: [String!]
+
+  """All values that are not contained in given list."""
+  image_not_in: [String!]
+
+  """All values less than the given value."""
+  image_lt: String
+
+  """All values less than or equal the given value."""
+  image_lte: String
+
+  """All values greater than the given value."""
+  image_gt: String
+
+  """All values greater than or equal the given value."""
+  image_gte: String
+
+  """All values containing the given string."""
+  image_contains: String
+
+  """All values not containing the given string."""
+  image_not_contains: String
+
+  """All values starting with the given string."""
+  image_starts_with: String
+
+  """All values not starting with the given string."""
+  image_not_starts_with: String
+
+  """All values ending with the given string."""
+  image_ends_with: String
+
+  """All values not ending with the given string."""
+  image_not_ends_with: String
+  largeImage: String
+
+  """All values that are not equal to given value."""
+  largeImage_not: String
+
+  """All values that are contained in given list."""
+  largeImage_in: [String!]
+
+  """All values that are not contained in given list."""
+  largeImage_not_in: [String!]
+
+  """All values less than the given value."""
+  largeImage_lt: String
+
+  """All values less than or equal the given value."""
+  largeImage_lte: String
+
+  """All values greater than the given value."""
+  largeImage_gt: String
+
+  """All values greater than or equal the given value."""
+  largeImage_gte: String
+
+  """All values containing the given string."""
+  largeImage_contains: String
+
+  """All values not containing the given string."""
+  largeImage_not_contains: String
+
+  """All values starting with the given string."""
+  largeImage_starts_with: String
+
+  """All values not starting with the given string."""
+  largeImage_not_starts_with: String
+
+  """All values ending with the given string."""
+  largeImage_ends_with: String
+
+  """All values not ending with the given string."""
+  largeImage_not_ends_with: String
 }
 
-input MemoWhereUniqueInput {
+input BlogWhereUniqueInput {
   id: ID
 }
 
+"""
+The `Long` scalar type represents non-fractional signed whole numeric values.
+Long can represent values between -(2^63) and 2^63 - 1.
+"""
+scalar Long
+
 type Mutation {
   createUser(data: UserCreateInput!): User!
-  createMemo(data: MemoCreateInput!): Memo!
+  createBlog(data: BlogCreateInput!): Blog!
   updateUser(data: UserUpdateInput!, where: UserWhereUniqueInput!): User
-  updateMemo(data: MemoUpdateInput!, where: MemoWhereUniqueInput!): Memo
+  updateBlog(data: BlogUpdateInput!, where: BlogWhereUniqueInput!): Blog
   deleteUser(where: UserWhereUniqueInput!): User
-  deleteMemo(where: MemoWhereUniqueInput!): Memo
+  deleteBlog(where: BlogWhereUniqueInput!): Blog
   upsertUser(where: UserWhereUniqueInput!, create: UserCreateInput!, update: UserUpdateInput!): User!
-  upsertMemo(where: MemoWhereUniqueInput!, create: MemoCreateInput!, update: MemoUpdateInput!): Memo!
+  upsertBlog(where: BlogWhereUniqueInput!, create: BlogCreateInput!, update: BlogUpdateInput!): Blog!
   updateManyUsers(data: UserUpdateManyMutationInput!, where: UserWhereInput): BatchPayload!
-  updateManyMemoes(data: MemoUpdateManyMutationInput!, where: MemoWhereInput): BatchPayload!
+  updateManyBlogs(data: BlogUpdateManyMutationInput!, where: BlogWhereInput): BatchPayload!
   deleteManyUsers(where: UserWhereInput): BatchPayload!
-  deleteManyMemoes(where: MemoWhereInput): BatchPayload!
+  deleteManyBlogs(where: BlogWhereInput): BatchPayload!
 }
 
 enum MutationType {
@@ -391,11 +485,11 @@ type PageInfo {
 
 type Query {
   users(where: UserWhereInput, orderBy: UserOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [User]!
-  memoes(where: MemoWhereInput, orderBy: MemoOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Memo]!
+  blogs(where: BlogWhereInput, orderBy: BlogOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Blog]!
   user(where: UserWhereUniqueInput!): User
-  memo(where: MemoWhereUniqueInput!): Memo
+  blog(where: BlogWhereUniqueInput!): Blog
   usersConnection(where: UserWhereInput, orderBy: UserOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): UserConnection!
-  memoesConnection(where: MemoWhereInput, orderBy: MemoOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): MemoConnection!
+  blogsConnection(where: BlogWhereInput, orderBy: BlogOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): BlogConnection!
 
   """Fetches an object given its ID"""
   node(
@@ -406,7 +500,7 @@ type Query {
 
 type Subscription {
   user(where: UserSubscriptionWhereInput): UserSubscriptionPayload
-  memo(where: MemoSubscriptionWhereInput): MemoSubscriptionPayload
+  blog(where: BlogSubscriptionWhereInput): BlogSubscriptionPayload
 }
 
 type User implements Node {

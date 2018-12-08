@@ -1,14 +1,23 @@
 # import * from './generated/prisma.graphql'
 
 type Mutation {
-  createMemo(
+  createBlog(
     name: String!
     email: String!
     subject: String!
     message: String!
-  ): Memo!
+    image: String
+    largeImage: String
+  ): Blog!
 }
 
 type Query {
-  memoes: [Memo]!
+  blogs(
+    where: BlogWhereInput
+    orderBy: BlogOrderByInput
+    skip: Int
+    first: Int
+  ): [Blog]!
+  blog(where: BlogWhereUniqueInput!): Blog
+  blogsConnection(where: BlogWhereInput): BlogConnection!
 }

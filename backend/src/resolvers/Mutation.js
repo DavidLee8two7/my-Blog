@@ -1,6 +1,6 @@
 const Mutations = {
-  createMemo(parent, args, ctx, info) {
-    const memo = ctx.db.mutation.createMemo(
+  async createBlog(parent, args, ctx, info) {
+    const blog = await ctx.db.mutation.createBlog(
       {
         data: {
           ...args
@@ -8,8 +8,7 @@ const Mutations = {
       },
       info
     );
-    console.log(memo);
-    return memo;
+    return blog;
   }
 };
 
