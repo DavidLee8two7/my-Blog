@@ -7,16 +7,14 @@ import Error from "./styles/ErrorMessage";
 
 const CREATE_BLOG_MUTATION = gql`
   mutation CREATE_BLOG_MUTATION(
-    $name: String!
-    $email: String!
+    $title: String!
     $subject: String!
     $message: String!
     $image: String
     $largeImage: String
   ) {
     createBlog(
-      name: $name
-      email: $email
+      title: $title
       subject: $subject
       message: $message
       image: $image
@@ -30,7 +28,7 @@ const CREATE_BLOG_MUTATION = gql`
 class WriteBlog extends Component {
   state = {
     name: "test",
-    email: "hi@gmail.com",
+    title: "title",
     subject: "subject",
     message: "message",
     image: "",
@@ -109,15 +107,15 @@ class WriteBlog extends Component {
                   onChange={this.handleChange}
                 />
               </label>
-              <label htmlFor="email">
-                Email
+              <label htmlFor="title">
+                Title
                 <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="email"
+                  type="title"
+                  id="title"
+                  name="title"
+                  placeholder="title"
                   required
-                  value={this.state.email}
+                  value={this.state.title}
                   onChange={this.handleChange}
                 />
               </label>

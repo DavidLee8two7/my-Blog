@@ -6,8 +6,7 @@ type User {
 
 type Blog {
   id: ID! @unique
-  name: String!
-  email: String!
+  title: String!
   subject: String!
   message: String!
   image: String

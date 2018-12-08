@@ -10,8 +10,7 @@ const ALL_BLOGS_QUERY = gql`
   query ALL_BLOGS_QUERY($skip: Int = 0, $first: Int = ${perPage} ) {
     blogs(first: $first, skip: $skip, orderBy: createdAt_DESC) {
       id
-      name
-      email
+      title
       subject
       message
       image

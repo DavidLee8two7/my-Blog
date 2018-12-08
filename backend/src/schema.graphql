@@ -2,8 +2,7 @@
 
 type Mutation {
   createBlog(
-    name: String!
-    email: String!
+    title: String!
     subject: String!
     message: String!
     image: String

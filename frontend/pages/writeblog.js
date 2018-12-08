@@ -1,7 +1,7 @@
 import WriteBlog from "../components/WriteBlog";
 
-const Blog = () => {
+const writeBlog = () => {
   return <WriteBlog />;
 };
 
-export default Blog;
+export default writeBlog;
