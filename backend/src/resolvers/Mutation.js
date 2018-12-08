@@ -1,7 +1,6 @@
 const Mutations = {
-  async createSkill(parent, args, ctx, info) {
-    // TODO: check if they are logged in
-    const skill = await ctx.db.mutation.createSkill(
+  async createBlog(parent, args, ctx, info) {
+    const blog = await ctx.db.mutation.createBlog(
       {
         data: {
           ...args
@@ -9,7 +8,7 @@ const Mutations = {
       },
       info
     );
-    return skill;
+    return blog;
   }
 };
 

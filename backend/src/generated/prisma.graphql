@@ -1,7 +1,7 @@
 # source: https://eu1.prisma.sh/david-lee-9a8d2d/dlblog/dev
-# timestamp: Mon Nov 26 2018 17:19:06 GMT-0800 (Pacific Standard Time)
+# timestamp: Sat Dec 08 2018 13:36:01 GMT-0800 (Pacific Standard Time)
 
-type AggregateSkill {
+type AggregateBlog {
   count: Int!
 }
 
@@ -14,112 +14,51 @@ type BatchPayload {
   count: Long!
 }
 
-"""
-The `Long` scalar type represents non-fractional signed whole numeric values.
-Long can represent values between -(2^63) and 2^63 - 1.
-"""
-scalar Long
-
-type Mutation {
-  createUser(data: UserCreateInput!): User!
-  createSkill(data: SkillCreateInput!): Skill!
-  updateUser(data: UserUpdateInput!, where: UserWhereUniqueInput!): User
-  updateSkill(data: SkillUpdateInput!, where: SkillWhereUniqueInput!): Skill
-  deleteUser(where: UserWhereUniqueInput!): User
-  deleteSkill(where: SkillWhereUniqueInput!): Skill
-  upsertUser(where: UserWhereUniqueInput!, create: UserCreateInput!, update: UserUpdateInput!): User!
-  upsertSkill(where: SkillWhereUniqueInput!, create: SkillCreateInput!, update: SkillUpdateInput!): Skill!
-  updateManyUsers(data: UserUpdateManyMutationInput!, where: UserWhereInput): BatchPayload!
-  updateManySkills(data: SkillUpdateManyMutationInput!, where: SkillWhereInput): BatchPayload!
-  deleteManyUsers(where: UserWhereInput): BatchPayload!
-  deleteManySkills(where: SkillWhereInput): BatchPayload!
-}
-
-enum MutationType {
-  CREATED
-  UPDATED
-  DELETED
-}
-
-"""An object with an ID"""
-interface Node {
-  """The id of the object."""
-  id: ID!
-}
-
-"""Information about pagination in a connection."""
-type PageInfo {
-  """When paginating forwards, are there more items?"""
-  hasNextPage: Boolean!
-
-  """When paginating backwards, are there more items?"""
-  hasPreviousPage: Boolean!
-
-  """When paginating backwards, the cursor to continue."""
-  startCursor: String
-
-  """When paginating forwards, the cursor to continue."""
-  endCursor: String
-}
-
-type Query {
-  users(where: UserWhereInput, orderBy: UserOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [User]!
-  skills(where: SkillWhereInput, orderBy: SkillOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Skill]!
-  user(where: UserWhereUniqueInput!): User
-  skill(where: SkillWhereUniqueInput!): Skill
-  usersConnection(where: UserWhereInput, orderBy: UserOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): UserConnection!
-  skillsConnection(where: SkillWhereInput, orderBy: SkillOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): SkillConnection!
-
-  """Fetches an object given its ID"""
-  node(
-    """The ID of an object"""
-    id: ID!
-  ): Node
-}
-
-type Skill implements Node {
+type Blog implements Node {
   id: ID!
   title: String!
-  tech: [String!]!
+  subject: String!
+  message: String!
   image: String
   largeImage: String
 }
 
 """A connection to a list of items."""
-type SkillConnection {
+type BlogConnection {
   """Information to aid in pagination."""
   pageInfo: PageInfo!
 
   """A list of edges."""
-  edges: [SkillEdge]!
-  aggregate: AggregateSkill!
+  edges: [BlogEdge]!
+  aggregate: AggregateBlog!
 }
 
-input SkillCreateInput {
+input BlogCreateInput {
   title: String!
+  subject: String!
+  message: String!
   image: String
   largeImage: String
-  tech: SkillCreatetechInput
-}
-
-input SkillCreatetechInput {
-  set: [String!]
 }
 
 """An edge in a connection."""
-type SkillEdge {
+type BlogEdge {
   """The item at the end of the edge."""
-  node: Skill!
+  node: Blog!
 
   """A cursor for use in pagination."""
   cursor: String!
 }
 
-enum SkillOrderByInput {
+enum BlogOrderByInput {
   id_ASC
   id_DESC
   title_ASC
   title_DESC
+  subject_ASC
+  subject_DESC
+  message_ASC
+  message_DESC
   image_ASC
   image_DESC
   largeImage_ASC
@@ -130,30 +69,31 @@ enum SkillOrderByInput {
   createdAt_DESC
 }
 
-type SkillPreviousValues {
+type BlogPreviousValues {
   id: ID!
   title: String!
-  tech: [String!]!
+  subject: String!
+  message: String!
   image: String
   largeImage: String
 }
 
-type SkillSubscriptionPayload {
+type BlogSubscriptionPayload {
   mutation: MutationType!
-  node: Skill
+  node: Blog
   updatedFields: [String!]
-  previousValues: SkillPreviousValues
+  previousValues: BlogPreviousValues
 }
 
-input SkillSubscriptionWhereInput {
+input BlogSubscriptionWhereInput {
   """Logical AND on all given filters."""
-  AND: [SkillSubscriptionWhereInput!]
+  AND: [BlogSubscriptionWhereInput!]
 
   """Logical OR on all given filters."""
-  OR: [SkillSubscriptionWhereInput!]
+  OR: [BlogSubscriptionWhereInput!]
 
   """Logical NOT on all given filters combined by AND."""
-  NOT: [SkillSubscriptionWhereInput!]
+  NOT: [BlogSubscriptionWhereInput!]
 
   """
   The subscription event gets dispatched when it's listed in mutation_in
@@ -174,36 +114,34 @@ input SkillSubscriptionWhereInput {
   The subscription event gets only dispatched when some of the field names included in this list have been updated
   """
   updatedFields_contains_some: [String!]
-  node: SkillWhereInput
+  node: BlogWhereInput
 }
 
-input SkillUpdateInput {
+input BlogUpdateInput {
   title: String
+  subject: String
+  message: String
   image: String
   largeImage: String
-  tech: SkillUpdatetechInput
 }
 
-input SkillUpdateManyMutationInput {
+input BlogUpdateManyMutationInput {
   title: String
+  subject: String
+  message: String
   image: String
   largeImage: String
-  tech: SkillUpdatetechInput
 }
 
-input SkillUpdatetechInput {
-  set: [String!]
-}
-
-input SkillWhereInput {
+input BlogWhereInput {
   """Logical AND on all given filters."""
-  AND: [SkillWhereInput!]
+  AND: [BlogWhereInput!]
 
   """Logical OR on all given filters."""
-  OR: [SkillWhereInput!]
+  OR: [BlogWhereInput!]
 
   """Logical NOT on all given filters combined by AND."""
-  NOT: [SkillWhereInput!]
+  NOT: [BlogWhereInput!]
   id: ID
 
   """All values that are not equal to given value."""
@@ -284,6 +222,86 @@ input SkillWhereInput {
 
   """All values not ending with the given string."""
   title_not_ends_with: String
+  subject: String
+
+  """All values that are not equal to given value."""
+  subject_not: String
+
+  """All values that are contained in given list."""
+  subject_in: [String!]
+
+  """All values that are not contained in given list."""
+  subject_not_in: [String!]
+
+  """All values less than the given value."""
+  subject_lt: String
+
+  """All values less than or equal the given value."""
+  subject_lte: String
+
+  """All values greater than the given value."""
+  subject_gt: String
+
+  """All values greater than or equal the given value."""
+  subject_gte: String
+
+  """All values containing the given string."""
+  subject_contains: String
+
+  """All values not containing the given string."""
+  subject_not_contains: String
+
+  """All values starting with the given string."""
+  subject_starts_with: String
+
+  """All values not starting with the given string."""
+  subject_not_starts_with: String
+
+  """All values ending with the given string."""
+  subject_ends_with: String
+
+  """All values not ending with the given string."""
+  subject_not_ends_with: String
+  message: String
+
+  """All values that are not equal to given value."""
+  message_not: String
+
+  """All values that are contained in given list."""
+  message_in: [String!]
+
+  """All values that are not contained in given list."""
+  message_not_in: [String!]
+
+  """All values less than the given value."""
+  message_lt: String
+
+  """All values less than or equal the given value."""
+  message_lte: String
+
+  """All values greater than the given value."""
+  message_gt: String
+
+  """All values greater than or equal the given value."""
+  message_gte: String
+
+  """All values containing the given string."""
+  message_contains: String
+
+  """All values not containing the given string."""
+  message_not_contains: String
+
+  """All values starting with the given string."""
+  message_starts_with: String
+
+  """All values not starting with the given string."""
+  message_not_starts_with: String
+
+  """All values ending with the given string."""
+  message_ends_with: String
+
+  """All values not ending with the given string."""
+  message_not_ends_with: String
   image: String
 
   """All values that are not equal to given value."""
@@ -366,13 +384,76 @@ input SkillWhereInput {
   largeImage_not_ends_with: String
 }
 
-input SkillWhereUniqueInput {
+input BlogWhereUniqueInput {
   id: ID
+}
+
+"""
+The `Long` scalar type represents non-fractional signed whole numeric values.
+Long can represent values between -(2^63) and 2^63 - 1.
+"""
+scalar Long
+
+type Mutation {
+  createUser(data: UserCreateInput!): User!
+  createBlog(data: BlogCreateInput!): Blog!
+  updateUser(data: UserUpdateInput!, where: UserWhereUniqueInput!): User
+  updateBlog(data: BlogUpdateInput!, where: BlogWhereUniqueInput!): Blog
+  deleteUser(where: UserWhereUniqueInput!): User
+  deleteBlog(where: BlogWhereUniqueInput!): Blog
+  upsertUser(where: UserWhereUniqueInput!, create: UserCreateInput!, update: UserUpdateInput!): User!
+  upsertBlog(where: BlogWhereUniqueInput!, create: BlogCreateInput!, update: BlogUpdateInput!): Blog!
+  updateManyUsers(data: UserUpdateManyMutationInput!, where: UserWhereInput): BatchPayload!
+  updateManyBlogs(data: BlogUpdateManyMutationInput!, where: BlogWhereInput): BatchPayload!
+  deleteManyUsers(where: UserWhereInput): BatchPayload!
+  deleteManyBlogs(where: BlogWhereInput): BatchPayload!
+}
+
+enum MutationType {
+  CREATED
+  UPDATED
+  DELETED
+}
+
+"""An object with an ID"""
+interface Node {
+  """The id of the object."""
+  id: ID!
+}
+
+"""Information about pagination in a connection."""
+type PageInfo {
+  """When paginating forwards, are there more items?"""
+  hasNextPage: Boolean!
+
+  """When paginating backwards, are there more items?"""
+  hasPreviousPage: Boolean!
+
+  """When paginating backwards, the cursor to continue."""
+  startCursor: String
+
+  """When paginating forwards, the cursor to continue."""
+  endCursor: String
+}
+
+type Query {
+  users(where: UserWhereInput, orderBy: UserOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [User]!
+  blogs(where: BlogWhereInput, orderBy: BlogOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Blog]!
+  user(where: UserWhereUniqueInput!): User
+  blog(where: BlogWhereUniqueInput!): Blog
+  usersConnection(where: UserWhereInput, orderBy: UserOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): UserConnection!
+  blogsConnection(where: BlogWhereInput, orderBy: BlogOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): BlogConnection!
+
+  """Fetches an object given its ID"""
+  node(
+    """The ID of an object"""
+    id: ID!
+  ): Node
 }
 
 type Subscription {
   user(where: UserSubscriptionWhereInput): UserSubscriptionPayload
-  skill(where: SkillSubscriptionWhereInput): SkillSubscriptionPayload
+  blog(where: BlogSubscriptionWhereInput): BlogSubscriptionPayload
 }
 
 type User implements Node {

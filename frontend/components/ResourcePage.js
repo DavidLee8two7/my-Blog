@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 import Head from "next/head";
 
-class Contact extends Component {
+class Resource extends Component {
   render() {
     return (
       <div>
         <Head>
-          <title>David Lee | Contact</title>
+          <title>David Lee | Resources</title>
         </Head>
-        <div>Contact1</div>
-        <div>Contact2</div>
+        <div>resource1</div>
+        <div>resource2</div>
       </div>
     );
   }
 }
 
-export default Contact;
+export default Resource;

@@ -1,14 +1,22 @@
 # import * from './generated/prisma.graphql'
 
 type Mutation {
-  createSkill(
-    title: String
-    tech: String
+  createBlog(
+    title: String!
+    subject: String!
+    message: String!
     image: String
     largeImage: String
-  ): Skill!
+  ): Blog!
 }
 
 type Query {
-  skills: [Skill]!
+  blogs(
+    where: BlogWhereInput
+    orderBy: BlogOrderByInput
+    skip: Int
+    first: Int
+  ): [Blog]!
+  blog(where: BlogWhereUniqueInput!): Blog
+  blogsConnection(where: BlogWhereInput): BlogConnection!
 }
