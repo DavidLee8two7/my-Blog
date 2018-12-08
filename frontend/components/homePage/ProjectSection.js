@@ -88,7 +88,7 @@ class ProjectSection extends Component {
                   <ProjectLink>
                     <div className="icon">
                       <a
-                        clasName="icon"
+                        className="icon"
                         aria-label="project"
                         href="https://github.com"
                         target="_blank"

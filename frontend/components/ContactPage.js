@@ -3,21 +3,19 @@ import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
 import Router from "next/router";
 import Form from "./styles/Form";
-import Error from "./ErrorMessage";
+import Error from "./styles/ErrorMessage";
 
-const CREATE_USER_MUTATION = gql`
-  mutation CREATE_USER_MUTATION(
+const CREATE_MEMO_MUTATION = gql`
+  mutation CREATE_MEMO_MUTATION(
     $name: String!
     $email: String!
     $subject: String!
-    $budget: Int
     $message: String!
   ) {
-    createUser(
+    createMemo(
       name: $name
       email: $email
       subject: $subject
-      budget: $budget
       message: $message
     ) {
       id
@@ -25,12 +23,11 @@ const CREATE_USER_MUTATION = gql`
   }
 `;
 
-class CreateUser extends Component {
+class CreateMemo extends Component {
   state = {
     name: "",
     email: "",
     subject: "",
-    budget: 0,
     message: ""
   };
 
@@ -42,16 +39,16 @@ class CreateUser extends Component {
 
   render() {
     return (
-      <Mutation mutation={CREATE_USER_MUTATION} variables={this.state}>
-        {(createUser, { loading, error }) => (
+      <Mutation mutation={CREATE_MEMO_MUTATION} variables={this.state}>
+        {(createMemo, { loading, error }) => (
           <Form
             data-test="form"
             onSubmit={async e => {
               e.preventDefault();
-              const res = await createUser();
+              const res = await createMemo();
               Router.push({
                 pathname: "/thanks",
-                query: { id: res.data.createUser.id }
+                query: { id: res.data.createMemo.id }
               });
             }}
           >
@@ -72,7 +69,7 @@ class CreateUser extends Component {
               <label htmlFor="email">
                 Email
                 <input
-                  type="text"
+                  type="email"
                   id="email"
                   name="email"
                   placeholder="email"
@@ -90,19 +87,6 @@ class CreateUser extends Component {
                   placeholder="subject"
                   required
                   value={this.state.subject}
-                  onChange={this.handleChange}
-                />
-              </label>
-
-              <label htmlFor="budget">
-                Budget
-                <input
-                  type="number"
-                  id="budget"
-                  name="budget"
-                  placeholder="budget"
-                  required
-                  value={this.state.budget}
                   onChange={this.handleChange}
                 />
               </label>
@@ -127,5 +111,5 @@ class CreateUser extends Component {
   }
 }
 
-export default CreateUser;
-export { CREATE_USER_MUTATION };
+export default CreateMemo;
+export { CREATE_MEMO_MUTATION };

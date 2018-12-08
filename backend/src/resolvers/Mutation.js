@@ -1,7 +1,6 @@
 const Mutations = {
-  async createSkill(parent, args, ctx, info) {
-    // TODO: check if they are logged in
-    const skill = await ctx.db.mutation.createSkill(
+  createMemo(parent, args, ctx, info) {
+    const memo = ctx.db.mutation.createMemo(
       {
         data: {
           ...args
@@ -9,7 +8,8 @@ const Mutations = {
       },
       info
     );
-    return skill;
+    console.log(memo);
+    return memo;
   }
 };
 
