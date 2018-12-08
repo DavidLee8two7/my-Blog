@@ -1,7 +1,11 @@
 # source: https://eu1.prisma.sh/david-lee-9a8d2d/dlblog/dev
-# timestamp: Sat Dec 08 2018 13:36:01 GMT-0800 (Pacific Standard Time)
+# timestamp: Sat Dec 08 2018 15:22:39 GMT-0800 (Pacific Standard Time)
 
 type AggregateBlog {
+  count: Int!
+}
+
+type AggregateMemo {
   count: Int!
 }
 
@@ -394,19 +398,305 @@ Long can represent values between -(2^63) and 2^63 - 1.
 """
 scalar Long
 
+type Memo implements Node {
+  id: ID!
+  email: String!
+  subject: String!
+  message: String!
+}
+
+"""A connection to a list of items."""
+type MemoConnection {
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """A list of edges."""
+  edges: [MemoEdge]!
+  aggregate: AggregateMemo!
+}
+
+input MemoCreateInput {
+  email: String!
+  subject: String!
+  message: String!
+}
+
+"""An edge in a connection."""
+type MemoEdge {
+  """The item at the end of the edge."""
+  node: Memo!
+
+  """A cursor for use in pagination."""
+  cursor: String!
+}
+
+enum MemoOrderByInput {
+  id_ASC
+  id_DESC
+  email_ASC
+  email_DESC
+  subject_ASC
+  subject_DESC
+  message_ASC
+  message_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+  createdAt_ASC
+  createdAt_DESC
+}
+
+type MemoPreviousValues {
+  id: ID!
+  email: String!
+  subject: String!
+  message: String!
+}
+
+type MemoSubscriptionPayload {
+  mutation: MutationType!
+  node: Memo
+  updatedFields: [String!]
+  previousValues: MemoPreviousValues
+}
+
+input MemoSubscriptionWhereInput {
+  """Logical AND on all given filters."""
+  AND: [MemoSubscriptionWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [MemoSubscriptionWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [MemoSubscriptionWhereInput!]
+
+  """
+  The subscription event gets dispatched when it's listed in mutation_in
+  """
+  mutation_in: [MutationType!]
+
+  """
+  The subscription event gets only dispatched when one of the updated fields names is included in this list
+  """
+  updatedFields_contains: String
+
+  """
+  The subscription event gets only dispatched when all of the field names included in this list have been updated
+  """
+  updatedFields_contains_every: [String!]
+
+  """
+  The subscription event gets only dispatched when some of the field names included in this list have been updated
+  """
+  updatedFields_contains_some: [String!]
+  node: MemoWhereInput
+}
+
+input MemoUpdateInput {
+  email: String
+  subject: String
+  message: String
+}
+
+input MemoUpdateManyMutationInput {
+  email: String
+  subject: String
+  message: String
+}
+
+input MemoWhereInput {
+  """Logical AND on all given filters."""
+  AND: [MemoWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [MemoWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [MemoWhereInput!]
+  id: ID
+
+  """All values that are not equal to given value."""
+  id_not: ID
+
+  """All values that are contained in given list."""
+  id_in: [ID!]
+
+  """All values that are not contained in given list."""
+  id_not_in: [ID!]
+
+  """All values less than the given value."""
+  id_lt: ID
+
+  """All values less than or equal the given value."""
+  id_lte: ID
+
+  """All values greater than the given value."""
+  id_gt: ID
+
+  """All values greater than or equal the given value."""
+  id_gte: ID
+
+  """All values containing the given string."""
+  id_contains: ID
+
+  """All values not containing the given string."""
+  id_not_contains: ID
+
+  """All values starting with the given string."""
+  id_starts_with: ID
+
+  """All values not starting with the given string."""
+  id_not_starts_with: ID
+
+  """All values ending with the given string."""
+  id_ends_with: ID
+
+  """All values not ending with the given string."""
+  id_not_ends_with: ID
+  email: String
+
+  """All values that are not equal to given value."""
+  email_not: String
+
+  """All values that are contained in given list."""
+  email_in: [String!]
+
+  """All values that are not contained in given list."""
+  email_not_in: [String!]
+
+  """All values less than the given value."""
+  email_lt: String
+
+  """All values less than or equal the given value."""
+  email_lte: String
+
+  """All values greater than the given value."""
+  email_gt: String
+
+  """All values greater than or equal the given value."""
+  email_gte: String
+
+  """All values containing the given string."""
+  email_contains: String
+
+  """All values not containing the given string."""
+  email_not_contains: String
+
+  """All values starting with the given string."""
+  email_starts_with: String
+
+  """All values not starting with the given string."""
+  email_not_starts_with: String
+
+  """All values ending with the given string."""
+  email_ends_with: String
+
+  """All values not ending with the given string."""
+  email_not_ends_with: String
+  subject: String
+
+  """All values that are not equal to given value."""
+  subject_not: String
+
+  """All values that are contained in given list."""
+  subject_in: [String!]
+
+  """All values that are not contained in given list."""
+  subject_not_in: [String!]
+
+  """All values less than the given value."""
+  subject_lt: String
+
+  """All values less than or equal the given value."""
+  subject_lte: String
+
+  """All values greater than the given value."""
+  subject_gt: String
+
+  """All values greater than or equal the given value."""
+  subject_gte: String
+
+  """All values containing the given string."""
+  subject_contains: String
+
+  """All values not containing the given string."""
+  subject_not_contains: String
+
+  """All values starting with the given string."""
+  subject_starts_with: String
+
+  """All values not starting with the given string."""
+  subject_not_starts_with: String
+
+  """All values ending with the given string."""
+  subject_ends_with: String
+
+  """All values not ending with the given string."""
+  subject_not_ends_with: String
+  message: String
+
+  """All values that are not equal to given value."""
+  message_not: String
+
+  """All values that are contained in given list."""
+  message_in: [String!]
+
+  """All values that are not contained in given list."""
+  message_not_in: [String!]
+
+  """All values less than the given value."""
+  message_lt: String
+
+  """All values less than or equal the given value."""
+  message_lte: String
+
+  """All values greater than the given value."""
+  message_gt: String
+
+  """All values greater than or equal the given value."""
+  message_gte: String
+
+  """All values containing the given string."""
+  message_contains: String
+
+  """All values not containing the given string."""
+  message_not_contains: String
+
+  """All values starting with the given string."""
+  message_starts_with: String
+
+  """All values not starting with the given string."""
+  message_not_starts_with: String
+
+  """All values ending with the given string."""
+  message_ends_with: String
+
+  """All values not ending with the given string."""
+  message_not_ends_with: String
+}
+
+input MemoWhereUniqueInput {
+  id: ID
+}
+
 type Mutation {
   createUser(data: UserCreateInput!): User!
   createBlog(data: BlogCreateInput!): Blog!
+  createMemo(data: MemoCreateInput!): Memo!
   updateUser(data: UserUpdateInput!, where: UserWhereUniqueInput!): User
   updateBlog(data: BlogUpdateInput!, where: BlogWhereUniqueInput!): Blog
+  updateMemo(data: MemoUpdateInput!, where: MemoWhereUniqueInput!): Memo
   deleteUser(where: UserWhereUniqueInput!): User
   deleteBlog(where: BlogWhereUniqueInput!): Blog
+  deleteMemo(where: MemoWhereUniqueInput!): Memo
   upsertUser(where: UserWhereUniqueInput!, create: UserCreateInput!, update: UserUpdateInput!): User!
   upsertBlog(where: BlogWhereUniqueInput!, create: BlogCreateInput!, update: BlogUpdateInput!): Blog!
+  upsertMemo(where: MemoWhereUniqueInput!, create: MemoCreateInput!, update: MemoUpdateInput!): Memo!
   updateManyUsers(data: UserUpdateManyMutationInput!, where: UserWhereInput): BatchPayload!
   updateManyBlogs(data: BlogUpdateManyMutationInput!, where: BlogWhereInput): BatchPayload!
+  updateManyMemoes(data: MemoUpdateManyMutationInput!, where: MemoWhereInput): BatchPayload!
   deleteManyUsers(where: UserWhereInput): BatchPayload!
   deleteManyBlogs(where: BlogWhereInput): BatchPayload!
+  deleteManyMemoes(where: MemoWhereInput): BatchPayload!
 }
 
 enum MutationType {
@@ -439,10 +729,13 @@ type PageInfo {
 type Query {
   users(where: UserWhereInput, orderBy: UserOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [User]!
   blogs(where: BlogWhereInput, orderBy: BlogOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Blog]!
+  memoes(where: MemoWhereInput, orderBy: MemoOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Memo]!
   user(where: UserWhereUniqueInput!): User
   blog(where: BlogWhereUniqueInput!): Blog
+  memo(where: MemoWhereUniqueInput!): Memo
   usersConnection(where: UserWhereInput, orderBy: UserOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): UserConnection!
   blogsConnection(where: BlogWhereInput, orderBy: BlogOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): BlogConnection!
+  memoesConnection(where: MemoWhereInput, orderBy: MemoOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): MemoConnection!
 
   """Fetches an object given its ID"""
   node(
@@ -454,6 +747,7 @@ type Query {
 type Subscription {
   user(where: UserSubscriptionWhereInput): UserSubscriptionPayload
   blog(where: BlogSubscriptionWhereInput): BlogSubscriptionPayload
+  memo(where: MemoSubscriptionWhereInput): MemoSubscriptionPayload
 }
 
 type User implements Node {

@@ -24,6 +24,7 @@ export default class Blog extends Component {
           <a>{blog.title}</a>
         </Link>
         <p>{blog.subject}</p>
+        <p>{blog.message}</p>
       </BlogStyles>
     );
   }

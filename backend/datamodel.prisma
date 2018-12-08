@@ -13,3 +13,11 @@ type Blog {
   largeImage: String
   # user: User!
 }
+
+type Memo {
+  id: ID! @unique
+  email: String!
+  subject: String!
+  message: String!
+  # user: User!
+}

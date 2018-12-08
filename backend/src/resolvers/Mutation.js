@@ -9,6 +9,17 @@ const Mutations = {
       info
     );
     return blog;
+  },
+  async createMemo(parent, args, ctx, info) {
+    const memo = await ctx.db.mutation.createMemo(
+      {
+        data: {
+          ...args
+        }
+      },
+      info
+    );
+    return memo;
   }
 };
 
