@@ -26,6 +26,7 @@ const CREATE_MEMO_MUTATION = gql`
 class Memo extends Component {
   state = {
     name: "test",
+    email: "test@gmail.com",
     subject: "subject",
     message: "message"
   };

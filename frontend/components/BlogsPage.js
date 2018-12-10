@@ -25,9 +25,9 @@ const Center = styled.div`
 
 const BlogsList = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 60px;
-  max-width: ${props => props.theme.maxWidth};
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  max-width: 100rem;
   margin: 0 auto;
 `;
 

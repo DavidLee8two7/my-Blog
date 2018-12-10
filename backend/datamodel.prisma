@@ -16,6 +16,7 @@ type Blog {
 
 type Memo {
   id: ID! @unique
+  name: String!
   email: String!
   subject: String!
   message: String!

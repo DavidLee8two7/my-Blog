@@ -1,15 +1,16 @@
 import styled from "styled-components";
 
 const Memo = styled.div`
-  background: white;
+  background: ${props => props.theme.white};
   border: 1px solid ${props => props.theme.offWhite};
   box-shadow: ${props => props.theme.bs};
-  position: relative;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  justify-items: center;
+  align-items: center;
   img {
     width: 100%;
-    height: 400px;
+    max-height: 15rem;
     object-fit: cover;
   }
   p {
@@ -19,21 +20,6 @@ const Memo = styled.div`
     flex-grow: 1;
     padding: 0 3rem;
     font-size: 1.5rem;
-  }
-  .buttonList {
-    display: grid;
-    width: 100%;
-    border-top: 1px solid ${props => props.theme.lightgrey};
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-gap: 1px;
-    background: ${props => props.theme.lightgrey};
-    & > * {
-      background: white;
-      border: 0;
-      font-family: "radnika_next";
-      font-size: 1rem;
-      padding: 1rem;
-    }
   }
 `;
 

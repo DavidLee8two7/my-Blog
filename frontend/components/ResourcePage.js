@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Head from "next/head";
+import Title from "./styles/Title";
 
 class Resource extends Component {
   render() {
@@ -8,8 +9,7 @@ class Resource extends Component {
         <Head>
           <title>David Lee | Resources</title>
         </Head>
-        <div>resource1</div>
-        <div>resource2</div>
+        <Title>Coming Soon 🏗️</Title>
       </div>
     );
   }
