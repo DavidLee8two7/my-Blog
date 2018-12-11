@@ -7,26 +7,24 @@ const StyledBtn = styled.button`
   position: relative;
   overflow: hidden;
   border: none;
-  background: ${props => props.theme.offWhite};
-  font-size: 2.6rem;
+  font-size: 2.5rem;
   font-weight: 600;
-  color: ${props => props.theme.black};
+  background: black;
+  color: ${props => props.theme.orange};
   box-shadow: ${props => props.theme.sbs};
-  font-family: ${props => props.theme.fontDisplay};
+  font-family: ${props => props.theme.fontPrimary};
+  text-transform: uppercase;
   cursor: pointer;
-
   & > * {
     display: inline-block;
     height: 100%;
     width: 100%;
     transition: all 0.3s;
   }
-
   .visible {
     width: 100%;
-    padding: 2rem 7.5rem;
+    padding: 2rem 0;
   }
-
   .invisible {
     width: 100%;
     position: absolute;
@@ -34,22 +32,12 @@ const StyledBtn = styled.button`
     left: 0;
     top: -100%;
   }
-
-  &:hover {
-    background-image: linear-gradient(
-      to left,
-      rgba(0, 216, 255, 0.35),
-      rgba(0, 216, 255, 0.35)
-    );
-  }
   &:hover .visible {
     transform: translateY(100%);
   }
-
   &:hover .invisible {
     top: 0;
   }
-
   &:focus {
     outline: none;
     animation: pulsate 1s infinite;

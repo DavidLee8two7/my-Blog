@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import SectionTitle from "../styles/SectionTitle";
 import SVGIcon from "../styles/SVGIcon";
 import Fade from "react-reveal/Fade";
-import { ProjectDiv, ProjectTitle, InfoDiv } from "./ProjectStyles";
+import { ProjectDiv, InfoDiv } from "./ProjectStyles";
 import {
   Card,
   CardFront,
@@ -37,14 +36,6 @@ class ProjectSection extends Component {
           }}
         >
           <ProjectDiv>
-            <ProjectTitle>
-              <a href="/projects">
-                <SectionTitle
-                  visible={"Samples for React & GraphQL"}
-                  invisible={"You can find more samples by clicking here!"}
-                />
-              </a>
-            </ProjectTitle>
             <Card>
               <CardFront className="front">
                 <PictureDiv>&nbsp;</PictureDiv>
@@ -53,7 +44,7 @@ class ProjectSection extends Component {
                 </h4>
                 <FrontDesc>
                   <ul>
-                    <li>User Account Manage</li>
+                    <li>User Account</li>
                     <li>Sending Email</li>
                     <li>Shopping Cart</li>
                     <li>Pagination</li>
@@ -107,19 +98,33 @@ class ProjectSection extends Component {
             </Card>
             <InfoDiv>
               <h4>
-                <span>How can I help?</span>
+                <span>
+                  I have many years experience as a front-end developer, ERP
+                  system developing & business consulting.
+                </span>
               </h4>
-              <p>OOP, Functional, modual, resualablity, accessibility etc</p>
               <p>
                 A web developer's role is to combine design and business logic
                 to achieve a user-facing product. To do this successfully, a
                 wide skill set is necessary to produce a quality user experience
                 that leads to meeting business goals.
               </p>
+              <p>
+                I now specialise in front-end development but my knowledge of
+                multiple fields allows me to work on a project with the full
+                scope in mind; simplifying the process of our working together
+                and producing a more cohesive experience for your users.
+              </p>
             </InfoDiv>
             <Card>
               <CardFront className="front">
-                <PictureDiv>&nbsp;</PictureDiv>
+                <PictureDiv
+                  style={{
+                    backgroundImage: ""
+                  }}
+                >
+                  &nbsp;
+                </PictureDiv>
                 <h4>
                   <span>Korean Food Network</span>
                 </h4>

@@ -6,11 +6,8 @@ const Nav = () => (
     <Link prefetch href="/index">
       <a>About</a>
     </Link>
-    <Link prefetch href="/projects">
-      <a>Projects</a>
-    </Link>
     <Link prefetch href="/experience">
-      <a>Experience</a>
+      <a>Exp. & Skills</a>
     </Link>
     <Link prefetch href="/resources">
       <a>Resource</a>

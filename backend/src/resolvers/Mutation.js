@@ -10,6 +10,17 @@ const Mutations = {
     );
     return blog;
   },
+  async createResource(parent, args, ctx, info) {
+    const resource = await ctx.db.mutation.createResource(
+      {
+        data: {
+          ...args
+        }
+      },
+      info
+    );
+    return resource;
+  },
   async createMemo(parent, args, ctx, info) {
     const memo = await ctx.db.mutation.createMemo(
       {

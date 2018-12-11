@@ -22,6 +22,15 @@ type Skill {
   largeImage: String
 }
 
+type Resource {
+  id: ID! @unique
+  title: String!
+  subject: String!
+  message: String!
+  image: String
+  largeImage: String
+}
+
 type Memo {
   id: ID! @unique
   name: String!

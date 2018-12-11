@@ -118,7 +118,6 @@ class WriteBlog extends Component {
                   onChange={this.handleChange}
                 />
               </label>
-
               <label htmlFor="message">
                 Message
                 <textarea

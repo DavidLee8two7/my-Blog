@@ -22,11 +22,28 @@ type Mutation {
     image: String
     largeImage: String
   ): Skill!
+
+  createResource(
+    title: String!
+    subject: String!
+    message: String!
+    image: String
+    largeImage: String
+  ): Resource!
 }
 
 type Query {
   skills: [Skill]!
   skill(where: SkillWhereUniqueInput!): Skill
+
+  resources(
+    where: ResourceWhereInput
+    orderBy: ResourceOrderByInput
+    skip: Int
+    first: Int
+  ): [Resource]!
+  resource(where: ResourceWhereUniqueInput!): Resource
+  resourcesConnection(where: ResourceWhereInput): ResourceConnection!
 
   blogs(
     where: BlogWhereInput

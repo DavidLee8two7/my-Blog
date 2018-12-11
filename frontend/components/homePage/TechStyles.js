@@ -30,7 +30,7 @@ const IconsDiv = styled.div`
   a {
     &:hover {
       transform: scale(1.02);
-      color: rgb(247, 223, 30);
+      color: rgb(255, 102, 0);
     }
   }
 `;
