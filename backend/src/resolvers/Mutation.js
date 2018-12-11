@@ -20,6 +20,17 @@ const Mutations = {
       info
     );
     return memo;
+  },
+  async createSkill(parent, args, ctx, info) {
+    const skill = await ctx.db.mutation.createSkill(
+      {
+        data: {
+          ...args
+        }
+      },
+      info
+    );
+    return skill;
   }
 };
 

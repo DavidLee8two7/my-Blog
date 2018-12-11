@@ -1,23 +1,30 @@
 import React, { Component } from "react";
-import Head from "next/head";
+import { Query, Mutation } from "react-apollo";
+import { TOGGLE_CARD_REACT } from "../components/skillsPage/ReactStack";
+import { TOGGLE_CARD_NODE } from "../components/skillsPage/NodeStack";
+import gql from "graphql-tag";
 import styled from "styled-components";
-import SVGIcon from "./styles/SVGIcon";
+import Skill from "./skillsPage/Skill";
+import ReactStack from "./skillsPage/ReactStack";
+import NodeStack from "./skillsPage/NodeStack";
+import Title from "./styles/Title";
+import StyledButton from "./styles/StyledButton";
 
-const SkillDiv = styled.div`
-  display: flex;
-`;
-
-const IconDiv = styled.div`
-  width: 100px;
-  height: 80px;
-  margin: 15px 30px;
-  padding: 5px;
-  border-bottom: 1px solid ${props => props.theme.orange};
+const ALL_SKILLS_QUERY = gql`
+  query ALL_SKILLS_QUERY {
+    skills {
+      id
+      title
+      tech
+      image
+      largeImage
+    }
+  }
 `;
 
 const SkillsContainer = styled.div`
-  margin: 1rem 0;
-  text-align: left;
+  margin: 40px 0;
+  text-align: center;
 `;
 
 const SkillCatetory = styled.div`
@@ -28,34 +35,60 @@ const SkillCatetory = styled.div`
   box-shadow: ${props => props.theme.bs};
 `;
 
-const title = ["html", "css", "js", "backend", "tools", "etc"];
-const tech = ["github", "external", "react", "graphql", "prisma"];
+const MyStack = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+  width: 100%;
+`;
 
-class SkillsPage extends Component {
+class Skills extends Component {
   render() {
     return (
-      <SkillsContainer>
-        <Head>
-          <title>David Lee | Experience & Skills</title>
-        </Head>
-
-        {title.map(name => (
-          <SkillCatetory>
-            <div>
-              <a>{name}</a>
-              {tech.map(each => (
-                <SkillDiv>
-                  <IconDiv>
-                    <SVGIcon name={each} />
-                  </IconDiv>
-                </SkillDiv>
+      <Query query={ALL_SKILLS_QUERY}>
+        {({ data, error, loading }) => {
+          if (loading) return <p>Loading...</p>;
+          if (error) return <p>Error: {error.message}</p>;
+          return (
+            <SkillsContainer>
+              <MyStack>
+                <Mutation mutation={TOGGLE_CARD_REACT}>
+                  {toggleReact => (
+                    <StyledButton
+                      onClick={toggleReact}
+                      style={{ backgroundColor: "#2164f4" }}
+                    >
+                      Apollo fullstack
+                    </StyledButton>
+                  )}
+                </Mutation>
+                <ReactStack />
+                <Mutation mutation={TOGGLE_CARD_NODE}>
+                  {toggleNode => (
+                    <StyledButton
+                      onClick={toggleNode}
+                      style={{ backgroundColor: "#green" }}
+                    >
+                      Node fullstack
+                    </StyledButton>
+                  )}
+                </Mutation>
+                <NodeStack />
+              </MyStack>
+              {data.skills.map(skill => (
+                <SkillCatetory key={skill.id}>
+                  <Title>
+                    <a>{skill.title}</a>
+                  </Title>
+                  <Skill tech={skill.tech} />
+                </SkillCatetory>
               ))}
-            </div>
-          </SkillCatetory>
-        ))}
-      </SkillsContainer>
+            </SkillsContainer>
+          );
+        }}
+      </Query>
     );
   }
 }
 
-export default SkillsPage;
+export default Skills;

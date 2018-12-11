@@ -15,9 +15,19 @@ type Mutation {
     subject: String!
     message: String!
   ): Memo!
+
+  createSkill(
+    title: String!
+    tech: String!
+    image: String
+    largeImage: String
+  ): Skill!
 }
 
 type Query {
+  skills: [Skill]!
+  skill(where: SkillWhereUniqueInput!): Skill
+
   blogs(
     where: BlogWhereInput
     orderBy: BlogOrderByInput

@@ -1,11 +1,15 @@
 # source: https://eu1.prisma.sh/david-lee-9a8d2d/dlblog/dev
-# timestamp: Sat Dec 08 2018 15:27:04 GMT-0800 (Pacific Standard Time)
+# timestamp: Mon Dec 10 2018 15:58:45 GMT-0800 (Pacific Standard Time)
 
 type AggregateBlog {
   count: Int!
 }
 
 type AggregateMemo {
+  count: Int!
+}
+
+type AggregateSkill {
   count: Int!
 }
 
@@ -728,21 +732,27 @@ input MemoWhereUniqueInput {
 type Mutation {
   createUser(data: UserCreateInput!): User!
   createBlog(data: BlogCreateInput!): Blog!
+  createSkill(data: SkillCreateInput!): Skill!
   createMemo(data: MemoCreateInput!): Memo!
   updateUser(data: UserUpdateInput!, where: UserWhereUniqueInput!): User
   updateBlog(data: BlogUpdateInput!, where: BlogWhereUniqueInput!): Blog
+  updateSkill(data: SkillUpdateInput!, where: SkillWhereUniqueInput!): Skill
   updateMemo(data: MemoUpdateInput!, where: MemoWhereUniqueInput!): Memo
   deleteUser(where: UserWhereUniqueInput!): User
   deleteBlog(where: BlogWhereUniqueInput!): Blog
+  deleteSkill(where: SkillWhereUniqueInput!): Skill
   deleteMemo(where: MemoWhereUniqueInput!): Memo
   upsertUser(where: UserWhereUniqueInput!, create: UserCreateInput!, update: UserUpdateInput!): User!
   upsertBlog(where: BlogWhereUniqueInput!, create: BlogCreateInput!, update: BlogUpdateInput!): Blog!
+  upsertSkill(where: SkillWhereUniqueInput!, create: SkillCreateInput!, update: SkillUpdateInput!): Skill!
   upsertMemo(where: MemoWhereUniqueInput!, create: MemoCreateInput!, update: MemoUpdateInput!): Memo!
   updateManyUsers(data: UserUpdateManyMutationInput!, where: UserWhereInput): BatchPayload!
   updateManyBlogs(data: BlogUpdateManyMutationInput!, where: BlogWhereInput): BatchPayload!
+  updateManySkills(data: SkillUpdateManyMutationInput!, where: SkillWhereInput): BatchPayload!
   updateManyMemoes(data: MemoUpdateManyMutationInput!, where: MemoWhereInput): BatchPayload!
   deleteManyUsers(where: UserWhereInput): BatchPayload!
   deleteManyBlogs(where: BlogWhereInput): BatchPayload!
+  deleteManySkills(where: SkillWhereInput): BatchPayload!
   deleteManyMemoes(where: MemoWhereInput): BatchPayload!
 }
 
@@ -776,12 +786,15 @@ type PageInfo {
 type Query {
   users(where: UserWhereInput, orderBy: UserOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [User]!
   blogs(where: BlogWhereInput, orderBy: BlogOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Blog]!
+  skills(where: SkillWhereInput, orderBy: SkillOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Skill]!
   memoes(where: MemoWhereInput, orderBy: MemoOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Memo]!
   user(where: UserWhereUniqueInput!): User
   blog(where: BlogWhereUniqueInput!): Blog
+  skill(where: SkillWhereUniqueInput!): Skill
   memo(where: MemoWhereUniqueInput!): Memo
   usersConnection(where: UserWhereInput, orderBy: UserOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): UserConnection!
   blogsConnection(where: BlogWhereInput, orderBy: BlogOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): BlogConnection!
+  skillsConnection(where: SkillWhereInput, orderBy: SkillOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): SkillConnection!
   memoesConnection(where: MemoWhereInput, orderBy: MemoOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): MemoConnection!
 
   """Fetches an object given its ID"""
@@ -791,9 +804,303 @@ type Query {
   ): Node
 }
 
+type Skill implements Node {
+  id: ID!
+  title: String!
+  tech: [String!]!
+  image: String
+  largeImage: String
+}
+
+"""A connection to a list of items."""
+type SkillConnection {
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """A list of edges."""
+  edges: [SkillEdge]!
+  aggregate: AggregateSkill!
+}
+
+input SkillCreateInput {
+  title: String!
+  image: String
+  largeImage: String
+  tech: SkillCreatetechInput
+}
+
+input SkillCreatetechInput {
+  set: [String!]
+}
+
+"""An edge in a connection."""
+type SkillEdge {
+  """The item at the end of the edge."""
+  node: Skill!
+
+  """A cursor for use in pagination."""
+  cursor: String!
+}
+
+enum SkillOrderByInput {
+  id_ASC
+  id_DESC
+  title_ASC
+  title_DESC
+  image_ASC
+  image_DESC
+  largeImage_ASC
+  largeImage_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+  createdAt_ASC
+  createdAt_DESC
+}
+
+type SkillPreviousValues {
+  id: ID!
+  title: String!
+  tech: [String!]!
+  image: String
+  largeImage: String
+}
+
+type SkillSubscriptionPayload {
+  mutation: MutationType!
+  node: Skill
+  updatedFields: [String!]
+  previousValues: SkillPreviousValues
+}
+
+input SkillSubscriptionWhereInput {
+  """Logical AND on all given filters."""
+  AND: [SkillSubscriptionWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [SkillSubscriptionWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [SkillSubscriptionWhereInput!]
+
+  """
+  The subscription event gets dispatched when it's listed in mutation_in
+  """
+  mutation_in: [MutationType!]
+
+  """
+  The subscription event gets only dispatched when one of the updated fields names is included in this list
+  """
+  updatedFields_contains: String
+
+  """
+  The subscription event gets only dispatched when all of the field names included in this list have been updated
+  """
+  updatedFields_contains_every: [String!]
+
+  """
+  The subscription event gets only dispatched when some of the field names included in this list have been updated
+  """
+  updatedFields_contains_some: [String!]
+  node: SkillWhereInput
+}
+
+input SkillUpdateInput {
+  title: String
+  image: String
+  largeImage: String
+  tech: SkillUpdatetechInput
+}
+
+input SkillUpdateManyMutationInput {
+  title: String
+  image: String
+  largeImage: String
+  tech: SkillUpdatetechInput
+}
+
+input SkillUpdatetechInput {
+  set: [String!]
+}
+
+input SkillWhereInput {
+  """Logical AND on all given filters."""
+  AND: [SkillWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [SkillWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [SkillWhereInput!]
+  id: ID
+
+  """All values that are not equal to given value."""
+  id_not: ID
+
+  """All values that are contained in given list."""
+  id_in: [ID!]
+
+  """All values that are not contained in given list."""
+  id_not_in: [ID!]
+
+  """All values less than the given value."""
+  id_lt: ID
+
+  """All values less than or equal the given value."""
+  id_lte: ID
+
+  """All values greater than the given value."""
+  id_gt: ID
+
+  """All values greater than or equal the given value."""
+  id_gte: ID
+
+  """All values containing the given string."""
+  id_contains: ID
+
+  """All values not containing the given string."""
+  id_not_contains: ID
+
+  """All values starting with the given string."""
+  id_starts_with: ID
+
+  """All values not starting with the given string."""
+  id_not_starts_with: ID
+
+  """All values ending with the given string."""
+  id_ends_with: ID
+
+  """All values not ending with the given string."""
+  id_not_ends_with: ID
+  title: String
+
+  """All values that are not equal to given value."""
+  title_not: String
+
+  """All values that are contained in given list."""
+  title_in: [String!]
+
+  """All values that are not contained in given list."""
+  title_not_in: [String!]
+
+  """All values less than the given value."""
+  title_lt: String
+
+  """All values less than or equal the given value."""
+  title_lte: String
+
+  """All values greater than the given value."""
+  title_gt: String
+
+  """All values greater than or equal the given value."""
+  title_gte: String
+
+  """All values containing the given string."""
+  title_contains: String
+
+  """All values not containing the given string."""
+  title_not_contains: String
+
+  """All values starting with the given string."""
+  title_starts_with: String
+
+  """All values not starting with the given string."""
+  title_not_starts_with: String
+
+  """All values ending with the given string."""
+  title_ends_with: String
+
+  """All values not ending with the given string."""
+  title_not_ends_with: String
+  image: String
+
+  """All values that are not equal to given value."""
+  image_not: String
+
+  """All values that are contained in given list."""
+  image_in: [String!]
+
+  """All values that are not contained in given list."""
+  image_not_in: [String!]
+
+  """All values less than the given value."""
+  image_lt: String
+
+  """All values less than or equal the given value."""
+  image_lte: String
+
+  """All values greater than the given value."""
+  image_gt: String
+
+  """All values greater than or equal the given value."""
+  image_gte: String
+
+  """All values containing the given string."""
+  image_contains: String
+
+  """All values not containing the given string."""
+  image_not_contains: String
+
+  """All values starting with the given string."""
+  image_starts_with: String
+
+  """All values not starting with the given string."""
+  image_not_starts_with: String
+
+  """All values ending with the given string."""
+  image_ends_with: String
+
+  """All values not ending with the given string."""
+  image_not_ends_with: String
+  largeImage: String
+
+  """All values that are not equal to given value."""
+  largeImage_not: String
+
+  """All values that are contained in given list."""
+  largeImage_in: [String!]
+
+  """All values that are not contained in given list."""
+  largeImage_not_in: [String!]
+
+  """All values less than the given value."""
+  largeImage_lt: String
+
+  """All values less than or equal the given value."""
+  largeImage_lte: String
+
+  """All values greater than the given value."""
+  largeImage_gt: String
+
+  """All values greater than or equal the given value."""
+  largeImage_gte: String
+
+  """All values containing the given string."""
+  largeImage_contains: String
+
+  """All values not containing the given string."""
+  largeImage_not_contains: String
+
+  """All values starting with the given string."""
+  largeImage_starts_with: String
+
+  """All values not starting with the given string."""
+  largeImage_not_starts_with: String
+
+  """All values ending with the given string."""
+  largeImage_ends_with: String
+
+  """All values not ending with the given string."""
+  largeImage_not_ends_with: String
+}
+
+input SkillWhereUniqueInput {
+  id: ID
+}
+
 type Subscription {
   user(where: UserSubscriptionWhereInput): UserSubscriptionPayload
   blog(where: BlogSubscriptionWhereInput): BlogSubscriptionPayload
+  skill(where: SkillSubscriptionWhereInput): SkillSubscriptionPayload
   memo(where: MemoSubscriptionWhereInput): MemoSubscriptionPayload
 }
 

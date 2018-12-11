@@ -9,7 +9,7 @@ const Nav = () => (
     <Link prefetch href="/projects">
       <a>Projects</a>
     </Link>
-    <Link prefetch href="/Experience">
+    <Link prefetch href="/experience">
       <a>Experience</a>
     </Link>
     <Link prefetch href="/resources">

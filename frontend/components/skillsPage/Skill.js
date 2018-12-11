@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import SVGIcon from "../styles/SVGIcon";
 
@@ -15,13 +16,26 @@ const IconDiv = styled.div`
 `;
 
 class Skill extends Component {
+  static propTypes = {
+    skill: PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      tech: PropTypes.string.isRequired,
+      image: PropTypes.string.isRequired,
+      largeImage: PropTypes.string.isRequired
+    })
+  };
+
   render() {
+    const { tech } = this.props;
     console.log(this.props);
     return (
       <SkillDiv>
-        <IconDiv>
-          <SVGIcon name={this.props.tech} />
-        </IconDiv>
+        {tech.map(skill => (
+          <IconDiv key={skill}>
+            <SVGIcon name={skill} />
+            <p>{skill.toUpperCase()}</p>
+          </IconDiv>
+        ))}
       </SkillDiv>
     );
   }

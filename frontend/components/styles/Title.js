@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Title = styled.h3`
-  margin: 30rem auto;
+  margin: 3rem auto;
   max-width: 100rem;
   text-align: center;
   line-height: 1.3;

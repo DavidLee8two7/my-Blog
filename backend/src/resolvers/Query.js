@@ -6,7 +6,9 @@ const Query = {
   blogsConnection: forwardTo("db"),
   memoes: forwardTo("db"),
   memo: forwardTo("db"),
-  memoesConnection: forwardTo("db")
+  memoesConnection: forwardTo("db"),
+  skills: forwardTo("db"),
+  skill: forwardTo("db")
 };
 
 module.exports = Query;
