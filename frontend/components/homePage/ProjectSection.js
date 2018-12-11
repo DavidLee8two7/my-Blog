@@ -44,7 +44,7 @@ class ProjectSection extends Component {
                 </h4>
                 <FrontDesc>
                   <ul>
-                    <li>User Account</li>
+                    <li>JWT Authentication</li>
                     <li>Sending Email</li>
                     <li>Shopping Cart</li>
                     <li>Pagination</li>
@@ -60,19 +60,19 @@ class ProjectSection extends Component {
                     </h4>
                     <ul>
                       <li>
-                        <strong>Ruby on Rails</strong> backend
+                        <strong>Next.js</strong> for server side rendering
                       </li>
                       <li>
-                        <strong>Materialize CSS</strong> frontend
+                        <strong>Apollo Client</strong> for Managing States
                       </li>
                       <li>
-                        User <strong>authentication</strong> via Devise
+                        <strong>Styled Components</strong> for styling
                       </li>
                       <li>
-                        Implemented <strong>liking functionality</strong>
+                        <strong>GraphQL Yoga</strong> for Server Side Logic
                       </li>
                       <li>
-                        <strong>Client-side rendering</strong> via AJAX
+                        <strong>Prisma</strong> CRUD APIs for MySQL Database
                       </li>
                     </ul>
                   </ProjectInfo>
@@ -118,13 +118,7 @@ class ProjectSection extends Component {
             </InfoDiv>
             <Card>
               <CardFront className="front">
-                <PictureDiv
-                  style={{
-                    backgroundImage: ""
-                  }}
-                >
-                  &nbsp;
-                </PictureDiv>
+                <PictureDiv>&nbsp;</PictureDiv>
                 <h4>
                   <span>Korean Food Network</span>
                 </h4>
@@ -133,8 +127,8 @@ class ProjectSection extends Component {
                     <li>User Permission Manage</li>
                     <li>Image Uploading</li>
                     <li>Password Reset</li>
-                    <li>Search Bar</li>
-                    <li>Google Map</li>
+                    <li>Ajax Search Interface</li>
+                    <li>Custom Google Map</li>
                   </ul>
                 </FrontDesc>
               </CardFront>
@@ -146,19 +140,19 @@ class ProjectSection extends Component {
                     </h4>
                     <ul>
                       <li>
-                        <strong>Ruby on Rails</strong> backend
+                        <strong>Pug(Jade)</strong> template engine
                       </li>
                       <li>
-                        <strong>Materialize CSS</strong> frontend
+                        <strong>SCSS</strong> for styling
                       </li>
                       <li>
-                        User <strong>authentication</strong> via Devise
+                        <strong>Node Express</strong> for Server Side Logic
                       </li>
                       <li>
-                        Implemented <strong>liking functionality</strong>
+                        <strong>Bcrypt & JWToken</strong> for Authentication
                       </li>
                       <li>
-                        <strong>Client-side rendering</strong> via AJAX
+                        <strong>MongoDB</strong> for database
                       </li>
                     </ul>
                   </ProjectInfo>
