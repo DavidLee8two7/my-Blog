@@ -6,12 +6,13 @@ const IntroDiv = styled.div`
   grid-column: 1 / span 4;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 40% 1fr;
   justify-items: center;
   align-items: start;
   margin-top: 1rem;
-  padding: 4rem;
+  padding: 2rem;
   background: ${props => props.theme.white};
+  box-shadow: ${props => props.theme.sbs};
   h2 {
     font-size: 3.2rem;
     text-align: center;

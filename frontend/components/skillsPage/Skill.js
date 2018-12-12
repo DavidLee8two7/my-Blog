@@ -19,7 +19,7 @@ class Skill extends Component {
   static propTypes = {
     skill: PropTypes.shape({
       title: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
+      tech: PropTypes.string.isRequired,
       image: PropTypes.string.isRequired,
       largeImage: PropTypes.string.isRequired
     })
@@ -27,6 +27,7 @@ class Skill extends Component {
 
   render() {
     const { tech } = this.props;
+    console.log(this.props);
     return (
       <SkillDiv>
         {tech.map(skill => (

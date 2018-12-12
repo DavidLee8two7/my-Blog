@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import SectionTitle from "../styles/SectionTitle";
 import SVGIcon from "../styles/SVGIcon";
 import Fade from "react-reveal/Fade";
-import { ProjectDiv, ProjectTitle, InfoDiv } from "./ProjectStyles";
+import { ProjectDiv, InfoDiv } from "./ProjectStyles";
 import {
   Card,
   CardFront,
@@ -37,23 +36,27 @@ class ProjectSection extends Component {
           }}
         >
           <ProjectDiv>
-            <ProjectTitle>
-              <a href="/projects">
-                <SectionTitle
-                  visible={"Samples for React & GraphQL"}
-                  invisible={"You can find more samples by clicking here!"}
-                />
-              </a>
-            </ProjectTitle>
             <Card>
               <CardFront className="front">
-                <PictureDiv>&nbsp;</PictureDiv>
+                <PictureDiv
+                  style={{
+                    backgroundSize: "cover",
+                    backgroundImage: `linear-gradient(
+                      to right bottom,
+                      rgba(225, 225, 225, 0.95),
+                      rgba(237, 237, 237, 0.25)
+                    ),
+                    url(/static/img/tShirts.jpg)`
+                  }}
+                >
+                  &nbsp;
+                </PictureDiv>
                 <h4>
                   <span>T-shirts Factory, CA</span>
                 </h4>
                 <FrontDesc>
                   <ul>
-                    <li>User Account Manage</li>
+                    <li>JWT Authentication</li>
                     <li>Sending Email</li>
                     <li>Shopping Cart</li>
                     <li>Pagination</li>
@@ -69,19 +72,19 @@ class ProjectSection extends Component {
                     </h4>
                     <ul>
                       <li>
-                        <strong>Ruby on Rails</strong> backend
+                        <strong>Next.js</strong> for server side rendering
                       </li>
                       <li>
-                        <strong>Materialize CSS</strong> frontend
+                        <strong>Apollo Client</strong> for Managing States
                       </li>
                       <li>
-                        User <strong>authentication</strong> via Devise
+                        <strong>Styled Components</strong> for styling
                       </li>
                       <li>
-                        Implemented <strong>liking functionality</strong>
+                        <strong>GraphQL Yoga</strong> for Server Side Logic
                       </li>
                       <li>
-                        <strong>Client-side rendering</strong> via AJAX
+                        <strong>Prisma</strong> CRUD APIs for MySQL Database
                       </li>
                     </ul>
                   </ProjectInfo>
@@ -97,7 +100,11 @@ class ProjectSection extends Component {
                       </a>
                     </div>
                     <div className="icon">
-                      <a aria-label="website" href="" target="_blank">
+                      <a
+                        aria-label="website"
+                        href="https://github.com"
+                        target="_blank"
+                      >
                         <SVGIcon name={"external"} viewBox={"0 0 28 28"} />
                       </a>
                     </div>
@@ -107,19 +114,39 @@ class ProjectSection extends Component {
             </Card>
             <InfoDiv>
               <h4>
-                <span>How can I help?</span>
+                <span>
+                  I have many years experience as a Front-end developer, ERP
+                  system developer & Business consultant.
+                </span>
               </h4>
-              <p>OOP, Functional, modual, resualablity, accessibility etc</p>
               <p>
                 A web developer's role is to combine design and business logic
                 to achieve a user-facing product. To do this successfully, a
                 wide skill set is necessary to produce a quality user experience
                 that leads to meeting business goals.
               </p>
+              <p>
+                I now specialise in front-end development but my knowledge of
+                multiple fields allows me to work on a project with the full
+                scope in mind; simplifying the process of our working together
+                and producing a more cohesive experience for your users.
+              </p>
             </InfoDiv>
             <Card>
               <CardFront className="front">
-                <PictureDiv>&nbsp;</PictureDiv>
+                <PictureDiv
+                  style={{
+                    backgroundSize: "cover",
+                    backgroundImage: `linear-gradient(
+                      to right bottom,
+                      rgba(225, 225, 225, 0.95),
+                      rgba(237, 237, 237, 0.25)
+                    ),
+                    url(/static/img/koreanFood.jpg)`
+                  }}
+                >
+                  &nbsp;
+                </PictureDiv>
                 <h4>
                   <span>Korean Food Network</span>
                 </h4>
@@ -128,8 +155,8 @@ class ProjectSection extends Component {
                     <li>User Permission Manage</li>
                     <li>Image Uploading</li>
                     <li>Password Reset</li>
-                    <li>Search Bar</li>
-                    <li>Google Map</li>
+                    <li>Ajax Search Interface</li>
+                    <li>Custom Google Map</li>
                   </ul>
                 </FrontDesc>
               </CardFront>
@@ -141,19 +168,19 @@ class ProjectSection extends Component {
                     </h4>
                     <ul>
                       <li>
-                        <strong>Ruby on Rails</strong> backend
+                        <strong>Pug(Jade)</strong> template engine
                       </li>
                       <li>
-                        <strong>Materialize CSS</strong> frontend
+                        <strong>SCSS</strong> for styling
                       </li>
                       <li>
-                        User <strong>authentication</strong> via Devise
+                        <strong>Node Express</strong> for Server Side Logic
                       </li>
                       <li>
-                        Implemented <strong>liking functionality</strong>
+                        <strong>Bcrypt & JWToken</strong> for Authentication
                       </li>
                       <li>
-                        <strong>Client-side rendering</strong> via AJAX
+                        <strong>MongoDB</strong> for backend database
                       </li>
                     </ul>
                   </ProjectInfo>
@@ -169,7 +196,11 @@ class ProjectSection extends Component {
                       </a>
                     </div>
                     <div className="icon">
-                      <a aria-label="website" href="" target="_blank">
+                      <a
+                        aria-label="website"
+                        href="https://github.com"
+                        target="_blank"
+                      >
                         <SVGIcon name={"external"} viewBox={"0 0 28 28"} />
                       </a>
                     </div>

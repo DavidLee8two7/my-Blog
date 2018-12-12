@@ -27,7 +27,6 @@ const CREATE_BLOG_MUTATION = gql`
 
 class WriteBlog extends Component {
   state = {
-    name: "test",
     title: "title",
     subject: "subject",
     message: "message",
@@ -95,18 +94,6 @@ class WriteBlog extends Component {
                   />
                 )}
               </label>
-              <label htmlFor="name">
-                Name
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="name"
-                  required
-                  value={this.state.name}
-                  onChange={this.handleChange}
-                />
-              </label>
               <label htmlFor="title">
                 Title
                 <input
@@ -131,7 +118,6 @@ class WriteBlog extends Component {
                   onChange={this.handleChange}
                 />
               </label>
-
               <label htmlFor="message">
                 Message
                 <textarea

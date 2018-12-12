@@ -8,9 +8,43 @@ type Mutation {
     image: String
     largeImage: String
   ): Blog!
+
+  createMemo(
+    name: String!
+    email: String!
+    subject: String!
+    message: String!
+  ): Memo!
+
+  createSkill(
+    title: String!
+    tech: String!
+    image: String
+    largeImage: String
+  ): Skill!
+
+  createResource(
+    title: String!
+    subject: String!
+    message: String!
+    image: String
+    largeImage: String
+  ): Resource!
 }
 
 type Query {
+  skills: [Skill]!
+  skill(where: SkillWhereUniqueInput!): Skill
+
+  resources(
+    where: ResourceWhereInput
+    orderBy: ResourceOrderByInput
+    skip: Int
+    first: Int
+  ): [Resource]!
+  resource(where: ResourceWhereUniqueInput!): Resource
+  resourcesConnection(where: ResourceWhereInput): ResourceConnection!
+
   blogs(
     where: BlogWhereInput
     orderBy: BlogOrderByInput
@@ -19,4 +53,13 @@ type Query {
   ): [Blog]!
   blog(where: BlogWhereUniqueInput!): Blog
   blogsConnection(where: BlogWhereInput): BlogConnection!
+
+  memoes(
+    where: MemoWhereInput
+    orderBy: MemoOrderByInput
+    skip: Int
+    first: Int
+  ): [Memo]!
+  memo(where: MemoWhereUniqueInput!): Memo
+  memoesConnection(where: MemoWhereInput): MemoConnection!
 }

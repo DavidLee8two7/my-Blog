@@ -58,15 +58,6 @@ class TechSection extends Component {
             width: "100%"
           }}
         >
-          <TechTitle>
-            <a href="/skills">
-              <SectionTitle
-                visible={"Currently focusing on React & GraphQL Fullstack 💻"}
-                invisible={"Click will take you to talent page!"}
-              />
-            </a>
-          </TechTitle>
-
           <IconsDiv>
             <FrontDiv>
               <a href={tech.firstTech.href} target="_blank">
@@ -81,7 +72,6 @@ class TechSection extends Component {
                 <p>{tech.secondTech.title}</p>
               </a>
             </FrontDiv>
-
             <BackDiv>
               <a href={tech.thirdTech.href} target="_blank">
                 <TechIcon title={tech.thirdTech.title} />
@@ -96,6 +86,14 @@ class TechSection extends Component {
               </a>
             </BackDiv>
           </IconsDiv>
+          <TechTitle>
+            <a href="/experience">
+              <SectionTitle
+                visible={"Current focus : 💻 React & GraphQL stack"}
+                invisible={"Click for more skills and projects."}
+              />
+            </a>
+          </TechTitle>
         </div>
       </Zoom>
     );

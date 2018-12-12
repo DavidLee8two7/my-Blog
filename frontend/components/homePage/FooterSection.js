@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Link from "next/link";
 import {
   FooterDiv,
   Footer,
@@ -22,25 +23,38 @@ class FooterSection extends Component {
             <FooterNav>
               <ul>
                 <li>
-                  <a href="/">Home</a>
+                  <Link prefetch href="/index">
+                    <a>About</a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/projects">Projects</a>
+                  <Link prefetch href="/experience">
+                    <a>Exp. & Skills</a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/skills">Know-how</a>
+                  <Link prefetch href="/resources">
+                    <a>Resource</a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/resource">Resource</a>
+                  <Link prefetch href="/blogs">
+                    <a>Blogs</a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/contact">Contact</a>
+                  <Link prefetch href="/contact">
+                    <a>Contact</a>
+                  </Link>
                 </li>
               </ul>
             </FooterNav>
             <CopyRight>
               <p>
-                Copyright &copy; by <a href="/contact">David Lee</a>
+                Copyright &copy; by{" "}
+                <Link prefetch href="/contact">
+                  <a>David Lee</a>
+                </Link>
               </p>
             </CopyRight>
           </ContactDiv>

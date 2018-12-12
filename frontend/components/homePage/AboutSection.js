@@ -19,7 +19,7 @@ class AboutMe extends Component {
                 target="_blank"
                 href="https://www.google.com/maps/place/Buena+Park,+CA/@33.850486,-118.0580578,10.29z/data=!4m5!3m4!1s0x80dd2bf413605d2b:0xcd9feee5cde8fe25!8m2!3d33.8674044!4d-117.9981387"
               >
-                <span className="loc visible"> Buena Park, CA, USA</span>
+                <span className="loc visible"> Buena Park, CA, USA.</span>
                 <span className="loc invisible"> Show it in Google 🗺️ !</span>
               </a>
             </Location>
@@ -30,9 +30,9 @@ class AboutMe extends Component {
             ethic to build better future for our children and seniors. I’ve
             always sought out opportunities and challenges that are meaningful
             to me. Although my professional path has taken many twists and turns
-            - from ERP system developer, Supply chain management, business
-            consulting - I've never stopped engaging my passion to help others
-            and solve problems.
+            - from ERP(SAP) system developing, Supply chain management, Business
+            analyze & consulting - I've never stopped engaging my passion to
+            help others and solve problems.
           </p>
         </AboutDiv>
       </IntroDiv>

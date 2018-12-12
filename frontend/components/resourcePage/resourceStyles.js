@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Memo = styled.div`
+const resourceStyles = styled.div`
   background: ${props => props.theme.white};
   border: 1px solid ${props => props.theme.offWhite};
   box-shadow: ${props => props.theme.bs};
@@ -23,4 +23,4 @@ const Memo = styled.div`
   }
 `;
 
-export default Memo;
+export default resourceStyles;

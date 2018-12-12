@@ -13,3 +13,29 @@ type Blog {
   largeImage: String
   # user: User!
 }
+
+type Skill {
+  id: ID! @unique
+  title: String!
+  tech: [String]!
+  image: String
+  largeImage: String
+}
+
+type Resource {
+  id: ID! @unique
+  title: String!
+  subject: String!
+  message: String!
+  image: String
+  largeImage: String
+}
+
+type Memo {
+  id: ID! @unique
+  name: String!
+  email: String!
+  subject: String!
+  message: String!
+  # user: User!
+}
