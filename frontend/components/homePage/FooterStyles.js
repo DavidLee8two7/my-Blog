@@ -29,6 +29,7 @@ const FooterNav = styled.div`
     list-style: none;
   }
   li {
+    font-size: 1.8rem;
     display: inline-block;
     margin-right: 2.5rem;
   }

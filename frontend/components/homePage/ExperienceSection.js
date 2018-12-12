@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import Reveal from "react-reveal/Reveal";
-import SectionTitle from "../styles/SectionTitle";
 import {
   Experience,
-  ExperienceTitle,
   ShapeDiv,
   StyledImg,
   TextDiv,
@@ -34,69 +32,57 @@ class ExperienceSection extends Component {
             alignItems: "center"
           }}
         >
-          <ExperienceTitle>
-            <a href="/talents">
-              <SectionTitle
-                visible={"Experience 📽️"}
-                invisible={"You can find more information here!"}
-              />
-            </a>
-          </ExperienceTitle>
           <Experience>
             <ShapeDiv>
               <StyledImg
                 src="/static/img/face.jpeg"
-                alt="profile"
+                alt="david lee's picture"
                 className="image"
               />
               <CaptionDiv className="caption">🐵</CaptionDiv>
             </ShapeDiv>
             <TextDiv>
               <h4>
-                Software Developer / ERP(SAP) System consultant / Supply Chain
-                Management
+                <span className="javascript">JavaScript</span> focused{" "}
+                <span className="react">Front-End Web Developer</span> + Extra
               </h4>
-              <p>
+              <p className="experience">
                 I can help the client to create responsive websites that work on
                 a wide range of devices Assist with production of clean and
                 functional design Bridge communication gap between designers and
                 developers Integrate your website into an easy to use content
-                management system.
+                management system. I take great care to ensure each project is
+                well-documented and easily maintainable so you can enhance a
+                website as your company grows.
               </p>
             </TextDiv>
             <DetailsDiv>
               <div>
-                <h4>Projects</h4>
+                <h4>Features</h4>
                 <ul>
-                  <li>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </li>
-                  <li>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </li>
-                  <li>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </li>
-                  <li>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </li>
+                  <li>Analyze purpose and the users of the website</li>
+                  <li>Design structure and aesthetics of the project</li>
+                  <li>High-level user experience</li>
+                  <li>Easy maintenance and Good Documentation</li>
                 </ul>
               </div>
               <div>
                 <h4>Accomplishments</h4>
                 <ul>
-                  <li>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </li>
-                  <li>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </li>
-                  <li>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </li>
-                  <li>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </li>
+                  <ul>
+                    <li>
+                      Implementation of ERP (SAP - PP & MM modules) system 2
+                      times for int'l corps.
+                    </li>
+                    <li>
+                      $2 million cost saving in one year(2018) by restructuring
+                      the purchasing stratege of bakery franchise corp.
+                    </li>
+                    <li>
+                      Productivity increase of 1 ~ 3% for 5 year consecutively
+                      for a manufacturing corp.
+                    </li>
+                  </ul>
                 </ul>
               </div>
             </DetailsDiv>

@@ -4,15 +4,16 @@ import styled from "styled-components";
 const StyledBtn = styled.button`
   z-index: 3;
   width: 100%;
+  padding: 1rem 0;
   position: relative;
   overflow: hidden;
   border: none;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 600;
   background: black;
   color: ${props => props.theme.orange};
   box-shadow: ${props => props.theme.sbs};
-  font-family: ${props => props.theme.fontPrimary};
+  font-family: ${props => props.theme.fontDisplay};
   text-transform: uppercase;
   cursor: pointer;
   & > * {
@@ -36,7 +37,7 @@ const StyledBtn = styled.button`
     transform: translateY(100%);
   }
   &:hover .invisible {
-    top: 0;
+    top: 8.5px;
   }
   &:focus {
     outline: none;

@@ -40,20 +40,18 @@ const CardFront = styled.div`
   color: ${props => props.theme.black};
   font-weight: 400;
   h4 {
-    font-size: 2.6rem;
-    font-family: ${props => props.theme.fontDisplay};
-    font-weight: 600;
+    font-size: 2.4rem;
     text-transform: uppercase;
     text-align: right;
     color: ${props => props.theme.black};
     position: absolute;
     top: 4rem;
     right: 3rem;
-    width: 80%;
+    width: 100%;
   }
   span {
     border-radius: 3px;
-    padding: 1rem 3rem;
+    padding: 1rem;
     box-decoration-break: clone;
     background-image: linear-gradient(
       to right bottom,
@@ -77,8 +75,8 @@ const PictureDiv = styled.div`
   border-top-right-radius: 3px;
   background-image: linear-gradient(
       to right bottom,
-      rgba(255, 102, 0, 0.95),
-      rgba(255, 102, 0, 0.25)
+      rgba(225, 225, 225, 0.95),
+      rgba(237, 237, 237, 0.25)
     ),
     url(/static/img/working_pic.jpg);
 `;
@@ -90,7 +88,7 @@ const FrontDesc = styled.div`
     margin: 0 auto;
     li {
       text-align: left;
-      font-size: 1.7rem;
+      font-size: 2rem;
       font-weight: 400;
       padding: 1rem;
       &:not(:last-child) {
@@ -117,8 +115,8 @@ const CardBack = styled.div`
   transform: rotateY(180deg);
   background-image: linear-gradient(
     to right bottom,
-    rgba(255, 102, 0, 0.95),
-    rgba(255, 102, 0, 0.25)
+    rgba(225, 225, 225, 0.95),
+    rgba(237, 237, 237, 0.25)
   );
   @media only screen and (max-width: 900px), only screen and (hover: none) {
     height: auto;

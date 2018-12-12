@@ -2,18 +2,28 @@ import styled from "styled-components";
 
 const Experience = styled.div`
   z-index: 3;
-  width: 85%;
-  margin: 6rem auto;
+  width: 80%;
+  margin: 8rem auto;
   background-color: ${props => props.theme.white};
   border-radius: 3px;
   padding: 6rem;
   transform: skewX(-12deg);
+  box-shadow: ${props => props.theme.sbs};
   h4 {
     width: 100%;
-    margin-left: 1rem;
-    font-size: 1.8rem;
-    font-weight: 400;
+    font-size: 2.6rem;
+    font-weight: 600;
     text-align: left;
+  }
+  .javascript {
+    color: ${props => props.theme.orange};
+  }
+  .react {
+    color: ${props => props.theme.blue};
+  }
+  .experience {
+    font-size: 1.6rem;
+    font-weight: 400;
   }
   &:hover .caption {
     opacity: 1;
@@ -21,13 +31,9 @@ const Experience = styled.div`
   }
 `;
 
-const ExperienceTitle = styled.div`
-  width: 100%;
-`;
-
 const ShapeDiv = styled.div`
-  width: 15rem;
-  height: 15rem;
+  width: 16.5rem;
+  height: 16.5rem;
   float: left;
   transform: translateX(-2rem) skewX(12deg);
   position: relative;
@@ -69,25 +75,19 @@ const CaptionDiv = styled.div`
 const DetailsDiv = styled.div`
   border-top: 1px solid ${props => props.theme.lightGray};
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 60%;
   justify-items: start;
   align-items: center;
   transform: skewX(12deg);
-  h4 {
-    width: 100%;
-    margin-left: 1rem;
-    font-size: 1.6rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: left;
-  }
   ul {
     width: 100%;
     margin: 0 auto;
     li {
+      list-style: none;
       text-align: left;
-      font-size: 1.5rem;
+      font-size: 2rem;
       padding: 0.5rem;
+      font-weight: 400;
       &:not(:last-child) {
         border-bottom: 1px solid ${props => props.theme.lightGray};
       }
@@ -95,12 +95,4 @@ const DetailsDiv = styled.div`
   }
 `;
 
-export {
-  Experience,
-  ExperienceTitle,
-  ShapeDiv,
-  StyledImg,
-  TextDiv,
-  CaptionDiv,
-  DetailsDiv
-};
+export { Experience, ShapeDiv, StyledImg, TextDiv, CaptionDiv, DetailsDiv };

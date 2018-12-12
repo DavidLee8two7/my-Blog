@@ -38,7 +38,19 @@ class ProjectSection extends Component {
           <ProjectDiv>
             <Card>
               <CardFront className="front">
-                <PictureDiv>&nbsp;</PictureDiv>
+                <PictureDiv
+                  style={{
+                    backgroundSize: "cover",
+                    backgroundImage: `linear-gradient(
+                      to right bottom,
+                      rgba(225, 225, 225, 0.95),
+                      rgba(237, 237, 237, 0.25)
+                    ),
+                    url(/static/img/tShirts.jpg)`
+                  }}
+                >
+                  &nbsp;
+                </PictureDiv>
                 <h4>
                   <span>T-shirts Factory, CA</span>
                 </h4>
@@ -88,7 +100,11 @@ class ProjectSection extends Component {
                       </a>
                     </div>
                     <div className="icon">
-                      <a aria-label="website" href="" target="_blank">
+                      <a
+                        aria-label="website"
+                        href="https://github.com"
+                        target="_blank"
+                      >
                         <SVGIcon name={"external"} viewBox={"0 0 28 28"} />
                       </a>
                     </div>
@@ -99,8 +115,8 @@ class ProjectSection extends Component {
             <InfoDiv>
               <h4>
                 <span>
-                  I have many years experience as a front-end developer, ERP
-                  system developing & business consulting.
+                  I have many years experience as a Front-end developer, ERP
+                  system developer & Business consultant.
                 </span>
               </h4>
               <p>
@@ -118,7 +134,19 @@ class ProjectSection extends Component {
             </InfoDiv>
             <Card>
               <CardFront className="front">
-                <PictureDiv>&nbsp;</PictureDiv>
+                <PictureDiv
+                  style={{
+                    backgroundSize: "cover",
+                    backgroundImage: `linear-gradient(
+                      to right bottom,
+                      rgba(225, 225, 225, 0.95),
+                      rgba(237, 237, 237, 0.25)
+                    ),
+                    url(/static/img/koreanFood.jpg)`
+                  }}
+                >
+                  &nbsp;
+                </PictureDiv>
                 <h4>
                   <span>Korean Food Network</span>
                 </h4>
@@ -152,7 +180,7 @@ class ProjectSection extends Component {
                         <strong>Bcrypt & JWToken</strong> for Authentication
                       </li>
                       <li>
-                        <strong>MongoDB</strong> for database
+                        <strong>MongoDB</strong> for backend database
                       </li>
                     </ul>
                   </ProjectInfo>
@@ -168,7 +196,11 @@ class ProjectSection extends Component {
                       </a>
                     </div>
                     <div className="icon">
-                      <a aria-label="website" href="" target="_blank">
+                      <a
+                        aria-label="website"
+                        href="https://github.com"
+                        target="_blank"
+                      >
                         <SVGIcon name={"external"} viewBox={"0 0 28 28"} />
                       </a>
                     </div>

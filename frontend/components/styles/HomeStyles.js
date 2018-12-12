@@ -30,10 +30,10 @@ const NameDiv = styled.div`
     text-shadow: 2px 2px 2px ${props => props.theme.orange};
   }
   .david {
-    transform: translateX(-20rem);
+    transform: translateX(-30rem);
   }
   .lee {
-    transform: translateX(17rem);
+    transform: translateX(30rem);
   }
   .messages {
     margin-top: 20rem;
