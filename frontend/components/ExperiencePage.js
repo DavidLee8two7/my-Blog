@@ -9,7 +9,6 @@ import ReactStack from "./skillsPage/ReactStack";
 import NodeStack from "./skillsPage/NodeStack";
 import Title from "./styles/Title";
 import StyledButton from "./styles/StyledButton";
-import TechSection from "../components/homePage/TechSection";
 
 const ALL_SKILLS_QUERY = gql`
   query ALL_SKILLS_QUERY {
@@ -52,7 +51,6 @@ class Skills extends Component {
           if (error) return <p>Error: {error.message}</p>;
           return (
             <SkillsContainer>
-              <TechSection />
               <MyStack>
                 <Mutation mutation={TOGGLE_CARD_REACT}>
                   {toggleReact => (
