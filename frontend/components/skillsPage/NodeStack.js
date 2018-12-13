@@ -2,14 +2,8 @@ import React from "react";
 import { Query, Mutation } from "react-apollo";
 import gql from "graphql-tag";
 import NodeStyles from "./NodeStyles";
-import CloseButton from "../styles/CloseButton";
-import StyledButton from "../styles/StyledButton";
-import {
-  ReactSide,
-  TechType,
-  TechIcon,
-  TechDescription
-} from "../styles/StackList";
+import { StyledButton, CloseButton } from "../styles/StyledButtons";
+import { ReactSide, TechType, TechIcon, TechDescription } from "./StackList";
 
 const LOCAL_STATE_NODE = gql`
   query {

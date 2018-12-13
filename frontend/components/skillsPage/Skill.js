@@ -5,13 +5,17 @@ import SVGIcon from "../styles/SVGIcon";
 
 const SkillDiv = styled.div`
   display: flex;
+  flex-direction: row;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
 `;
 
 const IconDiv = styled.div`
-  width: 100px;
-  height: 80px;
-  margin: 15px 30px;
-  padding: 5px;
+  width: 100%;
+  max-height: 10rem;
+  margin: 3rem 2rem;
+  padding: 1rem;
   border-bottom: 1px solid ${props => props.theme.orange};
 `;
 
@@ -27,7 +31,6 @@ class Skill extends Component {
 
   render() {
     const { tech } = this.props;
-    console.log(this.props);
     return (
       <SkillDiv>
         {tech.map(skill => (

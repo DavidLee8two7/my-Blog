@@ -3,7 +3,7 @@ import styled from "styled-components";
 const FooterDiv = styled.div`
   padding: 1rem 0;
   z-index: 2;
-  grid-row: 7;
+  grid-row: 8;
   grid-column: 1 / span 4;
   width: 100%;
   justify-items: center;

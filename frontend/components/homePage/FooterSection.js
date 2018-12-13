@@ -28,7 +28,7 @@ class FooterSection extends Component {
                   </Link>
                 </li>
                 <li>
-                  <Link prefetch href="/experience">
+                  <Link prefetch href="/skills">
                     <a>Exp. & Skills</a>
                   </Link>
                 </li>

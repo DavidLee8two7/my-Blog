@@ -1,11 +1,16 @@
 import React, { Component } from "react";
 import Head from "next/head";
-import { HomeStyles, NameDiv, GreetingDiv } from "./styles/HomeStyles";
+import {
+  HomeStyles,
+  NameDiv,
+  GreetingDiv,
+  TechTitle
+} from "./styles/HomeStyles";
 import AboutSection from "./homePage/AboutSection";
 import TechSection from "./homePage/TechSection";
 import ExperienceSection from "./homePage/ExperienceSection";
 import ProjectSection from "./homePage/ProjectSection";
-import FooterSection from "./homePage/FooterSection";
+import TitleSection from "./homePage/TitleSection";
 
 class Home extends Component {
   render() {
@@ -33,9 +38,18 @@ class Home extends Component {
         </GreetingDiv>
         <AboutSection />
         <TechSection />
+
+        <TechTitle>
+          <a href="/skills">
+            <TitleSection
+              visible={"Current focus : 💻 React & GraphQL stack"}
+              invisible={"Click for more skills and projects."}
+            />
+          </a>
+        </TechTitle>
+
         <ProjectSection />
         <ExperienceSection />
-        <FooterSection />
       </HomeStyles>
     );
   }

@@ -76,4 +76,12 @@ const GreetingDiv = styled.div`
   }
 `;
 
-export { HomeStyles, NameDiv, GreetingDiv };
+const TechTitle = styled.div`
+  z-index: 3;
+  width: 100%;
+  text-align: center;
+  display: grid;
+  grid-column: 1 / -1;
+`;
+
+export { HomeStyles, NameDiv, GreetingDiv, TechTitle };
