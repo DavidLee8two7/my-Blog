@@ -6,8 +6,6 @@ import gql from "graphql-tag";
 import Skill from "./skillsPage/Skill";
 import ReactStack from "./skillsPage/ReactStack";
 import NodeStack from "./skillsPage/NodeStack";
-import TechSection from "./homePage/TechSection";
-import NodeTech from "./skillsPage/NodeTech";
 import { StyledButton } from "./styles/StyledButtons";
 import {
   SkillsContainer,
@@ -39,6 +37,14 @@ class Skills extends Component {
           if (error) return <p>Error: {error.message}</p>;
           return (
             <SkillsContainer>
+              {data.skills.map(skill => (
+                <SkillCatetory key={skill.id}>
+                  <Title>
+                    <a>{skill.title}</a>
+                  </Title>
+                  <Skill tech={skill.tech} />
+                </SkillCatetory>
+              ))}
               <FullStacks>
                 <ReactFull>
                   <Mutation mutation={TOGGLE_CARD_REACT}>
@@ -52,7 +58,6 @@ class Skills extends Component {
                     )}
                   </Mutation>
                   <ReactStack />
-                  <TechSection />
                 </ReactFull>
 
                 <NodeFull>
@@ -67,18 +72,8 @@ class Skills extends Component {
                     )}
                   </Mutation>
                   <NodeStack />
-                  <NodeTech />
                 </NodeFull>
               </FullStacks>
-
-              {data.skills.map(skill => (
-                <SkillCatetory key={skill.id}>
-                  <Title>
-                    <a>{skill.title}</a>
-                  </Title>
-                  <Skill tech={skill.tech} />
-                </SkillCatetory>
-              ))}
             </SkillsContainer>
           );
         }}

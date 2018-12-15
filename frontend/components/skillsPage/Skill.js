@@ -19,6 +19,17 @@ const IconDiv = styled.div`
   border-bottom: 1px solid ${props => props.theme.orange};
 `;
 
+const viewBox = name => {
+  switch (name) {
+    case "pug":
+      return "0 0 478.928 478.928";
+    case "apollo client":
+      return "0 0 256 256";
+    default:
+      return "0 0 32 32";
+  }
+};
+
 class Skill extends Component {
   static propTypes = {
     skill: PropTypes.shape({
@@ -35,7 +46,7 @@ class Skill extends Component {
       <SkillDiv>
         {tech.map(skill => (
           <IconDiv key={skill}>
-            <SVGIcon name={skill} />
+            <SVGIcon viewBox={viewBox(skill)} name={skill} />
             <p>{skill.toUpperCase()}</p>
           </IconDiv>
         ))}

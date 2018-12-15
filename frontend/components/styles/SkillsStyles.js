@@ -3,7 +3,6 @@ import styled from "styled-components";
 const SkillsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  padding: 1rem;
   justify-items: center;
   align-items: center;
   background: linear-gradient(
@@ -15,16 +14,15 @@ const SkillsContainer = styled.div`
 `;
 
 const FullStacks = styled.div`
-  margin: 3rem 0;
-  width: 100%;
+  width: 70%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   justify-items: center;
   align-items: center;
+  background: white;
 `;
 
 const ReactFull = styled.div`
-  grid-column: 1;
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
@@ -33,7 +31,6 @@ const ReactFull = styled.div`
 `;
 
 const NodeFull = styled.div`
-  grid-column: 2;
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
@@ -43,7 +40,7 @@ const NodeFull = styled.div`
 
 const Title = styled.h3`
   width: min-content;
-  padding: 2rem 4rem;
+  padding: 2rem 6rem;
   margin: 2rem 0 4rem 2rem;
   text-align: center;
   line-height: 1.3;
@@ -61,14 +58,14 @@ const Title = styled.h3`
 `;
 
 const SkillCatetory = styled.div`
-  width: 66%;
+  width: 70%;
   min-height: 400px;
   display: flex;
   flex-direction: column;
-  margin: 3rem 0;
+  margin: 5rem 0;
   padding: 1rem;
   background: ${props => props.theme.white};
-  border: 1px solid ${props => props.theme.offWhite};
+  border-radius: 3px;
   box-shadow: ${props => props.theme.bbs};
 `;
 
