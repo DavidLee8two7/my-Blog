@@ -10,6 +10,7 @@ import { StyledButton } from "./styles/StyledButtons";
 import {
   SkillsContainer,
   FullStacks,
+  SvgText,
   SkillCatetory,
   ReactFull,
   NodeFull,
@@ -37,15 +38,14 @@ class Skills extends Component {
           if (error) return <p>Error: {error.message}</p>;
           return (
             <SkillsContainer>
-              {data.skills.map(skill => (
-                <SkillCatetory key={skill.id}>
-                  <Title>
-                    <a>{skill.title}</a>
-                  </Title>
-                  <Skill tech={skill.tech} />
-                </SkillCatetory>
-              ))}
               <FullStacks>
+                <SvgText>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285 80">
+                    <text x="0" y="30">
+                      two stacks
+                    </text>
+                  </svg>
+                </SvgText>
                 <ReactFull>
                   <Mutation mutation={TOGGLE_CARD_REACT}>
                     {toggleReact => (
@@ -59,7 +59,6 @@ class Skills extends Component {
                   </Mutation>
                   <ReactStack />
                 </ReactFull>
-
                 <NodeFull>
                   <Mutation mutation={TOGGLE_CARD_NODE}>
                     {toggleNode => (
@@ -74,6 +73,15 @@ class Skills extends Component {
                   <NodeStack />
                 </NodeFull>
               </FullStacks>
+
+              {data.skills.map(skill => (
+                <SkillCatetory key={skill.id}>
+                  <Title>
+                    <a>{skill.title}</a>
+                  </Title>
+                  <Skill tech={skill.tech} />
+                </SkillCatetory>
+              ))}
             </SkillsContainer>
           );
         }}

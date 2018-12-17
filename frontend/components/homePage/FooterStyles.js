@@ -1,15 +1,17 @@
 import styled from "styled-components";
 
 const FooterDiv = styled.div`
-  padding: 1rem 0;
-  z-index: 2;
+  margin-top: 10rem;
+  z-index: 3;
   grid-row: 8;
   grid-column: 1 / span 4;
   width: 100%;
+  padding: 1rem 0;
   justify-items: center;
   align-items: center;
-  background: ${props => props.theme.white};
   font-size: 1.8rem;
+  background: ${props => props.theme.lightOrange};
+  box-shadow: ${props => props.theme.bbs};
 `;
 
 const Footer = styled.footer`

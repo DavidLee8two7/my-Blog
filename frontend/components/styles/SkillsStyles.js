@@ -5,21 +5,31 @@ const SkillsContainer = styled.div`
   grid-template-columns: 1fr;
   justify-items: center;
   align-items: center;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("/static/img/whaleJump.jpg") no-repeat center center fixed;
-  background-size: cover;
+  background: ${props => props.theme.white};
 `;
 
 const FullStacks = styled.div`
+  margin-top: 5rem;
+  padding: 2rem;
   width: 70%;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   justify-items: center;
   align-items: center;
-  background: white;
+  background: ${props => props.theme.white};
+  grid-gap: 2rem;
+  box-shadow: ${props => props.theme.bbs};
+  font-size: 2rem;
+`;
+
+const SvgText = styled.div`
+  grid-column: 1 / -1;
+  width: 100%;
+  svg text {
+    font-weight: 600;
+    font-size: 2rem;
+    fill: orange;
+  }
 `;
 
 const ReactFull = styled.div`
@@ -28,6 +38,7 @@ const ReactFull = styled.div`
   width: 100%;
   justify-items: center;
   align-items: center;
+  box-shadow: ${props => props.theme.sbs};
 `;
 
 const NodeFull = styled.div`
@@ -36,6 +47,19 @@ const NodeFull = styled.div`
   width: 100%;
   justify-items: center;
   align-items: center;
+  box-shadow: ${props => props.theme.sbs};
+`;
+
+const SkillCatetory = styled.div`
+  width: 70%;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  padding: 1rem;
+  background: ${props => props.theme.white};
+  border-radius: 3px;
+  box-shadow: ${props => props.theme.bbs};
 `;
 
 const Title = styled.h3`
@@ -57,21 +81,10 @@ const Title = styled.h3`
   }
 `;
 
-const SkillCatetory = styled.div`
-  width: 70%;
-  min-height: 400px;
-  display: flex;
-  flex-direction: column;
-  margin: 5rem 0;
-  padding: 1rem;
-  background: ${props => props.theme.white};
-  border-radius: 3px;
-  box-shadow: ${props => props.theme.bbs};
-`;
-
 export {
   SkillsContainer,
   FullStacks,
+  SvgText,
   MyStack,
   ReactFull,
   NodeFull,

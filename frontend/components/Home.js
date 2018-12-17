@@ -37,8 +37,6 @@ class Home extends Component {
           </p>
         </GreetingDiv>
         <AboutSection />
-        <TechSection />
-
         <TechTitle>
           <a href="/skills">
             <TitleSection
@@ -47,7 +45,7 @@ class Home extends Component {
             />
           </a>
         </TechTitle>
-
+        <TechSection />
         <ProjectSection />
         <ExperienceSection />
       </HomeStyles>

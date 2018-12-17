@@ -12,19 +12,29 @@ const SkillDiv = styled.div`
 `;
 
 const IconDiv = styled.div`
-  width: 100%;
-  max-height: 10rem;
-  margin: 3rem 2rem;
-  padding: 1rem;
+  width: 16rem;
+  height: 16rem;
+  margin: 1rem 5rem;
+  padding: 3rem;
   border-bottom: 1px solid ${props => props.theme.orange};
+  p {
+    margin-top: 3rem;
+    font-size: 1.8rem;
+  }
 `;
 
 const viewBox = name => {
   switch (name) {
-    case "pug":
-      return "0 0 478.928 478.928";
+    case "pug(jade)":
+      return "0 0 479 479";
     case "apollo client":
       return "0 0 256 256";
+    case "jsx":
+      return "0 0 512 512";
+    case "styled-components":
+      return "0 0 512 512";
+    case "material-ui":
+      return "0 0 600 476.6";
     default:
       return "0 0 32 32";
   }
