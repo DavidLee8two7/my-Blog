@@ -39,7 +39,7 @@ class ExperienceSection extends Component {
                 alt="david lee's picture"
                 className="image"
               />
-              <CaptionDiv className="caption">🐵</CaptionDiv>
+              <CaptionDiv className="caption">David Lee</CaptionDiv>
             </ShapeDiv>
             <TextDiv>
               <h4>

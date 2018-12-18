@@ -1,16 +1,14 @@
 import styled from "styled-components";
 
 const FooterDiv = styled.div`
-  margin-top: 10rem;
   z-index: 3;
   grid-row: 8;
   grid-column: 1 / span 4;
   width: 100%;
-  padding: 1rem 0;
   justify-items: center;
   align-items: center;
   font-size: 1.8rem;
-  background: ${props => props.theme.lightOrange};
+  background: black;
   box-shadow: ${props => props.theme.bbs};
 `;
 
@@ -36,10 +34,10 @@ const FooterNav = styled.div`
     margin-right: 2.5rem;
   }
   a {
-    color: gray;
+    color: white;
     &:link,
     &:visited {
-      color: ${props => props.theme.black};
+      color: white;
       text-decoration: none;
       text-transform: uppercase;
       display: inline-block;
@@ -82,12 +80,12 @@ const LogoDiv = styled.div`
 const CopyRight = styled.div`
   width: 100%;
   text-align: center;
-  color: ${props => props.theme.black};
-  font-size: 1.8rem;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
   a {
     &:link,
     &:visited {
-      color: ${props => props.theme.black};
       text-decoration: none;
       text-transform: uppercase;
       display: inline-block;
@@ -96,7 +94,6 @@ const CopyRight = styled.div`
 
     &:hover,
     &:active {
-      font-weight: 600;
       color: ${props => props.theme.orange};
       box-shadow: 0 1rem 2rem rgba(orange, 0.4);
       transform: translateY(-1rem) rotate(5deg) scale(1.3);

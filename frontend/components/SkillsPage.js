@@ -8,13 +8,14 @@ import ReactStack from "./skillsPage/ReactStack";
 import NodeStack from "./skillsPage/NodeStack";
 import { StyledButton } from "./styles/StyledButtons";
 import {
-  SkillsContainer,
+  SkillsPage,
   FullStacks,
-  SvgText,
-  SkillCatetory,
-  ReactFull,
-  NodeFull,
-  Title
+  TechMessage,
+  TechAbout,
+  ReactGraphqlStack,
+  PugNodeStack,
+  Title,
+  SkillCatetory
 } from "./styles/SkillsStyles";
 
 const ALL_SKILLS_QUERY = gql`
@@ -37,41 +38,48 @@ class Skills extends Component {
           if (loading) return <p>Loading...</p>;
           if (error) return <p>Error: {error.message}</p>;
           return (
-            <SkillsContainer>
+            <SkillsPage>
               <FullStacks>
-                <SvgText>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285 80">
-                    <text x="0" y="30">
-                      two stacks
-                    </text>
-                  </svg>
-                </SvgText>
-                <ReactFull>
+                <TechMessage>
+                  <Title
+                    style={{
+                      color: `${props => props.theme.black}`,
+                      fontSize: "3rem"
+                    }}
+                  >
+                    Skills
+                  </Title>
+                </TechMessage>
+                <TechAbout>
+                  I've found out that learning new things and concentration
+                  gives me peace(dopamine) I like learning new things...
+                </TechAbout>
+                <ReactGraphqlStack>
                   <Mutation mutation={TOGGLE_CARD_REACT}>
                     {toggleReact => (
                       <StyledButton
                         onClick={toggleReact}
-                        style={{ backgroundColor: "#2164f4" }}
+                        style={{ backgroundColor: "#00d8ff" }}
                       >
-                        Apollo fullstack
+                        React & GraphQL Stack
                       </StyledButton>
                     )}
                   </Mutation>
                   <ReactStack />
-                </ReactFull>
-                <NodeFull>
+                </ReactGraphqlStack>
+                <PugNodeStack>
                   <Mutation mutation={TOGGLE_CARD_NODE}>
                     {toggleNode => (
                       <StyledButton
                         onClick={toggleNode}
-                        style={{ backgroundColor: "#green" }}
+                        style={{ backgroundColor: "#215732" }}
                       >
-                        Node fullstack
+                        Pug(Jade) & Node Stack
                       </StyledButton>
                     )}
                   </Mutation>
                   <NodeStack />
-                </NodeFull>
+                </PugNodeStack>
               </FullStacks>
 
               {data.skills.map(skill => (
@@ -82,7 +90,7 @@ class Skills extends Component {
                   <Skill tech={skill.tech} />
                 </SkillCatetory>
               ))}
-            </SkillsContainer>
+            </SkillsPage>
           );
         }}
       </Query>

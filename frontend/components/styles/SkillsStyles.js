@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-const SkillsContainer = styled.div`
+const SkillsPage = styled.div`
+  margin: 6rem 0;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
@@ -9,30 +10,36 @@ const SkillsContainer = styled.div`
 `;
 
 const FullStacks = styled.div`
-  margin-top: 5rem;
   padding: 2rem;
-  width: 70%;
+  width: 85%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
   justify-items: center;
   align-items: center;
   background: ${props => props.theme.white};
-  grid-gap: 2rem;
   box-shadow: ${props => props.theme.bbs};
   font-size: 2rem;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("/static/plaid.jpg");
 `;
 
-const SvgText = styled.div`
-  grid-column: 1 / -1;
+const TechMessage = styled.div`
   width: 100%;
-  svg text {
-    font-weight: 600;
-    font-size: 2rem;
-    fill: orange;
-  }
+  font-size: 2.4rem;
+  font-weight: 400;
 `;
 
-const ReactFull = styled.div`
+const TechAbout = styled.div`
+  width: 100%;
+  font-size: 1.4rem;
+  text-align: left;
+`;
+
+const ReactGraphqlStack = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
@@ -41,7 +48,7 @@ const ReactFull = styled.div`
   box-shadow: ${props => props.theme.sbs};
 `;
 
-const NodeFull = styled.div`
+const PugNodeStack = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
@@ -57,14 +64,18 @@ const SkillCatetory = styled.div`
   flex-direction: column;
   margin-top: 5rem;
   padding: 1rem;
-  background: ${props => props.theme.white};
   border-radius: 3px;
   box-shadow: ${props => props.theme.bbs};
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("/static/plaid.jpg");
 `;
 
 const Title = styled.h3`
-  width: min-content;
-  padding: 2rem 6rem;
+  width: max-content;
+  padding: 2rem;
   margin: 2rem 0 4rem 2rem;
   text-align: center;
   line-height: 1.3;
@@ -74,20 +85,20 @@ const Title = styled.h3`
   background: ${props => props.theme.lightOrange};
   box-shadow: ${props => props.theme.sbs};
   p {
-    font-size: 2.6rem;
+    font-size: 2rem;
   }
   a {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 `;
 
 export {
-  SkillsContainer,
+  SkillsPage,
   FullStacks,
-  SvgText,
-  MyStack,
-  ReactFull,
-  NodeFull,
+  TechMessage,
+  TechAbout,
+  ReactGraphqlStack,
+  PugNodeStack,
   Title,
   SkillCatetory
 };

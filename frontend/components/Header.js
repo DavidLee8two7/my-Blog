@@ -14,15 +14,16 @@ Router.onRouteChangeError = () => {
   NProgress.done();
 };
 
-const Logo = styled.h1`
-  font-size: 4.2rem;
-  font-family: ${props => props.theme.fontDisplay};
+const Logo = styled.div`
   margin-left: 2rem;
   position: relative;
-  text-shadow: 0.5px 0.5px 0.5px ${props => props.theme.orange};
+  padding: 2rem;
   a {
     padding: 0.5rem 1rem;
-    color: ${props => props.theme.black};
+    color: ${props => props.theme.white};
+    font-weight: 600;
+    font-family: ${props => props.theme.fontDisplay};
+    font-size: 3.2rem;
     text-decoration: none;
     .javascript {
       color: ${props => props.theme.orange};
@@ -43,7 +44,7 @@ const StyleHeader = styled.header`
     grid-template-columns: auto 1fr;
     justify-content: space-between;
     align-items: stretch;
-    background: ${props => props.theme.white};
+    background: black;
     @media (max-width: 1300px) {
       grid-template-columns: 1fr;
       justify-content: center;
@@ -66,7 +67,7 @@ const Header = () => (
   <StyleHeader>
     <div className="bar">
       <Logo>
-        <Link href="/">
+        <Link href="/contact">
           <a>
             <span className="full-text">
               Full Stack <span className="javascript">JavaScript</span>{" "}
