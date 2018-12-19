@@ -16,12 +16,12 @@ const HomeStyles = styled.div`
 
 const NameDiv = styled.div`
   z-index: 2;
-  margin: 6rem 0;
+  margin: 8rem 0;
   padding: 2rem;
+  width: max-content;
   grid-row: 1;
   grid-column: 1 / -1;
   text-align: center;
-  text-transform: uppercase;
   line-height: 1.4rem;
   h2 {
     font-family: ${props => props.theme.fontDisplay};
@@ -29,30 +29,15 @@ const NameDiv = styled.div`
     letter-spacing: 2px;
     text-shadow: 2px 2px 2px ${props => props.theme.orange};
   }
-  .david {
-    transform: translateX(-30rem);
-  }
-  .lee {
-    transform: translateX(30rem);
-  }
   .messages {
-    margin-top: 20rem;
+    margin-top: 10rem;
     font-size: 2.4rem;
     font-weight: 400;
     text-shadow: ${props => props.theme.ts};
     border-bottom: 1.5px solid ${props => props.theme.orange};
   }
-  @media (max-width: 1200px) {
-    border-bottom: none;
-    .david {
-      transform: translateX(0);
-    }
-    .jaehoon {
-      display: none;
-    }
-    .lee {
-      transform: translateX(0);
-    }
+  img {
+    max-width: 100rem;
   }
   @media (max-width: 650px) {
     p {
@@ -63,17 +48,22 @@ const NameDiv = styled.div`
 
 const GreetingDiv = styled.div`
   z-index: 2;
+  margin-top: 6rem;
   grid-row: 2;
   grid-column: 1 / -1;
-  margin-bottom: 3rem;
-  h2 {
-    font-size: 2.8rem;
-    text-align: center;
-  }
   p {
-    font-size: 2.3rem;
     text-align: center;
+    font-size: 2.4rem;
+    font-weight: 600;
   }
 `;
 
-export { HomeStyles, NameDiv, GreetingDiv };
+const TechTitle = styled.div`
+  z-index: 3;
+  width: 100%;
+  text-align: center;
+  display: grid;
+  grid-column: 1 / -1;
+`;
+
+export { HomeStyles, NameDiv, GreetingDiv, TechTitle };

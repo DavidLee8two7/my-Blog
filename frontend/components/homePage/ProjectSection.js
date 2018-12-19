@@ -29,7 +29,7 @@ class ProjectSection extends Component {
       >
         <div
           style={{
-            gridRow: "5",
+            gridRow: "6",
             gridColumn: "1 / -1",
             width: "100%",
             background: "white"

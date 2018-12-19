@@ -25,7 +25,7 @@ class ExperienceSection extends Component {
       >
         <div
           style={{
-            gridRow: "6",
+            gridRow: "7",
             gridColumn: "1 / -1",
             width: "100%",
             justifyItems: "center",
@@ -39,7 +39,7 @@ class ExperienceSection extends Component {
                 alt="david lee's picture"
                 className="image"
               />
-              <CaptionDiv className="caption">🐵</CaptionDiv>
+              <CaptionDiv className="caption">David Lee</CaptionDiv>
             </ShapeDiv>
             <TextDiv>
               <h4>
@@ -62,7 +62,7 @@ class ExperienceSection extends Component {
                 <ul>
                   <li>Analyze purpose and the users of the website</li>
                   <li>Design structure and aesthetics of the project</li>
-                  <li>High-level user experience</li>
+                  <li>Create environment for pleasant user experience</li>
                   <li>Easy maintenance and Good Documentation</li>
                 </ul>
               </div>

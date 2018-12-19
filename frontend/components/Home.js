@@ -1,11 +1,16 @@
 import React, { Component } from "react";
 import Head from "next/head";
-import { HomeStyles, NameDiv, GreetingDiv } from "./styles/HomeStyles";
 import AboutSection from "./homePage/AboutSection";
 import TechSection from "./homePage/TechSection";
 import ExperienceSection from "./homePage/ExperienceSection";
 import ProjectSection from "./homePage/ProjectSection";
-import FooterSection from "./homePage/FooterSection";
+import TitleSection from "./homePage/TitleSection";
+import {
+  HomeStyles,
+  NameDiv,
+  GreetingDiv,
+  TechTitle
+} from "./styles/HomeStyles";
 
 class Home extends Component {
   render() {
@@ -16,26 +21,33 @@ class Home extends Component {
         </Head>
         <NameDiv>
           <div>
-            <h2 className="david">David</h2>
-            <h2 className="jaehoon">jaehoon</h2>
-            <h2 className="lee">Lee</h2>
+            <img src="/static/img/myLogo.png" />
           </div>
           <div className="messages">
-            <p>What We don't know is more important than what We know 📚</p>
+            <p>
+              “The purpose of life is finding the largest burden that you can
+              bear and bearing it.” ― Jordan B. Peterson
+            </p>
           </div>
         </NameDiv>
         <GreetingDiv>
-          <h2>How can I help? 😍</h2>
           <p>
             Get to know me as a person. You can find out about my background,
             experience and more below.
           </p>
         </GreetingDiv>
         <AboutSection />
+        <TechTitle>
+          <a href="/skills">
+            <TitleSection
+              visible={"Current focus : 💻 React & GraphQL stack"}
+              invisible={"Click for more skills and projects."}
+            />
+          </a>
+        </TechTitle>
         <TechSection />
         <ProjectSection />
         <ExperienceSection />
-        <FooterSection />
       </HomeStyles>
     );
   }

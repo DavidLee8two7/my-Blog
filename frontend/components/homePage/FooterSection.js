@@ -13,11 +13,13 @@ class FooterSection extends Component {
   render() {
     return (
       <FooterDiv>
-        <Footer className="footer">
+        <Footer>
           <LogoDiv>
-            <a href="/contact">
-              <img src="/static/img/myLogo.png" />
-            </a>
+            <Link prefetch href="/">
+              <a>
+                <img src="/static/img/myLogo.png" />
+              </a>
+            </Link>
           </LogoDiv>
           <ContactDiv>
             <FooterNav>
@@ -28,7 +30,7 @@ class FooterSection extends Component {
                   </Link>
                 </li>
                 <li>
-                  <Link prefetch href="/experience">
+                  <Link prefetch href="/skills">
                     <a>Exp. & Skills</a>
                   </Link>
                 </li>

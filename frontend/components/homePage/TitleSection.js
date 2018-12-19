@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledBtn = styled.button`
-  z-index: 3;
   width: 100%;
   padding: 1rem 0;
   position: relative;
@@ -37,7 +36,7 @@ const StyledBtn = styled.button`
     transform: translateY(100%);
   }
   &:hover .invisible {
-    top: 8.5px;
+    top: 8px;
   }
   &:focus {
     outline: none;
@@ -45,7 +44,7 @@ const StyledBtn = styled.button`
   }
 `;
 
-const SectionTitle = props => {
+const TitleSection = props => {
   return (
     <StyledBtn>
       <span className="visible">{props.visible}</span>
@@ -54,4 +53,4 @@ const SectionTitle = props => {
   );
 };
 
-export default SectionTitle;
+export default TitleSection;

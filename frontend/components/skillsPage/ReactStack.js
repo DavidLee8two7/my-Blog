@@ -2,8 +2,7 @@ import React from "react";
 import { Query, Mutation } from "react-apollo";
 import gql from "graphql-tag";
 import ReactStyles from "./ReactStyles";
-import CloseButton from "../styles/CloseButton";
-import StyledButton from "../styles/StyledButton";
+import { StyledButton, CloseButton } from "../styles/StyledButtons";
 import {
   ReactSide,
   TechType,
@@ -11,7 +10,7 @@ import {
   TechDescription,
   TechImg,
   TechName
-} from "../styles/StackList";
+} from "./StackList";
 
 const LOCAL_STATE_REACT = gql`
   query {

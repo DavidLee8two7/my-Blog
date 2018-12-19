@@ -1,14 +1,9 @@
 import styled from "styled-components";
 
-const TechTitle = styled.div`
-  width: 100%;
-  text-align: center;
-  display: block;
-  margin-left: 0;
-  margin-right: 0;
-`;
-
 const IconsDiv = styled.div`
+  z-index: 2;
+  grid-row: 5;
+  grid-column: 1 / -1;
   padding: 4rem;
   margin-top: 3rem;
   margin-bottom: 1rem;
@@ -56,4 +51,4 @@ const BackDiv = styled.div`
   grid-column-gap: 10rem;
 `;
 
-export { TechTitle, IconsDiv, FrontDiv, BackDiv };
+export { IconsDiv, FrontDiv, BackDiv };

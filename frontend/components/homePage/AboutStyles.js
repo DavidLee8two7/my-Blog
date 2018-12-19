@@ -3,7 +3,7 @@ import styled from "styled-components";
 const IntroDiv = styled.div`
   z-index: 2;
   grid-row: 3;
-  grid-column: 1 / span 4;
+  grid-column: 1 / -1;
   width: 100%;
   display: grid;
   grid-template-columns: 40% 1fr;

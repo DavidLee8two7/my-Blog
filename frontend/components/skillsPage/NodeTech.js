@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Zoom from "react-reveal/Zoom";
 import TechIcon from "../styles/TechIcon";
-import { IconsDiv, FrontDiv, BackDiv } from "./TechStyles";
+import { IconsDiv, FrontDiv, BackDiv } from "../homePage/TechStyles";
 
 class TechSection extends Component {
   state = {
@@ -10,34 +10,28 @@ class TechSection extends Component {
 
   render() {
     const tech = {
-      visible: {
-        desc: "Currently focusing on 💻 React & GraphQL Fullstack"
-      },
-      invisible: {
-        desc: "Please click to find more information!"
-      },
       firstTech: {
-        title: "react",
+        title: "pug",
         src: "",
         viewBox: "",
         href: "https://reactjs.org/"
       },
       secondTech: {
-        title: "apollo client",
+        title: "node js",
         src: "",
-        viewBox: "0 0 256 256",
+        viewBox: "",
         href: "https://www.apollographql.com/docs/?no-cache=1"
       },
       thirdTech: {
-        title: "graphql",
+        title: "express",
         src: "",
         viewBox: "",
         href: "https://graphql.org/learn/"
       },
       fourthTech: {
-        title: "prisma",
+        title: "mongodb",
         src: "",
-        viewBox: "-3.5 0 32 32",
+        viewBox: "",
         href: "https://www.prisma.io/"
       }
     };
@@ -64,10 +58,7 @@ class TechSection extends Component {
                 <p>{tech.firstTech.title}</p>
               </a>
               <a href={tech.secondTech.href} target="_blank">
-                <TechIcon
-                  title={tech.secondTech.title}
-                  viewBox={tech.secondTech.viewBox}
-                />
+                <TechIcon title={tech.secondTech.title} />
                 <p>{tech.secondTech.title}</p>
               </a>
             </FrontDiv>
@@ -77,10 +68,7 @@ class TechSection extends Component {
                 <p>{tech.thirdTech.title}</p>
               </a>
               <a href={tech.fourthTech.href} target="_blank">
-                <TechIcon
-                  title={tech.fourthTech.title}
-                  viewBox={tech.fourthTech.viewBox}
-                />
+                <TechIcon title={tech.fourthTech.title} />
                 <p>{tech.fourthTech.title}</p>
               </a>
             </BackDiv>

@@ -27,7 +27,7 @@ const Experience = styled.div`
   }
   &:hover .caption {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(3.5);
+    transform: translate(-50%, -50%) scale(1.01);
   }
 `;
 
@@ -46,6 +46,21 @@ const ShapeDiv = styled.div`
   }
 `;
 
+const CaptionDiv = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: ${props => props.theme.orange};
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.5s;
+  backface-visibility: hidden;
+  opacity: 0;
+  transform: translate(-50%, 20%);
+`;
+
 const StyledImg = styled.img`
   height: 100%;
   backface-visibility: hidden;
@@ -55,21 +70,6 @@ const StyledImg = styled.img`
 
 const TextDiv = styled.div`
   transform: skewX(12deg);
-`;
-
-const CaptionDiv = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: ${props => props.theme.orange};
-  text-transform: uppercase;
-  font-size: 2.7rem;
-  font-weight: 600;
-  text-align: center;
-  transition: all 0.5s;
-  backface-visibility: hidden;
-  opacity: 0;
-  transform: translate(-50%, 20%);
 `;
 
 const DetailsDiv = styled.div`
