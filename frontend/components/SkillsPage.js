@@ -42,16 +42,24 @@ class Skills extends Component {
             <TechSkills>
               <FullStacks>
                 <TechIntro>
-                  <h4>Tech Skills</h4>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 20">
+                    <text x="0" y="16">
+                      Tech Skills
+                    </text>
+                  </svg>
                 </TechIntro>
-
                 <TechMessage>
                   <p>
-                    I've found out that learning new things and concentration
-                    gives me peace(dopamine) I like learning new things...
+                    I am JavaScript focused fullstack web developer. Here are
+                    some programming languages and tools that I like improving
+                    while I'm looking for something new to learn.
+                  </p>
+                  <p>
+                    I like using React, Styled-Component, and GraphQL as my
+                    fullstack tools because its ready to build & everything is
+                    in JavaScript.
                   </p>
                 </TechMessage>
-
                 <ReactGraphqlStack>
                   <Mutation mutation={TOGGLE_CARD_REACT}>
                     {toggleReact => (
@@ -59,13 +67,12 @@ class Skills extends Component {
                         onClick={toggleReact}
                         style={{ backgroundColor: "black" }}
                       >
-                        <span>React & GraphQL</span>
+                        <p>React & GraphQL</p>
                       </StyledButton>
                     )}
                   </Mutation>
                   <ReactStack />
                 </ReactGraphqlStack>
-
                 <PugNodeStack>
                   <Mutation mutation={TOGGLE_CARD_NODE}>
                     {toggleNode => (
@@ -75,7 +82,7 @@ class Skills extends Component {
                           backgroundColor: "#215732"
                         }}
                       >
-                        Pug & Node
+                        <p>Pug & Node</p>
                       </StyledButton>
                     )}
                   </Mutation>

@@ -11,47 +11,48 @@ const TechSkills = styled.div`
     ),
     url("/static/img/working_pic.jpg") no-repeat center center fixed;
   background-size: cover;
+  color: black;
 `;
 
 const FullStacks = styled.div`
-  margin: 6rem;
-  padding: 2rem;
-  width: 100%;
+  margin-top: 3rem;
+  padding: 0 5rem;
   grid-row: 1;
-  grid-column: 1 / -1;
-  border-radius: 5px;
+  grid-column: 1 /-1;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr;
   grid-gap: 1rem;
   justify-items: center;
   align-items: center;
-  box-shadow: ${props => props.theme.bbs};
 `;
 
 const TechIntro = styled.div`
   width: 100%;
   margin-left: 1rem;
   text-align: left;
-  grid-column: 1 / span 2;
-  h4 {
-    font-family: ${props => props.theme.fontDisplay};
-    font-size: 3.2rem;
-    font-weight: 600;
+  grid-column: 1 / -1;
+  svg text {
+    text-transform: uppercase;
+    font-style: italic;
+    fill: ${props => props.theme.black};
   }
 `;
 
 const TechMessage = styled.div`
-  width: 95%;
+  padding: 1rem;
+  width: 100%;
   grid-column: 1 / -1;
   p {
-    font-size: 2rem;
+    font-size: 2.4rem;
+    font-weight: 600;
     text-align: left;
+    text-shadow: ${props => props.theme.ts};
   }
 `;
 
 const ReactGraphqlStack = styled.div`
   width: 100%;
-  grid-column: 1 / 3;
+  grid-column: 1;
   & > * {
     cursor: pointer;
   }
@@ -59,19 +60,19 @@ const ReactGraphqlStack = styled.div`
 
 const PugNodeStack = styled.div`
   width: 100%;
-  grid-column: 3 / -1;
+  grid-column: 2;
   & > * {
     cursor: pointer;
   }
 `;
 
 const Title = styled.div`
-  width: 30%;
+  width: 20rem;
   margin-left: 3rem;
   h4 {
     min-width: 5rem;
     padding: 2rem;
-    text-align: left;
+    text-align: center;
     line-height: 1.3;
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
     transform: skew(-5deg) rotate(-1deg);
@@ -88,14 +89,16 @@ const Title = styled.div`
 `;
 
 const SkillsDiv = styled.div`
+  width: 80%;
+  margin: 4rem;
+  padding: 2rem;
   grid-row: 2;
   grid-column: 1 / -1;
-  align-content: start;
 `;
 
 const SkillCatetory = styled.div`
+  margin-bottom: 6rem;
   width: 100%;
-  min-height: 370px;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: start;

@@ -4,22 +4,20 @@ import styled from "styled-components";
 import SVGIcon from "../styles/SVGIcon";
 
 const SkillDiv = styled.div`
+  margin: 5rem 0;
   display: flex;
   flex-direction: row;
-  text-align: center;
-  font-size: 1.6rem;
-  font-weight: 600;
 `;
 
 const IconDiv = styled.div`
-  height: 17rem;
-  margin: 1rem 5rem;
-  padding: 3rem;
-  border-bottom: 1px solid ${props => props.theme.orange};
-  p {
-    margin-top: 3rem;
-    font-size: 1.8rem;
-  }
+  margin: 0 auto;
+  max-height: 100px;
+  padding-bottom: 10px;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+  font-size: 1.8rem;
+  font-weight: 600;
 `;
 
 const viewBox = name => {
