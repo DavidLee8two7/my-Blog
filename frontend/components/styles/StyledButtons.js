@@ -1,24 +1,25 @@
 import styled from "styled-components";
 
 const StyledButton = styled.button`
+  display: inline-block;
+  padding: 2rem;
   width: 100%;
-  min-height: 10rem;
-  background: black;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   color: white;
-  font-weight: 500;
+  background: black;
+  font-weight: 600;
   border-radius: 3px;
   text-transform: uppercase;
-  font-size: 2rem;
-  display: inline-block;
-  transition: all 0.2s;
+  font-size: 2.4rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  transition: all 0.3s;
   &[disabled] {
     opacity: 0.5;
   }
   &:hover {
     background-color: black;
     color: #ff6600;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    box-shadow: ${props => props.theme.bbs};
+    transform: skewX(0deg) translateY(-5px);
   }
 `;
 

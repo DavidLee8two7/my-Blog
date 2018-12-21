@@ -16,6 +16,7 @@ const TOGGLE_CARD_NODE = gql`
     toggleNode @client
   }
 `;
+
 const NodeStack = () => {
   return (
     <Mutation mutation={TOGGLE_CARD_NODE}>
@@ -38,17 +39,14 @@ const NodeStack = () => {
                   <TechIcon />
                   <TechDescription />
                 </TechType>
-                <TechType>
-                  <TechIcon />
-                  <TechDescription />
-                </TechType>
-                <TechType>
-                  <TechIcon />
-                  <TechDescription />
-                </TechType>
               </ReactSide>
               <footer>
-                <StyledButton onClick={toggleNode}>Close</StyledButton>
+                <StyledButton
+                  style={{ background: "#215732" }}
+                  onClick={toggleNode}
+                >
+                  Close
+                </StyledButton>
               </footer>
             </NodeStyles>
           )}

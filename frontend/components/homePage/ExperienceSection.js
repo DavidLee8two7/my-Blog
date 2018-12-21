@@ -2,11 +2,10 @@ import React, { Component } from "react";
 import Reveal from "react-reveal/Reveal";
 import {
   Experience,
-  ShapeDiv,
-  StyledImg,
-  TextDiv,
-  CaptionDiv,
-  DetailsDiv
+  PictureDiv,
+  PictureImg,
+  IntroductionDiv,
+  ExpList
 } from "./ExperienceStyles";
 
 class ExperienceSection extends Component {
@@ -33,20 +32,16 @@ class ExperienceSection extends Component {
           }}
         >
           <Experience>
-            <ShapeDiv>
-              <StyledImg
+            <PictureDiv>
+              <PictureImg
                 src="/static/img/face.jpeg"
                 alt="david lee's picture"
-                className="image"
+                className="picture"
               />
-              <CaptionDiv className="caption">David Lee</CaptionDiv>
-            </ShapeDiv>
-            <TextDiv>
-              <h4>
-                <span className="javascript">JavaScript</span> focused{" "}
-                <span className="react">Front-End Web Developer</span> + Extra
-              </h4>
-              <p className="experience">
+            </PictureDiv>
+            <IntroductionDiv>
+              <h4>FULL-STACK WEB DEVELOPER</h4>
+              <p>
                 I can help the client to create responsive websites that work on
                 a wide range of devices Assist with production of clean and
                 functional design Bridge communication gap between designers and
@@ -55,8 +50,8 @@ class ExperienceSection extends Component {
                 well-documented and easily maintainable so you can enhance a
                 website as your company grows.
               </p>
-            </TextDiv>
-            <DetailsDiv>
+            </IntroductionDiv>
+            <ExpList>
               <div>
                 <h4>Features</h4>
                 <ul>
@@ -85,7 +80,7 @@ class ExperienceSection extends Component {
                   </ul>
                 </ul>
               </div>
-            </DetailsDiv>
+            </ExpList>
           </Experience>
         </div>
       </Reveal>

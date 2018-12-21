@@ -23,7 +23,7 @@ const InfoDiv = styled.div`
   text-align: left;
   border-radius: 3px;
   h4 {
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-weight: 500;
     text-align: right;
     color: ${props => props.theme.black};
@@ -42,7 +42,7 @@ const InfoDiv = styled.div`
   }
   p {
     padding: 0 3rem;
-    font-size: 2rem;
+    font-size: 2.2rem;
     text-align: left;
     font-weight: 400;
   }

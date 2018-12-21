@@ -1,39 +1,20 @@
 import styled from "styled-components";
 
 const Experience = styled.div`
+  color: ${props => props.theme.black};
   z-index: 3;
   width: 80%;
   margin: 8rem auto;
-  background-color: ${props => props.theme.white};
+  background-color: white;
   border-radius: 3px;
-  padding: 6rem;
+  padding: 7rem;
   transform: skewX(-12deg);
   box-shadow: ${props => props.theme.sbs};
-  h4 {
-    width: 100%;
-    font-size: 2.6rem;
-    font-weight: 600;
-    text-align: left;
-  }
-  .javascript {
-    color: ${props => props.theme.orange};
-  }
-  .react {
-    color: ${props => props.theme.blue};
-  }
-  .experience {
-    font-size: 1.6rem;
-    font-weight: 400;
-  }
-  &:hover .caption {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1.01);
-  }
 `;
 
-const ShapeDiv = styled.div`
-  width: 16.5rem;
-  height: 16.5rem;
+const PictureDiv = styled.div`
+  width: 20rem;
+  height: 20rem;
   float: left;
   transform: translateX(-2rem) skewX(12deg);
   position: relative;
@@ -46,53 +27,54 @@ const ShapeDiv = styled.div`
   }
 `;
 
-const CaptionDiv = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: ${props => props.theme.orange};
-  text-transform: uppercase;
-  font-size: 2.2rem;
-  font-weight: 600;
-  text-align: center;
-  transition: all 0.5s;
-  backface-visibility: hidden;
-  opacity: 0;
-  transform: translate(-50%, 20%);
-`;
-
-const StyledImg = styled.img`
+const PictureImg = styled.img`
   height: 100%;
   backface-visibility: hidden;
   transition: all 0.5s;
   transform: scale(1.15);
 `;
 
-const TextDiv = styled.div`
+const IntroductionDiv = styled.div`
   transform: skewX(12deg);
+  h4 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
 `;
 
-const DetailsDiv = styled.div`
-  border-top: 1px solid ${props => props.theme.lightGray};
+const ExpList = styled.div`
   display: grid;
   grid-template-columns: 1fr 60%;
   justify-items: start;
-  align-items: center;
+  align-items: start;
   transform: skewX(12deg);
+  border-top: 0.7px solid ${props => props.theme.lightGray};
+  h4 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+  }
   ul {
     width: 100%;
     margin: 0 auto;
     li {
       list-style: none;
       text-align: left;
-      font-size: 2rem;
+      font-size: 1.8rem;
       padding: 0.5rem;
       font-weight: 400;
       &:not(:last-child) {
-        border-bottom: 1px solid ${props => props.theme.lightGray};
+        border-bottom: 0.7px solid ${props => props.theme.lightGray};
       }
     }
   }
 `;
 
-export { Experience, ShapeDiv, StyledImg, TextDiv, CaptionDiv, DetailsDiv };
+export { Experience, PictureDiv, PictureImg, IntroductionDiv, ExpList };

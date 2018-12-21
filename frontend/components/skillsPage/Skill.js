@@ -12,8 +12,7 @@ const SkillDiv = styled.div`
 `;
 
 const IconDiv = styled.div`
-  width: 16rem;
-  height: 16rem;
+  height: 17rem;
   margin: 1rem 5rem;
   padding: 3rem;
   border-bottom: 1px solid ${props => props.theme.orange};
@@ -26,8 +25,8 @@ const IconDiv = styled.div`
 const viewBox = name => {
   switch (name) {
     case "pug(jade)":
-      return "0 0 479 479";
-    case "apollo client":
+      return "0 0 400 400";
+    case "apollo":
       return "0 0 256 256";
     case "jsx":
       return "0 0 512 512";

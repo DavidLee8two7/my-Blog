@@ -9,7 +9,7 @@ const ContactDiv = styled.div`
   align-items: center;
 `;
 
-const ContactTitle = styled.div`z
+const ContactTitle = styled.div`
   z-index: 3;
   width: 100%;
   grid-row: 1;

@@ -3,15 +3,15 @@ import styled from "styled-components";
 const NodeStyles = styled.div`
   padding: 20px;
   position: relative;
-  background: ${props => props.theme.offWhite};
+  background: ${props => props.theme.white};
   position: fixed;
   height: 100%;
   top: 0;
-  left: 0;
+  right: 0;
   width: 50%;
   min-width: 500px;
   bottom: 0;
-  transform: translateX(-100%);
+  transform: translateX(100%);
   transition: all 0.3s;
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
   z-index: 5;
@@ -19,7 +19,7 @@ const NodeStyles = styled.div`
   grid-template-rows: auto 1fr auto;
   ${props => props.open && `transform: translateX(0);`};
   header {
-    border-bottom: 5px solid ${props => props.theme.orange};
+    border-bottom: 5px solid ${props => props.theme.lightOrange};
     margin-bottom: 2rem;
     font-family: ${props => props.theme.fontPrimary};
     font-size: 30px;
@@ -28,7 +28,7 @@ const NodeStyles = styled.div`
     color: black;
   }
   footer {
-    border-top: 10px double ${props => props.theme.orange};
+    border-top: 10px double ${props => props.theme.lightOrange};
     margin-top: 2rem;
     padding-top: 2rem;
     display: grid;
