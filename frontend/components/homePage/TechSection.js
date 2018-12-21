@@ -23,7 +23,7 @@ class TechSection extends Component {
         href: "https://reactjs.org/"
       },
       secondTech: {
-        title: "apollo client",
+        title: "apollo",
         src: "",
         viewBox: "0 0 256 256",
         href: "https://www.apollographql.com/docs/?no-cache=1"

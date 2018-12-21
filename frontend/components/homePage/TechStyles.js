@@ -5,8 +5,6 @@ const IconsDiv = styled.div`
   grid-row: 5;
   grid-column: 1 / -1;
   padding: 4rem;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;

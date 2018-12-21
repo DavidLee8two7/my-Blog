@@ -1,24 +1,26 @@
 import styled from "styled-components";
 
 const StyledButton = styled.button`
-  width: 100%;
-  min-height: 10rem;
-  background: black;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-  color: white;
-  font-weight: 500;
-  border-radius: 3px;
-  text-transform: uppercase;
-  font-size: 2rem;
   display: inline-block;
-  transition: all 0.2s;
+  padding: 2rem 0;
+  width: 100%;
+  color: white;
+  background: black;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  box-shadow: ${props => props.theme.sbs};
+  transition: all 0.3s;
   &[disabled] {
     opacity: 0.5;
   }
   &:hover {
     background-color: black;
     color: #ff6600;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    box-shadow: ${props => props.theme.bbs};
+    transform: translateY(-5px);
   }
 `;
 

@@ -8,12 +8,13 @@ import ReactStack from "./skillsPage/ReactStack";
 import NodeStack from "./skillsPage/NodeStack";
 import { StyledButton } from "./styles/StyledButtons";
 import {
-  SkillsPage,
+  TechSkills,
   FullStacks,
+  TechIntro,
   TechMessage,
-  TechAbout,
   ReactGraphqlStack,
   PugNodeStack,
+  SkillsDiv,
   Title,
   SkillCatetory
 } from "./styles/SkillsStyles";
@@ -38,30 +39,35 @@ class Skills extends Component {
           if (loading) return <p>Loading...</p>;
           if (error) return <p>Error: {error.message}</p>;
           return (
-            <SkillsPage>
+            <TechSkills>
               <FullStacks>
+                <TechIntro>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 20">
+                    <text x="0" y="16">
+                      Tech Skills
+                    </text>
+                  </svg>
+                </TechIntro>
                 <TechMessage>
-                  <Title
-                    style={{
-                      color: `${props => props.theme.black}`,
-                      fontSize: "3rem"
-                    }}
-                  >
-                    Skills
-                  </Title>
+                  <p>
+                    I am JavaScript focused fullstack web developer. Here are
+                    some programming languages and tools that I like improving
+                    while I'm looking for something new to learn.
+                  </p>
+                  <p>
+                    I like using React, Styled-Component, and GraphQL as my
+                    fullstack tools because its ready to build & everything is
+                    in JavaScript.
+                  </p>
                 </TechMessage>
-                <TechAbout>
-                  I've found out that learning new things and concentration
-                  gives me peace(dopamine) I like learning new things...
-                </TechAbout>
                 <ReactGraphqlStack>
                   <Mutation mutation={TOGGLE_CARD_REACT}>
                     {toggleReact => (
                       <StyledButton
                         onClick={toggleReact}
-                        style={{ backgroundColor: "#00d8ff" }}
+                        style={{ backgroundColor: "black" }}
                       >
-                        React & GraphQL Stack
+                        <p>React & GraphQL</p>
                       </StyledButton>
                     )}
                   </Mutation>
@@ -72,9 +78,11 @@ class Skills extends Component {
                     {toggleNode => (
                       <StyledButton
                         onClick={toggleNode}
-                        style={{ backgroundColor: "#215732" }}
+                        style={{
+                          backgroundColor: "#215732"
+                        }}
                       >
-                        Pug(Jade) & Node Stack
+                        <p>Pug & Node</p>
                       </StyledButton>
                     )}
                   </Mutation>
@@ -82,15 +90,19 @@ class Skills extends Component {
                 </PugNodeStack>
               </FullStacks>
 
-              {data.skills.map(skill => (
-                <SkillCatetory key={skill.id}>
-                  <Title>
-                    <a>{skill.title}</a>
-                  </Title>
-                  <Skill tech={skill.tech} />
-                </SkillCatetory>
-              ))}
-            </SkillsPage>
+              <SkillsDiv>
+                {data.skills.map(skill => (
+                  <SkillCatetory key={skill.id}>
+                    <Title>
+                      <h4>
+                        <a>{skill.title}</a>
+                      </h4>
+                    </Title>
+                    <Skill tech={skill.tech} />
+                  </SkillCatetory>
+                ))}
+              </SkillsDiv>
+            </TechSkills>
           );
         }}
       </Query>

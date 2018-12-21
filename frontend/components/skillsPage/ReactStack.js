@@ -3,14 +3,7 @@ import { Query, Mutation } from "react-apollo";
 import gql from "graphql-tag";
 import ReactStyles from "./ReactStyles";
 import { StyledButton, CloseButton } from "../styles/StyledButtons";
-import {
-  ReactSide,
-  TechType,
-  TechIcon,
-  TechDescription,
-  TechImg,
-  TechName
-} from "./StackList";
+import { ReactSide, TechType, TechIcon, TechDescription } from "./StackList";
 
 const LOCAL_STATE_REACT = gql`
   query {
@@ -39,31 +32,11 @@ const ReactStack = () => {
               </header>
               <ReactSide>
                 <TechType>
-                  <TechIcon>
-                    <TechImg />
-                    <TechName />
-                  </TechIcon>
+                  <TechIcon />
                   <TechDescription />
                 </TechType>
                 <TechType>
-                  <TechIcon>
-                    <TechImg />
-                    <TechName />
-                  </TechIcon>
-                  <TechDescription />
-                </TechType>
-                <TechType>
-                  <TechIcon>
-                    <TechImg />
-                    <TechName />
-                  </TechIcon>
-                  <TechDescription />
-                </TechType>
-                <TechType>
-                  <TechIcon>
-                    <TechImg />
-                    <TechName />
-                  </TechIcon>
+                  <TechIcon />
                   <TechDescription />
                 </TechType>
               </ReactSide>

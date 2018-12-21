@@ -1,104 +1,119 @@
 import styled from "styled-components";
 
-const SkillsPage = styled.div`
-  margin: 6rem 0;
+const TechSkills = styled.div`
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   align-items: center;
-  background: ${props => props.theme.white};
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("/static/img/working_pic.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: black;
 `;
 
 const FullStacks = styled.div`
-  padding: 2rem;
-  width: 85%;
+  margin-top: 3rem;
+  padding: 0 5rem;
+  grid-row: 1;
+  grid-column: 1 /-1;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
   justify-items: center;
   align-items: center;
-  background: ${props => props.theme.white};
-  box-shadow: ${props => props.theme.bbs};
-  font-size: 2rem;
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("/static/plaid.jpg");
+`;
+
+const TechIntro = styled.div`
+  width: 100%;
+  margin-left: 1rem;
+  text-align: left;
+  grid-column: 1 / -1;
+  svg text {
+    text-transform: uppercase;
+    font-style: italic;
+    fill: ${props => props.theme.black};
+  }
 `;
 
 const TechMessage = styled.div`
+  padding: 1rem;
   width: 100%;
-  font-size: 2.4rem;
-  font-weight: 400;
-`;
-
-const TechAbout = styled.div`
-  width: 100%;
-  font-size: 1.4rem;
-  text-align: left;
+  grid-column: 1 / -1;
+  p {
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-align: left;
+    text-shadow: ${props => props.theme.ts};
+  }
 `;
 
 const ReactGraphqlStack = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
   width: 100%;
-  justify-items: center;
-  align-items: center;
-  box-shadow: ${props => props.theme.sbs};
+  grid-column: 1;
+  & > * {
+    cursor: pointer;
+  }
 `;
 
 const PugNodeStack = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
   width: 100%;
-  justify-items: center;
-  align-items: center;
-  box-shadow: ${props => props.theme.sbs};
+  grid-column: 2;
+  & > * {
+    cursor: pointer;
+  }
+`;
+
+const Title = styled.div`
+  width: 20rem;
+  margin-left: 3rem;
+  h4 {
+    min-width: 5rem;
+    padding: 2rem;
+    text-align: center;
+    line-height: 1.3;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    transform: skew(-5deg) rotate(-1deg);
+    text-transform: uppercase;
+    background: ${props => props.theme.lightOrange};
+    box-shadow: ${props => props.theme.sbs};
+    p {
+      font-size: 2rem;
+    }
+    a {
+      font-size: 2rem;
+    }
+  }
+`;
+
+const SkillsDiv = styled.div`
+  width: 80%;
+  margin: 4rem;
+  padding: 2rem;
+  grid-row: 2;
+  grid-column: 1 / -1;
 `;
 
 const SkillCatetory = styled.div`
-  width: 70%;
-  min-height: 400px;
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 6rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: start;
   margin-top: 5rem;
-  padding: 1rem;
   border-radius: 3px;
-  box-shadow: ${props => props.theme.bbs};
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("/static/plaid.jpg");
-`;
-
-const Title = styled.h3`
-  width: max-content;
-  padding: 2rem;
-  margin: 2rem 0 4rem 2rem;
-  text-align: center;
-  line-height: 1.3;
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
-  transform: skew(-5deg) rotate(-1deg);
-  text-transform: uppercase;
-  background: ${props => props.theme.lightOrange};
-  box-shadow: ${props => props.theme.sbs};
-  p {
-    font-size: 2rem;
-  }
-  a {
-    font-size: 2rem;
-  }
 `;
 
 export {
-  SkillsPage,
+  TechSkills,
   FullStacks,
+  TechIntro,
   TechMessage,
-  TechAbout,
   ReactGraphqlStack,
   PugNodeStack,
+  SkillsDiv,
   Title,
   SkillCatetory
 };
