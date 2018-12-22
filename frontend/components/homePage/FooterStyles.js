@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const FooterDiv = styled.div`
+const FooterDiv = styled.footer`
   z-index: 3;
   grid-row: 8;
   grid-column: 1 / span 4;

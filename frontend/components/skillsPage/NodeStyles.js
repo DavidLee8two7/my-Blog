@@ -1,44 +1,46 @@
 import styled from "styled-components";
 
 const NodeStyles = styled.div`
-  padding: 20px;
+  padding: 2rem;
   position: relative;
-  background: ${props => props.theme.white};
   position: fixed;
   height: 100%;
   top: 0;
-  right: 0;
+  left: 0;
   width: 50%;
   min-width: 500px;
   bottom: 0;
-  transform: translateX(100%);
+  transform: translateX(-100%);
   transition: all 0.3s;
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
   z-index: 5;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  background-size: cover;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(225, 225, 225, 0.95),
+      rgba(237, 237, 237, 0.25)
+    ),
+    url(/static/img/tShirts.jpg);
   ${props => props.open && `transform: translateX(0);`};
   header {
-    border-bottom: 5px solid ${props => props.theme.lightOrange};
-    margin-bottom: 2rem;
-    font-family: ${props => props.theme.fontPrimary};
-    font-size: 30px;
-    font-weight: 800;
+    border-bottom: 5px solid ${props => props.theme.lightGray};
+    font-family: ${props => props.theme.fontDisplay};
+    font-size: 3rem;
+    font-weight: 600;
     line-height: 2;
     color: black;
+    text-align: center;
   }
   footer {
-    border-top: 10px double ${props => props.theme.lightOrange};
+    border-top: 10px double ${props => props.theme.lightGray};
     margin-top: 2rem;
     padding-top: 2rem;
     display: grid;
-    grid-template-columns: auto auto;
     align-items: center;
     font-size: 3rem;
     font-weight: 900;
-    p {
-      margin: 0;
-    }
   }
   ul {
     margin: 0;

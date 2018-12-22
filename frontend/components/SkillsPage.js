@@ -63,11 +63,8 @@ class Skills extends Component {
                 <ReactGraphqlStack>
                   <Mutation mutation={TOGGLE_CARD_REACT}>
                     {toggleReact => (
-                      <StyledButton
-                        onClick={toggleReact}
-                        style={{ backgroundColor: "black" }}
-                      >
-                        <p>React & GraphQL</p>
+                      <StyledButton onClick={toggleReact}>
+                        <p>React & GraphQL project sample</p>
                       </StyledButton>
                     )}
                   </Mutation>
@@ -82,7 +79,7 @@ class Skills extends Component {
                           backgroundColor: "#215732"
                         }}
                       >
-                        <p>Pug & Node</p>
+                        <p>Pug & Node project sample</p>
                       </StyledButton>
                     )}
                   </Mutation>

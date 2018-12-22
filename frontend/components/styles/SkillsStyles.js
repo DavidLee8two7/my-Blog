@@ -53,17 +53,11 @@ const TechMessage = styled.div`
 const ReactGraphqlStack = styled.div`
   width: 100%;
   grid-column: 1;
-  & > * {
-    cursor: pointer;
-  }
 `;
 
 const PugNodeStack = styled.div`
   width: 100%;
   grid-column: 2;
-  & > * {
-    cursor: pointer;
-  }
 `;
 
 const Title = styled.div`
