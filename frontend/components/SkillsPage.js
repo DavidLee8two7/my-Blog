@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Query, Mutation } from "react-apollo";
+import Experience from "./skillsPage/Experience";
 import { TOGGLE_CARD_REACT } from "./skillsPage/ReactStack";
 import { TOGGLE_CARD_NODE } from "./skillsPage/NodeStack";
 import gql from "graphql-tag";
@@ -86,7 +87,6 @@ class Skills extends Component {
                   <NodeStack />
                 </PugNodeStack>
               </FullStacks>
-
               <SkillsDiv>
                 {data.skills.map(skill => (
                   <SkillCatetory key={skill.id}>
@@ -99,6 +99,7 @@ class Skills extends Component {
                   </SkillCatetory>
                 ))}
               </SkillsDiv>
+              <Experience />
             </TechSkills>
           );
         }}
