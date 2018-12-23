@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ExperienceDiv = styled.div`
+const OthersDiv = styled.div`
   width: 100%;
   grid-column: 1 / -1;
   display: grid;
@@ -10,7 +10,7 @@ const ExperienceDiv = styled.div`
   align-items: center;
 `;
 
-const ExperienceTitle = styled.div`
+const OthersTitle = styled.div`
   width: 100%;
   background: black;
   color: white;
@@ -21,7 +21,7 @@ const ExperienceTitle = styled.div`
   padding: 2rem 0 2rem 3rem;
 `;
 
-const CompanyDiv = styled.div`
+const EducationDiv = styled.div`
   width: 70%;
   margin: 5rem 0;
   padding: 2rem;
@@ -31,19 +31,4 @@ const CompanyDiv = styled.div`
   }
 `;
 
-const CompanyIntro = styled.div`
-  width: 100%;
-  display: flex;
-  border-bottom: 2px solid ${props => props.theme.black};
-  img {
-    height: 7rem;
-  }
-  h4 {
-    margin-left: 6rem;
-    font-weight: 500;
-    font-size: 2.3rem;
-    text-align: center;
-  }
-`;
-
-export { ExperienceDiv, ExperienceTitle, CompanyDiv, CompanyIntro };
+export { OthersDiv, OthersTitle, EducationDiv };

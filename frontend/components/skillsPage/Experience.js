@@ -13,16 +13,10 @@ class Experience extends Component {
         <ExperienceTitle>Experience</ExperienceTitle>
         <CompanyDiv>
           <CompanyIntro>
-            <a
-              href="http://english.cj.net/cj_introduction/index.asp"
-              target="_blank"
-            >
+            <a href="http://eng.paris.co.kr/new/vision.html" target="_blank">
               <img src="/static/cj.png" />
             </a>
-            <a
-              href="http://english.cj.net/cj_introduction/index.asp"
-              target="_blank"
-            >
+            <a href="http://eng.paris.co.kr/new/vision.html" target="_blank">
               <h4>CJ America, Inc.</h4>
             </a>
           </CompanyIntro>
@@ -52,17 +46,11 @@ class Experience extends Component {
         </CompanyDiv>
         <CompanyDiv>
           <CompanyIntro>
-            <a
-              href="http://english.cj.net/cj_introduction/index.asp"
-              target="_blank"
-            >
-              <img src="/static/cj.png" />
+            <a href="http://eng.paris.co.kr/new/global.html" target="_blank">
+              <img src="/static/pb.gif" />
             </a>
-            <a
-              href="http://english.cj.net/cj_introduction/index.asp"
-              target="_blank"
-            >
-              <h4>CJ America, Inc.</h4>
+            <a href="http://eng.paris.co.kr/new/global.html" target="_blank">
+              <h4>Paris Baguette, Inc.</h4>
             </a>
           </CompanyIntro>
           <div>

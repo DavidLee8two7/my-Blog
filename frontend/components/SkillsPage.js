@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Query, Mutation } from "react-apollo";
 import Experience from "./skillsPage/Experience";
+import Others from "./skillsPage/Others";
 import { TOGGLE_CARD_REACT } from "./skillsPage/ReactStack";
 import { TOGGLE_CARD_NODE } from "./skillsPage/NodeStack";
 import gql from "graphql-tag";
@@ -100,6 +101,7 @@ class Skills extends Component {
                 ))}
               </SkillsDiv>
               <Experience />
+              <Others />
             </TechSkills>
           );
         }}
