@@ -4,7 +4,7 @@ import NavStyles from "./styles/NavStyles";
 const Nav = () => (
   <NavStyles>
     <Link prefetch href="/index">
-      <a>About</a>
+      <a>Home</a>
     </Link>
     <Link prefetch href="/skills">
       <a>Skills & Exp</a>

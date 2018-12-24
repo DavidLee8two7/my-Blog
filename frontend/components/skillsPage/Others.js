@@ -15,15 +15,6 @@ class OtherSkills extends Component {
             <li>one</li>
           </ul>
         </EducationDiv>
-        <EducationDiv>
-          <h4>University of Oregon</h4>
-          <ul>
-            <li>one</li>
-            <li>one</li>
-            <li>one</li>
-            <li>one</li>
-          </ul>
-        </EducationDiv>
       </OthersDiv>
     );
   }

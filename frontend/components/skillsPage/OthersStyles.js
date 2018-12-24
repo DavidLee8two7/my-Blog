@@ -26,9 +26,6 @@ const EducationDiv = styled.div`
   margin: 5rem 0;
   padding: 2rem;
   box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.2);
-  &:last-child {
-    margin-top: 0;
-  }
 `;
 
 export { OthersDiv, OthersTitle, EducationDiv };
