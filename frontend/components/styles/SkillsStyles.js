@@ -5,18 +5,11 @@ const TechSkills = styled.div`
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   align-items: center;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.8),
-      rgba(255, 255, 255, 0.8)
-    ),
-    url("/static/img/working_pic.jpg") no-repeat center center fixed;
-  background-size: cover;
   color: black;
 `;
 
 const FullStacks = styled.div`
-  margin-top: 3rem;
-  padding: 0 5rem;
+  padding: 5rem;
   grid-row: 1;
   grid-column: 1 /-1;
   display: grid;
@@ -39,7 +32,6 @@ const TechIntro = styled.div`
 `;
 
 const TechMessage = styled.div`
-  padding: 1rem;
   width: 100%;
   grid-column: 1 / -1;
   p {

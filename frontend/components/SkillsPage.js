@@ -49,19 +49,19 @@ class Skills extends Component {
                       Tech Skills
                     </text>
                   </svg>
+                  <TechMessage>
+                    <p>
+                      I am JavaScript focused fullstack web developer. Here are
+                      some programming languages and tools that I like improving
+                      while I'm looking for something new to learn.
+                    </p>
+                    <p>
+                      I like using React, Styled-Component, and GraphQL as my
+                      fullstack tools because its ready to build & everything is
+                      in JavaScript.
+                    </p>
+                  </TechMessage>
                 </TechIntro>
-                <TechMessage>
-                  <p>
-                    I am JavaScript focused fullstack web developer. Here are
-                    some programming languages and tools that I like improving
-                    while I'm looking for something new to learn.
-                  </p>
-                  <p>
-                    I like using React, Styled-Component, and GraphQL as my
-                    fullstack tools because its ready to build & everything is
-                    in JavaScript.
-                  </p>
-                </TechMessage>
                 <ReactGraphqlStack>
                   <Mutation mutation={TOGGLE_CARD_REACT}>
                     {toggleReact => (

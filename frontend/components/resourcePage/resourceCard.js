@@ -3,27 +3,40 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const ResourceStyles = styled.div`
-  width: 30rem;
-  display: flex;
-  justify-items: center;
-  align-items: center;
+  width: 70%;
+  float: left;
+  margin: 4%;
+  align-self: start;
   img {
-    height: 4rem;
-    object-fit: cover;
+    display: block;
+    height: 5rem;
+    margin-bottom: 2rem;
+    border-style: none;
   }
   h5 {
-    font-size: 1.8rem;
-    font-weight: 500;
+    color: ${props => props.theme.orange};
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+  }
+  a {
+    background-color: transparent;
   }
   p {
-    text-align: left;
-    font-size: 1.4rem;
-    line-height: 2;
-    font-weight: 400;
-    flex-grow: 1;
-    padding: 0 3rem;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
   }
 `;
+
 export default class Resources extends Component {
   static propTypes = {
     resource: PropTypes.object.isRequired
@@ -33,15 +46,11 @@ export default class Resources extends Component {
     const { resource } = this.props;
     return (
       <ResourceStyles>
-        <div>
-          {resource.image && (
-            <img src={resource.image} alt={resource.subject} />
-          )}
-          <a href={resource.src} target="_blank">
-            <h5>{resource.subject}</h5>
-          </a>
-          <p>{resource.message}</p>
-        </div>
+        {resource.image && <img src={resource.image} alt={resource.subject} />}
+        <a href={resource.src} target="_blank">
+          <h5>{resource.subject}</h5>
+        </a>
+        <p>{resource.message}</p>
       </ResourceStyles>
     );
   }

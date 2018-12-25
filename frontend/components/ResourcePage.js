@@ -1,98 +1,136 @@
 import React, { Component } from "react";
 import Head from "next/head";
-import styled from "styled-components";
+import {
+  devTools,
+  htmlResources,
+  cssResources,
+  javascriptResources,
+  fontResources,
+  data
+} from "../lib/resourceData";
 import Resources from "./resourcePage/resourceCard";
-
-const Center = styled.div`
-  text-align: center;
-`;
-
-const ResourceList = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  justify-items: center;
-  align-items: center;
-  background: lightblue;
-`;
-
-const ResourceList2 = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  justify-items: center;
-  align-items: center;
-  background: lightgreen;
-`;
-
-const data = {
-  resources: [
-    {
-      image: "/static/logo/vscode.png",
-      src: "https://code.visualstudio.com/",
-      subject: "VS Code",
-      message:
-        "I recently switched to this code editor ! See the next resource for my setup."
-    },
-    {
-      image: "/static/logo/vscode.png",
-      src: "https://github.com/DavidLee8two7",
-      subject: "My Visual Studio Code Setup",
-      message: "Check out exactly what theme. its good."
-    },
-    {
-      image: "/static/logo/codepen.png",
-      src: "https://codepen.io/",
-      subject: "Code Pen",
-      message:
-        "Codepen has become an essential tool for me to quickly test out some ideas or do some tests."
-    },
-    {
-      image: "/static/logo/emmet.png",
-      src: "https://docs.emmet.io/cheat-sheet/",
-      subject: "subject",
-      message:
-        "Emmet is an essential tool for writing HTML. This is a very handy cheat sheet to get started."
-    }
-  ]
-};
+import {
+  ResourceDiv,
+  ResourceIntro,
+  ResourceList,
+  Title
+} from "./styles/ResourceStyles";
 
 class Resource extends Component {
   render() {
     return (
-      <Center>
+      <ResourceDiv>
         <Head>
           <title>David Lee | Resources</title>
         </Head>
-        <h1>Tools</h1>
+        <ResourceIntro>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 20">
+            <text x="10" y="20">
+              Development Tools
+            </text>
+          </svg>
+          <p>
+            Here are tools that I often use to save time for whomever comes here
+            including myself. 😊
+          </p>
+        </ResourceIntro>
+        <Title>
+          <h4>Development Tools</h4>
+        </Title>
+        <ResourceList>
+          {devTools.resources.map(resource => (
+            <Resources resource={resource} key={resource.id} />
+          ))}
+        </ResourceList>
+        <Title>
+          <h4>HTML5 resources</h4>
+        </Title>
+        <ResourceList>
+          {htmlResources.resources.map(resource => (
+            <Resources resource={resource} key={resource.id} />
+          ))}
+        </ResourceList>
+        <Title>
+          <h4>CSS resources</h4>
+        </Title>
+        <ResourceList>
+          {cssResources.resources.map(resource => (
+            <Resources resource={resource} key={resource.id} />
+          ))}
+        </ResourceList>
+        <Title>
+          <h4>JavaScript resources</h4>
+        </Title>
+        <ResourceList>
+          {javascriptResources.resources.map(resource => (
+            <Resources resource={resource} key={resource.id} />
+          ))}
+        </ResourceList>
+        <Title>
+          <h4>Fonts and typography tools</h4>
+        </Title>
+        <ResourceList>
+          {fontResources.resources.map(resource => (
+            <Resources resource={resource} key={resource.id} />
+          ))}
+        </ResourceList>
+        <Title>
+          <h4>Colors, themes and tools</h4>
+        </Title>
         <ResourceList>
           {data.resources.map(resource => (
             <Resources resource={resource} key={resource.id} />
           ))}
         </ResourceList>
-        <h1>Tools</h1>
-        <ResourceList2>
-          {data.resources.map(resource => (
-            <Resources resource={resource} key={resource.id} />
-          ))}
-        </ResourceList2>
-        <h1>Tools</h1>
+        <Title>
+          <h4>Images & Videos</h4>
+        </Title>
         <ResourceList>
           {data.resources.map(resource => (
             <Resources resource={resource} key={resource.id} />
           ))}
         </ResourceList>
-        <h1>Tools</h1>
-        <ResourceList2>
-          {data.resources.map(resource => (
-            <Resources resource={resource} key={resource.id} />
-          ))}
-        </ResourceList2>
-        <h1>Tools</h1>
+        <Title>
+          <h4>Fonts and Typography Tools</h4>
+        </Title>
         <ResourceList>
           {data.resources.map(resource => (
             <Resources resource={resource} key={resource.id} />
           ))}
         </ResourceList>
-      </Center>
+        <Title>
+          <h4>Icons and tools</h4>
+        </Title>
+        <ResourceList>
+          {data.resources.map(resource => (
+            <Resources resource={resource} key={resource.id} />
+          ))}
+        </ResourceList>
+        <Title>
+          <h4>Design and references</h4>
+        </Title>
+        <ResourceList>
+          {data.resources.map(resource => (
+            <Resources resource={resource} key={resource.id} />
+          ))}
+        </ResourceList>
+        <Title>
+          <h4>Communities and blogs</h4>
+        </Title>
+        <ResourceList>
+          {data.resources.map(resource => (
+            <Resources resource={resource} key={resource.id} />
+          ))}
+        </ResourceList>
+        <Title>
+          <h4>Planning, optimization & deploymenet</h4>
+        </Title>
+        <ResourceList>
+          {data.resources.map(resource => (
+            <Resources resource={resource} key={resource.id} />
+          ))}
+        </ResourceList>
+      </ResourceDiv>
     );
   }
 }
