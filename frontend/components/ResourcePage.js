@@ -1,14 +1,21 @@
 import React, { Component } from "react";
 import Head from "next/head";
+import Resources from "./resourcePage/resourceCard";
+
 import {
   devTools,
   htmlResources,
   cssResources,
   javascriptResources,
   fontResources,
-  data
+  colorResources,
+  imagesAndVidoes,
+  iconsAndOthers,
+  designs,
+  communities,
+  allOthers
 } from "../lib/resourceData";
-import Resources from "./resourcePage/resourceCard";
+
 import {
   ResourceDiv,
   ResourceIntro,
@@ -78,7 +85,7 @@ class Resource extends Component {
           <h4>Colors, themes and tools</h4>
         </Title>
         <ResourceList>
-          {data.resources.map(resource => (
+          {colorResources.resources.map(resource => (
             <Resources resource={resource} key={resource.id} />
           ))}
         </ResourceList>
@@ -86,15 +93,7 @@ class Resource extends Component {
           <h4>Images & Videos</h4>
         </Title>
         <ResourceList>
-          {data.resources.map(resource => (
-            <Resources resource={resource} key={resource.id} />
-          ))}
-        </ResourceList>
-        <Title>
-          <h4>Fonts and Typography Tools</h4>
-        </Title>
-        <ResourceList>
-          {data.resources.map(resource => (
+          {imagesAndVidoes.resources.map(resource => (
             <Resources resource={resource} key={resource.id} />
           ))}
         </ResourceList>
@@ -102,15 +101,15 @@ class Resource extends Component {
           <h4>Icons and tools</h4>
         </Title>
         <ResourceList>
-          {data.resources.map(resource => (
+          {iconsAndOthers.resources.map(resource => (
             <Resources resource={resource} key={resource.id} />
           ))}
         </ResourceList>
         <Title>
-          <h4>Design and references</h4>
+          <h4>Design samples</h4>
         </Title>
         <ResourceList>
-          {data.resources.map(resource => (
+          {designs.resources.map(resource => (
             <Resources resource={resource} key={resource.id} />
           ))}
         </ResourceList>
@@ -118,7 +117,7 @@ class Resource extends Component {
           <h4>Communities and blogs</h4>
         </Title>
         <ResourceList>
-          {data.resources.map(resource => (
+          {communities.resources.map(resource => (
             <Resources resource={resource} key={resource.id} />
           ))}
         </ResourceList>
@@ -126,7 +125,7 @@ class Resource extends Component {
           <h4>Planning, optimization & deploymenet</h4>
         </Title>
         <ResourceList>
-          {data.resources.map(resource => (
+          {allOthers.resources.map(resource => (
             <Resources resource={resource} key={resource.id} />
           ))}
         </ResourceList>

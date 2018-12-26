@@ -117,8 +117,20 @@ const cssResources = {
         "The Responsive Grid System. It's a quick, easy & flexible way to create a responsive web site."
     },
     {
+      image: "/static/logo/flexbox.jpg",
+      src: "https://yoksel.github.io/flex-cheatsheet/",
+      subject: "Flexbox cheat sheet",
+      message: "Cheat sheet for using flexbox grid system."
+    },
+    {
+      image: "/static/logo/cssgrid.jpg",
+      src: "https://mosaicdigitalmedia.co.uk/css-grid-impressions/",
+      subject: "CSS Grid system",
+      message: "CSS Grid system cheat sheet"
+    },
+    {
       image: "/static/logo/cubic.png",
-      src: "http://cubic-bezier.com/#.17,.67,.83,.67",
+      src: "https://yoksel.github.io/flex-cheatsheet/",
       subject: "Cubic-bezier calculator",
       message:
         "Visually generating cubic-bezier calculator for CSS transitions and animations."
@@ -194,10 +206,281 @@ const fontResources = {
         "Google Fonts has a huge library of fonts and it's easy-to-use webfonts."
     },
     {
-      image: "/static/logo/mdn.png",
-      src: "https://developer.mozilla.org/en-US/docs/Web/Events",
-      subject: "JavaScript Event Reference",
-      message: "MDN reference for JavaScript DOM events."
+      image: "/static/logo/myFonts.png",
+      src: "https://www.myfonts.com/",
+      subject: "MyFonts",
+      message: "Another one of the largest library of premium fonts."
+    },
+    {
+      image: "/static/logo/typetester.png",
+      src: "https://www.typetester.org/",
+      subject: "TypeTester",
+      message: "Web application for testing and comparing a lot of typefaces."
+    },
+    {
+      image: "/static/logo/guide.svg",
+      src: "http://www.typogui.de/",
+      subject: "A Pocket Guide to Typography",
+      message: "Typography basics well organized."
+    }
+  ]
+};
+
+const colorResources = {
+  resources: [
+    {
+      image: "/static/logo/colorhunt.gif",
+      src: "https://colorhunt.co/",
+      subject: "Colorhunt Palettes",
+      message:
+        "Colorhunt can help with what colors to use with beautiful color palettes."
+    },
+    {
+      image: "/static/logo/materialPalette.jpg",
+      src: "https://www.materialpalette.com/",
+      subject: "Material Palette",
+      message: "Good set of colors inspired in material design."
+    },
+    {
+      image: "/static/logo/paletton.png",
+      src: "http://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF",
+      subject: "Paletton",
+      message:
+        "A very popular tool which allows you to create color combinations that play well together."
+    },
+    {
+      image: "/static/logo/brandColors.png",
+      src: "https://brandcolors.net/",
+      subject: "BrandColors",
+      message: "Collection of colors themes by name brands."
+    },
+    {
+      image: "/static/logo/uiGradients.png",
+      src: "https://uigradients.com/#VeniceBlue",
+      subject: "UI Gradients",
+      message:
+        "Collection of beautiful color gradients for you to choose from and export to your project."
+    },
+    {
+      image: "/static/logo/0to255.png",
+      src: "http://www.0to255.com/",
+      subject: "0to255",
+      message:
+        "A simple tool that helps you find variations of any color. Perfect for hovers, borders and gradients."
+    }
+  ]
+};
+
+const imagesAndVidoes = {
+  resources: [
+    {
+      image: "/static/logo/unsplash.svg",
+      src: "https://unsplash.com/",
+      subject: "Unsplash",
+      message: "Free high-resolution photos."
+    },
+    {
+      image: "/static/logo/pixaby.png",
+      src: "https://pixabay.com/en/",
+      subject: "Pixaby",
+      message:
+        "Free stock photos, vectors and art illustrations. I like this one because I can choose file size."
+    },
+    {
+      image: "/static/logo/subtlepatterns.png",
+      src: "https://www.toptal.com/designers/subtlepatterns/",
+      subject: "Subtle Patterns",
+      message:
+        "High quality resource of tilable textured patterns, completely free to use."
+    },
+    {
+      image: "/static/logo/coverr.png",
+      src: "http://www.coverr.co/",
+      subject: "Coverr",
+      message: "Good source for free videos"
+    },
+    {
+      image: "/static/logo/canva.png",
+      src: "https://www.canva.com/",
+      subject: "Coverr",
+      message: "Easily create designs with drag-and-drop features and layouts."
+    }
+  ]
+};
+
+const iconsAndOthers = {
+  resources: [
+    {
+      image: "/static/logo/icomoon.png",
+      src: "https://icomoon.io/",
+      subject: "Icomoon",
+      message: "Convert icon fonts to SVG icons and sprites."
+    },
+    {
+      image: "/static/logo/fontastic.png",
+      src: "http://fontastic.me/",
+      subject: "Fontastic",
+      message:
+        "Create a customized icon font. You can import your own icons as well."
+    },
+    {
+      image: "/static/logo/flaticon.png",
+      src: "https://www.flaticon.com/",
+      subject: "Flaticon",
+      message:
+        "Free icons available in PNG, SVG, EPS and PSD. It's even searchable."
+    },
+    {
+      image: "/static/logo/fontawesome.ico",
+      src: "https://fontawesome.com/?from=io",
+      subject: "Font Awesome",
+      message:
+        "Another highly popular icon font,icons spread across several categories."
+    },
+    {
+      image: "/static/logo/icons8.png",
+      src: "https://icons8.com/",
+      subject: "Icons8",
+      message: "Premium icon set with a lots of icons in any size and format."
+    }
+  ]
+};
+
+const designs = {
+  resources: [
+    {
+      image: "/static/logo/dribbble.png",
+      src: "https://dribbble.com/",
+      subject: "Dribbble",
+      message: "Good design inspiration resource, not just for web design."
+    },
+    {
+      image: "/static/logo/onepagelove.png",
+      src: "https://onepagelove.com/",
+      subject: "One Page Love",
+      message: "The ultimate showcase of delicious One Page websites."
+    },
+    {
+      image: "/static/logo/siteinspire.png",
+      src: "https://www.siteinspire.com/",
+      subject: "Site Inspire",
+      message: "A showcase of the finest web and interactive design."
+    },
+    {
+      image: "/static/logo/mediaqueries.png",
+      src: "https://mediaqueri.es/",
+      subject: "Media Queries",
+      message: "A collection of responsively designed websites for inspiration."
+    },
+    {
+      image: "/static/logo/calltoidea.png",
+      src: "https://www.calltoidea.com/",
+      subject: "Call To idea",
+      message:
+        "Get quick inspiration for common website elements such as forms, sliders, navigations, etc."
+    }
+  ]
+};
+
+const communities = {
+  resources: [
+    {
+      image: "/static/logo/stackoverflow.png",
+      src: "https://stackoverflow.com/",
+      subject: "Stack Overflow",
+      message: "I think it's largest programmer community."
+    },
+    {
+      image: "/static/logo/designDepot.png",
+      src: "https://www.webdesignerdepot.com/",
+      subject: "Web Designer Depot",
+      message: "Web design news, views, techniques, and resources."
+    },
+    {
+      image: "/static/logo/frontend.png",
+      src: "https://frontendfront.com/",
+      subject: "Front End Front",
+      message:
+        "Front-end focused community where developers can ask questions, share links, and show works."
+    },
+    {
+      image: "/static/logo/heydesigner.png",
+      src: "https://heydesigner.com/",
+      subject: "Hey Designer",
+      message: "Curated articles for designers and front-end developers."
+    },
+    {
+      image: "/static/logo/designernews.png",
+      src: "https://www.designernews.co/",
+      subject: "Designer News",
+      message:
+        "A community for people in design and tech, to discuss and share interesting things in the industry."
+    }
+  ]
+};
+
+const allOthers = {
+  resources: [
+    {
+      image: "/static/logo/usability.ico",
+      src: "https://stayintech.com/UX",
+      subject: "Usability checklist",
+      message:
+        "Catch common usability problems for the website before deploy it."
+    },
+    {
+      image: "/static/logo/periodictable.png",
+      src:
+        "https://www.newdesigngroup.ca/website-design/web-design-process-infographic/",
+      subject: "Periodic Table of Web Design Process",
+      message: "Overview of the web design process. Project brief to launching."
+    },
+    {
+      image: "/static/logo/optimizilla.png",
+      src: "https://imagecompressor.com/",
+      subject: "Optimizilla",
+      message:
+        "Compress up to 20 JPEG and PNG images while keeping a good level of quality."
+    },
+    {
+      image: "/static/logo/nibbler.png",
+      src: "http://nibbler.silktide.com/en_US",
+      subject: "Nibbler",
+      message:
+        "Website testing tool for key areas including accessibility, SEO, social media and technology."
+    },
+    {
+      image: "/static/logo/optimization.png",
+      src: "https://kinsta.com/learn/page-speed/",
+      subject: "Website Speed Optimization Guide",
+      message: "An excellent guide to optimize your webpage speed."
+    },
+    {
+      image: "/static/logo/sizzy.png",
+      src: "https://sizzy.co/",
+      subject: "Sizzy",
+      message:
+        "A tool for developing responsive websites. Let you be able to see multiple devices at once."
+    },
+    {
+      image: "/static/logo/googledev.png",
+      src: "https://testmysite.thinkwithgoogle.com/",
+      subject: "Google Mobile-Friendly Test",
+      message:
+        "Testing webpages for mobile-friendly design, according to Google's ranking factors."
+    },
+    {
+      image: "/static/logo/googledev.png",
+      src: "https://developers.google.com/speed/pagespeed/insights/",
+      subject: "Google PageSpeed Insights",
+      message: "Quick tool to test your webpage for performance on all devices."
+    },
+    {
+      image: "/static/logo/googleanalytics.png",
+      src: "https://marketingplatform.google.com/about/analytics/",
+      subject: "Google Analytics",
+      message:
+        "Get free insights about traffic, visitors and conversions. A must for every website."
     }
   ]
 };
@@ -208,5 +491,10 @@ export {
   cssResources,
   javascriptResources,
   fontResources,
-  data
+  colorResources,
+  imagesAndVidoes,
+  iconsAndOthers,
+  designs,
+  communities,
+  allOthers
 };
