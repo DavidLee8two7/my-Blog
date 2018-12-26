@@ -20,13 +20,21 @@ export default class Blog extends Component {
               query: { id: blog.id }
             }}
           >
-            <a>{blog.title}</a>
+            <a>
+              <h4>
+                Scientific name: <br /> {blog.subject}
+              </h4>
+            </a>
           </Link>
         </div>
 
         <div>
-          <p>{blog.subject}</p>
-          <p>{blog.message}</p>
+          <h5>
+            Name : <br /> <p>{blog.title}</p>
+          </h5>
+          <h5>
+            medicinal effect : <br /> <span>{blog.message}</span>
+          </h5>
         </div>
       </BlogStyles>
     );

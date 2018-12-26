@@ -4,7 +4,6 @@ const loading = keyframes`
   from {
     background-position: 0 0;
   }
-
   to {
     background-position: 100% 100%;
   }
@@ -15,7 +14,7 @@ const Form = styled.form`
   background: rgba(0, 0, 0, 0.02);
   border: 5px solid white;
   padding: 20px;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   line-height: 1.5;
   font-weight: 600;
   label {
@@ -26,8 +25,9 @@ const Form = styled.form`
   textarea,
   select {
     width: 100%;
+    height: 6rem;
     padding: 0.5rem;
-    font-size: 1rem;
+    font-size: 2rem;
     border: 1px solid black;
     &:focus {
       outline: 0;
@@ -42,7 +42,8 @@ const Form = styled.form`
     border: 0;
     font-size: 2rem;
     font-weight: 600;
-    padding: 0.5rem 1.2rem;
+    padding: 1.5rem 2.2rem;
+    border-radius: 6px;
   }
   fieldset {
     border: 0;

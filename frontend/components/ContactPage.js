@@ -4,6 +4,7 @@ import gql from "graphql-tag";
 import Router from "next/router";
 import Form from "./styles/Form";
 import Error from "./styles/ErrorMessage";
+import styled from "styled-components";
 
 const CREATE_MEMO_MUTATION = gql`
   mutation CREATE_MEMO_MUTATION(
@@ -25,10 +26,10 @@ const CREATE_MEMO_MUTATION = gql`
 
 class Memo extends Component {
   state = {
-    name: "test",
-    email: "test@gmail.com",
-    subject: "subject",
-    message: "message"
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
   };
 
   handleChange = e => {
@@ -89,7 +90,7 @@ class Memo extends Component {
                 />
               </label>
               <label htmlFor="message">
-                Message
+                How can I help you?
                 <textarea
                   id="message"
                   name="message"

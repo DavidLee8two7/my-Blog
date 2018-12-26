@@ -41,9 +41,6 @@ class Resource extends Component {
             including myself. 😊
           </p>
         </ResourceIntro>
-        <Title>
-          <h4>Development Tools</h4>
-        </Title>
         <ResourceList>
           {devTools.resources.map(resource => (
             <Resources resource={resource} key={resource.id} />

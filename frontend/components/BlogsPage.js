@@ -21,13 +21,20 @@ const ALL_BLOGS_QUERY = gql`
 
 const Center = styled.div`
   text-align: center;
+  background-size: cover;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(225, 225, 225, 0.5),
+      rgba(237, 237, 237, 0.5)
+    ),
+    url(/static/img/herbalist.jpeg);
 `;
 
 const BlogsList = styled.div`
+  padding: 3rem;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 2rem;
-  max-width: 100rem;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
   margin: 0 auto;
 `;
 
