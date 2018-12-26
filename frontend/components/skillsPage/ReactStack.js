@@ -3,7 +3,7 @@ import { Query, Mutation } from "react-apollo";
 import gql from "graphql-tag";
 import ReactStyles from "./ReactStyles";
 import { StyledButton, CloseButton } from "../styles/StyledButtons";
-import { ReactSide, TechType, TechIcon, TechDescription } from "./StackList";
+import { Description } from "./StackList";
 
 const LOCAL_STATE_REACT = gql`
   query {
@@ -28,18 +28,53 @@ const ReactStack = () => {
                 <CloseButton onClick={toggleReact} title="close">
                   &times;
                 </CloseButton>
-                <p>React and GraphQL stack</p>
+                <p>T - Shirts Factory in Santa Ana, CA</p>
               </header>
-              <ReactSide>
-                <TechType>
-                  <TechIcon />
-                  <TechDescription />
-                </TechType>
-                <TechType>
-                  <TechIcon />
-                  <TechDescription />
-                </TechType>
-              </ReactSide>
+              <Description>
+                <ul>
+                  <li>Server Side Rendering</li>
+                  <li>Styled Components</li>
+                  <li>Theming</li>
+                  <li>Animations</li>
+                  <li>JSON Web Token (JWT)</li>
+                  <li>Cache Management</li>
+                  <li>Loading and Error States</li>
+                  <li>Logic and Flow with Async + Await</li>
+                </ul>
+                <ul>
+                  <li>Authentication and Permissions</li>
+                  <li>Charging Credit Cards</li>
+                  <li>Hosting and Transforming Images</li>
+                  <li>Sending Email</li>
+                  <li>Forms in React</li>
+                  <li>Unit Testing</li>
+                  <li>Mocking Components</li>
+                  <li>Pagination</li>
+                </ul>
+              </Description>
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "1fr 1fr"
+                }}
+              >
+                <a
+                  target="_blank"
+                  href="https://github.com/DavidLee8two7/node_master"
+                >
+                  <StyledButton style={{ background: "black" }}>
+                    Git Hub
+                  </StyledButton>
+                </a>
+                <a
+                  target="_blank"
+                  href="https://github.com/DavidLee8two7/Dev_stickers_Co"
+                >
+                  <StyledButton style={{ background: "blue" }}>
+                    Link to Website
+                  </StyledButton>
+                </a>
+              </div>
               <footer>
                 <StyledButton onClick={toggleReact}>Close</StyledButton>
               </footer>

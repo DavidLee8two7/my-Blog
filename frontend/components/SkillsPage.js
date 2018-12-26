@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Query, Mutation } from "react-apollo";
+import Experience from "./skillsPage/Experience";
+import Others from "./skillsPage/Others";
 import { TOGGLE_CARD_REACT } from "./skillsPage/ReactStack";
 import { TOGGLE_CARD_NODE } from "./skillsPage/NodeStack";
 import gql from "graphql-tag";
@@ -47,27 +49,24 @@ class Skills extends Component {
                       Tech Skills
                     </text>
                   </svg>
+                  <TechMessage>
+                    <p>
+                      I am JavaScript focused fullstack web developer. Here are
+                      some programming languages and tools that I like improving
+                      while I'm looking for something new to learn.
+                    </p>
+                    <p>
+                      I like using React, Styled-Component, and GraphQL as my
+                      fullstack tools because its ready to build & everything is
+                      in JavaScript.
+                    </p>
+                  </TechMessage>
                 </TechIntro>
-                <TechMessage>
-                  <p>
-                    I am JavaScript focused fullstack web developer. Here are
-                    some programming languages and tools that I like improving
-                    while I'm looking for something new to learn.
-                  </p>
-                  <p>
-                    I like using React, Styled-Component, and GraphQL as my
-                    fullstack tools because its ready to build & everything is
-                    in JavaScript.
-                  </p>
-                </TechMessage>
                 <ReactGraphqlStack>
                   <Mutation mutation={TOGGLE_CARD_REACT}>
                     {toggleReact => (
-                      <StyledButton
-                        onClick={toggleReact}
-                        style={{ backgroundColor: "black" }}
-                      >
-                        <p>React & GraphQL</p>
+                      <StyledButton onClick={toggleReact}>
+                        <p>React & GraphQL project sample</p>
                       </StyledButton>
                     )}
                   </Mutation>
@@ -82,14 +81,13 @@ class Skills extends Component {
                           backgroundColor: "#215732"
                         }}
                       >
-                        <p>Pug & Node</p>
+                        <p>Pug & Node project sample</p>
                       </StyledButton>
                     )}
                   </Mutation>
                   <NodeStack />
                 </PugNodeStack>
               </FullStacks>
-
               <SkillsDiv>
                 {data.skills.map(skill => (
                   <SkillCatetory key={skill.id}>
@@ -102,6 +100,8 @@ class Skills extends Component {
                   </SkillCatetory>
                 ))}
               </SkillsDiv>
+              <Experience />
+              <Others />
             </TechSkills>
           );
         }}

@@ -1,40 +1,24 @@
 import styled from "styled-components";
 
-const ReactSide = styled.div`
+const Description = styled.div`
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  padding: 2rem;
+  margin: 1rem;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  ul {
+    width: 80%;
+    list-style: none;
+    li {
+      padding: 1rem;
+      font-size: 2rem;
+      font-weight: 600;
+      border-bottom: 1.5px solid ${props => props.theme.lightGray};
+    }
+  }
 `;
 
-const TechType = styled.div`
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  grid-template-rows: auto;
-  border: 1px solid ${props => props.theme.green};
-  width: 100%;
-  margin: 2px;
-  padding: 2px;
-`;
-
-const TechIcon = styled.div`
-  display: grid;
-  grid-template-rows: 1fr 40px;
-  margin-right: 1px;
-  border: 1px solid ${props => props.theme.black};
-`;
-
-const TechImg = styled.img`
-  background: pink;
-  border: 1px solid ${props => props.theme.black};
-`;
-
-const TechName = styled.div`
-  background: blue;
-  border: 1px solid ${props => props.theme.black};
-`;
-
-const TechDescription = styled.div`
-  border: 1px solid ${props => props.theme.black};
-`;
-
-export { ReactSide, TechType, TechIcon, TechDescription, TechImg, TechName };
+export { Description };

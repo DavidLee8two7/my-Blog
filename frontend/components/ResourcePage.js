@@ -1,56 +1,135 @@
 import React, { Component } from "react";
 import Head from "next/head";
-import { Query } from "react-apollo";
-import gql from "graphql-tag";
-import styled from "styled-components";
 import Resources from "./resourcePage/resourceCard";
 
-const ALL_RESOURCE_QUERY = gql`
-  query ALL_RESOURCE_QUERY {
-    resources {
-      id
-      title
-      subject
-      message
-      image
-      largeImage
-    }
-  }
-`;
+import {
+  devTools,
+  htmlResources,
+  cssResources,
+  javascriptResources,
+  fontResources,
+  colorResources,
+  imagesAndVidoes,
+  iconsAndOthers,
+  designs,
+  communities,
+  allOthers
+} from "../lib/resourceData";
 
-const Center = styled.div`
-  text-align: center;
-`;
-
-const ResourceList = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 2rem;
-  max-width: 100rem;
-  margin: 0 auto;
-`;
+import {
+  ResourceDiv,
+  ResourceIntro,
+  ResourceList,
+  Title
+} from "./styles/ResourceStyles";
 
 class Resource extends Component {
   render() {
     return (
-      <Center>
+      <ResourceDiv>
         <Head>
           <title>David Lee | Resources</title>
         </Head>
-        <Query query={ALL_RESOURCE_QUERY}>
-          {({ data, error, loading }) => {
-            if (loading) return <p>Loading...</p>;
-            if (error) return <p>Error: {error.message}</p>;
-            return (
-              <ResourceList>
-                {data.resources.map(resource => (
-                  <Resources resource={resource} key={resource.id} />
-                ))}
-              </ResourceList>
-            );
-          }}
-        </Query>
-      </Center>
+        <ResourceIntro>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 20">
+            <text x="10" y="20">
+              Development Tools
+            </text>
+          </svg>
+          <p>
+            Here are tools that I often use to save time for whomever comes here
+            including myself. 😊
+          </p>
+        </ResourceIntro>
+        <Title>
+          <h4>Development Tools</h4>
+        </Title>
+        <ResourceList>
+          {devTools.resources.map(resource => (
+            <Resources resource={resource} key={resource.id} />
+          ))}
+        </ResourceList>
+        <Title>
+          <h4>HTML5 resources</h4>
+        </Title>
+        <ResourceList>
+          {htmlResources.resources.map(resource => (
+            <Resources resource={resource} key={resource.id} />
+          ))}
+        </ResourceList>
+        <Title>
+          <h4>CSS resources</h4>
+        </Title>
+        <ResourceList>
+          {cssResources.resources.map(resource => (
+            <Resources resource={resource} key={resource.id} />
+          ))}
+        </ResourceList>
+        <Title>
+          <h4>JavaScript resources</h4>
+        </Title>
+        <ResourceList>
+          {javascriptResources.resources.map(resource => (
+            <Resources resource={resource} key={resource.id} />
+          ))}
+        </ResourceList>
+        <Title>
+          <h4>Fonts and typography tools</h4>
+        </Title>
+        <ResourceList>
+          {fontResources.resources.map(resource => (
+            <Resources resource={resource} key={resource.id} />
+          ))}
+        </ResourceList>
+        <Title>
+          <h4>Colors, themes and tools</h4>
+        </Title>
+        <ResourceList>
+          {colorResources.resources.map(resource => (
+            <Resources resource={resource} key={resource.id} />
+          ))}
+        </ResourceList>
+        <Title>
+          <h4>Images & Videos</h4>
+        </Title>
+        <ResourceList>
+          {imagesAndVidoes.resources.map(resource => (
+            <Resources resource={resource} key={resource.id} />
+          ))}
+        </ResourceList>
+        <Title>
+          <h4>Icons and tools</h4>
+        </Title>
+        <ResourceList>
+          {iconsAndOthers.resources.map(resource => (
+            <Resources resource={resource} key={resource.id} />
+          ))}
+        </ResourceList>
+        <Title>
+          <h4>Design samples</h4>
+        </Title>
+        <ResourceList>
+          {designs.resources.map(resource => (
+            <Resources resource={resource} key={resource.id} />
+          ))}
+        </ResourceList>
+        <Title>
+          <h4>Communities and blogs</h4>
+        </Title>
+        <ResourceList>
+          {communities.resources.map(resource => (
+            <Resources resource={resource} key={resource.id} />
+          ))}
+        </ResourceList>
+        <Title>
+          <h4>Planning, optimization & deploymenet</h4>
+        </Title>
+        <ResourceList>
+          {allOthers.resources.map(resource => (
+            <Resources resource={resource} key={resource.id} />
+          ))}
+        </ResourceList>
+      </ResourceDiv>
     );
   }
 }

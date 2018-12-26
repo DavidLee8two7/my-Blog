@@ -7,7 +7,6 @@ class AboutMe extends Component {
       <IntroDiv>
         <Picture>
           <img src="/static/img/couple.jpeg" alt="couple picture" />
-          <img className="baby" src="/static/img/son.jpeg" alt="baby picture" />
         </Picture>
         <AboutDiv>
           <h2>About Me 🎎</h2>
