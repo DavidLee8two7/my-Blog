@@ -38,9 +38,37 @@ const NameDiv = styled.div`
   img {
     max-width: 100rem;
   }
-  @media (max-width: 650px) {
-    p {
-      font-size: 2rem;
+  @media (max-width: 1350px) {
+    margin: 4rem 0;
+    padding: 1rem;
+    img {
+      max-width: 60rem;
+    }
+    .messages {
+      margin-top: 4rem;
+      font-size: 1.8rem;
+      border-bottom: 1.5px solid ${props => props.theme.orange};
+    }
+  }
+  @media (max-width: 950px) {
+    margin: 4rem 0;
+    padding: 1rem;
+    .messages {
+      margin-top: 3rem;
+      font-size: 1.6rem;
+      border-bottom: 1.5px solid ${props => props.theme.orange};
+    }
+  }
+  @media (max-width: 750px) {
+    margin: 2rem 0;
+    .messages {
+      display: none;
+    }
+  }
+  @media (max-width: 500px) {
+    margin: 1rem 0;
+    img {
+      max-width: 40rem;
     }
   }
 `;
@@ -54,6 +82,19 @@ const GreetingDiv = styled.div`
     text-align: center;
     font-size: 2.4rem;
     font-weight: 600;
+  }
+  @media (max-width: 1350px) {
+    margin: 4rem;
+    p {
+      font-size: 1.9rem;
+      margin: 0;
+    }
+  }
+  @media (max-width: 950px) {
+    margin: 2rem;
+    p {
+      font-size: 1.6rem;
+    }
   }
 `;
 

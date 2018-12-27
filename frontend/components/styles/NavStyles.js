@@ -19,8 +19,8 @@ const NavStyles = styled.ul`
     font-size: 1.4em;
     cursor: pointer;
     @media (max-width: 700px) {
-      font-size: 10px;
-      padding: 0 10px;
+      font-size: 14px;
+      padding: 0 14px;
     }
     &:after {
       height: 2px;
@@ -42,7 +42,7 @@ const NavStyles = styled.ul`
       }
     }
   }
-  @media (max-width: 1300px) {
+  @media (max-width: 1350px) {
     border-top: 1.5px solid ${props => props.theme.orange};
     width: 100%;
     justify-content: center;

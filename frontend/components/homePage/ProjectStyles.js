@@ -12,13 +12,6 @@ const InfoDiv = styled.div`
   margin: 3rem 0;
   padding: 1rem 3rem;
   width: 100%;
-  background-size: cover;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(225, 225, 225, 0.95),
-      rgba(237, 237, 237, 0.25)
-    ),
-    url(/static/img/working_pic.jpg);
   box-shadow: 0 0 1.5rem rgba(126, 126, 126, 0.75);
   text-align: left;
   border-radius: 3px;

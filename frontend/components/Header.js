@@ -29,7 +29,7 @@ const Logo = styled.div`
       color: ${props => props.theme.orange};
     }
   }
-  @media (max-width: 1300px) {
+  @media (max-width: 1350px) {
     margin: 0;
     text-align: center;
   }
@@ -45,7 +45,7 @@ const StyleHeader = styled.header`
     justify-content: space-between;
     align-items: stretch;
     background: black;
-    @media (max-width: 1300px) {
+    @media (max-width: 1350px) {
       grid-template-columns: 1fr;
       justify-content: center;
     }
@@ -53,7 +53,7 @@ const StyleHeader = styled.header`
   .short-text {
     display: none;
   }
-  @media (max-width: 1300px) {
+  @media (max-width: 1350px) {
     .short-text {
       display: inline-block;
     }
