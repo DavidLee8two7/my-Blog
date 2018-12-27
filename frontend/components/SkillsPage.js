@@ -51,14 +51,17 @@ class Skills extends Component {
                   </svg>
                   <TechMessage>
                     <p>
-                      I am JavaScript focused fullstack web developer. Here are
-                      some programming languages and tools that I like improving
-                      while I'm looking for something new to learn.
+                      I would like to consider myself as a fullstack JavaScript
+                      web developer for the moment. Here are some{" "}
+                      <span>
+                        programming languages and tools that I enjoy using
+                      </span>{" "}
+                      for my projects but I'm always{" "}
+                      <span>looking for something good and new to learn</span>.
                     </p>
                     <p>
-                      I like using React, Styled-Component, and GraphQL as my
-                      fullstack tools because its ready to build & everything is
-                      in JavaScript.
+                      You can also get to know me more with some of my previous{" "}
+                      <span>experiences</span> listed below.
                     </p>
                   </TechMessage>
                 </TechIntro>

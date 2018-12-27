@@ -40,9 +40,10 @@ const Pagination = props => {
               </a>
             </Link>
             <p>
-              Page {props.page} of <span className="totalPages">{pages}</span>!
+              Page ( {props.page} ) of{" "}
+              <span className="totalPages">{pages}</span>!
             </p>
-            <p>Total of {count} 🌿 Medicinal herbs has been updated.</p>
+            <p>Total of ( {count} ) 🌿 Medicinal herbs has been updated.</p>
             <Link
               prefetch
               href={{ pathname: "blogs", query: { page: page + 1 } }}

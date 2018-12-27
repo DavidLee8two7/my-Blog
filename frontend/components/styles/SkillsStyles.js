@@ -9,7 +9,7 @@ const TechSkills = styled.div`
 `;
 
 const FullStacks = styled.div`
-  padding: 5rem;
+  padding: 5rem 0 7rem 0;
   grid-row: 1;
   grid-column: 1 /-1;
   display: grid;
@@ -17,6 +17,13 @@ const FullStacks = styled.div`
   grid-gap: 1rem;
   justify-items: center;
   align-items: center;
+  background-size: cover;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(225, 225, 225, 0.35),
+      rgba(237, 237, 237, 0.9)
+    ),
+    url(/static/img/whaleJump.jpg);
 `;
 
 const TechIntro = styled.div`
@@ -34,11 +41,16 @@ const TechIntro = styled.div`
 const TechMessage = styled.div`
   width: 100%;
   grid-column: 1 / -1;
+  padding: 2rem;
+  margin: 2rem 0;
   p {
     font-size: 2.4rem;
     font-weight: 600;
     text-align: left;
     text-shadow: ${props => props.theme.ts};
+  }
+  span {
+    border-bottom: 2px solid ${props => props.theme.orange};
   }
 `;
 
@@ -75,7 +87,7 @@ const Title = styled.div`
 `;
 
 const SkillsDiv = styled.div`
-  width: 80%;
+  width: 100%;
   margin: 4rem;
   padding: 2rem;
   grid-row: 2;

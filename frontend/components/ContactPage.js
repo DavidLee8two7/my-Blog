@@ -23,6 +23,17 @@ const CREATE_MEMO_MUTATION = gql`
     }
   }
 `;
+// TODO: play song
+
+const ContactMessage = styled.div`
+  img {
+    height: 15rem;
+    opacity: 0.7;
+    :hover {
+      .;
+    }
+  }
+`;
 
 class Memo extends Component {
   state = {
@@ -46,6 +57,9 @@ class Memo extends Component {
             onSubmit={async e => {
               e.preventDefault();
               const res = await createMemo();
+              alert(
+                "Thank you for contacting me. I will get back to you as soon as possible."
+              );
               Router.push({
                 pathname: "/"
               });
@@ -53,13 +67,19 @@ class Memo extends Component {
           >
             <Error error={error} />
             <fieldset disabled={loading} aria-busy={loading}>
+              <ContactMessage>
+                <h4>
+                  Please make sure to leave your contact information. I will get
+                  back to you as soon as possible.
+                </h4>
+              </ContactMessage>
               <label htmlFor="name">
                 Name
                 <input
                   type="text"
                   id="name"
                   name="name"
-                  placeholder="name"
+                  placeholder=""
                   required
                   value={this.state.name}
                   onChange={this.handleChange}
@@ -71,7 +91,7 @@ class Memo extends Component {
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="email"
+                  placeholder=""
                   required
                   value={this.state.email}
                   onChange={this.handleChange}
@@ -83,7 +103,7 @@ class Memo extends Component {
                   type="text"
                   id="subject"
                   name="subject"
-                  placeholder="subject"
+                  placeholder=""
                   required
                   value={this.state.subject}
                   onChange={this.handleChange}

@@ -142,13 +142,13 @@ class ProjectSection extends Component {
                       rgba(225, 225, 225, 0.95),
                       rgba(237, 237, 237, 0.25)
                     ),
-                    url(/static/img/koreanFood.jpg)`
+                    url(/static/img/herbalist.jpg)`
                   }}
                 >
                   &nbsp;
                 </PictureDiv>
                 <h4>
-                  <span>Korean Food Network</span>
+                  <span>Herbalist Network</span>
                 </h4>
                 <FrontDesc>
                   <ul>

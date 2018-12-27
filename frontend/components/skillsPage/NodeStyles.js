@@ -19,10 +19,10 @@ const NodeStyles = styled.div`
   background-size: cover;
   background-image: linear-gradient(
       to right bottom,
-      rgba(225, 225, 225, 0.95),
-      rgba(237, 237, 237, 0.25)
+      rgba(225, 225, 225, 0.85),
+      rgba(237, 237, 237, 0.85)
     ),
-    url(/static/img/tShirts.jpg);
+    url(/static/img/herbalist.jpg);
   ${props => props.open && `transform: translateX(0);`};
   header {
     border-bottom: 5px solid ${props => props.theme.lightGray};

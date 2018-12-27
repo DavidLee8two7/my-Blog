@@ -28,7 +28,7 @@ const NodeStack = () => {
                 <CloseButton onClick={toggleNode} title="close">
                   &times;
                 </CloseButton>
-                <p>Korean Food Network</p>
+                <p>Herbalist Network</p>
               </header>
               <Description>
                 <ul>

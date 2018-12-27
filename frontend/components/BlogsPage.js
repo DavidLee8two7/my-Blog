@@ -27,7 +27,7 @@ const Center = styled.div`
       rgba(225, 225, 225, 0.5),
       rgba(237, 237, 237, 0.5)
     ),
-    url(/static/img/herbalist.jpeg);
+    url(/static/img/herbalism.jpeg);
 `;
 
 const BlogsList = styled.div`

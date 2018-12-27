@@ -20,7 +20,10 @@ const theme = {
   bbs: "0 4px 2px 2px rgba(126, 126, 126, 0.75)",
   ts: "0.15px 0.15px 0.30px rgba(126, 126, 126, 0.75)",
   fontDisplay: "'Playfair Display SC', serif",
-  fontPrimary: "'Roboto', sans-serif"
+  fontPrimary: "'Roboto', sans-serif",
+  base: "#ffc600",
+  spacing: "10px",
+  blur: "10px"
 };
 
 const StyledPage = styled.div`
