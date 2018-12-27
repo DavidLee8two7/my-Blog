@@ -65,7 +65,7 @@ const NameDiv = styled.div`
       display: none;
     }
   }
-  @media (max-width: 500px) {
+  @media (max-width: 700px) {
     margin: 1rem 0;
     img {
       max-width: 40rem;
