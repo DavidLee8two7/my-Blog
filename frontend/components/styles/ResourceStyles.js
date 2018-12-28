@@ -34,11 +34,6 @@ const ResourceIntro = styled.div`
   }
 `;
 
-const ResourceMessage = styled.div`
-  padding: 3rem;
-  width: 100%;
-`;
-
 const ResourceList = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);

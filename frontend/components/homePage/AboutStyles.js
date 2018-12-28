@@ -75,24 +75,10 @@ const IntroDiv = styled.div`
   @media (max-width: 1150px) {
     margin: 0;
     padding: 1rem;
-    p {
-      font-size: 1.45rem;
-    }
-  }
-  @media (max-width: 1100px) {
-    margin: 0;
-    padding-top: 1.5rem;
-    p {
-      font-size: 1.4rem;
-    }
   }
   @media (max-width: 1050px) {
     display: grid;
     grid-template-columns: 1fr;
-  }
-  @media (max-width: 750px) {
-    margin: 0.5rem;
-    padding: 0.5rem;
   }
 `;
 

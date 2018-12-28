@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 const Card = styled.div`
-  margin: 3rem 2rem;
+  margin: 6rem 2rem;
   perspective: 150rem;
   position: relative;
-  height: 61rem;
+  height: 63rem;
   &:hover .front {
     transform: rotateY(-180deg);
   }
@@ -14,8 +14,11 @@ const Card = styled.div`
   @media only screen and (max-width: 900px), only screen and (hover: none) {
     height: auto;
     border-radius: 3px;
-    background-color: ${props => props.theme.white};
-    box-shadow: 0 0 1.5rem rgba(126, 126, 126, 0.75);
+    box-shadow: 0 0 1rem rgba(126, 126, 126, 0.5);
+    margin: 1.5rem 0.5rem;
+    .front {
+      display: none;
+    }
   }
   @media only screen and (max-width: 900px), only screen and (hover: none) {
     &:hover .front {
@@ -25,7 +28,7 @@ const Card = styled.div`
 `;
 
 const CardFront = styled.div`
-  height: 61rem;
+  height: 63rem;
   transition: all 0.8s ease;
   position: absolute;
   top: 0;
@@ -35,28 +38,26 @@ const CardFront = styled.div`
   backface-visibility: hidden;
   border-radius: 3px;
   overflow: hidden;
-  box-shadow: 0 0 1.5rem rgba(126, 126, 126, 0.75);
-  background-color: ${props => props.theme.white};
-  color: ${props => props.theme.black};
-  font-weight: 400;
+  box-shadow: 0 0 1rem rgba(126, 126, 126, 0.5);
+  font-weight: 600;
+  color: black;
+  font-size: 2rem;
   h4 {
-    font-size: 2.4rem;
+    color: black;
     text-transform: uppercase;
-    text-align: right;
-    color: ${props => props.theme.black};
+    text-align: left;
     position: absolute;
     top: 4rem;
-    right: 3rem;
-    width: 100%;
+    right: 4rem;
   }
   span {
     border-radius: 3px;
     padding: 1rem;
     box-decoration-break: clone;
     background-image: linear-gradient(
-      to right bottom,
-      rgba(255, 102, 0, 0.95),
-      rgba(255, 102, 0, 0.25)
+      to bottom,
+      rgba(247, 223, 30, 0.15),
+      rgba(247, 223, 30, 0.95)
     );
   }
   @media only screen and (max-width: 900px), only screen and (hover: none) {
@@ -73,26 +74,25 @@ const PictureDiv = styled.div`
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(225, 225, 225, 0.95),
-      rgba(237, 237, 237, 0.25)
-    ),
-    url(/static/img/working_pic.jpg);
+  position: relative;
+  img {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 `;
 
 const FrontDesc = styled.div`
   ul {
     list-style: none;
-    width: 60%;
-    margin: 0 auto;
+    width: 90%;
     li {
-      text-align: left;
+      text-align: center;
       font-size: 2rem;
       font-weight: 400;
       padding: 1rem;
       &:not(:last-child) {
-        border-bottom: 1px solid ${props => props.theme.lightGray};
+        border-bottom: 1px solid ${props => props.theme.black};
       }
     }
   }
@@ -102,7 +102,7 @@ const FrontDesc = styled.div`
 `;
 
 const CardBack = styled.div`
-  height: 61rem;
+  height: 63rem;
   transition: all 0.8s ease;
   position: absolute;
   top: 0;
@@ -111,13 +111,8 @@ const CardBack = styled.div`
   backface-visibility: hidden;
   border-radius: 3px;
   overflow: hidden;
-  box-shadow: 0 0 1.5rem rgba(126, 126, 126, 0.75);
+  box-shadow: 0 0 1rem rgba(126, 126, 126, 0.5);
   transform: rotateY(180deg);
-  background-image: linear-gradient(
-    to right bottom,
-    rgba(225, 225, 225, 0.95),
-    rgba(237, 237, 237, 0.25)
-  );
   @media only screen and (max-width: 900px), only screen and (hover: none) {
     height: auto;
     position: relative;
@@ -152,7 +147,7 @@ const BackDesc = styled.div`
 
 const ProjectInfo = styled.div`
   h4 {
-    font-size: 2.8rem;
+    font-size: 1.8rem;
     font-weight: 600;
     text-transform: uppercase;
     text-align: center;
@@ -164,29 +159,47 @@ const ProjectInfo = styled.div`
     padding: 1rem 1.5rem;
     box-decoration-break: clone;
     background-image: linear-gradient(
-      to right bottom,
-      rgba(255, 102, 0, 0.95),
-      rgba(255, 102, 0, 0.25)
+      to bottom,
+      rgba(247, 223, 30, 0.95),
+      rgba(247, 223, 30, 0.25)
     );
   }
   ul {
     list-style: none;
     width: 100%;
-    margin: 0 auto;
     li {
-      text-align: left;
-      font-size: 2.2rem;
+      text-align: center;
+      font-size: 1.8rem;
       font-weight: 400;
-      padding: 1rem;
+      padding: 0.8rem;
       &:not(:last-child) {
-        border-bottom: 1px solid ${props => props.theme.lightGray};
+        border-bottom: 1px solid ${props => props.theme.black};
+      }
+    }
+  }
+  @media only screen and (max-width: 900px), only screen and (hover: none) {
+    h4 {
+      font-size: 2rem;
+      font-weight: 400;
+    }
+    ul {
+      list-style: none;
+      width: 100%;
+      li {
+        text-align: left;
+        font-size: 1.5rem;
+        font-weight: 400;
+        padding: 0.75rem;
+        &:not(:last-child) {
+          border-bottom: 1px solid ${props => props.theme.black};
+        }
       }
     }
   }
 `;
 
 const ProjectLink = styled.div`
-  width: 80%;
+  width: 100%;
   margin-top: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;

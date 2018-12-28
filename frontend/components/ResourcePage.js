@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Head from "next/head";
 import Resources from "./resourcePage/resourceCard";
-
 import {
   devTools,
   htmlResources,
@@ -15,7 +14,6 @@ import {
   communities,
   allOthers
 } from "../lib/resourceData";
-
 import {
   ResourceDiv,
   ResourceIntro,
@@ -37,8 +35,9 @@ class Resource extends Component {
             </text>
           </svg>
           <p>
-            Here are tools that I often use to save time for whomever comes here
-            including myself. 😊
+            Please find tools that I often use to save time. I usually keep this
+            page open and uses it like menu at a restaurent.
+            <span style={{ fontSize: "35px" }}>😊</span>
           </p>
         </ResourceIntro>
         <ResourceList>

@@ -52,9 +52,10 @@ class TechSection extends Component {
         <div
           style={{
             zIndex: "2",
-            gridRow: "4",
+            gridRow: "5",
             gridColumn: "1 / -1",
-            width: "100%"
+            width: "100%",
+            margin: "3rem 0 1rem 0"
           }}
         >
           <IconsDiv>

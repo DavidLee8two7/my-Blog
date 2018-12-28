@@ -1,43 +1,73 @@
 import styled from "styled-components";
 
 const ProjectDiv = styled.div`
+  grid-row: 6;
+  grid-column: 1 / -1;
   z-index: 3;
   width: 100%;
   display: grid;
   grid-template-columns: 30% 1fr 30%;
-  box-shadow: ${props => props.theme.sbs};
+  background: white;
+  @media (max-width: 1800px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 700px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 80%;
+  }
 `;
 
 const InfoDiv = styled.div`
-  margin: 3rem 0;
+  margin: 6rem 0;
   padding: 1rem 3rem;
   width: 100%;
-  box-shadow: 0 0 1.5rem rgba(126, 126, 126, 0.75);
+  box-shadow: 0 0 1rem rgba(126, 126, 126, 0.5);
   text-align: left;
   border-radius: 3px;
+  color: black;
   h4 {
     font-size: 2.4rem;
-    font-weight: 500;
-    text-align: right;
-    color: ${props => props.theme.black};
+    font-weight: 600;
     width: 100%;
+    padding: 1rem 3rem;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(247, 223, 30, 0.25),
+      rgba(247, 223, 30, 0.95)
+    );
   }
   span {
     border-radius: 3px;
-    padding: 1rem 3rem;
     box-decoration-break: clone;
     background-image: linear-gradient(
-      to right bottom,
-      rgba(247, 223, 30, 0.95),
-      rgba(247, 223, 30, 0.25)
+      to bottom,
+      rgba(247, 223, 30, 0.25),
+      rgba(247, 223, 30, 0.95)
     );
-    color: ${props => props.theme.black};
   }
   p {
-    padding: 0 3rem;
-    font-size: 2.2rem;
+    padding: 1rem 3rem;
+    font-size: 2rem;
     text-align: left;
     font-weight: 400;
+  }
+  @media (max-width: 1800px) {
+    grid-row: 1;
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 0 2rem;
+    h4 {
+      font-size: 1.8rem;
+      padding: 0.5rem 2rem;
+    }
+    p {
+      padding: 0.5rem 1.5rem;
+      font-size: 1.5rem;
+    }
   }
 `;
 

@@ -16,8 +16,8 @@ const theme = {
   white: "#ffffff", // 255,255,255
   offWhite: "#f5f8fa", //
   maxWidth: "100%",
-  sbs: "0 2px 1px 1px rgba(126, 126, 126, 0.75)",
-  bbs: "0 4px 2px 2px rgba(126, 126, 126, 0.75)",
+  sbs: "0 1px 1px 1px rgba(126, 126, 126, 0.75)",
+  bbs: "0 2px 2px 2px rgba(126, 126, 126, 0.75)",
   ts: "0.15px 0.15px 0.30px rgba(126, 126, 126, 0.75)",
   fontDisplay: "'Playfair Display SC', serif",
   fontPrimary: "'Roboto', sans-serif",

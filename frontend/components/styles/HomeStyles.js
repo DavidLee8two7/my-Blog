@@ -101,6 +101,7 @@ const GreetingDiv = styled.div`
 const TechTitle = styled.div`
   z-index: 2;
   width: 100%;
+  grid-row: 4;
   text-align: center;
   display: grid;
   grid-column: 1 / -1;

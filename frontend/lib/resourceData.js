@@ -140,6 +140,13 @@ const cssResources = {
       src: "https://easings.net/",
       subject: "Collection of easing functions ",
       message: "Easing functions to use in CSS transitions and animations."
+    },
+    {
+      image: "/static/logo/colorHex.png",
+      src: "https://www.color-hex.com/",
+      subject: "Color Hex Color Codes",
+      message:
+        "Color-hex gives information about colors including color models (RGB,HSL,HSV and CMYK), Triadic colors, monochromatic colors and analogous colors calculated in color page."
     }
   ]
 };
