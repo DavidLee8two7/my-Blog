@@ -10,6 +10,12 @@ const Experience = styled.div`
   padding: 7rem;
   transform: skewX(-12deg);
   box-shadow: ${props => props.theme.sbs};
+  @media (max-width: 1450px) {
+    margin: 4rem auto;
+    transform: skewX(0deg);
+    width: 100%;
+    padding: 4rem 7rem;
+  }
 `;
 
 const PictureDiv = styled.div`
@@ -24,6 +30,9 @@ const PictureDiv = styled.div`
     clip-path: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
     border-radius: none;
+  }
+  @media (max-width: 1450px) {
+    transform: translateX(-2rem) skewX(0deg);
   }
 `;
 
@@ -46,6 +55,9 @@ const IntroductionDiv = styled.div`
     font-size: 1.8rem;
     font-weight: 400;
   }
+  @media (max-width: 1450px) {
+    transform: skewX(0deg);
+  }
 `;
 
 const ExpList = styled.div`
@@ -63,17 +75,19 @@ const ExpList = styled.div`
   }
   ul {
     width: 100%;
-    margin: 0 auto;
     li {
       list-style: none;
       text-align: left;
       font-size: 1.8rem;
-      padding: 0.5rem;
+      padding: 0.5rem 0;
       font-weight: 400;
       &:not(:last-child) {
         border-bottom: 0.7px solid ${props => props.theme.lightGray};
       }
     }
+  }
+  @media (max-width: 1450px) {
+    transform: skewX(0deg);
   }
 `;
 

@@ -11,7 +11,7 @@ const IntroDiv = styled.div`
   align-items: start;
   margin-top: 1rem;
   padding: 2rem;
-  background: ${props => props.theme.white};
+  background: white;
   box-shadow: ${props => props.theme.sbs};
   h2 {
     font-size: 3.2rem;
@@ -21,9 +21,6 @@ const IntroDiv = styled.div`
   p {
     font-size: 2.4rem;
     margin-left: 3rem;
-  }
-  span {
-    font-weight: bold;
   }
   .loc {
     border-bottom: 1.5px solid ${props => props.theme.orange};
@@ -79,6 +76,13 @@ const IntroDiv = styled.div`
   @media (max-width: 1050px) {
     display: grid;
     grid-template-columns: 1fr;
+    p {
+      font-size: 1.6rem;
+    }
+  }
+  @media (max-width: 500px) {
+    box-shadow: none;
+    background: transparent;
   }
 `;
 

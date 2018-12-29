@@ -96,7 +96,7 @@ class ProjectSection extends Component {
           </CardBack>
         </Card>
         <InfoDiv>
-          <h4>JavaScript focused Frontend Web Developer</h4>
+          <h4>Fullstack JavaScript Web Developer</h4>
           <p>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I have experience as an ERP
             system consultant & Business consultant but{" "}

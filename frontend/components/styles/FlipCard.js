@@ -25,6 +25,9 @@ const Card = styled.div`
       transform: rotateY(0deg);
     }
   }
+  @media screen and (max-width: 700px) {
+    box-shadow: none;
+  }
 `;
 
 const CardFront = styled.div`
@@ -40,10 +43,10 @@ const CardFront = styled.div`
   overflow: hidden;
   box-shadow: 0 0 1rem rgba(126, 126, 126, 0.5);
   font-weight: 600;
-  color: black;
   font-size: 2rem;
   h4 {
     color: black;
+    font-family: ${props => props.theme.fontDisplay};
     text-transform: uppercase;
     text-align: left;
     position: absolute;
@@ -85,14 +88,14 @@ const PictureDiv = styled.div`
 const FrontDesc = styled.div`
   ul {
     list-style: none;
-    width: 90%;
+    width: 94%;
     li {
       text-align: center;
       font-size: 2rem;
       font-weight: 400;
       padding: 1rem;
       &:not(:last-child) {
-        border-bottom: 1px solid ${props => props.theme.black};
+        border-bottom: 1.4px solid ${props => props.theme.yellow};
       }
     }
   }
@@ -128,10 +131,9 @@ const BackDesc = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  text-align: center;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr min-content;
+  grid-template-rows: 1fr max-content;
   align-items: start;
   justify-items: center;
   grid-gap: 2rem 0;
@@ -150,9 +152,9 @@ const ProjectInfo = styled.div`
     font-size: 1.8rem;
     font-weight: 600;
     text-transform: uppercase;
-    text-align: center;
-    color: ${props => props.theme.black};
+    text-align: left;
     width: 100%;
+    margin-left: 4.5rem;
   }
   span {
     border-radius: 3px;
@@ -168,30 +170,34 @@ const ProjectInfo = styled.div`
     list-style: none;
     width: 100%;
     li {
-      text-align: center;
+      text-align: left;
       font-size: 1.8rem;
       font-weight: 400;
-      padding: 0.8rem;
+      padding: 1.2rem 0;
       &:not(:last-child) {
-        border-bottom: 1px solid ${props => props.theme.black};
+        border-bottom: 1px solid ${props => props.theme.yellow};
       }
     }
   }
-  @media only screen and (max-width: 900px), only screen and (hover: none) {
-    h4 {
-      font-size: 2rem;
-      font-weight: 400;
-    }
+  @media screen and (max-width: 900px) {
     ul {
-      list-style: none;
-      width: 100%;
       li {
-        text-align: left;
-        font-size: 1.5rem;
-        font-weight: 400;
-        padding: 0.75rem;
+        font-size: 1.4rem;
+        padding: 0.2rem 0;
+        margin: 0;
         &:not(:last-child) {
-          border-bottom: 1px solid ${props => props.theme.black};
+          border-bottom: 1px solid ${props => props.theme.yellow};
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 700px) {
+    ul {
+      li {
+        font-size: 1.7rem;
+        padding: 0;
+        &:not(:last-child) {
+          border-bottom: 1px solid ${props => props.theme.yellow};
         }
       }
     }
@@ -199,20 +205,22 @@ const ProjectInfo = styled.div`
 `;
 
 const ProjectLink = styled.div`
-  width: 100%;
+  width: 70%;
   margin-top: 1rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
-  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
   transition: all 0.3s;
   .icon {
-    width: 40%;
+    height: 10rem;
     transition: all 0.3s;
     transform: translateY(0px) scale(0.9);
     &:hover {
       transform: translateY(-5px) scale(1.04);
     }
+  }
+  @media screen and (max-width: 900px) {
+    width: 100%;
+    justify-content: space-between;
   }
 `;
 

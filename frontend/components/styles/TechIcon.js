@@ -13,7 +13,7 @@ const TechDiv = styled.div`
   display: flex;
   flex-direction: column;
   &:hover {
-    transform: translateY(-1rem) scale(1.02);
+    transform: translateY(-0.5rem) scale(1.02);
   }
 `;
 

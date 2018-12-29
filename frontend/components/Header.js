@@ -20,7 +20,7 @@ const Logo = styled.div`
   padding: 2rem;
   a {
     padding: 0.5rem 1rem;
-    color: ${props => props.theme.white};
+    color: white;
     font-weight: 600;
     font-family: ${props => props.theme.fontDisplay};
     font-size: 3.2rem;
@@ -29,9 +29,17 @@ const Logo = styled.div`
       color: ${props => props.theme.orange};
     }
   }
-  @media (max-width: 1350px) {
+  @media screen and (max-width: 1350px) {
     margin: 0;
     text-align: center;
+  }
+  @media screen and (max-width: 500px) {
+    a {
+      padding: 0.25rem 0;
+      font-size: 2.5rem;
+      margin: 0.1rem;
+      padding: 0.1rem;
+    }
   }
 `;
 
@@ -59,6 +67,10 @@ const StyleHeader = styled.header`
     }
     .full-text {
       display: none;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .bar {
     }
   }
 `;

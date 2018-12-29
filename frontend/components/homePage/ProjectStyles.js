@@ -3,7 +3,7 @@ import styled from "styled-components";
 const ProjectDiv = styled.div`
   grid-row: 6;
   grid-column: 1 / -1;
-  z-index: 3;
+  z-index: 2;
   width: 100%;
   display: grid;
   grid-template-columns: 30% 1fr 30%;
@@ -13,9 +13,11 @@ const ProjectDiv = styled.div`
     grid-template-columns: 1fr 1fr;
   }
   @media (max-width: 700px) {
+    box-shadow: none;
+    background: transparent;
     display: grid;
     grid-template-columns: 1fr;
-    width: 80%;
+    justify-items: start;
   }
 `;
 
@@ -26,7 +28,6 @@ const InfoDiv = styled.div`
   box-shadow: 0 0 1rem rgba(126, 126, 126, 0.5);
   text-align: left;
   border-radius: 3px;
-  color: black;
   h4 {
     font-size: 2.4rem;
     font-weight: 600;
@@ -53,7 +54,6 @@ const InfoDiv = styled.div`
     padding: 1rem 3rem;
     font-size: 2rem;
     text-align: left;
-    font-weight: 400;
   }
   @media (max-width: 1800px) {
     grid-row: 1;
@@ -61,12 +61,28 @@ const InfoDiv = styled.div`
     margin: 0;
     padding: 0 2rem;
     h4 {
-      font-size: 1.8rem;
+      font-size: 2.2rem;
       padding: 0.5rem 2rem;
     }
     p {
       padding: 0.5rem 1.5rem;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
+    }
+  }
+  @media (max-width: 950px) {
+    margin: 0;
+    padding: 0 1rem;
+    h4 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.6rem;
+    }
+  }
+  @media (max-width: 700px) {
+    box-shadow: none;
+    p {
+      font-size: 1.6rem;
     }
   }
 `;

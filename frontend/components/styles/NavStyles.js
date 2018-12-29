@@ -18,9 +18,13 @@ const NavStyles = styled.ul`
     font-weight: 600;
     font-size: 1.4em;
     cursor: pointer;
-    @media (max-width: 700px) {
-      font-size: 14px;
-      padding: 0 14px;
+    @media screen and (max-width: 700px) {
+      font-size: 1.4rem;
+      padding: 0 1.4rem;
+    }
+    @media screen and (max-width: 500px) {
+      font-size: 1.2rem;
+      padding: 0 1rem;
     }
     &:after {
       height: 2px;
@@ -47,6 +51,9 @@ const NavStyles = styled.ul`
     width: 100%;
     justify-content: center;
     font-size: 1.3rem;
+  }
+  @media screen and (max-width: 500px) {
+    border-top: none;
   }
 `;
 

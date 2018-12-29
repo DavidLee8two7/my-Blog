@@ -26,14 +26,12 @@ const IconsDiv = styled.div`
       color: rgb(255, 102, 0);
     }
   }
-  @media (max-width: 1050px) {
+  @media screen and (max-width: 1050px) {
     padding: 1.5rem 1.5rem 0 1.5rem;
     grid-column-gap: 5rem;
   }
-  @media (max-width: 700px) {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+  @media screen and (max-width: 700px) {
+    display: none;
   }
 `;
 
@@ -44,10 +42,10 @@ const FrontDiv = styled.div`
   justify-items: center;
   align-items: center;
   grid-column-gap: 7rem;
-  @media (max-width: 1000px) {
+  @media screen and (max-width: 1000px) {
     grid-column-gap: 5rem;
   }
-  @media (max-width: 700px) {
+  @media screen and (max-width: 700px) {
     width: 80%;
   }
 `;
@@ -59,10 +57,10 @@ const BackDiv = styled.div`
   justify-items: center;
   align-items: center;
   grid-column-gap: 7rem;
-  @media (max-width: 1000px) {
+  @media screen and (max-width: 1000px) {
     grid-column-gap: 5rem;
   }
-  @media (max-width: 700px) {
+  @media screen and (max-width: 700px) {
     width: 80%;
   }
 `;

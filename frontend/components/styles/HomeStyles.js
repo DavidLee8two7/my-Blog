@@ -38,7 +38,7 @@ const NameDiv = styled.div`
   img {
     max-width: 100rem;
   }
-  @media (max-width: 1350px) {
+  @media screen and (max-width: 1350px) {
     margin: 4rem 0;
     padding: 1rem;
     img {
@@ -50,7 +50,7 @@ const NameDiv = styled.div`
       border-bottom: 1.5px solid ${props => props.theme.orange};
     }
   }
-  @media (max-width: 950px) {
+  @media screen and (max-width: 950px) {
     margin: 4rem 0;
     padding: 1rem;
     .messages {
@@ -59,16 +59,22 @@ const NameDiv = styled.div`
       border-bottom: 1.5px solid ${props => props.theme.orange};
     }
   }
-  @media (max-width: 750px) {
+  @media screen and (max-width: 750px) {
     margin: 2rem 0;
     .messages {
       display: none;
     }
   }
-  @media (max-width: 700px) {
+  @media screen and (max-width: 700px) {
     margin: 1rem 0;
     img {
       max-width: 40rem;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    margin: 0.5rem 0;
+    img {
+      max-width: 25rem;
     }
   }
 `;
@@ -83,14 +89,14 @@ const GreetingDiv = styled.div`
     font-size: 2.4rem;
     font-weight: 600;
   }
-  @media (max-width: 1350px) {
+  @media screen and (max-width: 1350px) {
     margin: 4rem;
     p {
       font-size: 1.9rem;
       margin: 0;
     }
   }
-  @media (max-width: 950px) {
+  @media screen and (max-width: 950px) {
     margin: 2rem;
     p {
       font-size: 1.6rem;
@@ -105,6 +111,9 @@ const TechTitle = styled.div`
   text-align: center;
   display: grid;
   grid-column: 1 / -1;
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 `;
 
 export { HomeStyles, NameDiv, GreetingDiv, TechTitle };
