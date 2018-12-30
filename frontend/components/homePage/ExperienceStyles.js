@@ -10,11 +10,19 @@ const Experience = styled.div`
   padding: 7rem;
   transform: skewX(-12deg);
   box-shadow: ${props => props.theme.sbs};
-  @media (max-width: 1450px) {
-    margin: 4rem auto;
-    transform: skewX(0deg);
+  @media (max-width: 1700px) {
     width: 100%;
+    margin: 5rem 0;
     padding: 4rem 7rem;
+    transform: skewX(0deg);
+  }
+  @media (max-width: 950px) {
+    margin: 0;
+    padding: 2rem;
+  }
+  @media (max-width: 500px) {
+    box-shadow: none;
+    background: transparent;
   }
 `;
 
@@ -31,8 +39,13 @@ const PictureDiv = styled.div`
     shape-outside: circle(50% at 50% 50%);
     border-radius: none;
   }
-  @media (max-width: 1450px) {
+  @media (max-width: 1700px) {
     transform: translateX(-2rem) skewX(0deg);
+  }
+  @media (max-width: 950px) {
+    width: 15rem;
+    height: 15rem;
+    transform: translateX(-1rem);
   }
 `;
 
@@ -55,8 +68,20 @@ const IntroductionDiv = styled.div`
     font-size: 1.8rem;
     font-weight: 400;
   }
-  @media (max-width: 1450px) {
+  @media (max-width: 1700px) {
     transform: skewX(0deg);
+  }
+  @media (max-width: 950px) {
+    h4 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      text-align: left;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
   }
 `;
 
@@ -86,8 +111,31 @@ const ExpList = styled.div`
       }
     }
   }
-  @media (max-width: 1450px) {
+  @media (max-width: 1700px) {
     transform: skewX(0deg);
+  }
+  @media (max-width: 1655px) {
+    h2 {
+      font-size: 2rem;
+    }
+    ul {
+      li {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  @media (max-width: 950px) {
+    h4 {
+      font-size: 1.8rem;
+    }
+    ul {
+      li {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  @media (max-width: 750px) {
+    display: none;
   }
 `;
 

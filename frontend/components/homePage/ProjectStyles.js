@@ -13,11 +13,12 @@ const ProjectDiv = styled.div`
     grid-template-columns: 1fr 1fr;
   }
   @media (max-width: 700px) {
-    box-shadow: none;
-    background: transparent;
     display: grid;
     grid-template-columns: 1fr;
-    justify-items: start;
+  }
+  @media (max-width: 500px) {
+    box-shadow: none;
+    background: transparent;
   }
 `;
 
@@ -76,13 +77,15 @@ const InfoDiv = styled.div`
       font-size: 2rem;
     }
     p {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
     }
   }
   @media (max-width: 700px) {
     box-shadow: none;
+  }
+  @media (max-width: 500px) {
     p {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
   }
 `;

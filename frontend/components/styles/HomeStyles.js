@@ -102,6 +102,13 @@ const GreetingDiv = styled.div`
       font-size: 1.6rem;
     }
   }
+  @media screen and (max-width: 750px) {
+    margin: 0;
+    padding: 0 2rem;
+    p {
+      font-size: 1.4rem;
+    }
+  }
 `;
 
 const TechTitle = styled.div`

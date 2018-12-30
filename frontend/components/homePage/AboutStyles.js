@@ -30,7 +30,7 @@ const IntroDiv = styled.div`
       border-bottom: 1.5px solid ${props => props.theme.lightBlue};
     }
   }
-  @media (max-width: 1655px) {
+  @media screen and (max-width: 1655px) {
     h2 {
       font-size: 2rem;
     }
@@ -39,50 +39,53 @@ const IntroDiv = styled.div`
       margin-left: 1rem;
     }
   }
-  @media (max-width: 1550px) {
+  @media screen and (max-width: 1550px) {
     p {
       font-size: 2rem;
     }
   }
-  @media (max-width: 1500px) {
+  @media screen and (max-width: 1500px) {
     p {
       font-size: 1.9rem;
     }
   }
-  @media (max-width: 1400px) {
+  @media screen and (max-width: 1400px) {
     p {
       font-size: 1.75rem;
     }
   }
-  @media (max-width: 1300px) {
+  @media screen and (max-width: 1300px) {
     p {
       font-size: 1.65rem;
     }
   }
-  @media (max-width: 1250px) {
+  @media screen and (max-width: 1250px) {
     p {
       font-size: 1.6rem;
     }
   }
-  @media (max-width: 1200px) {
+  @media screen and (max-width: 1200px) {
     p {
       font-size: 1.5rem;
     }
   }
-  @media (max-width: 1150px) {
+  @media screen and (max-width: 1150px) {
     margin: 0;
     padding: 1rem;
   }
-  @media (max-width: 1050px) {
+  @media screen and (max-width: 1050px) {
     display: grid;
     grid-template-columns: 1fr;
     p {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
     }
   }
-  @media (max-width: 500px) {
+  @media screen and (max-width: 500px) {
     box-shadow: none;
     background: transparent;
+    p {
+      font-size: 1.4rem;
+    }
   }
 `;
 
@@ -96,10 +99,10 @@ const Picture = styled.div`
     margin-right: auto;
     width: 100%;
   }
-  @media (max-width: 1655px) {
+  @media screen and (max-width: 1655px) {
     width: 90%;
   }
-  @media (max-width: 1050px) {
+  @media screen and (max-width: 1050px) {
     display: none;
   }
 `;
@@ -108,6 +111,11 @@ const AboutDiv = styled.div`
   margin-right: 1rem;
   h2 {
     text-shadow: ${props => props.theme.ts};
+  }
+  @media screen and (max-width: 550px) {
+    h2 {
+      font-size: 1.8rem;
+    }
   }
 `;
 

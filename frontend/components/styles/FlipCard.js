@@ -27,6 +27,8 @@ const Card = styled.div`
   }
   @media screen and (max-width: 700px) {
     box-shadow: none;
+    margin: 0;
+    padding: 0;
   }
 `;
 
@@ -133,7 +135,7 @@ const BackDesc = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr max-content;
+  grid-template-rows: 1fr min-content;
   align-items: start;
   justify-items: center;
   grid-gap: 2rem 0;
@@ -179,10 +181,10 @@ const ProjectInfo = styled.div`
       }
     }
   }
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 950px) {
     ul {
       li {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         padding: 0.2rem 0;
         margin: 0;
         &:not(:last-child) {
@@ -191,10 +193,9 @@ const ProjectInfo = styled.div`
       }
     }
   }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 750px) {
     ul {
       li {
-        font-size: 1.7rem;
         padding: 0;
         &:not(:last-child) {
           border-bottom: 1px solid ${props => props.theme.yellow};
@@ -219,7 +220,6 @@ const ProjectLink = styled.div`
     }
   }
   @media screen and (max-width: 900px) {
-    width: 100%;
     justify-content: space-between;
   }
 `;

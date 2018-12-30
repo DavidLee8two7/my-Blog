@@ -11,15 +11,12 @@ const FooterDiv = styled.footer`
   align-items: center;
   font-size: 1.8rem;
   background: black;
-`;
-
-const ContactDiv = styled.div`
-  width: 100%;
-  grid-column: 2;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  justify-items: center;
-  align-items: center;
+  @media screen and (max-width: 750px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+  }
 `;
 
 const LogoDiv = styled.div`
@@ -36,6 +33,24 @@ const LogoDiv = styled.div`
   }
   &:hover img {
     transform: scale(1.07);
+  }
+  @media screen and (max-width: 750px) {
+    grid-row: 1;
+  }
+`;
+
+const ContactDiv = styled.div`
+  width: 100%;
+  grid-column: 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  @media screen and (max-width: 750px) {
+    grid-row: 2;
+    grid-column: 1;
+    display: grid;
+    grid-template-rows: 1fr;
   }
 `;
 
@@ -68,6 +83,9 @@ const FooterNav = styled.div`
       transform: translateY(-1rem) rotate(3deg) scale(1.01);
     }
   }
+  @media (max-width: 750px) {
+    display: none;
+  }
 `;
 
 const CopyRight = styled.div`
@@ -91,6 +109,13 @@ const CopyRight = styled.div`
       box-shadow: 0 1rem 2rem rgba(orange, 0.4);
       transform: translateY(-1rem) rotate(3deg) scale(1.01);
     }
+  }
+  @media screen and (max-width: 750px) {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 1.6rem;
   }
 `;
 
