@@ -32,13 +32,22 @@ const Logo = styled.div`
   @media screen and (max-width: 1350px) {
     margin: 0;
     text-align: center;
+    a {
+      padding: 0.25rem 0;
+      font-size: 2.7rem;
+      margin: 0.1rem;
+      padding: 0.1rem;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    a {
+      font-size: 2.4rem;
+    }
   }
   @media screen and (max-width: 500px) {
     a {
-      padding: 0.25rem 0;
-      font-size: 2.5rem;
-      margin: 0.1rem;
-      padding: 0.1rem;
+      padding: 0;
+      font-size: 2rem;
     }
   }
 `;

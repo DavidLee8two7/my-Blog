@@ -145,7 +145,7 @@ const BackDesc = styled.div`
     left: 0;
     transform: translate(0);
     width: 100%;
-    padding: 7rem 4rem 4rem 4rem;
+    padding: 5rem;
   }
 `;
 

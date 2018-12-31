@@ -25,28 +25,42 @@ const ReactStyles = styled.div`
     url(/static/img/tshirts.jpg);
   ${props => props.open && `transform: translateX(0);`};
   header {
-    border-bottom: 5px solid ${props => props.theme.lightGray};
+    border-bottom: 5px solid gray;
     font-family: ${props => props.theme.fontDisplay};
     font-size: 3rem;
     font-weight: 600;
     line-height: 2;
-    color: black;
     text-align: center;
+    @media screen and (max-width: 800px) {
+      font-size: 2.4rem;
+    }
   }
   footer {
-    border-top: 10px double ${props => props.theme.lightGray};
+    border-top: 10px double gray;
     margin-top: 2rem;
     padding-top: 2rem;
     display: grid;
     align-items: center;
     font-size: 3rem;
-    font-weight: 900;
+    font-weight: 600;
   }
   ul {
     margin: 0;
     padding: 0;
     list-style: none;
     overflow: scroll;
+  }
+  @media screen and (max-width: 1500px) {
+    width: 70%;
+  }
+  @media screen and (max-width: 1015px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 900px) {
+    width: 90%;
+  }
+  @media screen and (max-width: 800px) {
+    width: 100%;
   }
 `;
 

@@ -3,28 +3,29 @@ import {
   ExperienceDiv,
   ExperienceTitle,
   CompanyDiv,
-  CompanyIntro
+  CompanyInfo,
+  JobDescription
 } from "./ExperienceStyles";
 
 class Experience extends Component {
   render() {
     return (
       <ExperienceDiv>
-        <ExperienceTitle>Experience</ExperienceTitle>
+        <ExperienceTitle>Experiences</ExperienceTitle>
         <CompanyDiv>
-          <CompanyIntro>
+          <CompanyInfo>
             <a href="https://en.wikipedia.org/wiki/CJ_Group" target="_blank">
               <img src="/static/cj.png" />
             </a>
             <a href="https://en.wikipedia.org/wiki/CJ_Group" target="_blank">
-              <h4>CJ America, Inc.</h4>
+              <h3>CJ America, Inc.</h3>
             </a>
-          </CompanyIntro>
-          <div>
-            <h4>ERP System Support Manager</h4>
+          </CompanyInfo>
+          <JobDescription>
+            <h4>ERP System(SAP) Specialist</h4>
             <h4>Duties</h4>
             <ul>
-              <li>Implementation of SAP R3 ERP system for production teams.</li>
+              <li>Implementation of SAP R3 ERP system for production teams</li>
               <li>
                 Improve standard operation procedure for higher productivity
               </li>
@@ -38,33 +39,34 @@ class Experience extends Component {
             </ul>
             <h4>Accomplishments</h4>
             <ul>
-              <li>successful implementataion</li>
-              <li>documetationa nd training building power users</li>
               <li>
-                stablelize in 3 month when goal was 6 month for each monthly
-                monthly's accuracy and ontime rate
+                Successful implementation by shortening launch date target by 1
+                month
+              </li>
+              <li>Documetationa and training to build power users</li>
+              <li>
+                Stablelized in 4 month(target was 6 month) by accurately
+                performing monthly closing of all trasactions
               </li>
               <li>
                 Productivity increase of 1 ~ 3% for 5 year consecutively for
                 combine of 3 manufacturing plants
               </li>
             </ul>
-          </div>
-          <div>
-            <span>2011 - 2016 | Fullerton, CA</span>
-          </div>
+            <h4>2013 - 2016 🗓️ Fullerton, CA</h4>
+          </JobDescription>
         </CompanyDiv>
         <CompanyDiv>
-          <CompanyIntro>
+          <CompanyInfo>
             <a href="http://eng.paris.co.kr/new/global.html" target="_blank">
               <img src="/static/pb.gif" />
             </a>
             <a href="http://eng.paris.co.kr/new/global.html" target="_blank">
-              <h4>Paris Baguette, Inc.</h4>
+              <h3>Paris Baguette, Inc.</h3>
             </a>
-          </CompanyIntro>
-          <div>
-            <h4>Purchasing strategy team manager</h4>
+          </CompanyInfo>
+          <JobDescription>
+            <h4>Purchasing strategy specialist (& ERP system stablizing)</h4>
             <h4>Duties</h4>
             <ul>
               <li>Support stablizing ERP system for supply chain management</li>
@@ -80,14 +82,12 @@ class Experience extends Component {
               </li>
               <li>Restructure purchasing operation procedure</li>
               <li>
-                Consolidate and reselect vendors and service proviers in USA
+                Consolidate and reselect vendors and service providers in USA
               </li>
               <li>$2 million cost saving in year 2018</li>
             </ul>
-          </div>
-          <div>
-            <span>2016 - 2018 | Commerce, CA</span>
-          </div>
+            <h4>2017 - 2018 🗓️ Commerce, CA</h4>
+          </JobDescription>
         </CompanyDiv>
       </ExperienceDiv>
     );

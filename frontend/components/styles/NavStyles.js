@@ -26,6 +26,9 @@ const NavStyles = styled.ul`
       font-size: 1.2rem;
       padding: 0 1rem;
     }
+    @media screen and (max-width: 350px) {
+      padding: 0 0.5rem;
+    }
     &:after {
       height: 2px;
       background: ${props => props.theme.lightBlue};

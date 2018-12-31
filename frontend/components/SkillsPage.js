@@ -51,16 +51,13 @@ class Skills extends Component {
                   </svg>
                   <TechMessage>
                     <p>
-                      I would like to consider myself as a fullstack JavaScript
-                      web developer for the moment. Here are some{" "}
+                      Here are some{" "}
                       <span>
                         programming languages and tools that I enjoy using
                       </span>{" "}
                       for my projects but I'm always{" "}
                       <span>looking for something good and new to learn</span>.
-                    </p>
-                    <p>
-                      You can also get to know me more with some of my previous{" "}
+                      You can also find some of my previous{" "}
                       <span>experiences</span> listed below.
                     </p>
                   </TechMessage>
@@ -68,8 +65,13 @@ class Skills extends Component {
                 <ReactGraphqlStack>
                   <Mutation mutation={TOGGLE_CARD_REACT}>
                     {toggleReact => (
-                      <StyledButton onClick={toggleReact}>
-                        <p>React & GraphQL project sample</p>
+                      <StyledButton
+                        onClick={toggleReact}
+                        style={{
+                          backgroundColor: "#01579b"
+                        }}
+                      >
+                        <p>React & GraphQL sample</p>
                       </StyledButton>
                     )}
                   </Mutation>
@@ -81,10 +83,10 @@ class Skills extends Component {
                       <StyledButton
                         onClick={toggleNode}
                         style={{
-                          backgroundColor: "#215732"
+                          backgroundColor: "#006064"
                         }}
                       >
-                        <p>Pug & Node project sample</p>
+                        <p>Pug & Node sample</p>
                       </StyledButton>
                     )}
                   </Mutation>
@@ -95,9 +97,7 @@ class Skills extends Component {
                 {data.skills.map(skill => (
                   <SkillCatetory key={skill.id}>
                     <Title>
-                      <h4>
-                        <a>{skill.title}</a>
-                      </h4>
+                      <h4>{skill.title}</h4>
                     </Title>
                     <Skill tech={skill.tech} />
                   </SkillCatetory>
