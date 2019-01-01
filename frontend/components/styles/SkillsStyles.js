@@ -93,7 +93,7 @@ const PugNodeStack = styled.div`
 `;
 
 const Title = styled.div`
-  width: 20rem;
+  min-width: 20rem;
   margin-left: 3rem;
   h4 {
     min-width: 5rem;

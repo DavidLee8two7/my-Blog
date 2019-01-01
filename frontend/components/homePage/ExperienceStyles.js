@@ -118,11 +118,6 @@ const ExpList = styled.div`
     h2 {
       font-size: 2rem;
     }
-    ul {
-      li {
-        font-size: 1.8rem;
-      }
-    }
   }
   @media (max-width: 950px) {
     h4 {

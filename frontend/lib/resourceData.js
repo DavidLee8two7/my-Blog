@@ -309,7 +309,7 @@ const imagesAndVidoes = {
     {
       image: "/static/logo/canva.png",
       src: "https://www.canva.com/",
-      subject: "Coverr",
+      subject: "Canva",
       message: "Easily create designs with drag-and-drop features and layouts."
     }
   ]

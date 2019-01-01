@@ -36,13 +36,12 @@ class Resource extends Component {
           </svg>
           <p>
             Please find tools that I often use to save time. I usually keep this
-            page open and uses it like menu at a restaurent.
-            <span style={{ fontSize: "35px" }}>😊</span>
+            page open and uses it like a menu.
           </p>
         </ResourceIntro>
         <ResourceList>
           {devTools.resources.map(resource => (
-            <Resources resource={resource} key={resource.id} />
+            <Resources resource={resource} key={resource.subject} />
           ))}
         </ResourceList>
         <Title>
@@ -50,7 +49,7 @@ class Resource extends Component {
         </Title>
         <ResourceList>
           {htmlResources.resources.map(resource => (
-            <Resources resource={resource} key={resource.id} />
+            <Resources resource={resource} key={resource.subject} />
           ))}
         </ResourceList>
         <Title>
@@ -58,7 +57,7 @@ class Resource extends Component {
         </Title>
         <ResourceList>
           {cssResources.resources.map(resource => (
-            <Resources resource={resource} key={resource.id} />
+            <Resources resource={resource} key={resource.subject} />
           ))}
         </ResourceList>
         <Title>
@@ -66,7 +65,7 @@ class Resource extends Component {
         </Title>
         <ResourceList>
           {javascriptResources.resources.map(resource => (
-            <Resources resource={resource} key={resource.id} />
+            <Resources resource={resource} key={resource.subject} />
           ))}
         </ResourceList>
         <Title>
@@ -74,7 +73,7 @@ class Resource extends Component {
         </Title>
         <ResourceList>
           {fontResources.resources.map(resource => (
-            <Resources resource={resource} key={resource.id} />
+            <Resources resource={resource} key={resource.subject} />
           ))}
         </ResourceList>
         <Title>
@@ -82,7 +81,7 @@ class Resource extends Component {
         </Title>
         <ResourceList>
           {colorResources.resources.map(resource => (
-            <Resources resource={resource} key={resource.id} />
+            <Resources resource={resource} key={resource.subject} />
           ))}
         </ResourceList>
         <Title>
@@ -90,7 +89,7 @@ class Resource extends Component {
         </Title>
         <ResourceList>
           {imagesAndVidoes.resources.map(resource => (
-            <Resources resource={resource} key={resource.id} />
+            <Resources resource={resource} key={resource.subject} />
           ))}
         </ResourceList>
         <Title>
@@ -98,7 +97,7 @@ class Resource extends Component {
         </Title>
         <ResourceList>
           {iconsAndOthers.resources.map(resource => (
-            <Resources resource={resource} key={resource.id} />
+            <Resources resource={resource} key={resource.subject} />
           ))}
         </ResourceList>
         <Title>
@@ -106,7 +105,7 @@ class Resource extends Component {
         </Title>
         <ResourceList>
           {designs.resources.map(resource => (
-            <Resources resource={resource} key={resource.id} />
+            <Resources resource={resource} key={resource.subject} />
           ))}
         </ResourceList>
         <Title>
@@ -114,7 +113,7 @@ class Resource extends Component {
         </Title>
         <ResourceList>
           {communities.resources.map(resource => (
-            <Resources resource={resource} key={resource.id} />
+            <Resources resource={resource} key={resource.subject} />
           ))}
         </ResourceList>
         <Title>
@@ -122,7 +121,7 @@ class Resource extends Component {
         </Title>
         <ResourceList>
           {allOthers.resources.map(resource => (
-            <Resources resource={resource} key={resource.id} />
+            <Resources resource={resource} key={resource.subject} />
           ))}
         </ResourceList>
       </ResourceDiv>
