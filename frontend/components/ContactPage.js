@@ -23,14 +23,34 @@ const CREATE_MEMO_MUTATION = gql`
     }
   }
 `;
-// TODO: play song
 
 const ContactMessage = styled.div`
-  img {
-    height: 15rem;
-    opacity: 0.7;
-    :hover {
-      .;
+  width: 100%;
+  @media screen and (max-width: 1200px) {
+    font-size: 1.8rem;
+    h4 {
+      font-size: 2rem;
+    }
+    button {
+      font-size: 1.8rem;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    font-size: 1.6rem;
+    h4 {
+      font-size: 1.8rem;
+    }
+    button {
+      font-size: 1.6rem;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 1.4rem;
+    h4 {
+      font-size: 1.6rem;
+    }
+    button {
+      font-size: 1.4rem;
     }
   }
 `;
@@ -72,55 +92,55 @@ class Memo extends Component {
                   Please make sure to leave your contact information. I will get
                   back to you as soon as possible.
                 </h4>
+                <label htmlFor="name">
+                  Name
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder=""
+                    required
+                    value={this.state.name}
+                    onChange={this.handleChange}
+                  />
+                </label>
+                <label htmlFor="email">
+                  Email
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder=""
+                    required
+                    value={this.state.email}
+                    onChange={this.handleChange}
+                  />
+                </label>
+                <label htmlFor="subject">
+                  Subject
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder=""
+                    required
+                    value={this.state.subject}
+                    onChange={this.handleChange}
+                  />
+                </label>
+                <label htmlFor="message">
+                  How can I help you?
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Enter message"
+                    required
+                    value={this.state.message}
+                    onChange={this.handleChange}
+                  />
+                </label>
+                <button type="submit">Submit</button>
               </ContactMessage>
-              <label htmlFor="name">
-                Name
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder=""
-                  required
-                  value={this.state.name}
-                  onChange={this.handleChange}
-                />
-              </label>
-              <label htmlFor="email">
-                Email
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder=""
-                  required
-                  value={this.state.email}
-                  onChange={this.handleChange}
-                />
-              </label>
-              <label htmlFor="subject">
-                Subject
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  placeholder=""
-                  required
-                  value={this.state.subject}
-                  onChange={this.handleChange}
-                />
-              </label>
-              <label htmlFor="message">
-                How can I help you?
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="Enter message"
-                  required
-                  value={this.state.message}
-                  onChange={this.handleChange}
-                />
-              </label>
-              <button type="submit">Submit</button>
             </fieldset>
           </Form>
         )}
