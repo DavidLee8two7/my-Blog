@@ -1,2 +1,2 @@
 # myWebsite
-rebuilding with react, next.js, graphql yoga & prisma
+Built with react(next), graphql & prisma
