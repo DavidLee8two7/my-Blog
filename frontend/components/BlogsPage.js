@@ -36,6 +36,10 @@ const BlogsList = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-gap: 3rem;
   margin: 0 auto;
+  @media screen and (max-width: 700px) {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
 `;
 
 class Blogs extends Component {
