@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import Link from "next/link";
-import BlogStyles from "./BlogStyles";
+import { BlogStyles, HerbImage, HerbDescription } from "./BlogStyles";
 
 export default class Blog extends Component {
   static propTypes = {
@@ -12,22 +11,27 @@ export default class Blog extends Component {
     const { blog } = this.props;
     return (
       <BlogStyles>
-        <div>
+        <HerbImage>
           {blog.image && <img src={blog.image} alt={blog.title} />}
-          <Link
-            href={{
-              pathname: "/blogs",
-              query: { id: blog.id }
-            }}
-          >
-            <a>{blog.title}</a>
-          </Link>
-        </div>
+          <h4 className="short">{blog.title}</h4>
+          <h4 className="long">
+            {blog.title}
+            <br /> ({blog.subject})
+          </h4>
+        </HerbImage>
 
-        <div>
-          <p>{blog.subject}</p>
-          <p>{blog.message}</p>
-        </div>
+        <HerbDescription>
+          <p className="hide">
+            <strong>Scientific name:</strong>
+            <br />
+            {blog.subject}
+          </p>
+          <p>
+            <strong>Medicinal effect :</strong>
+            <br />
+            {blog.message}
+          </p>
+        </HerbDescription>
       </BlogStyles>
     );
   }

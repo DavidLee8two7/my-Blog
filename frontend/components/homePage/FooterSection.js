@@ -24,7 +24,7 @@ class FooterSection extends Component {
             <ul>
               <li>
                 <Link prefetch href="/index">
-                  <a>About</a>
+                  <a>Home</a>
                 </Link>
               </li>
               <li>

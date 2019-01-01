@@ -18,9 +18,16 @@ const NavStyles = styled.ul`
     font-weight: 600;
     font-size: 1.4em;
     cursor: pointer;
-    @media (max-width: 700px) {
-      font-size: 10px;
-      padding: 0 10px;
+    @media screen and (max-width: 700px) {
+      font-size: 1.4rem;
+      padding: 0 1.4rem;
+    }
+    @media screen and (max-width: 500px) {
+      font-size: 1.2rem;
+      padding: 0 1rem;
+    }
+    @media screen and (max-width: 350px) {
+      padding: 0 0.5rem;
     }
     &:after {
       height: 2px;
@@ -42,11 +49,14 @@ const NavStyles = styled.ul`
       }
     }
   }
-  @media (max-width: 1300px) {
+  @media (max-width: 1350px) {
     border-top: 1.5px solid ${props => props.theme.orange};
     width: 100%;
     justify-content: center;
     font-size: 1.3rem;
+  }
+  @media screen and (max-width: 500px) {
+    border-top: none;
   }
 `;
 

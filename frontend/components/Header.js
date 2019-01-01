@@ -20,7 +20,7 @@ const Logo = styled.div`
   padding: 2rem;
   a {
     padding: 0.5rem 1rem;
-    color: ${props => props.theme.white};
+    color: white;
     font-weight: 600;
     font-family: ${props => props.theme.fontDisplay};
     font-size: 3.2rem;
@@ -29,9 +29,26 @@ const Logo = styled.div`
       color: ${props => props.theme.orange};
     }
   }
-  @media (max-width: 1300px) {
+  @media screen and (max-width: 1350px) {
     margin: 0;
     text-align: center;
+    a {
+      padding: 0.25rem 0;
+      font-size: 2.7rem;
+      margin: 0.1rem;
+      padding: 0.1rem;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    a {
+      font-size: 2.4rem;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    a {
+      padding: 0;
+      font-size: 2rem;
+    }
   }
 `;
 
@@ -45,7 +62,7 @@ const StyleHeader = styled.header`
     justify-content: space-between;
     align-items: stretch;
     background: black;
-    @media (max-width: 1300px) {
+    @media (max-width: 1350px) {
       grid-template-columns: 1fr;
       justify-content: center;
     }
@@ -53,12 +70,16 @@ const StyleHeader = styled.header`
   .short-text {
     display: none;
   }
-  @media (max-width: 1300px) {
+  @media (max-width: 1350px) {
     .short-text {
       display: inline-block;
     }
     .full-text {
       display: none;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .bar {
     }
   }
 `;

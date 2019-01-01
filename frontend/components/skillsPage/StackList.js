@@ -10,13 +10,12 @@ const Description = styled.div`
   align-items: center;
   text-align: center;
   ul {
-    width: 80%;
+    width: 100%;
     list-style: none;
     li {
       padding: 1rem;
-      font-size: 2rem;
-      font-weight: 600;
-      border-bottom: 1.5px solid ${props => props.theme.lightGray};
+      font-size: 1.6rem;
+      border-bottom: 1.5px solid gray;
     }
   }
 `;

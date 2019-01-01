@@ -11,7 +11,7 @@ const IntroDiv = styled.div`
   align-items: start;
   margin-top: 1rem;
   padding: 2rem;
-  background: ${props => props.theme.white};
+  background: white;
   box-shadow: ${props => props.theme.sbs};
   h2 {
     font-size: 3.2rem;
@@ -22,9 +22,6 @@ const IntroDiv = styled.div`
     font-size: 2.4rem;
     margin-left: 3rem;
   }
-  span {
-    font-weight: bold;
-  }
   .loc {
     border-bottom: 1.5px solid ${props => props.theme.orange};
     &:hover,
@@ -33,40 +30,62 @@ const IntroDiv = styled.div`
       border-bottom: 1.5px solid ${props => props.theme.lightBlue};
     }
   }
-  @media (max-width: 1600px) {
+  @media screen and (max-width: 1655px) {
     h2 {
-      font-size: 2.8rem;
+      font-size: 2rem;
     }
     p {
-      font-size: 2.2rem;
+      font-size: 2.1rem;
+      margin-left: 1rem;
     }
   }
-  @media (max-width: 1500px) {
-    h2 {
-      font-size: 2.6rem;
-    }
+  @media screen and (max-width: 1550px) {
     p {
       font-size: 2rem;
     }
   }
-  @media (max-width: 1350px) {
-    h2 {
-      font-size: 2rem;
+  @media screen and (max-width: 1500px) {
+    p {
+      font-size: 1.9rem;
     }
+  }
+  @media screen and (max-width: 1400px) {
+    p {
+      font-size: 1.75rem;
+    }
+  }
+  @media screen and (max-width: 1300px) {
+    p {
+      font-size: 1.65rem;
+    }
+  }
+  @media screen and (max-width: 1250px) {
+    p {
+      font-size: 1.6rem;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    p {
+      font-size: 1.5rem;
+    }
+  }
+  @media screen and (max-width: 1150px) {
+    margin: 0;
+    padding: 1rem;
+  }
+  @media screen and (max-width: 1050px) {
+    display: grid;
+    grid-template-columns: 1fr;
     p {
       font-size: 1.8rem;
     }
   }
-  @media (max-width: 1200px) {
-    h2 {
-      font-size: 1.6rem;
-    }
+  @media screen and (max-width: 500px) {
+    box-shadow: none;
+    background: transparent;
     p {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
-  }
-  @media (max-width: 700px) {
-    grid-template-columns: 1fr;
   }
 `;
 
@@ -80,16 +99,11 @@ const Picture = styled.div`
     margin-right: auto;
     width: 100%;
   }
-  .baby {
-    width: 40%;
-    position: absolute;
-    bottom: 0;
-    left: 30%;
-    margin-bottom: 1.5rem;
-    border-radius: 50%;
+  @media screen and (max-width: 1655px) {
+    width: 90%;
   }
-  @media (max-width: 700px) {
-    width: 50%;
+  @media screen and (max-width: 1050px) {
+    display: none;
   }
 `;
 
@@ -98,8 +112,10 @@ const AboutDiv = styled.div`
   h2 {
     text-shadow: ${props => props.theme.ts};
   }
-  @media (max-width: 700px) {
-    width: 70%;
+  @media screen and (max-width: 550px) {
+    h2 {
+      font-size: 1.8rem;
+    }
   }
 `;
 

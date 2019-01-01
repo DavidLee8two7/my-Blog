@@ -17,7 +17,6 @@ class ExperienceSection extends Component {
     return (
       <Reveal
         bottom
-        fraction={0.6}
         onReveal={() => {
           this.setState({ show: true });
         }}

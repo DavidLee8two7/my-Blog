@@ -41,7 +41,7 @@ class Home extends Component {
           <a href="/skills">
             <TitleSection
               visible={"Current focus : 💻 React & GraphQL stack"}
-              invisible={"Click for more skills and projects."}
+              invisible={"Click for more skills and projects"}
             />
           </a>
         </TechTitle>

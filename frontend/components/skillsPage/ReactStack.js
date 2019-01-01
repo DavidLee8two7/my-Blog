@@ -62,7 +62,7 @@ const ReactStack = () => {
                   target="_blank"
                   href="https://github.com/DavidLee8two7/node_master"
                 >
-                  <StyledButton style={{ background: "black" }}>
+                  <StyledButton style={{ background: "#393939" }}>
                     Git Hub
                   </StyledButton>
                 </a>
@@ -70,7 +70,7 @@ const ReactStack = () => {
                   target="_blank"
                   href="https://github.com/DavidLee8two7/Dev_stickers_Co"
                 >
-                  <StyledButton style={{ background: "blue" }}>
+                  <StyledButton style={{ background: "#01579b" }}>
                     Link to Website
                   </StyledButton>
                 </a>

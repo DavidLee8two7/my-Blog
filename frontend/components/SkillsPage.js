@@ -51,22 +51,27 @@ class Skills extends Component {
                   </svg>
                   <TechMessage>
                     <p>
-                      I am JavaScript focused fullstack web developer. Here are
-                      some programming languages and tools that I like improving
-                      while I'm looking for something new to learn.
-                    </p>
-                    <p>
-                      I like using React, Styled-Component, and GraphQL as my
-                      fullstack tools because its ready to build & everything is
-                      in JavaScript.
+                      Here are some{" "}
+                      <span>
+                        programming languages and tools that I enjoy using
+                      </span>{" "}
+                      for my projects but I'm always{" "}
+                      <span>looking for something good and new to learn</span>.
+                      You can also find some of my previous{" "}
+                      <span>experiences</span> listed below.
                     </p>
                   </TechMessage>
                 </TechIntro>
                 <ReactGraphqlStack>
                   <Mutation mutation={TOGGLE_CARD_REACT}>
                     {toggleReact => (
-                      <StyledButton onClick={toggleReact}>
-                        <p>React & GraphQL project sample</p>
+                      <StyledButton
+                        onClick={toggleReact}
+                        style={{
+                          backgroundColor: "#01579b"
+                        }}
+                      >
+                        <p>React & GraphQL sample</p>
                       </StyledButton>
                     )}
                   </Mutation>
@@ -78,10 +83,10 @@ class Skills extends Component {
                       <StyledButton
                         onClick={toggleNode}
                         style={{
-                          backgroundColor: "#215732"
+                          backgroundColor: "#006064"
                         }}
                       >
-                        <p>Pug & Node project sample</p>
+                        <p>Pug & Node sample</p>
                       </StyledButton>
                     )}
                   </Mutation>
@@ -92,9 +97,7 @@ class Skills extends Component {
                 {data.skills.map(skill => (
                   <SkillCatetory key={skill.id}>
                     <Title>
-                      <h4>
-                        <a>{skill.title}</a>
-                      </h4>
+                      <h4>{skill.title}</h4>
                     </Title>
                     <Skill tech={skill.tech} />
                   </SkillCatetory>

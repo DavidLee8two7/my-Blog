@@ -22,21 +22,39 @@ const ResourceDiv = styled.div`
 const ResourceIntro = styled.div`
   padding: 10rem 0;
   width: 100%;
-  min-height: 40rem;
   p {
     display: block;
     margin-inline-start: 10rem;
     margin-inline-end: 7rem;
-    font-size: 3.4rem;
+    font-size: 2.4rem;
     font-weight: 600;
     text-align: left;
     text-shadow: ${props => props.theme.ts};
   }
-`;
-
-const ResourceMessage = styled.div`
-  padding: 3rem;
-  width: 100%;
+  @media screen and (max-width: 1000px) {
+    padding: 2rem;
+    p {
+      font-size: 2rem;
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    p {
+      font-size: 1.8rem;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    p {
+      font-size: 1.5rem;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    p {
+      font-weight: 400;
+      font-size: 1.3rem;
+    }
+  }
 `;
 
 const ResourceList = styled.div`
@@ -48,8 +66,8 @@ const ResourceList = styled.div`
 `;
 
 const Title = styled.div`
-  width: 30rem;
-  margin: 7rem;
+  min-width: 20rem;
+  margin-left: 3rem;
   h4 {
     width: max-content;
     padding: 2rem;
@@ -61,6 +79,27 @@ const Title = styled.div`
     background: ${props => props.theme.lightOrange};
     box-shadow: ${props => props.theme.sbs};
     font-size: 2rem;
+  }
+  @media screen and (max-width: 1000px) {
+    margin-left: 2rem;
+    h4 {
+      padding: 1.5rem;
+      font-size: 1.8rem;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    margin-left: 1.5rem;
+    h4 {
+      padding: 1rem;
+      font-size: 1.6rem;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    margin-left: 1rem;
+    h4 {
+      padding: 0.5rem;
+      font-size: 1.4rem;
+    }
   }
 `;
 

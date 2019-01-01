@@ -38,9 +38,43 @@ const NameDiv = styled.div`
   img {
     max-width: 100rem;
   }
-  @media (max-width: 650px) {
-    p {
-      font-size: 2rem;
+  @media screen and (max-width: 1350px) {
+    margin: 4rem 0;
+    padding: 1rem;
+    img {
+      max-width: 60rem;
+    }
+    .messages {
+      margin-top: 4rem;
+      font-size: 1.8rem;
+      border-bottom: 1.5px solid ${props => props.theme.orange};
+    }
+  }
+  @media screen and (max-width: 950px) {
+    margin: 4rem 0;
+    padding: 1rem;
+    .messages {
+      margin-top: 3rem;
+      font-size: 1.6rem;
+      border-bottom: 1.5px solid ${props => props.theme.orange};
+    }
+  }
+  @media screen and (max-width: 750px) {
+    margin: 2rem 0;
+    .messages {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    margin: 1rem 0;
+    img {
+      max-width: 40rem;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    margin: 0.5rem 0;
+    img {
+      max-width: 25rem;
     }
   }
 `;
@@ -55,14 +89,38 @@ const GreetingDiv = styled.div`
     font-size: 2.4rem;
     font-weight: 600;
   }
+  @media screen and (max-width: 1350px) {
+    margin: 4rem;
+    p {
+      font-size: 1.9rem;
+      margin: 0;
+    }
+  }
+  @media screen and (max-width: 950px) {
+    margin: 2rem;
+    p {
+      font-size: 1.6rem;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    margin: 0;
+    padding: 0 2rem;
+    p {
+      font-size: 1.4rem;
+    }
+  }
 `;
 
 const TechTitle = styled.div`
   z-index: 2;
   width: 100%;
+  grid-row: 4;
   text-align: center;
   display: grid;
   grid-column: 1 / -1;
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 `;
 
 export { HomeStyles, NameDiv, GreetingDiv, TechTitle };
