@@ -5,4 +5,4 @@ hooks:
   post-deploy:
     - graphql get-schema -p prisma
 
-endpoint: https://my-website-prod-78144029fd.herokuapp.com/
+endpoint: https://website-server-0cade2ae57.herokuapp.com/
