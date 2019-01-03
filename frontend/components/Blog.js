@@ -1,8 +1,14 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { BlogStyles, HerbImage, HerbDescription } from "./BlogStyles";
+import Link from "next/link";
+import {
+  BlogStyles,
+  HerbImage,
+  HerbDescription,
+  Title
+} from "./blogsPage/BlogStyles";
 
-export default class Blog extends Component {
+class Blog extends Component {
   static propTypes = {
     blog: PropTypes.object.isRequired
   };
@@ -13,11 +19,18 @@ export default class Blog extends Component {
       <BlogStyles>
         <HerbImage>
           {blog.image && <img src={blog.image} alt={blog.title} />}
-          <h4 className="short">{blog.title}</h4>
-          <h4 className="long">
-            {blog.title}
-            <br /> ({blog.subject})
-          </h4>
+          <Title>
+            <Link
+              href={{
+                pathname: "/blog",
+                query: { id: blog.id }
+              }}
+            >
+              <a>
+                <h4>{blog.title}</h4>
+              </a>
+            </Link>
+          </Title>
         </HerbImage>
 
         <HerbDescription>
@@ -36,3 +49,5 @@ export default class Blog extends Component {
     );
   }
 }
+
+export default Blog;

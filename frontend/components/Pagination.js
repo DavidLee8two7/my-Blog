@@ -44,7 +44,7 @@ const Pagination = props => {
               !
             </p>
             <p className="toggle">
-              Total of ( {count} ) 🌿 Medicinal herbs has been updated.
+              Total of ( {count} ) Blogs has been updated.
             </p>
             <Link
               prefetch
