@@ -4,13 +4,11 @@ const db = require("./db");
 
 const server = createServer();
 
-// TODO: Use express middleware to handle cookies (JWT)
-// TODO: use middleware to populate current user
-
 server.start(
   {
     cors: {
-      credentials: true
+      credentials: true,
+      origin: process.env.FRONTEND_URL
     }
   },
   deets => {
