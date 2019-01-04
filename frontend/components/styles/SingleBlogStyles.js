@@ -60,6 +60,7 @@ const SingleHerbDescription = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: start;
+  padding: 5px;
   span {
     margin-left: 2rem;
     font-size: 2rem;
