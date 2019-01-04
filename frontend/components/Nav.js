@@ -15,9 +15,6 @@ const Nav = () => (
     <Link prefetch href="/blogs">
       <a>Blogs</a>
     </Link>
-    <Link prefetch href="/writeblog">
-      <a>Write blog</a>
-    </Link>
     <Link prefetch href="/contact">
       <a>Contact</a>
     </Link>

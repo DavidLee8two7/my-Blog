@@ -21,16 +21,11 @@ class Blog extends Component {
           >
             <a>
               {blog.image && <img src={blog.image} alt={blog.title} />}
-              <h4>{blog.title}</h4>
+              <span>{blog.title}</span>
             </a>
           </Link>
         </HerbImage>
         <HerbDescription>
-          <p>
-            <strong>Scientific Name :</strong>
-            <br />
-            {blog.scientific}
-          </p>
           <p>
             <strong>Medicinal effect : </strong>
             <br />

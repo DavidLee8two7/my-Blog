@@ -24,7 +24,7 @@ const Center = styled.div`
   text-align: center;
   background-size: cover;
   background-image: linear-gradient(
-      to right bottom,
+      to bottom,
       rgba(225, 225, 225, 0.5),
       rgba(237, 237, 237, 0.5)
     ),
@@ -34,9 +34,10 @@ const Center = styled.div`
 const BlogsList = styled.div`
   padding: 3rem;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 3rem;
   margin: 0 auto;
+  max-width: 1200px;
   @media screen and (max-width: 700px) {
     grid-template-columns: 1fr;
     padding: 1rem;

@@ -7,27 +7,11 @@ const BlogStyles = styled.div`
   border-radius: 3px;
   justify-self: center;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   justify-items: start;
   align-items: start;
-  padding: 2px 0 0 2px;
-  width: 1000px;
-  img {
-    width: 100%;
-    height: 25rem;
-    object-fit: cover;
-    border-radius: 3px;
-  }
-  h4 {
-    margin-left: 2rem;
-    letter-spacing: 0.4px;
-    font-size: 2rem;
-    font-family: ${props => props.theme.fontDisplay};
-  }
-  p {
-    margin-left: 2rem;
-    font-size: 2rem;
-  }
+  padding: 1px 0 0 1px;
+  width: 100%;
   @media screen and (max-width: 1050px) {
     display: flex;
     flex-direction: column;
@@ -41,26 +25,26 @@ const BlogStyles = styled.div`
 const HerbImage = styled.div`
   display: flex;
   flex-direction: column;
-  .short {
-    display: inline;
+  justify-content: start;
+  img {
+    width: 100%;
+    min-width: 13rem;
+    height: 35rem;
+    object-fit: cover;
+    border-radius: 3px;
   }
-  .long {
-    display: none;
-  }
-  @media screen and (max-width: 1050px) {
-    .short {
-      display: none;
-    }
-    .long {
-      display: inline;
-    }
+  span {
+    margin-left: 2rem;
+    font-size: 2.5rem;
+    letter-spacing: 0.5px;
+    font-family: ${props => props.theme.fontDisplay};
+    font-weight: 600;
+    border-bottom: 2px solid ${props => props.theme.black};
   }
   @media screen and (max-width: 700px) {
-    .short {
-      display: inline;
-    }
-    .long {
-      display: none;
+    span {
+      margin-left: 1rem;
+      font-size: 2rem;
     }
   }
 `;
@@ -69,30 +53,13 @@ const HerbDescription = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  h5 {
-    text-align: left;
-    margin-left: 2rem;
-    letter-spacing: 0.5px;
-    font-size: 1.8rem;
-  }
+  margin: 3px;
   p {
     text-align: left;
     margin-left: 2rem;
-    font-size: 1.5rem;
-  }
-  @media screen and (max-width: 1050px) {
-    .hide {
-      display: none;
-    }
+    font-size: 1.6rem;
   }
   @media screen and (max-width: 700px) {
-    .hide {
-      display: inline;
-    }
-    h5 {
-      margin-left: 1rem;
-      font-size: 1.6rem;
-    }
     p {
       margin-left: 1rem;
       font-size: 1.3rem;
