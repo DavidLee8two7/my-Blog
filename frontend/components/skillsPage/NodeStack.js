@@ -60,7 +60,7 @@ const NodeStack = () => {
               >
                 <a
                   target="_blank"
-                  href="https://github.com/DavidLee8two7/Dev_stickers_Co"
+                  href="https://github.com/SanBuNam/Herbalist-network-prototype"
                 >
                   <StyledButton style={{ background: "#393939" }}>
                     Git Hub
@@ -68,7 +68,7 @@ const NodeStack = () => {
                 </a>
                 <a
                   target="_blank"
-                  href="https://github.com/DavidLee8two7/Dev_stickers_Co"
+                  href="https://github.com/SanBuNam/Herbalist-network-prototype"
                 >
                   <StyledButton style={{ background: "#006064" }}>
                     Link to Website
