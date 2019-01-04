@@ -3,13 +3,15 @@ import styled from "styled-components";
 const BlogStyles = styled.div`
   background: white;
   border: 1px solid ${props => props.theme.offWhite};
-  border-radius: 3px;
   box-shadow: ${props => props.theme.bbs};
+  border-radius: 3px;
+  justify-self: center;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  justify-items: center;
+  justify-items: start;
   align-items: start;
-  padding: 2px 5px 0 2px;
+  padding: 2px 0 0 2px;
+  width: 1000px;
   img {
     width: 100%;
     height: 25rem;
@@ -17,11 +19,14 @@ const BlogStyles = styled.div`
     border-radius: 3px;
   }
   h4 {
-    text-align: center;
     margin-left: 2rem;
-    letter-spacing: 0.5px;
-    font-size: 1.8rem;
+    letter-spacing: 0.4px;
+    font-size: 2rem;
     font-family: ${props => props.theme.fontDisplay};
+  }
+  p {
+    margin-left: 2rem;
+    font-size: 2rem;
   }
   @media screen and (max-width: 1050px) {
     display: flex;
@@ -95,23 +100,4 @@ const HerbDescription = styled.div`
   }
 `;
 
-const Title = styled.h3`
-  margin: 0 1rem;
-  text-align: center;
-  transform: skew(-5deg) rotate(-1deg);
-  margin-top: -3rem;
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
-  a {
-    background: ${props => props.theme.orange};
-    display: inline;
-    line-height: 1.3;
-    font-size: 4rem;
-    text-align: center;
-    color: white;
-    padding: 0 1rem;
-  }
-`;
-
-export default Title;
-
-export { BlogStyles, HerbImage, HerbDescription, Title };
+export { BlogStyles, HerbImage, HerbDescription };

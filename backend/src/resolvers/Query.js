@@ -4,8 +4,6 @@ const Query = {
   blogs: forwardTo("db"),
   blog: forwardTo("db"),
   blogsConnection: forwardTo("db"),
-  resources: forwardTo("db"),
-  resource: forwardTo("db"),
   memoes: forwardTo("db"),
   memo: forwardTo("db"),
   skills: forwardTo("db"),

@@ -11,8 +11,9 @@ const ALL_BLOGS_QUERY = gql`
     blogs(first: $first, skip: $skip, orderBy: createdAt_DESC) {
       id
       title
-      subject
-      message
+      scientific
+      effect
+      reference
       image
       largeImage
     }
@@ -33,7 +34,7 @@ const Center = styled.div`
 const BlogsList = styled.div`
   padding: 3rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 3rem;
   margin: 0 auto;
   @media screen and (max-width: 700px) {

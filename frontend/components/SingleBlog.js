@@ -8,11 +8,11 @@ import Head from "next/head";
 const SingleBlogStyles = styled.div`
   max-width: 1200px;
   margin: 2rem auto;
-  box-shadow: ${props => props.theme.bs};
+  box-shadow: ${props => props.theme.bbs};
   display: grid;
   grid-auto-columns: 1fr;
   grid-auto-flow: column;
-  min-height: 800px;
+  min-height: 600px;
   img {
     width: 100%;
     height: 100%;
@@ -57,8 +57,8 @@ class SingleBlog extends Component {
               </Head>
               <img src={blog.largeImage} alt={blog.title} />
               <div className="details">
-                <h2>Viewing {blog.title}</h2>
-                <p>{blog.description}</p>
+                <h2>{blog.title}</h2>
+                <p>{blog.message}</p>
               </div>
             </SingleBlogStyles>
           );

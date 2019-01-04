@@ -1,8 +1,9 @@
 type Blog {
   id: ID! @unique
   title: String!
-  subject: String!
-  message: String!
+  scientific: String
+  effect: String!
+  reference: String
   image: String
   largeImage: String
 }
@@ -11,15 +12,6 @@ type Skill {
   id: ID! @unique
   title: String!
   tech: [String]!
-  image: String
-  largeImage: String
-}
-
-type Resource {
-  id: ID! @unique
-  title: String!
-  subject: String!
-  message: String!
   image: String
   largeImage: String
 }
