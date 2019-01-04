@@ -18,7 +18,7 @@ class Experience extends Component {
               <img src="/static/cj.png" />
             </a>
             <a href="https://en.wikipedia.org/wiki/CJ_Group" target="_blank">
-              <h3>CJ America, Inc.</h3>
+              <h3>CJ America, Inc</h3>
             </a>
           </CompanyInfo>
           <JobDescription>
@@ -62,7 +62,7 @@ class Experience extends Component {
               <img src="/static/pb.gif" />
             </a>
             <a href="http://eng.paris.co.kr/new/global.html" target="_blank">
-              <h3>Paris Baguette, Inc.</h3>
+              <h3>Paris Baguette, Inc</h3>
             </a>
           </CompanyInfo>
           <JobDescription>
