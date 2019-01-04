@@ -76,7 +76,7 @@ class ProjectSection extends Component {
                   <a
                     className="icon"
                     aria-label="project"
-                    href="https://github.com"
+                    href="https://github.com/SanBuNam/T-shirts-factory-prototype"
                     target="_blank"
                   >
                     <SVGIcon name={"github"} />
@@ -85,7 +85,7 @@ class ProjectSection extends Component {
                 <div className="icon">
                   <a
                     aria-label="website"
-                    href="https://github.com"
+                    href="https://github.com/SanBuNam/T-shirts-factory-prototype"
                     target="_blank"
                   >
                     <SVGIcon name={"external"} viewBox={"0 0 28 28"} />
@@ -174,7 +174,7 @@ class ProjectSection extends Component {
                   <a
                     className="icon"
                     aria-label="project"
-                    href="https://github.com"
+                    href="https://github.com/SanBuNam/Herbalist-network-prototype"
                     target="_blank"
                   >
                     <SVGIcon name={"github"} />
@@ -183,7 +183,7 @@ class ProjectSection extends Component {
                 <div className="icon">
                   <a
                     aria-label="website"
-                    href="https://github.com"
+                    href="https://github.com/SanBuNam/Herbalist-network-prototype"
                     target="_blank"
                   >
                     <SVGIcon name={"external"} viewBox={"0 0 28 28"} />

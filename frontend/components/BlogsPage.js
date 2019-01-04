@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
 import styled from "styled-components";
-import Blog from "./blogsPage/Blog";
+import Blog from "../components/Blog";
 import Pagination from "./Pagination";
 import { perPage } from "../config";
 
@@ -11,8 +11,9 @@ const ALL_BLOGS_QUERY = gql`
     blogs(first: $first, skip: $skip, orderBy: createdAt_DESC) {
       id
       title
-      subject
-      message
+      scientific
+      effect
+      reference
       image
       largeImage
     }
@@ -23,7 +24,7 @@ const Center = styled.div`
   text-align: center;
   background-size: cover;
   background-image: linear-gradient(
-      to right bottom,
+      to bottom,
       rgba(225, 225, 225, 0.5),
       rgba(237, 237, 237, 0.5)
     ),
@@ -36,6 +37,7 @@ const BlogsList = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-gap: 3rem;
   margin: 0 auto;
+  max-width: 1200px;
   @media screen and (max-width: 700px) {
     grid-template-columns: 1fr;
     padding: 1rem;

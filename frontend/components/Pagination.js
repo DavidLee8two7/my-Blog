@@ -4,6 +4,7 @@ import { Query } from "react-apollo";
 import Head from "next/head";
 import Link from "next/link";
 import PaginationStyles from "./styles/PaginationStyles";
+import Error from "./styles/ErrorMessage";
 import { perPage } from "../config";
 
 const PAGINATION_QUERY = gql`
@@ -21,6 +22,7 @@ const Pagination = props => {
     <Query query={PAGINATION_QUERY}>
       {({ data, loading, error }) => {
         if (loading) return <p>Loading...</p>;
+        if (error) return <Error error={error} />;
         const count = data.blogsConnection.aggregate.count;
         const pages = Math.ceil(count / perPage);
         const page = props.page;
@@ -44,7 +46,7 @@ const Pagination = props => {
               !
             </p>
             <p className="toggle">
-              Total of ( {count} ) 🌿 Medicinal herbs has been updated.
+              Total of ( {count} ) Blogs has been updated.
             </p>
             <Link
               prefetch

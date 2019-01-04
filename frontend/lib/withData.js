@@ -1,6 +1,6 @@
 import withApollo from "next-with-apollo";
 import ApolloClient from "apollo-boost";
-import { endpoint } from "../config";
+import { endpoint, prodEndpoint } from "../config";
 import { LOCAL_STATE_REACT } from "../components/skillsPage/ReactStack";
 import { LOCAL_STATE_NODE } from "../components/skillsPage/NodeStack";
 

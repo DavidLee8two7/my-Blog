@@ -8,16 +8,15 @@ const PaginationStyles = styled.div`
   justify-content: center;
   align-content: center;
   margin: 4rem 0;
-  border: 1px solid black;
+  border: 1px solid ${props => props.theme.black};
   border-radius: 3px;
   font-size: 2rem;
   font-weight: 600;
   letter-spacing: 1px;
-  color: black;
   & > * {
     margin: 0;
     padding: 15px 30px;
-    border-right: 1px solid black;
+    border-right: 1px solid ${props => props.theme.black};
     &:last-child {
       border-right: 0;
     }

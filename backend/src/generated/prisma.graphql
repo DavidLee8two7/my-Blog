@@ -1,15 +1,11 @@
-# source: https://eu1.prisma.sh/david-lee-cb0176/demo/dev
-# timestamp: Wed Jan 02 2019 11:57:36 GMT-0800 (Pacific Standard Time)
+# source: https://us1.prisma.sh/david-lee-c070c7/demo-blog/dev
+# timestamp: Thu Jan 03 2019 18:29:21 GMT-0800 (Pacific Standard Time)
 
 type AggregateBlog {
   count: Int!
 }
 
 type AggregateMemo {
-  count: Int!
-}
-
-type AggregateResource {
   count: Int!
 }
 
@@ -25,8 +21,9 @@ type BatchPayload {
 type Blog implements Node {
   id: ID!
   title: String!
-  subject: String!
-  message: String!
+  scientific: String
+  effect: String!
+  reference: String
   image: String
   largeImage: String
 }
@@ -43,8 +40,9 @@ type BlogConnection {
 
 input BlogCreateInput {
   title: String!
-  subject: String!
-  message: String!
+  scientific: String
+  effect: String!
+  reference: String
   image: String
   largeImage: String
 }
@@ -63,10 +61,12 @@ enum BlogOrderByInput {
   id_DESC
   title_ASC
   title_DESC
-  subject_ASC
-  subject_DESC
-  message_ASC
-  message_DESC
+  scientific_ASC
+  scientific_DESC
+  effect_ASC
+  effect_DESC
+  reference_ASC
+  reference_DESC
   image_ASC
   image_DESC
   largeImage_ASC
@@ -80,8 +80,9 @@ enum BlogOrderByInput {
 type BlogPreviousValues {
   id: ID!
   title: String!
-  subject: String!
-  message: String!
+  scientific: String
+  effect: String!
+  reference: String
   image: String
   largeImage: String
 }
@@ -127,16 +128,18 @@ input BlogSubscriptionWhereInput {
 
 input BlogUpdateInput {
   title: String
-  subject: String
-  message: String
+  scientific: String
+  effect: String
+  reference: String
   image: String
   largeImage: String
 }
 
 input BlogUpdateManyMutationInput {
   title: String
-  subject: String
-  message: String
+  scientific: String
+  effect: String
+  reference: String
   image: String
   largeImage: String
 }
@@ -230,86 +233,126 @@ input BlogWhereInput {
 
   """All values not ending with the given string."""
   title_not_ends_with: String
-  subject: String
+  scientific: String
 
   """All values that are not equal to given value."""
-  subject_not: String
+  scientific_not: String
 
   """All values that are contained in given list."""
-  subject_in: [String!]
+  scientific_in: [String!]
 
   """All values that are not contained in given list."""
-  subject_not_in: [String!]
+  scientific_not_in: [String!]
 
   """All values less than the given value."""
-  subject_lt: String
+  scientific_lt: String
 
   """All values less than or equal the given value."""
-  subject_lte: String
+  scientific_lte: String
 
   """All values greater than the given value."""
-  subject_gt: String
+  scientific_gt: String
 
   """All values greater than or equal the given value."""
-  subject_gte: String
+  scientific_gte: String
 
   """All values containing the given string."""
-  subject_contains: String
+  scientific_contains: String
 
   """All values not containing the given string."""
-  subject_not_contains: String
+  scientific_not_contains: String
 
   """All values starting with the given string."""
-  subject_starts_with: String
+  scientific_starts_with: String
 
   """All values not starting with the given string."""
-  subject_not_starts_with: String
+  scientific_not_starts_with: String
 
   """All values ending with the given string."""
-  subject_ends_with: String
+  scientific_ends_with: String
 
   """All values not ending with the given string."""
-  subject_not_ends_with: String
-  message: String
+  scientific_not_ends_with: String
+  effect: String
 
   """All values that are not equal to given value."""
-  message_not: String
+  effect_not: String
 
   """All values that are contained in given list."""
-  message_in: [String!]
+  effect_in: [String!]
 
   """All values that are not contained in given list."""
-  message_not_in: [String!]
+  effect_not_in: [String!]
 
   """All values less than the given value."""
-  message_lt: String
+  effect_lt: String
 
   """All values less than or equal the given value."""
-  message_lte: String
+  effect_lte: String
 
   """All values greater than the given value."""
-  message_gt: String
+  effect_gt: String
 
   """All values greater than or equal the given value."""
-  message_gte: String
+  effect_gte: String
 
   """All values containing the given string."""
-  message_contains: String
+  effect_contains: String
 
   """All values not containing the given string."""
-  message_not_contains: String
+  effect_not_contains: String
 
   """All values starting with the given string."""
-  message_starts_with: String
+  effect_starts_with: String
 
   """All values not starting with the given string."""
-  message_not_starts_with: String
+  effect_not_starts_with: String
 
   """All values ending with the given string."""
-  message_ends_with: String
+  effect_ends_with: String
 
   """All values not ending with the given string."""
-  message_not_ends_with: String
+  effect_not_ends_with: String
+  reference: String
+
+  """All values that are not equal to given value."""
+  reference_not: String
+
+  """All values that are contained in given list."""
+  reference_in: [String!]
+
+  """All values that are not contained in given list."""
+  reference_not_in: [String!]
+
+  """All values less than the given value."""
+  reference_lt: String
+
+  """All values less than or equal the given value."""
+  reference_lte: String
+
+  """All values greater than the given value."""
+  reference_gt: String
+
+  """All values greater than or equal the given value."""
+  reference_gte: String
+
+  """All values containing the given string."""
+  reference_contains: String
+
+  """All values not containing the given string."""
+  reference_not_contains: String
+
+  """All values starting with the given string."""
+  reference_starts_with: String
+
+  """All values not starting with the given string."""
+  reference_not_starts_with: String
+
+  """All values ending with the given string."""
+  reference_ends_with: String
+
+  """All values not ending with the given string."""
+  reference_not_ends_with: String
   image: String
 
   """All values that are not equal to given value."""
@@ -732,27 +775,21 @@ input MemoWhereUniqueInput {
 type Mutation {
   createBlog(data: BlogCreateInput!): Blog!
   createSkill(data: SkillCreateInput!): Skill!
-  createResource(data: ResourceCreateInput!): Resource!
   createMemo(data: MemoCreateInput!): Memo!
   updateBlog(data: BlogUpdateInput!, where: BlogWhereUniqueInput!): Blog
   updateSkill(data: SkillUpdateInput!, where: SkillWhereUniqueInput!): Skill
-  updateResource(data: ResourceUpdateInput!, where: ResourceWhereUniqueInput!): Resource
   updateMemo(data: MemoUpdateInput!, where: MemoWhereUniqueInput!): Memo
   deleteBlog(where: BlogWhereUniqueInput!): Blog
   deleteSkill(where: SkillWhereUniqueInput!): Skill
-  deleteResource(where: ResourceWhereUniqueInput!): Resource
   deleteMemo(where: MemoWhereUniqueInput!): Memo
   upsertBlog(where: BlogWhereUniqueInput!, create: BlogCreateInput!, update: BlogUpdateInput!): Blog!
   upsertSkill(where: SkillWhereUniqueInput!, create: SkillCreateInput!, update: SkillUpdateInput!): Skill!
-  upsertResource(where: ResourceWhereUniqueInput!, create: ResourceCreateInput!, update: ResourceUpdateInput!): Resource!
   upsertMemo(where: MemoWhereUniqueInput!, create: MemoCreateInput!, update: MemoUpdateInput!): Memo!
   updateManyBlogs(data: BlogUpdateManyMutationInput!, where: BlogWhereInput): BatchPayload!
   updateManySkills(data: SkillUpdateManyMutationInput!, where: SkillWhereInput): BatchPayload!
-  updateManyResources(data: ResourceUpdateManyMutationInput!, where: ResourceWhereInput): BatchPayload!
   updateManyMemoes(data: MemoUpdateManyMutationInput!, where: MemoWhereInput): BatchPayload!
   deleteManyBlogs(where: BlogWhereInput): BatchPayload!
   deleteManySkills(where: SkillWhereInput): BatchPayload!
-  deleteManyResources(where: ResourceWhereInput): BatchPayload!
   deleteManyMemoes(where: MemoWhereInput): BatchPayload!
 }
 
@@ -786,15 +823,12 @@ type PageInfo {
 type Query {
   blogs(where: BlogWhereInput, orderBy: BlogOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Blog]!
   skills(where: SkillWhereInput, orderBy: SkillOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Skill]!
-  resources(where: ResourceWhereInput, orderBy: ResourceOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Resource]!
   memoes(where: MemoWhereInput, orderBy: MemoOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Memo]!
   blog(where: BlogWhereUniqueInput!): Blog
   skill(where: SkillWhereUniqueInput!): Skill
-  resource(where: ResourceWhereUniqueInput!): Resource
   memo(where: MemoWhereUniqueInput!): Memo
   blogsConnection(where: BlogWhereInput, orderBy: BlogOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): BlogConnection!
   skillsConnection(where: SkillWhereInput, orderBy: SkillOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): SkillConnection!
-  resourcesConnection(where: ResourceWhereInput, orderBy: ResourceOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): ResourceConnection!
   memoesConnection(where: MemoWhereInput, orderBy: MemoOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): MemoConnection!
 
   """Fetches an object given its ID"""
@@ -802,380 +836,6 @@ type Query {
     """The ID of an object"""
     id: ID!
   ): Node
-}
-
-type Resource implements Node {
-  id: ID!
-  title: String!
-  subject: String!
-  message: String!
-  image: String
-  largeImage: String
-}
-
-"""A connection to a list of items."""
-type ResourceConnection {
-  """Information to aid in pagination."""
-  pageInfo: PageInfo!
-
-  """A list of edges."""
-  edges: [ResourceEdge]!
-  aggregate: AggregateResource!
-}
-
-input ResourceCreateInput {
-  title: String!
-  subject: String!
-  message: String!
-  image: String
-  largeImage: String
-}
-
-"""An edge in a connection."""
-type ResourceEdge {
-  """The item at the end of the edge."""
-  node: Resource!
-
-  """A cursor for use in pagination."""
-  cursor: String!
-}
-
-enum ResourceOrderByInput {
-  id_ASC
-  id_DESC
-  title_ASC
-  title_DESC
-  subject_ASC
-  subject_DESC
-  message_ASC
-  message_DESC
-  image_ASC
-  image_DESC
-  largeImage_ASC
-  largeImage_DESC
-  updatedAt_ASC
-  updatedAt_DESC
-  createdAt_ASC
-  createdAt_DESC
-}
-
-type ResourcePreviousValues {
-  id: ID!
-  title: String!
-  subject: String!
-  message: String!
-  image: String
-  largeImage: String
-}
-
-type ResourceSubscriptionPayload {
-  mutation: MutationType!
-  node: Resource
-  updatedFields: [String!]
-  previousValues: ResourcePreviousValues
-}
-
-input ResourceSubscriptionWhereInput {
-  """Logical AND on all given filters."""
-  AND: [ResourceSubscriptionWhereInput!]
-
-  """Logical OR on all given filters."""
-  OR: [ResourceSubscriptionWhereInput!]
-
-  """Logical NOT on all given filters combined by AND."""
-  NOT: [ResourceSubscriptionWhereInput!]
-
-  """
-  The subscription event gets dispatched when it's listed in mutation_in
-  """
-  mutation_in: [MutationType!]
-
-  """
-  The subscription event gets only dispatched when one of the updated fields names is included in this list
-  """
-  updatedFields_contains: String
-
-  """
-  The subscription event gets only dispatched when all of the field names included in this list have been updated
-  """
-  updatedFields_contains_every: [String!]
-
-  """
-  The subscription event gets only dispatched when some of the field names included in this list have been updated
-  """
-  updatedFields_contains_some: [String!]
-  node: ResourceWhereInput
-}
-
-input ResourceUpdateInput {
-  title: String
-  subject: String
-  message: String
-  image: String
-  largeImage: String
-}
-
-input ResourceUpdateManyMutationInput {
-  title: String
-  subject: String
-  message: String
-  image: String
-  largeImage: String
-}
-
-input ResourceWhereInput {
-  """Logical AND on all given filters."""
-  AND: [ResourceWhereInput!]
-
-  """Logical OR on all given filters."""
-  OR: [ResourceWhereInput!]
-
-  """Logical NOT on all given filters combined by AND."""
-  NOT: [ResourceWhereInput!]
-  id: ID
-
-  """All values that are not equal to given value."""
-  id_not: ID
-
-  """All values that are contained in given list."""
-  id_in: [ID!]
-
-  """All values that are not contained in given list."""
-  id_not_in: [ID!]
-
-  """All values less than the given value."""
-  id_lt: ID
-
-  """All values less than or equal the given value."""
-  id_lte: ID
-
-  """All values greater than the given value."""
-  id_gt: ID
-
-  """All values greater than or equal the given value."""
-  id_gte: ID
-
-  """All values containing the given string."""
-  id_contains: ID
-
-  """All values not containing the given string."""
-  id_not_contains: ID
-
-  """All values starting with the given string."""
-  id_starts_with: ID
-
-  """All values not starting with the given string."""
-  id_not_starts_with: ID
-
-  """All values ending with the given string."""
-  id_ends_with: ID
-
-  """All values not ending with the given string."""
-  id_not_ends_with: ID
-  title: String
-
-  """All values that are not equal to given value."""
-  title_not: String
-
-  """All values that are contained in given list."""
-  title_in: [String!]
-
-  """All values that are not contained in given list."""
-  title_not_in: [String!]
-
-  """All values less than the given value."""
-  title_lt: String
-
-  """All values less than or equal the given value."""
-  title_lte: String
-
-  """All values greater than the given value."""
-  title_gt: String
-
-  """All values greater than or equal the given value."""
-  title_gte: String
-
-  """All values containing the given string."""
-  title_contains: String
-
-  """All values not containing the given string."""
-  title_not_contains: String
-
-  """All values starting with the given string."""
-  title_starts_with: String
-
-  """All values not starting with the given string."""
-  title_not_starts_with: String
-
-  """All values ending with the given string."""
-  title_ends_with: String
-
-  """All values not ending with the given string."""
-  title_not_ends_with: String
-  subject: String
-
-  """All values that are not equal to given value."""
-  subject_not: String
-
-  """All values that are contained in given list."""
-  subject_in: [String!]
-
-  """All values that are not contained in given list."""
-  subject_not_in: [String!]
-
-  """All values less than the given value."""
-  subject_lt: String
-
-  """All values less than or equal the given value."""
-  subject_lte: String
-
-  """All values greater than the given value."""
-  subject_gt: String
-
-  """All values greater than or equal the given value."""
-  subject_gte: String
-
-  """All values containing the given string."""
-  subject_contains: String
-
-  """All values not containing the given string."""
-  subject_not_contains: String
-
-  """All values starting with the given string."""
-  subject_starts_with: String
-
-  """All values not starting with the given string."""
-  subject_not_starts_with: String
-
-  """All values ending with the given string."""
-  subject_ends_with: String
-
-  """All values not ending with the given string."""
-  subject_not_ends_with: String
-  message: String
-
-  """All values that are not equal to given value."""
-  message_not: String
-
-  """All values that are contained in given list."""
-  message_in: [String!]
-
-  """All values that are not contained in given list."""
-  message_not_in: [String!]
-
-  """All values less than the given value."""
-  message_lt: String
-
-  """All values less than or equal the given value."""
-  message_lte: String
-
-  """All values greater than the given value."""
-  message_gt: String
-
-  """All values greater than or equal the given value."""
-  message_gte: String
-
-  """All values containing the given string."""
-  message_contains: String
-
-  """All values not containing the given string."""
-  message_not_contains: String
-
-  """All values starting with the given string."""
-  message_starts_with: String
-
-  """All values not starting with the given string."""
-  message_not_starts_with: String
-
-  """All values ending with the given string."""
-  message_ends_with: String
-
-  """All values not ending with the given string."""
-  message_not_ends_with: String
-  image: String
-
-  """All values that are not equal to given value."""
-  image_not: String
-
-  """All values that are contained in given list."""
-  image_in: [String!]
-
-  """All values that are not contained in given list."""
-  image_not_in: [String!]
-
-  """All values less than the given value."""
-  image_lt: String
-
-  """All values less than or equal the given value."""
-  image_lte: String
-
-  """All values greater than the given value."""
-  image_gt: String
-
-  """All values greater than or equal the given value."""
-  image_gte: String
-
-  """All values containing the given string."""
-  image_contains: String
-
-  """All values not containing the given string."""
-  image_not_contains: String
-
-  """All values starting with the given string."""
-  image_starts_with: String
-
-  """All values not starting with the given string."""
-  image_not_starts_with: String
-
-  """All values ending with the given string."""
-  image_ends_with: String
-
-  """All values not ending with the given string."""
-  image_not_ends_with: String
-  largeImage: String
-
-  """All values that are not equal to given value."""
-  largeImage_not: String
-
-  """All values that are contained in given list."""
-  largeImage_in: [String!]
-
-  """All values that are not contained in given list."""
-  largeImage_not_in: [String!]
-
-  """All values less than the given value."""
-  largeImage_lt: String
-
-  """All values less than or equal the given value."""
-  largeImage_lte: String
-
-  """All values greater than the given value."""
-  largeImage_gt: String
-
-  """All values greater than or equal the given value."""
-  largeImage_gte: String
-
-  """All values containing the given string."""
-  largeImage_contains: String
-
-  """All values not containing the given string."""
-  largeImage_not_contains: String
-
-  """All values starting with the given string."""
-  largeImage_starts_with: String
-
-  """All values not starting with the given string."""
-  largeImage_not_starts_with: String
-
-  """All values ending with the given string."""
-  largeImage_ends_with: String
-
-  """All values not ending with the given string."""
-  largeImage_not_ends_with: String
-}
-
-input ResourceWhereUniqueInput {
-  id: ID
 }
 
 type Skill implements Node {
@@ -1474,6 +1134,5 @@ input SkillWhereUniqueInput {
 type Subscription {
   blog(where: BlogSubscriptionWhereInput): BlogSubscriptionPayload
   skill(where: SkillSubscriptionWhereInput): SkillSubscriptionPayload
-  resource(where: ResourceSubscriptionWhereInput): ResourceSubscriptionPayload
   memo(where: MemoSubscriptionWhereInput): MemoSubscriptionPayload
 }

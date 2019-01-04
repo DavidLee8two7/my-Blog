@@ -8,15 +8,17 @@ import Error from "./styles/ErrorMessage";
 const CREATE_BLOG_MUTATION = gql`
   mutation CREATE_BLOG_MUTATION(
     $title: String!
-    $subject: String!
-    $message: String!
+    $scientific: String
+    $effect: String!
+    $reference: String
     $image: String
     $largeImage: String
   ) {
     createBlog(
       title: $title
-      subject: $subject
-      message: $message
+      scientific: $scientific
+      effect: $effect
+      reference: $reference
       image: $image
       largeImage: $largeImage
     ) {
@@ -27,9 +29,10 @@ const CREATE_BLOG_MUTATION = gql`
 
 class WriteBlog extends Component {
   state = {
-    title: "title",
-    subject: "subject",
-    message: "message",
+    title: "",
+    scientific: "",
+    effect: "",
+    reference: "",
     image: "",
     largeImage: ""
   };
@@ -106,26 +109,38 @@ class WriteBlog extends Component {
                   onChange={this.handleChange}
                 />
               </label>
-              <label htmlFor="subject">
-                Subject
+              <label htmlFor="scientific">
+                Scientific Name
                 <input
                   type="text"
-                  id="subject"
-                  name="subject"
-                  placeholder="subject"
+                  id="scientific"
+                  name="scientific"
+                  placeholder="scientific"
                   required
-                  value={this.state.subject}
+                  value={this.state.scientific}
                   onChange={this.handleChange}
                 />
               </label>
-              <label htmlFor="message">
-                Message
+              <label htmlFor="effect">
+                effect
                 <textarea
-                  id="message"
-                  name="message"
-                  placeholder="Enter message"
+                  id="effect"
+                  name="effect"
+                  placeholder="Enter effect"
                   required
-                  value={this.state.message}
+                  value={this.state.effect}
+                  onChange={this.handleChange}
+                />
+              </label>
+              <label htmlFor="reference">
+                Reference
+                <input
+                  type="text"
+                  id="reference"
+                  name="reference"
+                  placeholder="reference"
+                  required
+                  value={this.state.reference}
                   onChange={this.handleChange}
                 />
               </label>

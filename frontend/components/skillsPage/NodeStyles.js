@@ -16,13 +16,7 @@ const NodeStyles = styled.div`
   z-index: 5;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  background-size: cover;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(225, 225, 225, 0.85),
-      rgba(237, 237, 237, 0.85)
-    ),
-    url(/static/img/herbalist.jpg);
+  background-color: ${props => props.theme.offWhite};
   ${props => props.open && `transform: translateX(0);`};
   header {
     border-bottom: 5px solid gray;
