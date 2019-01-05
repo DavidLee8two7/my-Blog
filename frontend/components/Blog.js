@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
-import { BlogStyles, HerbImage, HerbDescription } from "./blogsPage/BlogStyles";
+import { BlogStyles, HerbImage, HerbDescription } from "./styles/BlogStyles";
 
 class Blog extends Component {
   static propTypes = {

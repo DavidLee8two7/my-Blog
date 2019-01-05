@@ -15,7 +15,7 @@ class Experience extends Component {
         <CompanyDiv>
           <CompanyInfo>
             <a href="https://en.wikipedia.org/wiki/CJ_Group" target="_blank">
-              <img src="/static/cj.png" />
+              <img src="/static/logo/cj.png" />
             </a>
             <a href="https://en.wikipedia.org/wiki/CJ_Group" target="_blank">
               <h3>CJ America, Inc</h3>
@@ -59,7 +59,7 @@ class Experience extends Component {
         <CompanyDiv>
           <CompanyInfo>
             <a href="http://eng.paris.co.kr/new/global.html" target="_blank">
-              <img src="/static/pb.gif" />
+              <img src="/static/logo/pb.gif" />
             </a>
             <a href="http://eng.paris.co.kr/new/global.html" target="_blank">
               <h3>Paris Baguette, Inc</h3>
