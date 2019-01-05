@@ -34,7 +34,7 @@ class Experience extends Component {
                 Routing manage and etc)
               </li>
               <li>
-                Productivity index anaysis (Yield%, Loss, productivity & COGM)
+                Productivity index analysis (Yield%, Loss, productivity & COGM)
               </li>
             </ul>
             <h4>Accomplishments</h4>
@@ -66,23 +66,23 @@ class Experience extends Component {
             </a>
           </CompanyInfo>
           <JobDescription>
-            <h4>Purchasing strategy specialist (ERP system stablizing)</h4>
+            <h4>Purchasing strategy specialist (ERP system analysis)</h4>
             <h4>Duties</h4>
             <ul>
-              <li>Support stablizing ERP system for supply chain management</li>
-              <li>Consolidation purchasing sources for west and east coast</li>
-              <li>Restructure fresh material purchasing routes</li>
+              <li>Support stablizing ERP system</li>
+              <li>Consolidation of purchasing sources in USA</li>
+              <li>Re-structure fresh material purchasing routes</li>
               <li>Meet Cost Saving Target $</li>
             </ul>
             <h4>Accomplishments</h4>
             <ul>
               <li>
-                Built Data base of all the purchasing related information and
+                Built Database of all the purchasing related information and
                 activities
               </li>
-              <li>Restructure purchasing operation procedure</li>
+              <li>Re-structure purchasing operation system</li>
               <li>
-                Consolidate and reselect vendors and service providers in USA
+                Consolidate and re-select vendors and service providers in USA
               </li>
               <li>$2 million cost saving in year 2018</li>
             </ul>
