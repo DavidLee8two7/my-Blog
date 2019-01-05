@@ -40,8 +40,8 @@ class Experience extends Component {
             <h4>Accomplishments</h4>
             <ul>
               <li>
-                Successful implementation by shortening launch date target by 1
-                month
+                Successful implementation of ERP system with shortening launch
+                date target by 1 month
               </li>
               <li>Documetationa and training to build power users</li>
               <li>
@@ -66,7 +66,7 @@ class Experience extends Component {
             </a>
           </CompanyInfo>
           <JobDescription>
-            <h4>Purchasing strategy specialist (& ERP system stablizing)</h4>
+            <h4>Purchasing strategy specialist (ERP system stablizing)</h4>
             <h4>Duties</h4>
             <ul>
               <li>Support stablizing ERP system for supply chain management</li>

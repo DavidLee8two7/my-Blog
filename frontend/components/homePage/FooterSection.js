@@ -34,7 +34,7 @@ class FooterSection extends Component {
               </li>
               <li>
                 <Link prefetch href="/resources">
-                  <a>Resource</a>
+                  <a>Resources</a>
                 </Link>
               </li>
               <li>
