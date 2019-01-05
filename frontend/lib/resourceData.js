@@ -216,7 +216,7 @@ const fontResources = {
       image: "/static/logo/myFonts.png",
       src: "https://www.myfonts.com/",
       subject: "MyFonts",
-      message: "Another one of the largest library of premium fonts."
+      message: "Another one of the largest library of professional fonts."
     },
     {
       image: "/static/logo/typetester.png",
