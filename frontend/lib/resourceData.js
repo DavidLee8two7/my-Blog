@@ -213,7 +213,7 @@ const fontResources = {
         "Google Fonts has a huge library of fonts and it's easy-to-use webfonts."
     },
     {
-      image: "/static/logo/myFonts.png",
+      image: "/static/logo/myfonts.png",
       src: "https://www.myfonts.com/",
       subject: "MyFonts",
       message: "Another one of the largest library of professional fonts."

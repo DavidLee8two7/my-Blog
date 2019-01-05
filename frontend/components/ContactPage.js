@@ -97,12 +97,25 @@ class Memo extends Component {
                       paddingTop: "5px"
                     }}
                   >
-                    You can print my resume from here. 📂
+                    Please find my resume from here - 📂
                   </a>
                 </h4>
                 <h4>
-                  Please make sure to leave your contact information. I will get
-                  back to you as soon as possible.
+                  <a
+                    href="https://github.com/SanBuNam/myWebsite"
+                    target="_blank"
+                    style={{
+                      borderBottom: "1px solid yellow",
+                      paddingTop: "5px"
+                    }}
+                  >
+                    Please find code for this website built with React & GraphQL
+                    - 🗄️
+                  </a>
+                </h4>
+                <h4>
+                  Thank you for contacting me. I will get back to you as soon as
+                  possible.
                 </h4>
                 <label htmlFor="name">
                   Name
