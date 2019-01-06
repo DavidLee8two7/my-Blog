@@ -10,6 +10,18 @@ type Mutation {
     largeImage: String
   ): Blog!
 
+  updateBlog(
+    id: ID!
+    title: String!
+    scientific: String
+    effect: String!
+    reference: String
+  ): Blog!
+
+  deleteBlog(id: ID!): Blog
+
+  signup(email: String!, password: String!, name: String!): User!
+
   createMemo(
     name: String!
     email: String!
