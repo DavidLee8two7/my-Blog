@@ -1,5 +1,5 @@
-# source: https://us1.prisma.sh/david-lee-c070c7/demo-blog/dev
-# timestamp: Thu Jan 03 2019 18:29:21 GMT-0800 (Pacific Standard Time)
+# source: https://david-lee-blogs-9489e960a2.herokuapp.com/prisma-data/prod
+# timestamp: Sun Jan 06 2019 09:36:26 GMT-0800 (Pacific Standard Time)
 
 type AggregateBlog {
   count: Int!

@@ -153,6 +153,9 @@ const SkillCatetory = styled.div`
   }
   @media screen and (max-width: 700px) {
     margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 3rem;
+    }
   }
 `;
 
