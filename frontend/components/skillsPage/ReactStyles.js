@@ -56,6 +56,11 @@ const ReactStyles = styled.div`
   @media screen and (max-width: 800px) {
     width: 100%;
   }
+  @media screen and (max-height: 800px) {
+    .hide {
+      display: none;
+    }
+  }
 `;
 
 export default ReactStyles;

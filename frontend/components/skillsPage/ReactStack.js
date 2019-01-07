@@ -33,22 +33,22 @@ const ReactStack = () => {
               <Description>
                 <ul>
                   <li>Server Side Rendering</li>
-                  <li>Styled Components</li>
-                  <li>Theming</li>
-                  <li>Animations</li>
+                  <li className="hide">Styled Components</li>
+                  <li className="hide">Theming</li>
+                  <li className="hide">Animations</li>
                   <li>JSON Web Token (JWT)</li>
-                  <li>Cache Management</li>
+                  <li className="hide">Cache Management</li>
                   <li>Loading and Error States</li>
                   <li>Logic and Flow with Async + Await</li>
                 </ul>
                 <ul>
                   <li>Authentication and Permissions</li>
-                  <li>Charging Credit Cards</li>
-                  <li>Hosting and Transforming Images</li>
+                  <li className="hide">Charging Credit Cards</li>
+                  <li className="hide">Hosting and Transforming Images</li>
                   <li>Sending Email</li>
-                  <li>Forms in React</li>
+                  <li className="hide">Forms in React</li>
                   <li>Unit Testing</li>
-                  <li>Mocking Components</li>
+                  <li className="hide">Mocking Components</li>
                   <li>Pagination</li>
                 </ul>
               </Description>

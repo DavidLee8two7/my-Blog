@@ -32,22 +32,22 @@ const NodeStack = () => {
               </header>
               <Description>
                 <ul>
-                  <li>User Accounts</li>
-                  <li>Database Schemas</li>
+                  <li>User Accounts setup</li>
+                  <li className="hide">Database Schemas</li>
                   <li>Templating and Mixins</li>
-                  <li>Middleware</li>
+                  <li className="hide">Middleware</li>
                   <li>Password Reset Flow</li>
-                  <li>Routing</li>
+                  <li className="hide">Routing</li>
                   <li>File Uploading</li>
-                  <li>MVC Pattern</li>
+                  <li className="hide">MVC Pattern</li>
                 </ul>
                 <ul>
                   <li>REST API endpoints</li>
-                  <li>Document Relationships</li>
-                  <li>Restricting Operations</li>
+                  <li className="hide">Document Relationships</li>
+                  <li className="hide">Restricting Operations</li>
                   <li>Image Resizing</li>
-                  <li>Storing Geospatial Data</li>
-                  <li>Advanced DB Queries</li>
+                  <li className="hide">Storing Geospatial Data</li>
+                  <li className="hide">Advanced DB Queries</li>
                   <li>Sending Email</li>
                   <li>Geocoding Addresses</li>
                 </ul>
