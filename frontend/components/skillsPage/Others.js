@@ -45,7 +45,7 @@ class OtherSkills extends Component {
             </a>
           </EducationInfo>
           <OthersDescription>
-            <h4>Business Major Marketing Concentration</h4>
+            <h4>Business Major Marketing Concentration, BS</h4>
             <ul>
               <li>Marketing Research</li>
               <li>Marketing Communications</li>
