@@ -4,7 +4,7 @@ const Experience = styled.div`
   color: ${props => props.theme.black};
   z-index: 3;
   width: 80%;
-  margin: 8rem 2rem;
+  margin: 8rem auto;
   background-color: white;
   border-radius: 3px;
   padding: 7rem;
@@ -12,12 +12,12 @@ const Experience = styled.div`
   box-shadow: ${props => props.theme.sbs};
   @media (max-width: 1700px) {
     width: 100%;
-    margin: 5rem 0;
+    margin: 5rem auto;
     padding: 4rem 7rem;
     transform: skewX(0deg);
   }
   @media (max-width: 950px) {
-    margin: 0;
+    margin: 2rem;
     padding: 2rem;
   }
   @media (max-width: 500px) {
