@@ -17,7 +17,7 @@ const Experience = styled.div`
     transform: skewX(0deg);
   }
   @media (max-width: 950px) {
-    margin: 2rem;
+    margin: 2rem auto;
     padding: 2rem;
   }
   @media (max-width: 500px) {
