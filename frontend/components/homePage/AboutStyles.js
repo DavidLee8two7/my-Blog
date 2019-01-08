@@ -12,7 +12,6 @@ const IntroDiv = styled.div`
   margin-top: 1rem;
   padding: 2rem;
   background: white;
-  box-shadow: ${props => props.theme.sbs};
   h2 {
     font-size: 3.2rem;
     text-align: center;

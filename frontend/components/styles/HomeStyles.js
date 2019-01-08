@@ -12,7 +12,6 @@ const HomeStyles = styled.div`
     ),
     url("/static/img/whale.jpg") no-repeat center center fixed;
   background-size: cover;
-  padding: 0;
 `;
 
 const NameDiv = styled.div`

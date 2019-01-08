@@ -4,7 +4,7 @@ const Experience = styled.div`
   color: ${props => props.theme.black};
   z-index: 3;
   width: 80%;
-  margin: 8rem auto;
+  margin: 8rem 2rem;
   background-color: white;
   border-radius: 3px;
   padding: 7rem;
