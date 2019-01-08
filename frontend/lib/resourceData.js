@@ -311,6 +311,13 @@ const imagesAndVidoes = {
       src: "https://www.canva.com/",
       subject: "Canva",
       message: "Easily create designs with drag-and-drop features and layouts."
+    },
+    {
+      image: "/static/logo/ImageOpt.gif",
+      src: "http://www.imageoptimizer.net/Home.aspx",
+      subject: "Image Optimizer",
+      message:
+        "Free online service, you can resize, compress and optimize your image files."
     }
   ]
 };

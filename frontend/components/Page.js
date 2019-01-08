@@ -14,7 +14,7 @@ const theme = {
   green: "#215732", // 33,87,50
   black: "#393939", // 57,57,57
   white: "#ffffff", // 255,255,255
-  offWhite: "#f5f8fa", //
+  offWhite: "#f5f8fa",
   maxWidth: "100%",
   sbs: "0 1px 1px 1px rgba(126, 126, 126, 0.75)",
   bbs: "0 2px 2px 2px rgba(126, 126, 126, 0.75)",
