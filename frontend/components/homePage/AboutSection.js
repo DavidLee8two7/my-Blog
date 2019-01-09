@@ -9,7 +9,7 @@ class AboutMe extends Component {
           <img src="/static/img/couple.jpeg" alt="couple picture" />
         </Picture>
         <AboutDiv>
-          <h2>About Me 🎎</h2>
+          <h2>About Me</h2>
           <p>
             Hi, My name is <strong>David Lee</strong>. I'm a web developer based
             in{" "}
