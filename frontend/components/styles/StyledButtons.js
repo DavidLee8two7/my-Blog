@@ -28,7 +28,7 @@ const StyledButton = styled.button`
   @media screen and (max-width: 1050px) {
     font-size: 1.6rem;
     &:hover {
-      transform: translateY(-2.5px);
+      transform: translateY(-2px);
     }
   }
   @media screen and (max-width: 800px) {
