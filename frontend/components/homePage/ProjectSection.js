@@ -85,7 +85,7 @@ class ProjectSection extends Component {
                 <div className="icon">
                   <a
                     aria-label="website"
-                    href="https://github.com/SanBuNam/T-shirts-factory-prototype"
+                    href="https://tshirtsfactory.herokuapp.com/"
                     target="_blank"
                   >
                     <SVGIcon name={"external"} viewBox={"0 0 28 28"} />
