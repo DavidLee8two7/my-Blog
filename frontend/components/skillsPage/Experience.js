@@ -22,7 +22,7 @@ class Experience extends Component {
             </a>
           </CompanyInfo>
           <JobDescription>
-            <h4>ERP system(SAP) specialist</h4>
+            <h4>ERP system (SAP) specialist</h4>
             <h4>Accomplishments</h4>
             <ul>
               <li>Implementation of ERP system (Beat target by 2 weeks)</li>
