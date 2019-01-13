@@ -8,14 +8,6 @@ type Blog {
   largeImage: String
 }
 
-type Skill {
-  id: ID! @unique
-  title: String!
-  tech: [String]!
-  image: String
-  largeImage: String
-}
-
 type Memo {
   id: ID! @unique
   name: String!
