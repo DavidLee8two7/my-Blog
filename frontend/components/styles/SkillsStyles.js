@@ -96,7 +96,6 @@ const Title = styled.div`
   min-width: 20rem;
   margin-left: 3rem;
   h4 {
-    min-width: 5rem;
     padding: 1.5rem;
     text-align: center;
     line-height: 1.3;
@@ -113,12 +112,9 @@ const Title = styled.div`
       font-size: 1.8rem;
     }
   }
-  @media screen and (max-width: 800px) {
-    h4 {
-      font-size: 1.6rem;
-    }
-  }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 900px) {
+    min-width: 10rem;
+    margin-left: 2rem;
     h4 {
       padding: 1rem;
       font-size: 1.4rem;
@@ -133,7 +129,7 @@ const Title = styled.div`
 `;
 
 const SkillsDiv = styled.div`
-  margin: 0 4rem;
+  margin: 0 2rem;
   padding: 2rem;
   grid-row: 2;
   grid-column: 1 / -1;

@@ -499,6 +499,31 @@ const allOthers = {
   ]
 };
 
+const skillsData = {
+  resources: [
+    {
+      title: "html",
+      tech: ["html5", "jsx", "jade"]
+    },
+    {
+      title: "css",
+      tech: ["css3", "sass", "bootstrap", "materialize", "styled-components"]
+    },
+    {
+      title: "javascript",
+      tech: ["javascript", "react", "next js", "apollo", "graphql"]
+    },
+    {
+      title: "backend",
+      tech: ["node js", "mongodb", "prisma", "google firebase"]
+    },
+    {
+      title: "build tools",
+      tech: ["webpack", "npm", "github", "heroku", "photoshop"]
+    }
+  ]
+};
+
 export {
   devTools,
   htmlResources,
@@ -510,5 +535,6 @@ export {
   iconsAndOthers,
   designs,
   communities,
-  allOthers
+  allOthers,
+  skillsData
 };

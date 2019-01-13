@@ -27,6 +27,10 @@ const ExperienceTitle = styled.div`
     padding: 0.5rem 0 0.5rem 1.5rem;
     font-size: 2rem;
   }
+  @media screen and (max-width: 350px) {
+    padding: 0.25rem 0 0.25rem 0.5rem;
+    font-size: 1.5rem;
+  }
 `;
 
 const CompanyDiv = styled.div`
@@ -74,6 +78,18 @@ const CompanyInfo = styled.div`
       font-size: 1.6rem;
     }
   }
+  @media screen and (max-width: 450px) {
+    h3 {
+      margin-left: 3rem;
+      font-size: 1.4rem;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    h3 {
+      margin-left: 1.5rem;
+      font-size: 1.2rem;
+    }
+  }
 `;
 
 const JobDescription = styled.div`
@@ -110,6 +126,11 @@ const JobDescription = styled.div`
   @media screen and (max-width: 500px) {
     h4 {
       font-size: 1.4rem;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    h4 {
+      font-size: 1.2rem;
     }
   }
 `;
