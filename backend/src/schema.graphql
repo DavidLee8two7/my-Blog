@@ -19,9 +19,6 @@ type Mutation {
 }
 
 type Query {
-  skills: [Skill]!
-  skill(where: SkillWhereUniqueInput!): Skill
-
   blogs(
     where: BlogWhereInput
     orderBy: BlogOrderByInput
