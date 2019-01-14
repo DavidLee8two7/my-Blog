@@ -35,6 +35,7 @@ const SingleHerbImage = styled.div`
     text-align: center;
     width: 80%;
     margin-left: 2rem;
+    margin-bottom: 2rem;
     font-size: 2.5rem;
     letter-spacing: 0.5px;
     font-family: ${props => props.theme.fontDisplay};
@@ -59,6 +60,7 @@ const SingleHerbDescription = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: start;
+  padding: 5px;
   span {
     margin-left: 2rem;
     font-size: 2rem;

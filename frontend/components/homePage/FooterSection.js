@@ -28,13 +28,13 @@ class FooterSection extends Component {
                 </Link>
               </li>
               <li>
-                <Link prefetch href="/skills">
-                  <a>Skills & Exp</a>
+                <Link prefetch href="/resources">
+                  <a>Resources</a>
                 </Link>
               </li>
               <li>
-                <Link prefetch href="/resources">
-                  <a>Resource</a>
+                <Link prefetch href="/skills">
+                  <a>Skills & Exp</a>
                 </Link>
               </li>
               <li>

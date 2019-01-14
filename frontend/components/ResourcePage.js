@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Head from "next/head";
-import Resources from "./resourcePage/resourceCard";
+import Resources from "./styles/resourceCard";
 import {
   devTools,
   htmlResources,
@@ -36,7 +36,7 @@ class Resource extends Component {
           </svg>
           <p>
             Please find tools that I often use to save time. I usually keep this
-            page open and uses it like a menu.
+            page open and use it like a menu.
           </p>
         </ResourceIntro>
         <ResourceList>

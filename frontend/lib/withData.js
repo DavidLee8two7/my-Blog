@@ -6,7 +6,7 @@ import { LOCAL_STATE_NODE } from "../components/skillsPage/NodeStack";
 
 function createClient({ headers }) {
   return new ApolloClient({
-    uri: process.env.NODE_ENV === "development" ? endpoint : endpoint,
+    uri: process.env.NODE_ENV === "development" ? endpoint : prodEndpoint,
     request: operation => {
       operation.setContext({
         fetchOptions: {
@@ -15,7 +15,6 @@ function createClient({ headers }) {
         headers
       });
     },
-    // local data
     clientState: {
       resolvers: {
         Mutation: {

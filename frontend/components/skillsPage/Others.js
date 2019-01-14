@@ -31,7 +31,7 @@ class OtherSkills extends Component {
               <li>
                 The course covers JavaScript, Node.js React, Redux, Angular,
                 MongoDB, PostgreSQL, HTML5, and CSS3 while focusing on industry
-                best practices and collaboration workflow.
+                best practices and collaboration workflow
               </li>
             </ul>
             <h4>Feb 2017 ~ May 2017 🗓️ Newport, CA</h4>
@@ -54,9 +54,9 @@ class OtherSkills extends Component {
             </ul>
             <h4>Other skills</h4>
             <ul>
-              <li>Korean & English Bilingual (Fluent speaking & writting)</li>
+              <li>Bilingual (Korean & English)</li>
               <li>ERP SAP system (PP & MM modules)</li>
-              <li>Microsoft office (Powerpoint, excel, word & etc)</li>
+              <li>Microsoft office (Powerpoint, Excel & Word)</li>
               <li>Regularly teach coding to small groups</li>
             </ul>
           </OthersDescription>

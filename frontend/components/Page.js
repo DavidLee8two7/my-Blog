@@ -14,7 +14,7 @@ const theme = {
   green: "#215732", // 33,87,50
   black: "#393939", // 57,57,57
   white: "#ffffff", // 255,255,255
-  offWhite: "#f5f8fa", //
+  offWhite: "#f5f8fa", // 245,248,250
   maxWidth: "100%",
   sbs: "0 1px 1px 1px rgba(126, 126, 126, 0.75)",
   bbs: "0 2px 2px 2px rgba(126, 126, 126, 0.75)",
@@ -33,6 +33,7 @@ const StyledPage = styled.div`
 const Inner = styled.div`
   max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
+  padding: 2rem;
 `;
 
 injectGlobal`

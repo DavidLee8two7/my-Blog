@@ -213,10 +213,10 @@ const fontResources = {
         "Google Fonts has a huge library of fonts and it's easy-to-use webfonts."
     },
     {
-      image: "/static/logo/myFonts.png",
+      image: "/static/logo/myfonts.png",
       src: "https://www.myfonts.com/",
       subject: "MyFonts",
-      message: "Another one of the largest library of premium fonts."
+      message: "Another one of the largest library of professional fonts."
     },
     {
       image: "/static/logo/typetester.png",
@@ -311,6 +311,13 @@ const imagesAndVidoes = {
       src: "https://www.canva.com/",
       subject: "Canva",
       message: "Easily create designs with drag-and-drop features and layouts."
+    },
+    {
+      image: "/static/logo/ImageOpt.gif",
+      src: "http://www.imageoptimizer.net/Home.aspx",
+      subject: "Image Optimizer",
+      message:
+        "Free online service, you can resize, compress and optimize your image files."
     }
   ]
 };
@@ -492,6 +499,31 @@ const allOthers = {
   ]
 };
 
+const skillsData = {
+  resources: [
+    {
+      title: "html",
+      tech: ["html5", "jsx", "jade"]
+    },
+    {
+      title: "css",
+      tech: ["css3", "sass", "bootstrap", "materialize", "styled-components"]
+    },
+    {
+      title: "javascript",
+      tech: ["javascript", "react", "next js", "apollo", "graphql"]
+    },
+    {
+      title: "backend",
+      tech: ["node js", "mongodb", "prisma", "google firebase"]
+    },
+    {
+      title: "build tools",
+      tech: ["webpack", "npm", "github", "heroku", "photoshop"]
+    }
+  ]
+};
+
 export {
   devTools,
   htmlResources,
@@ -503,5 +535,6 @@ export {
   iconsAndOthers,
   designs,
   communities,
-  allOthers
+  allOthers,
+  skillsData
 };

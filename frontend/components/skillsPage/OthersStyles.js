@@ -30,6 +30,10 @@ const OthersTitle = styled.div`
     font-size: 2rem;
     margin-bottom: 0;
   }
+  @media screen and (max-width: 350px) {
+    padding: 0.25rem 0 0.25rem 0.5rem;
+    font-size: 1.5rem;
+  }
 `;
 
 const EducationDiv = styled.div`
@@ -77,6 +81,18 @@ const EducationInfo = styled.div`
       font-size: 1.6rem;
     }
   }
+  @media screen and (max-width: 450px) {
+    h3 {
+      margin-left: 3rem;
+      font-size: 1.4rem;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    h3 {
+      margin-left: 1.5rem;
+      font-size: 1.2rem;
+    }
+  }
 `;
 
 const OthersDescription = styled.div`
@@ -117,6 +133,11 @@ const OthersDescription = styled.div`
   @media screen and (max-width: 500px) {
     h4 {
       font-size: 1.4rem;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    h4 {
+      font-size: 1.2rem;
     }
   }
 `;

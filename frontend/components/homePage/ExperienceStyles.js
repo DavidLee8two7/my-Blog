@@ -12,12 +12,12 @@ const Experience = styled.div`
   box-shadow: ${props => props.theme.sbs};
   @media (max-width: 1700px) {
     width: 100%;
-    margin: 5rem 0;
+    margin: 5rem auto;
     padding: 4rem 7rem;
     transform: skewX(0deg);
   }
   @media (max-width: 950px) {
-    margin: 0;
+    margin: 2rem auto;
     padding: 2rem;
   }
   @media (max-width: 500px) {

@@ -6,13 +6,11 @@ const IntroDiv = styled.div`
   grid-column: 1 / -1;
   width: 100%;
   display: grid;
-  grid-template-columns: 40% 1fr;
+  grid-template-columns: min-content 1fr;
   justify-items: center;
   align-items: start;
-  margin-top: 1rem;
-  padding: 2rem;
+  padding: 1rem;
   background: white;
-  box-shadow: ${props => props.theme.sbs};
   h2 {
     font-size: 3.2rem;
     text-align: center;
@@ -30,48 +28,25 @@ const IntroDiv = styled.div`
       border-bottom: 1.5px solid ${props => props.theme.lightBlue};
     }
   }
-  @media screen and (max-width: 1655px) {
-    h2 {
-      font-size: 2rem;
-    }
-    p {
-      font-size: 2.1rem;
-      margin-left: 1rem;
-    }
-  }
   @media screen and (max-width: 1550px) {
     p {
+      font-size: 2.2rem;
+    }
+  }
+  @media screen and (max-width: 1450px) {
+    p {
       font-size: 2rem;
     }
   }
-  @media screen and (max-width: 1500px) {
+  @media screen and (max-width: 1275px) {
     p {
-      font-size: 1.9rem;
-    }
-  }
-  @media screen and (max-width: 1400px) {
-    p {
-      font-size: 1.75rem;
-    }
-  }
-  @media screen and (max-width: 1300px) {
-    p {
-      font-size: 1.65rem;
-    }
-  }
-  @media screen and (max-width: 1250px) {
-    p {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
     }
   }
   @media screen and (max-width: 1200px) {
     p {
       font-size: 1.5rem;
     }
-  }
-  @media screen and (max-width: 1150px) {
-    margin: 0;
-    padding: 1rem;
   }
   @media screen and (max-width: 1050px) {
     display: grid;
@@ -92,15 +67,15 @@ const IntroDiv = styled.div`
 const Picture = styled.div`
   width: 100%;
   position: relative;
-  box-shadow: ${props => props.theme.sbs};
   img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+    width: 50rem;
+    height: 50rem;
   }
-  @media screen and (max-width: 1655px) {
-    width: 90%;
+  @media screen and (max-width: 1275px) {
+    img {
+      width: 40rem;
+      height: 40rem;
+    }
   }
   @media screen and (max-width: 1050px) {
     display: none;

@@ -89,8 +89,45 @@ class Memo extends Component {
             <fieldset disabled={loading} aria-busy={loading}>
               <ContactMessage>
                 <h4>
-                  Please make sure to leave your contact information. I will get
-                  back to you as soon as possible.
+                  <a
+                    href="https://docs.google.com/document/d/1oHZ1l3b--N-gUS2IcgtcOdBSlLNbcOGadwjhpFS-6ik/edit#"
+                    target="_blank"
+                    style={{
+                      borderBottom: "1px solid yellow",
+                      paddingTop: "5px"
+                    }}
+                  >
+                    Please find my resume from here - 📂
+                  </a>
+                </h4>
+                <h4>
+                  <a
+                    href="https://github.com/SanBuNam/myWebsite"
+                    target="_blank"
+                    style={{
+                      borderBottom: "1px solid yellow",
+                      paddingTop: "5px"
+                    }}
+                  >
+                    Please find code for this website built with React & GraphQL
+                    - 🗄️
+                  </a>
+                </h4>
+                <h4>
+                  <a
+                    href="mailto:davidleeworkard.com"
+                    style={{
+                      borderBottom: "1px solid yellow",
+                      paddingTop: "5px"
+                    }}
+                  >
+                    You can also email me to my personal email for faster
+                    response. - ✉️
+                  </a>
+                </h4>
+                <h4>
+                  Thank you for contacting me. I will get back to you as soon as
+                  possible.
                 </h4>
                 <label htmlFor="name">
                   Name
