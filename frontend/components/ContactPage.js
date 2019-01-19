@@ -116,10 +116,7 @@ class Memo extends Component {
                     <img src="/static/logo/linkedin.png" alt="linkedin" />
                   </a>
                 </h4>
-                <h4>
-                  Thank you for contacting me. I will get back to you as soon as
-                  possible.
-                </h4>
+                <h4>Thank you for visiting my website.</h4>
                 <label htmlFor="name">
                   Name
                   <input
