@@ -26,6 +26,9 @@ const CREATE_MEMO_MUTATION = gql`
 
 const ContactMessage = styled.div`
   width: 100%;
+  img {
+    width: 4.5rem;
+  }
   @media screen and (max-width: 1200px) {
     font-size: 1.8rem;
     h4 {
@@ -98,6 +101,19 @@ class Memo extends Component {
                     }}
                   >
                     Please find my resume here ➡ 📂
+                  </a>
+                </h4>
+                <h4>
+                  <a
+                    href="https://www.linkedin.com/in/david-lee-480985119/"
+                    target="_blank"
+                    style={{
+                      borderBottom: "1px solid yellow",
+                      paddingTop: "5px"
+                    }}
+                  >
+                    Please find LinkedIn profile here ➡
+                    <img src="/static/logo/linkedin.png" alt="linkedin" />
                   </a>
                 </h4>
                 <h4>
