@@ -28,7 +28,7 @@ const NodeStack = () => {
                 <CloseButton onClick={toggleNode} title="close">
                   &times;
                 </CloseButton>
-                <p>Herbalist Network</p>
+                <p>Korean Food Network</p>
               </header>
               <Description>
                 <ul>
@@ -60,7 +60,7 @@ const NodeStack = () => {
               >
                 <a
                   target="_blank"
-                  href="https://github.com/SanBuNam/Herbalist-network-prototype"
+                  href="https://github.com/SanBuNam/korean-food-network"
                 >
                   <StyledButton style={{ background: "#393939" }}>
                     Git Hub
@@ -68,7 +68,7 @@ const NodeStack = () => {
                 </a>
                 <a
                   target="_blank"
-                  href="https://github.com/SanBuNam/Herbalist-network-prototype"
+                  href="https://github.com/SanBuNam/korean-food-network"
                 >
                   <StyledButton style={{ background: "#006064" }}>
                     Link to Website

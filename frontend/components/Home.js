@@ -25,8 +25,8 @@ class Home extends Component {
           </div>
           <div className="messages">
             <p>
-              “The purpose of life is finding the largest burden that you can
-              bear and bearing it.” ― Jordan B. Peterson
+              The purpose of life is finding the largest burden that you can
+              bear and bearing it.
             </p>
           </div>
         </NameDiv>

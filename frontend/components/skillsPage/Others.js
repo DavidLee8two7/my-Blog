@@ -55,9 +55,8 @@ class OtherSkills extends Component {
             <h4>Other skills</h4>
             <ul>
               <li>Bilingual (Korean & English)</li>
-              <li>ERP SAP system (PP & MM modules)</li>
-              <li>Microsoft office (Powerpoint, Excel & Word)</li>
-              <li>Regularly teach coding to small groups</li>
+              <li>ERP SAP system</li>
+              <li>Microsoft office</li>
             </ul>
           </OthersDescription>
         </EducationDiv>

@@ -26,6 +26,9 @@ const CREATE_MEMO_MUTATION = gql`
 
 const ContactMessage = styled.div`
   width: 100%;
+  img {
+    width: 4.5rem;
+  }
   @media screen and (max-width: 1200px) {
     font-size: 1.8rem;
     h4 {
@@ -97,38 +100,23 @@ class Memo extends Component {
                       paddingTop: "5px"
                     }}
                   >
-                    Please find my resume from here - 📂
+                    Please find my resume here ➡ 📂
                   </a>
                 </h4>
                 <h4>
                   <a
-                    href="https://github.com/SanBuNam/myWebsite"
+                    href="https://www.linkedin.com/in/david-lee-480985119/"
                     target="_blank"
                     style={{
                       borderBottom: "1px solid yellow",
                       paddingTop: "5px"
                     }}
                   >
-                    Please find code for this website built with React & GraphQL
-                    - 🗄️
+                    Please find LinkedIn profile here ➡
+                    <img src="/static/logo/linkedin.png" alt="linkedin" />
                   </a>
                 </h4>
-                <h4>
-                  <a
-                    href="mailto:davidleeworkard.com"
-                    style={{
-                      borderBottom: "1px solid yellow",
-                      paddingTop: "5px"
-                    }}
-                  >
-                    You can also email me to my personal email for faster
-                    response. - ✉️
-                  </a>
-                </h4>
-                <h4>
-                  Thank you for contacting me. I will get back to you as soon as
-                  possible.
-                </h4>
+                <h4>Thank you for visiting my website.</h4>
                 <label htmlFor="name">
                   Name
                   <input

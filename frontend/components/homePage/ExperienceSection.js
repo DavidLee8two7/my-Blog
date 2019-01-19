@@ -65,12 +65,11 @@ class ExperienceSection extends Component {
                 <ul>
                   <ul>
                     <li>
-                      Implementation of ERP (SAP - PP & MM modules) system 2
-                      times for int'l corps.
+                      Implementation of ERP (SAP - PP & MM modules) systems.
                     </li>
                     <li>
-                      $2 million cost saving in one year(2018) by restructuring
-                      the purchasing stratege of bakery franchise corp.
+                      $2 million cost saving in one year(2018) for a bakery
+                      franchise corp.
                     </li>
                     <li>
                       Productivity increase of 1 ~ 3% for 5 year consecutively
