@@ -36,7 +36,7 @@ class Resource extends Component {
           </svg>
           <p>
             Please find tools that I often use to save time. I usually keep this
-            page open and use it like a menu.
+            page open when developing.
           </p>
         </ResourceIntro>
         <ResourceList>

@@ -97,32 +97,7 @@ class Memo extends Component {
                       paddingTop: "5px"
                     }}
                   >
-                    Please find my resume from here - 📂
-                  </a>
-                </h4>
-                <h4>
-                  <a
-                    href="https://github.com/SanBuNam/myWebsite"
-                    target="_blank"
-                    style={{
-                      borderBottom: "1px solid yellow",
-                      paddingTop: "5px"
-                    }}
-                  >
-                    Please find code for this website built with React & GraphQL
-                    - 🗄️
-                  </a>
-                </h4>
-                <h4>
-                  <a
-                    href="mailto:davidleeworkard.com"
-                    style={{
-                      borderBottom: "1px solid yellow",
-                      paddingTop: "5px"
-                    }}
-                  >
-                    You can also email me to my personal email for faster
-                    response. - ✉️
+                    Please find my resume here ➡ 📂
                   </a>
                 </h4>
                 <h4>
