@@ -75,7 +75,7 @@ const Header = () => (
       <Logo>
         <Link href="/contact">
           <a>
-            <span>Full-stack</span> Developer
+            <span>Full-stack</span> Web Developer
           </a>
         </Link>
       </Logo>
