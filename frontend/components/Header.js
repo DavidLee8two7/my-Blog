@@ -25,9 +25,9 @@ const Logo = styled.div`
     font-family: ${props => props.theme.fontDisplay};
     font-size: 3.2rem;
     text-decoration: none;
-    .javascript {
-      color: ${props => props.theme.orange};
-    }
+  }
+  span {
+    color: ${props => props.theme.orange};
   }
   @media screen and (max-width: 1350px) {
     margin: 0;
@@ -67,21 +67,6 @@ const StyleHeader = styled.header`
       justify-content: center;
     }
   }
-  .short-text {
-    display: none;
-  }
-  @media (max-width: 1350px) {
-    .short-text {
-      display: inline-block;
-    }
-    .full-text {
-      display: none;
-    }
-  }
-  @media screen and (max-width: 500px) {
-    .bar {
-    }
-  }
 `;
 
 const Header = () => (
@@ -90,13 +75,7 @@ const Header = () => (
       <Logo>
         <Link href="/contact">
           <a>
-            <span className="full-text">
-              Full Stack <span className="javascript">JavaScript</span>{" "}
-              Developer
-            </span>
-            <span className="short-text">
-              <span className="javascript">JavaScript</span> Developer
-            </span>
+            <span>Full-stack</span> Developer
           </a>
         </Link>
       </Logo>
