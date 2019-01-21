@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Head from "next/head";
 import AboutSection from "./homePage/AboutSection";
-import TechSection from "./homePage/TechSection";
 import ExperienceSection from "./homePage/ExperienceSection";
 import ProjectSection from "./homePage/ProjectSection";
 import TitleSection from "./homePage/TitleSection";
@@ -17,7 +16,7 @@ class Home extends Component {
     return (
       <HomeStyles>
         <Head>
-          <title>David Lee | JavaScript Dev.</title>
+          <title>David Lee's website</title>
         </Head>
         <NameDiv>
           <div>
@@ -25,8 +24,8 @@ class Home extends Component {
           </div>
           <div className="messages">
             <p>
-              The purpose of life is finding the largest burden that you can
-              bear and bearing it.
+              "It’s not just what it looks like and feels like. Design is how it
+              works.” – Steve Jobs
             </p>
           </div>
         </NameDiv>
@@ -45,7 +44,6 @@ class Home extends Component {
             />
           </a>
         </TechTitle>
-        <TechSection />
         <ProjectSection />
         <ExperienceSection />
       </HomeStyles>

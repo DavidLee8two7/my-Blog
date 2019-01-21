@@ -5,15 +5,9 @@ const TechSkills = styled.div`
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   align-items: center;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("/static/img/whale.jpg") no-repeat center center fixed;
-  background-size: cover;
 `;
 
-const FullStacks = styled.div`
+const TechContainer = styled.div`
   padding-top: 5rem;
   margin: 0 3rem;
   grid-row: 1;
@@ -73,22 +67,6 @@ const TechMessage = styled.div`
     p {
       font-size: 1.4rem;
     }
-  }
-`;
-
-const ReactGraphqlStack = styled.div`
-  width: 100%;
-  grid-column: 1;
-  @media screen and (max-width: 650px) {
-    display: none;
-  }
-`;
-
-const PugNodeStack = styled.div`
-  width: 100%;
-  grid-column: 2;
-  @media screen and (max-width: 650px) {
-    display: none;
   }
 `;
 
@@ -157,11 +135,9 @@ const SkillCatetory = styled.div`
 
 export {
   TechSkills,
-  FullStacks,
+  TechContainer,
   TechIntro,
   TechMessage,
-  ReactGraphqlStack,
-  PugNodeStack,
   SkillsDiv,
   Title,
   SkillCatetory

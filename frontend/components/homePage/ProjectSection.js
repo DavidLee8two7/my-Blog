@@ -174,7 +174,7 @@ class ProjectSection extends Component {
                   <a
                     className="icon"
                     aria-label="project"
-                    href="https://github.com/SanBuNam/Herbalist-network-prototype"
+                    href="https://github.com/SanBuNam/korean-food-network.git"
                     target="_blank"
                   >
                     <SVGIcon name={"github"} />
@@ -183,7 +183,7 @@ class ProjectSection extends Component {
                 <div className="icon">
                   <a
                     aria-label="website"
-                    href="https://github.com/SanBuNam/Herbalist-network-prototype"
+                    href="https://korean-food-network-mojajxwmez.now.sh/"
                     target="_blank"
                   >
                     <SVGIcon name={"external"} viewBox={"0 0 28 28"} />

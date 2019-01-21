@@ -68,7 +68,7 @@ const NodeStack = () => {
                 </a>
                 <a
                   target="_blank"
-                  href="https://github.com/SanBuNam/korean-food-network"
+                  href="https://korean-food-network-mojajxwmez.now.sh"
                 >
                   <StyledButton style={{ background: "#006064" }}>
                     Link to Website

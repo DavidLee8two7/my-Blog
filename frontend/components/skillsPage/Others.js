@@ -14,12 +14,8 @@ class OtherSkills extends Component {
         <OthersTitle>Education & other skills</OthersTitle>
         <EducationDiv>
           <EducationInfo>
-            <a href="https://www.orangecountycodeschool.com/" target="_blank">
-              <img src="/static/logo/occs.png" />
-            </a>
-            <a href="https://www.orangecountycodeschool.com/" target="_blank">
-              <h3>Orange County Coding Bootcamp</h3>
-            </a>
+            <img src="/static/logo/occs.png" />
+            <h3>Orange County Coding Bootcamp</h3>
           </EducationInfo>
           <OthersDescription>
             <h4>12 week full stack immersive bootcamp in Orange County, CA</h4>
@@ -34,15 +30,13 @@ class OtherSkills extends Component {
                 best practices and collaboration workflow
               </li>
             </ul>
-            <h4>Feb 2017 ~ May 2017 🗓️ Newport, CA</h4>
+            <h4>Feb 2017 ~ May 2017 in Newport, CA</h4>
           </OthersDescription>
+        </EducationDiv>
+        <EducationDiv>
           <EducationInfo>
-            <a href="https://www.uoregon.edu/" target="_blank">
-              <img src="/static/logo/uoregon.png" />
-            </a>
-            <a href="https://www.uoregon.edu/" target="_blank">
-              <h3>University of Oregon</h3>
-            </a>
+            <img src="/static/logo/uoregon.png" />
+            <h3>University of Oregon</h3>
           </EducationInfo>
           <OthersDescription>
             <h4>Business Major Marketing Concentration, BS</h4>
@@ -52,12 +46,7 @@ class OtherSkills extends Component {
               <li>Consumer Behavior</li>
               <li>Marketing Strategy</li>
             </ul>
-            <h4>Other skills</h4>
-            <ul>
-              <li>Bilingual (Korean & English)</li>
-              <li>ERP SAP system</li>
-              <li>Microsoft office</li>
-            </ul>
+            <h4>August 2009 ~ August 2013 in Eugene, OR</h4>
           </OthersDescription>
         </EducationDiv>
       </OthersDiv>

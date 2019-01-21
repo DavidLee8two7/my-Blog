@@ -118,6 +118,7 @@ const TechTitle = styled.div`
   text-align: center;
   display: grid;
   grid-column: 1 / -1;
+  box-shadow: ${props => props.theme.bbs};
   @media screen and (max-width: 500px) {
     display: none;
   }

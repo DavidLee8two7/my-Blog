@@ -40,9 +40,7 @@ const EducationDiv = styled.div`
   width: 80%;
   padding: 2rem;
   box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.2);
-  &:last-child {
-    margin-bottom: 7rem;
-  }
+  margin-bottom: 7rem;
   @media screen and (max-width: 900px) {
     width: 100%;
     &:last-child {

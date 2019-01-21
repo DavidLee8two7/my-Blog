@@ -6,7 +6,7 @@ class AboutMe extends Component {
     return (
       <IntroDiv>
         <Picture>
-          <img src="/static/img/laughing.jpeg" alt="couple picture" />
+          <img src="/static/img/couple.jpeg" alt="couple picture" />
         </Picture>
         <AboutDiv>
           <h2>About Me</h2>
