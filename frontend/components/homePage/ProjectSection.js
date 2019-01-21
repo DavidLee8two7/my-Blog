@@ -183,7 +183,7 @@ class ProjectSection extends Component {
                 <div className="icon">
                   <a
                     aria-label="website"
-                    href="https://korean-food-network-mojajxwmez.now.sh/"
+                    href="https://korean-food-network-cpvkitibkk.now.sh/"
                     target="_blank"
                   >
                     <SVGIcon name={"external"} viewBox={"0 0 28 28"} />
