@@ -57,12 +57,10 @@ class ExperienceSection extends Component {
               <h4>Accomplishments</h4>
               <ul>
                 <ul>
+                  <li>Implementation of ERP systems</li>
                   <li>
-                    Implementation of ERP (SAP - PP & MM modules) systems.
-                  </li>
-                  <li>
-                    $2 million cost saving in one year(2018) for a bakery
-                    franchise corp.
+                    $2 million cost saving in a year for a bakery franchise
+                    corp.
                   </li>
                   <li>
                     Productivity increase of 1 ~ 3% for 5 year consecutively for

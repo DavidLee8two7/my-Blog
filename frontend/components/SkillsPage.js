@@ -26,9 +26,8 @@ class Skills extends Component {
             </svg>
             <TechMessage>
               <p>
-                Here are some <span>programming language and tools</span> that I
-                enjoy improving while I am{" "}
-                <span>looking for something good and new to learn</span>. You
+                Here are some <span>tools</span> that I enjoy improving while I
+                am <span>looking for something good and new to learn</span>. You
                 can also find some of my previous <span>experiences</span>{" "}
                 listed below.
               </p>

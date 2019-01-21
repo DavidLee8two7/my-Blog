@@ -511,7 +511,7 @@ const skillsData = {
     },
     {
       title: "javascript",
-      tech: ["javascript", "react", "next js", "apollo", "graphql"]
+      tech: ["javascript", "react", "graphql"]
     },
     {
       title: "backend",
@@ -519,7 +519,7 @@ const skillsData = {
     },
     {
       title: "build tools",
-      tech: ["webpack", "npm", "github", "heroku", "photoshop"]
+      tech: ["webpack", "npm", "github", "heroku"]
     }
   ]
 };
