@@ -39,14 +39,13 @@ class OtherSkills extends Component {
             <h3>University of Oregon</h3>
           </EducationInfo>
           <OthersDescription>
-            <h4>Business Major Marketing Concentration, BS</h4>
+            <h4>Business Major Marketing Concentration</h4>
             <ul>
               <li>Marketing Research</li>
               <li>Marketing Communications</li>
               <li>Consumer Behavior</li>
               <li>Marketing Strategy</li>
             </ul>
-            <h4>August 2009 ~ August 2013 in Eugene, OR</h4>
           </OthersDescription>
         </EducationDiv>
       </OthersDiv>
