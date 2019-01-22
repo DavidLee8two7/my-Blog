@@ -38,6 +38,11 @@ class FooterSection extends Component {
                 </Link>
               </li>
               <li>
+                <Link prefetch href="/blogs">
+                  <a>Blogs</a>
+                </Link>
+              </li>
+              <li>
                 <Link prefetch href="/contact">
                   <a>Contact</a>
                 </Link>
