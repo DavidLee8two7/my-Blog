@@ -27,7 +27,7 @@ const CREATE_MEMO_MUTATION = gql`
 const ContactMessage = styled.div`
   width: 100%;
   img {
-    width: 4.5rem;
+    width: 2.5rem;
   }
   @media screen and (max-width: 1200px) {
     font-size: 1.8rem;
