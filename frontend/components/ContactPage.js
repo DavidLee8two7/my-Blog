@@ -116,7 +116,19 @@ class Memo extends Component {
                     <img src="/static/logo/linkedin.png" alt="linkedin" />
                   </a>
                 </h4>
-                <h4>Thank you for visiting my website.</h4>
+                <h4>
+                  <a
+                    href="https://github.com/SanBuNam"
+                    target="_blank"
+                    style={{
+                      borderBottom: "1px solid yellow",
+                      paddingTop: "5px"
+                    }}
+                  >
+                    Please find GitHub Link here ➡
+                    <img src="/static/logo/git.jpg" alt="github" />
+                  </a>
+                </h4>
                 <label htmlFor="name">
                   Name
                   <input
