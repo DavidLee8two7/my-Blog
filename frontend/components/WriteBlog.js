@@ -110,7 +110,7 @@ class WriteBlog extends Component {
                 />
               </label>
               <label htmlFor="scientific">
-                Scientific Name
+                Subject
                 <input
                   type="text"
                   id="scientific"
@@ -122,7 +122,7 @@ class WriteBlog extends Component {
                 />
               </label>
               <label htmlFor="effect">
-                effect
+                Details
                 <textarea
                   id="effect"
                   name="effect"

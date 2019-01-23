@@ -27,7 +27,7 @@ class Blog extends Component {
         </HerbImage>
         <HerbDescription>
           <p>
-            <strong>Medicinal effect : </strong>
+            <strong>Reference : </strong>
             <br />
             {blog.effect}
           </p>

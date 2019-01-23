@@ -47,12 +47,12 @@ class SingleBlog extends Component {
               </SingleHerbImage>
               <SingleHerbDescription>
                 <span>
-                  Scientific Name :
+                  subject :
                   <br />
                   {blog.scientific}
                 </span>
                 <p>
-                  <strong>Medicinal Effect : </strong>
+                  <strong>Details : </strong>
                   <br />
                   {blog.effect}
                 </p>
