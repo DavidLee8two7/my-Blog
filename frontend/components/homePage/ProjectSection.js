@@ -33,7 +33,7 @@ class ProjectSection extends Component {
             </PictureDiv>
             <h4>
               <div>
-                <span>Project : </span>
+                <span>Website : </span>
               </div>
               <span>T-shirts Factory, CA</span>
             </h4>
@@ -131,7 +131,7 @@ class ProjectSection extends Component {
             </PictureDiv>
             <h4>
               <div>
-                <span>Project : </span>
+                <span>Web App : </span>
               </div>
               <span>Korean Food Network</span>
             </h4>
