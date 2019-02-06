@@ -27,7 +27,7 @@ class Experience extends Component {
             <ul>
               <li>Implementation of ERP system</li>
               <li>Stabilized the system on time</li>
-              <li>Productivity increase of 1 ~ 3% for 5 years consecutively</li>
+              <li>Productivity increase of 2 ~ 5% for 3 years consecutively</li>
               <li>Continues improvement of standard operations procedure</li>
             </ul>
             <h4>2013 - 2016 in Fullerton, CA</h4>

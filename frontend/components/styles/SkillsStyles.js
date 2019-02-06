@@ -5,6 +5,12 @@ const TechSkills = styled.div`
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   align-items: center;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("/static/img/working_pic.jpg") no-repeat center center fixed;
+  background-size: cover;
 `;
 
 const TechContainer = styled.div`

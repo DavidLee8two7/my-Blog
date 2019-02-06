@@ -1,22 +1,21 @@
 import React, { Component } from "react";
-import gql from "graphql-tag";
 import { Query } from "react-apollo";
+import Head from "next/head";
+import gql from "graphql-tag";
 import Error from "./styles/ErrorMessage";
 import {
   SingleBlogStyle,
-  SingleHerbImage,
-  SingleHerbDescription
+  SingleBlogDescription
 } from "./styles/SingleBlogStyles";
-import Head from "next/head";
 
 const SINGLE_BLOG_QUERY = gql`
   query SINGLE_BLOG_QUERY($id: ID!) {
     blog(where: { id: $id }) {
       id
       title
-      scientific
-      effect
-      reference
+      subject
+      problem
+      opinion
       largeImage
     }
   }
@@ -39,29 +38,26 @@ class SingleBlog extends Component {
           return (
             <SingleBlogStyle image={blog.largeImage}>
               <Head>
-                <title>David's Blog | {blog.title}</title>
+                <title>Editorial | {blog.title}</title>
               </Head>
-              <SingleHerbImage>
-                <img src={blog.largeImage} alt={blog.title} />
+              <SingleBlogDescription>
                 <span>{blog.title}</span>
-              </SingleHerbImage>
-              <SingleHerbDescription>
-                <span>
-                  subject :
-                  <br />
-                  {blog.scientific}
-                </span>
                 <p>
-                  <strong>Details : </strong>
+                  <strong>Subject : </strong>
                   <br />
-                  {blog.effect}
+                  {blog.subject}
                 </p>
                 <p>
-                  <strong>Reference :</strong>
+                  <strong>Problem :</strong>
                   <br />
-                  {blog.reference}
+                  {blog.problem}
                 </p>
-              </SingleHerbDescription>
+                <p>
+                  <strong>Opinion :</strong>
+                  <br />
+                  {blog.opinion}
+                </p>
+              </SingleBlogDescription>
             </SingleBlogStyle>
           );
         }}

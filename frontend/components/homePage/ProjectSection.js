@@ -33,7 +33,7 @@ class ProjectSection extends Component {
             </PictureDiv>
             <h4>
               <div>
-                <span>Website : </span>
+                <span>Online Shop :</span>
               </div>
               <span>T-shirts Factory, CA</span>
             </h4>
@@ -95,25 +95,6 @@ class ProjectSection extends Component {
             </BackDesc>
           </CardBack>
         </Card>
-        <InfoDiv>
-          <h4>Fullstack JavaScript Web Developer</h4>
-          <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I have experience as an ERP
-            system consultant & Business consultant but{" "}
-            <span>I now only focus on being a web developer</span> but my
-            knowledge of multiple fields allows me to work on a project with the
-            full scope in mind; simplifying the process of our working together
-            and producing a more cohesive experience for your users.
-          </p>
-          <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A web developer's role is to
-            combine design and business logic to achieve a user-facing product.{" "}
-            <span>
-              To do this successfully, a wide skill set is necessary to produce
-              a quality user experience that leads to meeting business goals.
-            </span>
-          </p>
-        </InfoDiv>
         <Card>
           <CardFront className="front">
             <PictureDiv
@@ -131,9 +112,9 @@ class ProjectSection extends Component {
             </PictureDiv>
             <h4>
               <div>
-                <span>Web App : </span>
+                <span>Web App (Yelp) :</span>
               </div>
-              <span>Korean Food Network</span>
+              <span>K-Food Restaurants</span>
             </h4>
             <FrontDesc>
               <ul>
@@ -142,6 +123,83 @@ class ProjectSection extends Component {
                 <li>Password Reset</li>
                 <li>Ajax Search Interface</li>
                 <li>Custom Google Map</li>
+              </ul>
+            </FrontDesc>
+          </CardFront>
+          <CardBack className="back">
+            <BackDesc>
+              <ProjectInfo>
+                <h4>
+                  <span>Node Fullstack</span>
+                </h4>
+                <ul>
+                  <li>
+                    <strong>Pug(Jade)</strong> template engine
+                  </li>
+                  <li>
+                    <strong>SCSS</strong> for styling
+                  </li>
+                  <li>
+                    <strong>Node Express</strong> for Server Side Logic
+                  </li>
+                  <li>
+                    <strong>Bcrypt & JWToken</strong> for Authentication
+                  </li>
+                  <li>
+                    <strong>MongoDB</strong> for backend database
+                  </li>
+                </ul>
+              </ProjectInfo>
+              <ProjectLink>
+                <div className="icon">
+                  <a
+                    className="icon"
+                    aria-label="project"
+                    href="https://github.com/SanBuNam/korean-food-network.git"
+                    target="_blank"
+                  >
+                    <SVGIcon name={"github"} />
+                  </a>
+                </div>
+                <div className="icon">
+                  <a
+                    aria-label="website"
+                    href="https://korean-food-network-cpvkitibkk.now.sh/"
+                    target="_blank"
+                  >
+                    <SVGIcon name={"external"} viewBox={"0 0 28 28"} />
+                  </a>
+                </div>
+              </ProjectLink>
+            </BackDesc>
+          </CardBack>
+        </Card>
+        <Card>
+          <CardFront className="front">
+            <PictureDiv
+              style={{
+                backgroundSize: "cover",
+                backgroundImage: `linear-gradient(
+                      to bottom,
+                      rgba(255,255,255, 0.2),
+                      rgba(255,255,255, 0.4)
+                    ),
+                    url(/static/img/js_games.png)`
+              }}
+            >
+              <img src="/static/img/curl.png" alt="curl" />
+            </PictureDiv>
+            <h4>
+              <div>
+                <span>Web Games: </span>
+              </div>
+              <span>Classic JS_Games</span>
+            </h4>
+            <FrontDesc>
+              <ul>
+                <li>AI Snake</li>
+                <li>Tetris</li>
+                <li>One more</li>
               </ul>
             </FrontDesc>
           </CardFront>

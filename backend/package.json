@@ -27,9 +27,8 @@
     "prisma-binding": "2.1.6",
     "stripe": "^6.12.1"
   },
-  "license": "MIT",
   "repository": {
-    "url": "na.com"
+    "url": "https://github.com/SanBuNam/myWebsite"
   },
   "babel": {
     "presets": [

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
-import { BlogStyles, HerbImage, HerbDescription } from "./styles/BlogStyles";
+import { BlogStyles, BlogImage, BlogTitle } from "./styles/BlogStyles";
 
 class Blog extends Component {
   static propTypes = {
@@ -12,7 +12,7 @@ class Blog extends Component {
     const { blog } = this.props;
     return (
       <BlogStyles>
-        <HerbImage>
+        <BlogImage>
           <Link
             href={{
               pathname: "/blog",
@@ -24,14 +24,19 @@ class Blog extends Component {
               <span>{blog.title}</span>
             </a>
           </Link>
-        </HerbImage>
-        <HerbDescription>
+        </BlogImage>
+        <BlogTitle>
           <p>
-            <strong>Reference : </strong>
+            <strong>Title: </strong>
             <br />
-            {blog.effect}
+            {blog.title}
           </p>
-        </HerbDescription>
+          <p>
+            <strong>Subject: </strong>
+            <br />
+            {blog.subject}
+          </p>
+        </BlogTitle>
       </BlogStyles>
     );
   }

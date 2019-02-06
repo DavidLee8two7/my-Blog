@@ -18,19 +18,14 @@ class OtherSkills extends Component {
             <h3>Orange County Coding Bootcamp</h3>
           </EducationInfo>
           <OthersDescription>
-            <h4>12 week full stack immersive bootcamp in Orange County, CA</h4>
+            <h4>16 week full stack immersive bootcamp in Orange County, CA</h4>
             <ul>
-              <li>
-                540+ hours of hands-on coding with industry recognized expert
-                instructors
-              </li>
               <li>
                 The course covers JavaScript, Node.js React, Redux, Angular,
                 MongoDB, PostgreSQL, HTML5, and CSS3 while focusing on industry
                 best practices and collaboration workflow
               </li>
             </ul>
-            <h4>Feb 2017 ~ May 2017 in Newport, CA</h4>
           </OthersDescription>
         </EducationDiv>
         <EducationDiv>

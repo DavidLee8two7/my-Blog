@@ -4,13 +4,13 @@ const IntroDiv = styled.div`
   z-index: 2;
   grid-row: 3;
   grid-column: 1 / -1;
-  width: 100%;
+  width: 99%;
   display: grid;
   grid-template-columns: 40% 1fr;
   justify-items: center;
   align-items: start;
   margin-top: 1rem;
-  padding: 2rem;
+  padding: 1rem;
   background: white;
   box-shadow: ${props => props.theme.sbs};
   h2 {
@@ -19,8 +19,9 @@ const IntroDiv = styled.div`
     text-shadow: ${props => props.theme.ts};
   }
   p {
-    font-size: 2.4rem;
+    font-size: 2rem;
     margin-left: 3rem;
+    text-shadow: ${props => props.theme.ts};
   }
   .loc {
     border-bottom: 1.5px solid ${props => props.theme.orange};
@@ -30,54 +31,59 @@ const IntroDiv = styled.div`
       border-bottom: 1.5px solid ${props => props.theme.lightBlue};
     }
   }
-  @media screen and (max-width: 1655px) {
+  @media screen and (max-width: 1850px) {
     h2 {
       font-size: 2rem;
     }
     p {
-      font-size: 2.1rem;
-      margin-left: 1rem;
-    }
-  }
-  @media screen and (max-width: 1550px) {
-    p {
-      font-size: 2rem;
-    }
-  }
-  @media screen and (max-width: 1500px) {
-    p {
       font-size: 1.9rem;
     }
   }
-  @media screen and (max-width: 1400px) {
+  @media screen and (max-width: 1700px) {
+    p {
+      font-size: 1.8rem;
+    }
+  }
+  @media screen and (max-width: 1600px) {
     p {
       font-size: 1.75rem;
     }
   }
-  @media screen and (max-width: 1300px) {
-    p {
-      font-size: 1.65rem;
-    }
-  }
-  @media screen and (max-width: 1250px) {
+  @media screen and (max-width: 1550px) {
     p {
       font-size: 1.6rem;
     }
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1450px) {
     p {
       font-size: 1.5rem;
     }
   }
-  @media screen and (max-width: 1150px) {
-    margin: 0;
-    padding: 1rem;
+  @media screen and (max-width: 1380px) {
+    p {
+      font-size: 1.4rem;
+    }
   }
-  @media screen and (max-width: 1050px) {
+  @media screen and (max-width: 1300px) {
+    p {
+      font-size: 1.3rem;
+    }
+  }
+  @media screen and (max-width: 1220px) {
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  @media screen and (max-width: 1150px) {
     display: grid;
     grid-template-columns: 1fr;
     p {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    p {
+      font-size: 1.5rem;
     }
   }
   @media screen and (max-width: 500px) {
@@ -99,10 +105,7 @@ const Picture = styled.div`
     margin-right: auto;
     width: 100%;
   }
-  @media screen and (max-width: 1655px) {
-    width: 90%;
-  }
-  @media screen and (max-width: 1050px) {
+  @media screen and (max-width: 1150px) {
     display: none;
   }
 `;

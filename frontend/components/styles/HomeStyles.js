@@ -55,7 +55,7 @@ const NameDiv = styled.div`
     padding: 1rem;
     .messages {
       margin-top: 3rem;
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       border-bottom: 1.5px solid ${props => props.theme.orange};
     }
   }
@@ -113,12 +113,12 @@ const GreetingDiv = styled.div`
 
 const TechTitle = styled.div`
   z-index: 2;
-  width: 100%;
+  width: 99.2%;
   grid-row: 4;
   text-align: center;
   display: grid;
   grid-column: 1 / -1;
-  box-shadow: ${props => props.theme.bbs};
+  box-shadow: ${props => props.theme.sbs};
   @media screen and (max-width: 500px) {
     display: none;
   }

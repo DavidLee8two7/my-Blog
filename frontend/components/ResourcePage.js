@@ -31,13 +31,10 @@ class Resource extends Component {
         <ResourceIntro>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 20">
             <text x="10" y="20">
-              Development Tools
+              Resources
             </text>
           </svg>
-          <p>
-            Please find tools that I often use to save time. I usually keep this
-            page open when developing.
-          </p>
+          <p>Tools that I often use. This saves time.</p>
         </ResourceIntro>
         <ResourceList>
           {devTools.resources.map(resource => (

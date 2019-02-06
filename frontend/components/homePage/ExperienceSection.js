@@ -26,13 +26,13 @@ class ExperienceSection extends Component {
         <Experience>
           <PictureDiv>
             <PictureImg
-              src="/static/img/face.jpeg"
+              src="/static/img/laughing.jpeg"
               alt="david lee's picture"
               className="picture"
             />
           </PictureDiv>
           <IntroductionDiv>
-            <h4>FULL-STACK WEB DEVELOPER</h4>
+            <h4>I love making people's job eaiser and faster.</h4>
             <p>
               I can help the client to create responsive websites that work on a
               wide range of devices Assist with production of clean and
@@ -59,11 +59,11 @@ class ExperienceSection extends Component {
                 <ul>
                   <li>Implementation of ERP systems</li>
                   <li>
-                    $2 million cost saving in a year for a bakery franchise
+                    $2 million cost saving in year 2018 for a bakery franchise
                     corp.
                   </li>
                   <li>
-                    Productivity increase of 1 ~ 3% for 5 year consecutively for
+                    Productivity increase of 2 ~ 5% for 3 year consecutively for
                     a manufacturing corp.
                   </li>
                 </ul>

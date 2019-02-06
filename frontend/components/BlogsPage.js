@@ -11,9 +11,9 @@ const ALL_BLOGS_QUERY = gql`
     blogs(first: $first, skip: $skip, orderBy: createdAt_DESC) {
       id
       title
-      scientific
-      effect
-      reference
+      subject
+      problem
+      opinion
       image
       largeImage
     }

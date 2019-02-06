@@ -53,7 +53,7 @@ const PictureImg = styled.img`
   height: 100%;
   backface-visibility: hidden;
   transition: all 0.5s;
-  transform: scale(1.15);
+  transform: translateX(0.7rem) translateY(2.5rem) scale(1.2);
 `;
 
 const IntroductionDiv = styled.div`

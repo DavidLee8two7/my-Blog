@@ -4,15 +4,15 @@ const ProjectDiv = styled.div`
   grid-row: 6;
   grid-column: 1 / -1;
   z-index: 2;
-  width: 100%;
+  width: 99%;
   display: grid;
-  grid-template-columns: 30% 1fr 30%;
+  grid-template-columns: 1fr 1fr 1fr;
   background: white;
-  @media (max-width: 1800px) {
+  @media (max-width: 1200px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     display: grid;
     grid-template-columns: 1fr;
   }

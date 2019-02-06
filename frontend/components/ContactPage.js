@@ -80,9 +80,7 @@ class Memo extends Component {
             onSubmit={async e => {
               e.preventDefault();
               const res = await createMemo();
-              alert(
-                "Thank you for contacting me. I will get back to you as soon as possible."
-              );
+              alert("Your message has been submited.");
               Router.push({
                 pathname: "/"
               });
@@ -93,14 +91,14 @@ class Memo extends Component {
               <ContactMessage>
                 <h4>
                   <a
-                    href="https://docs.google.com/document/d/1oHZ1l3b--N-gUS2IcgtcOdBSlLNbcOGadwjhpFS-6ik/edit#"
+                    href="https://docs.google.com/document/d/1-HSiQEATsuxw9Bfm5WBKV9BpmWIALeewlxBOLwy3YWo/edit?usp=sharing"
                     target="_blank"
                     style={{
                       borderBottom: "1px solid yellow",
                       paddingTop: "5px"
                     }}
                   >
-                    Please find my resume here ➡ 📂
+                    David Lee's Resume 📂
                   </a>
                 </h4>
                 <h4>
@@ -112,7 +110,7 @@ class Memo extends Component {
                       paddingTop: "5px"
                     }}
                   >
-                    Please find LinkedIn profile here ➡
+                    LinkedIn Link{" "}
                     <img src="/static/logo/linkedin.png" alt="linkedin" />
                   </a>
                 </h4>
@@ -125,8 +123,7 @@ class Memo extends Component {
                       paddingTop: "5px"
                     }}
                   >
-                    Please find GitHub Link here ➡
-                    <img src="/static/logo/git.jpg" alt="github" />
+                    GitHub Link <img src="/static/logo/git.jpg" alt="github" />
                   </a>
                 </h4>
                 <label htmlFor="name">
@@ -166,7 +163,7 @@ class Memo extends Component {
                   />
                 </label>
                 <label htmlFor="message">
-                  How can I help you?
+                  Message
                   <textarea
                     id="message"
                     name="message"

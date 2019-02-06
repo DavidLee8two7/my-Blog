@@ -6,7 +6,7 @@ const SingleBlogStyle = styled.div`
   margin: 4rem auto;
   box-shadow: ${props => props.theme.bbs};
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr;
   text-align: left;
   background: ${props => props.theme.offWhite};
   @media screen and (max-width: 1250px) {
@@ -18,44 +18,7 @@ const SingleBlogStyle = styled.div`
   }
 `;
 
-const SingleHerbImage = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: ${props => props.theme.sbs};
-  img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 3px;
-    margin: 1rem 0;
-  }
-  span {
-    text-align: center;
-    width: 80%;
-    margin-left: 2rem;
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
-    letter-spacing: 0.5px;
-    font-family: ${props => props.theme.fontDisplay};
-    font-weight: 600;
-    border-bottom: 2px solid ${props => props.theme.black};
-  }
-  @media screen and (max-width: 700px) {
-    img {
-      width: 70%;
-    }
-    span {
-      margin-left: 1rem;
-      font-size: 2rem;
-      margin-bottom: 2rem;
-      width: 50%;
-    }
-  }
-`;
-
-const SingleHerbDescription = styled.div`
+const SingleBlogDescription = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -85,4 +48,4 @@ const SingleHerbDescription = styled.div`
     }
   }
 `;
-export { SingleBlogStyle, SingleHerbImage, SingleHerbDescription };
+export { SingleBlogStyle, SingleBlogDescription };

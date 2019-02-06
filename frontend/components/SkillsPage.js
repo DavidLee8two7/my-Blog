@@ -21,15 +21,13 @@ class Skills extends Component {
           <TechIntro>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 20">
               <text x="0" y="16">
-                Tech Skills
+                Never stop learning
               </text>
             </svg>
             <TechMessage>
               <p>
-                Here are some <span>tools</span> that I enjoy improving while I
-                am <span>looking for something good and new to learn</span>. You
-                can also find some of my previous <span>experiences</span>{" "}
-                listed below.
+                "Develop a passion for learning. If you do, you will never cease
+                to grow." - Anthony J. D'Angelo
               </p>
             </TechMessage>
           </TechIntro>

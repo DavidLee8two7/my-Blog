@@ -24,8 +24,8 @@ class Home extends Component {
           </div>
           <div className="messages">
             <p>
-              "It’s not just what it looks like and feels like. Design is how it
-              works.” – Steve Jobs
+              “The purpose of life is finding the largest burden that you can
+              bear and bearing it.” – Jordan B. Peterson
             </p>
           </div>
         </NameDiv>
@@ -39,8 +39,8 @@ class Home extends Component {
         <TechTitle>
           <a href="/skills">
             <TitleSection
-              visible={"Current focus : 💻 React & GraphQL stack"}
-              invisible={"Click for more skills and projects"}
+              visible={"Current focus : 💻 React & GraphQL"}
+              invisible={"More skills and experiences"}
             />
           </a>
         </TechTitle>

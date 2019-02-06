@@ -7,11 +7,10 @@ const StyledBtn = styled.button`
   position: relative;
   overflow: hidden;
   border: none;
-  font-size: 2.8rem;
+  font-size: 2.3rem;
   font-weight: 600;
   background: black;
   color: white;
-  box-shadow: ${props => props.theme.sbs};
   font-family: ${props => props.theme.fontDisplay};
   text-transform: uppercase;
   cursor: pointer;
@@ -42,17 +41,6 @@ const StyledBtn = styled.button`
   &:focus {
     outline: none;
     animation: pulsate 1s infinite;
-  }
-  @media (max-width: 1050px) {
-    padding: 0;
-    .visible {
-      font-size: 2.2rem;
-      font-weight: 500;
-    }
-    .invisible {
-      font-size: 2.2rem;
-      font-weight: 500;
-    }
   }
 `;
 
