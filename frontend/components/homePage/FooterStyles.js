@@ -9,7 +9,6 @@ const FooterDiv = styled.footer`
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   align-items: center;
-  font-size: 1.8rem;
   background: black;
   @media screen and (max-width: 750px) {
     display: grid;
@@ -61,7 +60,7 @@ const FooterNav = styled.div`
     list-style: none;
   }
   li {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     display: inline-block;
     margin-right: 2.5rem;
   }

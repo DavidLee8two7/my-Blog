@@ -2,15 +2,15 @@ import styled from "styled-components";
 
 const HomeStyles = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
   justify-items: center;
   align-items: center;
   width: 100%;
   background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
     ),
-    url("/static/img/whale.jpg") no-repeat center center fixed;
+    url("/static/img/galaxy.jpg") no-repeat top center fixed;
   background-size: cover;
 `;
 
@@ -27,13 +27,14 @@ const NameDiv = styled.div`
     font-family: ${props => props.theme.fontDisplay};
     font-size: 5.4rem;
     letter-spacing: 2px;
-    text-shadow: 2px 2px 2px ${props => props.theme.orange};
+    text-shadow: 2px 2px 2px ${props => props.theme.blue};
   }
   .messages {
     margin-top: 12rem;
     font-size: 2.4rem;
+    color: black;
     font-weight: 400;
-    border-bottom: 1.5px solid ${props => props.theme.orange};
+    border-bottom: 1.5px solid ${props => props.theme.black};
   }
   img {
     max-width: 100rem;
@@ -47,7 +48,7 @@ const NameDiv = styled.div`
     .messages {
       margin-top: 4rem;
       font-size: 1.8rem;
-      border-bottom: 1.5px solid ${props => props.theme.orange};
+      border-bottom: 1.5px solid ${props => props.theme.blue};
     }
   }
   @media screen and (max-width: 950px) {
@@ -56,7 +57,7 @@ const NameDiv = styled.div`
     .messages {
       margin-top: 3rem;
       font-size: 1.5rem;
-      border-bottom: 1.5px solid ${props => props.theme.orange};
+      border-bottom: 1.5px solid ${props => props.theme.blue};
     }
   }
   @media screen and (max-width: 750px) {
@@ -116,6 +117,8 @@ const TechTitle = styled.div`
   width: 99.2%;
   grid-row: 4;
   text-align: center;
+  margin: 0.5rem;
+  margin-top: 0;
   display: grid;
   grid-column: 1 / -1;
   box-shadow: ${props => props.theme.sbs};

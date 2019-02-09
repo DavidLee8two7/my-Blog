@@ -46,8 +46,9 @@ const CardFront = styled.div`
   box-shadow: 0 0 1rem rgba(126, 126, 126, 0.5);
   font-weight: 600;
   font-size: 2rem;
+  color: black;
+  background: white;
   h4 {
-    color: black;
     font-family: ${props => props.theme.fontDisplay};
     text-transform: uppercase;
     text-align: left;
@@ -118,6 +119,7 @@ const CardBack = styled.div`
   overflow: hidden;
   box-shadow: 0 0 1rem rgba(126, 126, 126, 0.5);
   transform: rotateY(180deg);
+  color: black;
   @media only screen and (max-width: 900px), only screen and (hover: none) {
     height: auto;
     position: relative;

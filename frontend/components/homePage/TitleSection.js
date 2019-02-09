@@ -10,7 +10,7 @@ const StyledBtn = styled.button`
   font-size: 2.3rem;
   font-weight: 600;
   background: black;
-  color: white;
+  color: ${props => props.theme.blue};
   font-family: ${props => props.theme.fontDisplay};
   text-transform: uppercase;
   cursor: pointer;
@@ -25,7 +25,7 @@ const StyledBtn = styled.button`
     padding: 2rem 0;
   }
   .invisible {
-    color: ${props => props.theme.orange};
+    color: ${props => props.theme.blue};
     width: 100%;
     position: absolute;
     padding: 2rem 0;
@@ -44,7 +44,7 @@ const StyledBtn = styled.button`
   }
 `;
 
-const TitleSection = props => {
+const FlipTitle = props => {
   return (
     <StyledBtn>
       <span className="visible">{props.visible}</span>
@@ -53,4 +53,4 @@ const TitleSection = props => {
   );
 };
 
-export default TitleSection;
+export default FlipTitle;

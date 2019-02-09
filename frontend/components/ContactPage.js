@@ -27,7 +27,16 @@ const CREATE_MEMO_MUTATION = gql`
 const ContactMessage = styled.div`
   width: 100%;
   img {
-    width: 2.5rem;
+    z-index: 1;
+    width: 10rem;
+    margin: 1rem 2rem;
+    padding: 5px;
+    box-shadow: ${props => props.theme.sbs};
+    transition: all 0.3s ease;
+    transform: scale(0.9);
+    :hover {
+      transform: scale(1);
+    }
   }
   @media screen and (max-width: 1200px) {
     font-size: 1.8rem;
@@ -89,43 +98,27 @@ class Memo extends Component {
             <Error error={error} />
             <fieldset disabled={loading} aria-busy={loading}>
               <ContactMessage>
-                <h4>
+                <span>
                   <a
                     href="https://docs.google.com/document/d/1-HSiQEATsuxw9Bfm5WBKV9BpmWIALeewlxBOLwy3YWo/edit?usp=sharing"
                     target="_blank"
-                    style={{
-                      borderBottom: "1px solid yellow",
-                      paddingTop: "5px"
-                    }}
                   >
-                    David Lee's Resume 📂
+                    <img src="/static/logo/resumeIcon.png" alt="resume" />
                   </a>
-                </h4>
-                <h4>
+                </span>
+                <span>
                   <a
                     href="https://www.linkedin.com/in/david-lee-480985119/"
                     target="_blank"
-                    style={{
-                      borderBottom: "1px solid yellow",
-                      paddingTop: "5px"
-                    }}
                   >
-                    LinkedIn Link{" "}
                     <img src="/static/logo/linkedin.png" alt="linkedin" />
                   </a>
-                </h4>
-                <h4>
-                  <a
-                    href="https://github.com/SanBuNam"
-                    target="_blank"
-                    style={{
-                      borderBottom: "1px solid yellow",
-                      paddingTop: "5px"
-                    }}
-                  >
-                    GitHub Link <img src="/static/logo/git.jpg" alt="github" />
+                </span>
+                <span>
+                  <a href="https://github.com/SanBuNam" target="_blank">
+                    <img src="/static/logo/git.jpg" alt="github" />
                   </a>
-                </h4>
+                </span>
                 <label htmlFor="name">
                   Name
                   <input

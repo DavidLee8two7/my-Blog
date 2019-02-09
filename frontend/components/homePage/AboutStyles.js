@@ -6,10 +6,10 @@ const IntroDiv = styled.div`
   grid-column: 1 / -1;
   width: 99%;
   display: grid;
-  grid-template-columns: 40% 1fr;
+  grid-template-columns: 1fr;
   justify-items: center;
   align-items: start;
-  margin-top: 1rem;
+  margin: 1rem;
   padding: 1rem;
   background: white;
   box-shadow: ${props => props.theme.sbs};
@@ -22,14 +22,6 @@ const IntroDiv = styled.div`
     font-size: 2rem;
     margin-left: 3rem;
     text-shadow: ${props => props.theme.ts};
-  }
-  .loc {
-    border-bottom: 1.5px solid ${props => props.theme.orange};
-    &:hover,
-    &:active {
-      color: ${props => props.theme.orange};
-      border-bottom: 1.5px solid ${props => props.theme.lightBlue};
-    }
   }
   @media screen and (max-width: 1850px) {
     h2 {
@@ -55,33 +47,6 @@ const IntroDiv = styled.div`
     }
   }
   @media screen and (max-width: 1450px) {
-    p {
-      font-size: 1.5rem;
-    }
-  }
-  @media screen and (max-width: 1380px) {
-    p {
-      font-size: 1.4rem;
-    }
-  }
-  @media screen and (max-width: 1300px) {
-    p {
-      font-size: 1.3rem;
-    }
-  }
-  @media screen and (max-width: 1220px) {
-    p {
-      font-size: 1.2rem;
-    }
-  }
-  @media screen and (max-width: 1150px) {
-    display: grid;
-    grid-template-columns: 1fr;
-    p {
-      font-size: 1.6rem;
-    }
-  }
-  @media screen and (max-width: 900px) {
     p {
       font-size: 1.5rem;
     }

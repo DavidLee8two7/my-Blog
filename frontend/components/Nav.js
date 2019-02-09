@@ -13,10 +13,10 @@ const Nav = () => (
       <a>Skills</a>
     </Link>
     <Link prefetch href="/blogs">
-      <a>Editorial</a>
+      <a>Blog</a>
     </Link>
     <Link prefetch href="/contact">
-      <a>Resume & etc</a>
+      <a>Resume</a>
     </Link>
   </NavStyles>
 );

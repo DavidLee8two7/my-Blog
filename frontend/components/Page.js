@@ -5,16 +5,15 @@ import FooterSection from "./homePage/FooterSection";
 import Meta from "./Meta";
 
 const theme = {
-  blue: "#2164f4", // 33,100,244
-  lightBlue: "#00d8ff", // 0,216,255
-  lightGray: "#E1E1E1", // 225,225,225
-  orange: "#ff6600", // 255,102,0
-  lightOrange: "#ffa500", // 255,165,0
-  yellow: "#f7df1e", // 247,223,30
-  green: "#215732", // 33,87,50
-  black: "#393939", // 57,57,57
-  white: "#ffffff", // 255,255,255
-  offWhite: "#f5f8fa", // 245,248,250
+  blue: "#009ADA",
+  lightGray: "#E1E1E1",
+  orange: "#ff6600",
+  lightOrange: "#ffa500",
+  yellow: "#f7df1e",
+  green: "#215732",
+  black: "#393939",
+  white: "#ffffff",
+  offWhite: "#f5f8fa",
   maxWidth: "100%",
   sbs: "0 1px 1px 1px rgba(126, 126, 126, 0.75)",
   bbs: "0 2px 2px 2px rgba(126, 126, 126, 0.75)",
@@ -33,7 +32,7 @@ const StyledPage = styled.div`
 const Inner = styled.div`
   max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
 `;
 
 injectGlobal`

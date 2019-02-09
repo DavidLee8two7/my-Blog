@@ -14,9 +14,9 @@ const NavStyles = styled.ul`
     text-transform: uppercase;
     background: none;
     border: 0;
-    color: white;
+    color: ${props => props.theme.blue};
     font-weight: 600;
-    font-size: 1.4em;
+    font-size: 1.5em;
     cursor: pointer;
     @media screen and (max-width: 700px) {
       font-size: 1.4rem;
@@ -31,7 +31,7 @@ const NavStyles = styled.ul`
     }
     &:after {
       height: 2px;
-      background: ${props => props.theme.lightBlue};
+      background: ${props => props.theme.blue};
       content: "";
       width: 0;
       position: absolute;
@@ -48,9 +48,13 @@ const NavStyles = styled.ul`
         width: calc(100% - 60px);
       }
     }
+    transition: all 0.3s ease;
+    :hover {
+      transform: scale(1.07);
+    }
   }
   @media (max-width: 1350px) {
-    border-top: 1.5px solid ${props => props.theme.orange};
+    border-top: 1.5px solid ${props => props.theme.blue};
     width: 100%;
     justify-content: center;
     font-size: 1.3rem;

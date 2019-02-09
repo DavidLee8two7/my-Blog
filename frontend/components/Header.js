@@ -27,7 +27,7 @@ const Logo = styled.div`
     text-decoration: none;
   }
   span {
-    color: ${props => props.theme.orange};
+    color: ${props => props.theme.blue};
   }
   @media screen and (max-width: 1350px) {
     margin: 0;
@@ -55,7 +55,7 @@ const Logo = styled.div`
 const StyleHeader = styled.header`
   .bar {
     z-index: 5;
-    border-bottom: 2px solid ${props => props.theme.orange};
+    border-bottom: 4px solid ${props => props.theme.blue};
     display: inline-block;
     display: grid;
     grid-template-columns: auto 1fr;
@@ -75,7 +75,7 @@ const Header = () => (
       <Logo>
         <Link href="/contact">
           <a>
-            <span>Full-stack</span> Web Developer
+            <span>Full stack Software Developer</span>
           </a>
         </Link>
       </Logo>

@@ -62,7 +62,6 @@ const ResourceList = styled.div`
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   align-items: center;
-  background: white;
 `;
 
 const Title = styled.div`
