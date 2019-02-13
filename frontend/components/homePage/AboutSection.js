@@ -1,39 +1,31 @@
 import React, { Component } from "react";
-import { IntroDiv, Picture, AboutDiv, Location } from "./AboutStyles";
+import IntroDiv from "./AboutStyles";
 
 class AboutMe extends Component {
   render() {
     return (
       <IntroDiv>
-        <Picture>
-          <img src="/static/img/laughing.jpeg" alt="couple picture" />
-        </Picture>
-        <AboutDiv>
-          <h2>About Me</h2>
-          <p>
-            Hi, My name is <strong>David Lee</strong>. I'm a web developer based
-            in{" "}
-            <Location>
-              <a
-                target="_blank"
-                href="https://www.google.com/maps/place/Buena+Park,+CA/@33.850486,-118.0580578,10.29z/data=!4m5!3m4!1s0x80dd2bf413605d2b:0xcd9feee5cde8fe25!8m2!3d33.8674044!4d-117.9981387"
-              >
-                <span className="loc visible"> Buena Park, CA, USA.</span>
-                <span className="loc invisible"> Show it in Google 🗺️ !</span>
-              </a>
-            </Location>
-          </p>
-          <p>
-            As a web developer, I enjoy using my obsessive attention to detail,
-            my unequivocal love for making things, and my mission-driven work
-            ethic to build better future for our children and seniors. I’ve
-            always sought out opportunities and challenges that are meaningful
-            to me. Although my professional path has taken many twists and turns
-            - from ERP(SAP) system developing, Supply chain management, Business
-            analyze & consulting - I've never stopped engaging my passion to
-            help others and solve problems.
-          </p>
-        </AboutDiv>
+        <h2>Welcome to my part of the internet!</h2>
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp; <strong>Hi, I'm Sanbunam</strong>
+          (Orophile: mountain lover), but my friends call me Sanbu or a hermit.
+          Hermit is how my friends make fun of me because I spend too much time
+          in my house writing codes. For me, I love the mountains because they
+          make me feel small. They help me sort out what’s important in life. I
+          believe that there is something about the mountains that makes one
+          fall in love with them. For some, it’s the vegetation, for some the
+          cool air, some like the peace and quiet and others just admire the way
+          they stand tall and don’t budge providing guidance and lessons in
+          life.
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <strong>
+            My true love is creating solutions to problems with software.
+          </strong>{" "}
+          When I take on a project I give daily updates to ensure that the
+          project is aligning properly with the client's goals. The end result
+          is the right product, delivered on time, and on budget.
+        </p>
       </IntroDiv>
     );
   }

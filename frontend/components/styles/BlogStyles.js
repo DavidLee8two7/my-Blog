@@ -22,14 +22,14 @@ const BlogStyles = styled.div`
   }
 `;
 
-const HerbImage = styled.div`
+const BlogImage = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: start;
   img {
     width: 100%;
     min-width: 13rem;
-    height: 35rem;
+    height: 25rem;
     object-fit: cover;
     border-radius: 3px;
   }
@@ -49,7 +49,7 @@ const HerbImage = styled.div`
   }
 `;
 
-const HerbDescription = styled.div`
+const BlogTitle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -67,4 +67,4 @@ const HerbDescription = styled.div`
   }
 `;
 
-export { BlogStyles, HerbImage, HerbDescription };
+export { BlogStyles, BlogImage, BlogTitle };

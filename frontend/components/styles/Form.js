@@ -31,19 +31,26 @@ const Form = styled.form`
     border: 1px solid black;
     &:focus {
       outline: 0;
-      border-color: ${props => props.theme.red};
+      border-color: ${props => props.theme.blue};
     }
   }
   button,
   input[type="submit"] {
+    box-shadow: ${props => props.theme.sbs};
     width: auto;
-    background: red;
+    background: black;
     color: white;
     border: 0;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 600;
     padding: 1.5rem 2.2rem;
     border-radius: 6px;
+    transition: all 0.3s ease;
+    transform: scale(0.9);
+    :hover {
+      cursor: pointer;
+      transform: scale(1);
+    }
   }
   fieldset {
     border: 0;
@@ -56,12 +63,7 @@ const Form = styled.form`
       height: 10px;
       content: "";
       display: block;
-      background-image: linear-gradient(
-        to right,
-        #ff3019 0%,
-        #e2b04a 50%,
-        #ff3019 100%
-      );
+      background-image: linear-gradient(to right, #00d8ff 0%, black 100%);
     }
     &[aria-busy="true"]::before {
       background-size: 50% auto;

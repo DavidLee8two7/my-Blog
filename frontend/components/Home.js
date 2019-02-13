@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import Head from "next/head";
 import AboutSection from "./homePage/AboutSection";
-import TechSection from "./homePage/TechSection";
 import ExperienceSection from "./homePage/ExperienceSection";
 import ProjectSection from "./homePage/ProjectSection";
-import TitleSection from "./homePage/TitleSection";
+import FlipTitle from "./homePage/TitleSection";
 import {
   HomeStyles,
   NameDiv,
@@ -17,7 +16,7 @@ class Home extends Component {
     return (
       <HomeStyles>
         <Head>
-          <title>David Lee | JavaScript Dev.</title>
+          <title>David - Sanbunam.com</title>
         </Head>
         <NameDiv>
           <div>
@@ -25,8 +24,8 @@ class Home extends Component {
           </div>
           <div className="messages">
             <p>
-              The purpose of life is finding the largest burden that you can
-              bear and bearing it.
+              "Develop a passion for learning. If you do, you will never cease
+              to grow." - Anthony J. D'Angelo
             </p>
           </div>
         </NameDiv>
@@ -39,13 +38,12 @@ class Home extends Component {
         <AboutSection />
         <TechTitle>
           <a href="/skills">
-            <TitleSection
-              visible={"Current focus : 💻 React & GraphQL stack"}
-              invisible={"Click for more skills and projects"}
+            <FlipTitle
+              visible={"Current focus : 💻 React.js  & Node.js"}
+              invisible={"More projects and experiences"}
             />
           </a>
         </TechTitle>
-        <TechSection />
         <ProjectSection />
         <ExperienceSection />
       </HomeStyles>

@@ -27,7 +27,16 @@ const CREATE_MEMO_MUTATION = gql`
 const ContactMessage = styled.div`
   width: 100%;
   img {
-    width: 4.5rem;
+    z-index: 1;
+    width: 10rem;
+    margin: 1rem 2rem;
+    padding: 5px;
+    box-shadow: ${props => props.theme.sbs};
+    transition: all 0.3s ease;
+    transform: scale(0.9);
+    :hover {
+      transform: scale(1);
+    }
   }
   @media screen and (max-width: 1200px) {
     font-size: 1.8rem;
@@ -80,9 +89,7 @@ class Memo extends Component {
             onSubmit={async e => {
               e.preventDefault();
               const res = await createMemo();
-              alert(
-                "Thank you for contacting me. I will get back to you as soon as possible."
-              );
+              alert("Your message has been submited.");
               Router.push({
                 pathname: "/"
               });
@@ -91,32 +98,27 @@ class Memo extends Component {
             <Error error={error} />
             <fieldset disabled={loading} aria-busy={loading}>
               <ContactMessage>
-                <h4>
+                <span>
                   <a
-                    href="https://docs.google.com/document/d/1oHZ1l3b--N-gUS2IcgtcOdBSlLNbcOGadwjhpFS-6ik/edit#"
+                    href="https://docs.google.com/document/d/1-HSiQEATsuxw9Bfm5WBKV9BpmWIALeewlxBOLwy3YWo/edit?usp=sharing"
                     target="_blank"
-                    style={{
-                      borderBottom: "1px solid yellow",
-                      paddingTop: "5px"
-                    }}
                   >
-                    Please find my resume here ➡ 📂
+                    <img src="/static/logo/resumeIcon.png" alt="resume" />
                   </a>
-                </h4>
-                <h4>
+                </span>
+                <span>
                   <a
                     href="https://www.linkedin.com/in/david-lee-480985119/"
                     target="_blank"
-                    style={{
-                      borderBottom: "1px solid yellow",
-                      paddingTop: "5px"
-                    }}
                   >
-                    Please find LinkedIn profile here ➡
                     <img src="/static/logo/linkedin.png" alt="linkedin" />
                   </a>
-                </h4>
-                <h4>Thank you for visiting my website.</h4>
+                </span>
+                <span>
+                  <a href="https://github.com/SanBuNam" target="_blank">
+                    <img src="/static/logo/git.jpg" alt="github" />
+                  </a>
+                </span>
                 <label htmlFor="name">
                   Name
                   <input
@@ -154,7 +156,7 @@ class Memo extends Component {
                   />
                 </label>
                 <label htmlFor="message">
-                  How can I help you?
+                  Message
                   <textarea
                     id="message"
                     name="message"

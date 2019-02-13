@@ -15,7 +15,7 @@ class FooterSection extends Component {
         <LogoDiv>
           <Link prefetch href="/">
             <a>
-              <img src="/static/img/footerLogo.png" />
+              <img src="/static/img/softwareDev.png" />
             </a>
           </Link>
         </LogoDiv>
@@ -28,23 +28,23 @@ class FooterSection extends Component {
                 </Link>
               </li>
               <li>
+                <Link prefetch href="/skills">
+                  <a>Skills</a>
+                </Link>
+              </li>
+              <li>
                 <Link prefetch href="/resources">
                   <a>Resources</a>
                 </Link>
               </li>
               <li>
-                <Link prefetch href="/skills">
-                  <a>Skills & Exp</a>
-                </Link>
-              </li>
-              <li>
                 <Link prefetch href="/blogs">
-                  <a>Blogs</a>
+                  <a>Blog</a>
                 </Link>
               </li>
               <li>
                 <Link prefetch href="/contact">
-                  <a>Contact</a>
+                  <a>Resume</a>
                 </Link>
               </li>
             </ul>

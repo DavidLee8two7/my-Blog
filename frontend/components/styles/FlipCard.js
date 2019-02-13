@@ -11,6 +11,9 @@ const Card = styled.div`
   &:hover .back {
     transform: rotateY(0);
   }
+  @media only screen and (max-width: 950px), only screen and (hover: none) {
+    margin: 3rem 0.5rem;
+  }
   @media only screen and (max-width: 900px), only screen and (hover: none) {
     height: auto;
     border-radius: 3px;
@@ -21,13 +24,13 @@ const Card = styled.div`
     }
   }
   @media only screen and (max-width: 900px), only screen and (hover: none) {
+    box-shadow: none;
+    margin: 0.5rem;
     &:hover .front {
       transform: rotateY(0deg);
     }
   }
-  @media screen and (max-width: 700px) {
-    box-shadow: none;
-    margin: 0;
+  @media screen and (max-width: 750px) {
     padding: 0;
   }
 `;
@@ -45,10 +48,10 @@ const CardFront = styled.div`
   overflow: hidden;
   box-shadow: 0 0 1rem rgba(126, 126, 126, 0.5);
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  color: black;
+  background: ${props => props.theme.offWhite};
   h4 {
-    color: black;
-    font-family: ${props => props.theme.fontDisplay};
     text-transform: uppercase;
     text-align: left;
     position: absolute;
@@ -56,14 +59,26 @@ const CardFront = styled.div`
     right: 4rem;
   }
   span {
+    font-family: ${props => props.theme.fontDisplay};
     border-radius: 3px;
     padding: 1rem;
     box-decoration-break: clone;
     background-image: linear-gradient(
       to bottom,
-      rgba(247, 223, 30, 0.15),
-      rgba(247, 223, 30, 0.95)
+      rgba(0, 154, 218, 0.45),
+      rgba(0, 154, 218, 0.95)
     );
+  }
+  @media only screen and (max-width: 1650px), only screen and (hover: none) {
+    span {
+      font-size: 1.6rem;
+    }
+  }
+  @media only screen and (max-width: 1350px), only screen and (hover: none) {
+    span {
+      margin-left: 1rem;
+      font-size: 1.4rem;
+    }
   }
   @media only screen and (max-width: 900px), only screen and (hover: none) {
     height: auto;
@@ -93,11 +108,25 @@ const FrontDesc = styled.div`
     width: 94%;
     li {
       text-align: center;
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: 400;
       padding: 1rem;
       &:not(:last-child) {
-        border-bottom: 1.4px solid ${props => props.theme.yellow};
+        border-bottom: 1.4px solid ${props => props.theme.blue};
+      }
+    }
+  }
+  @media only screen and (max-width: 1650px), only screen and (hover: none) {
+    ul {
+      li {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  @media only screen and (max-width: 1350px), only screen and (hover: none) {
+    ul {
+      li {
+        font-size: 1.4rem;
       }
     }
   }
@@ -118,12 +147,21 @@ const CardBack = styled.div`
   overflow: hidden;
   box-shadow: 0 0 1rem rgba(126, 126, 126, 0.5);
   transform: rotateY(180deg);
+  color: black;
+  background: ${props => props.theme.offWhite};
   @media only screen and (max-width: 900px), only screen and (hover: none) {
-    height: auto;
+    padding-top: 2rem;
     position: relative;
     box-shadow: none;
     transform: rotateY(0);
-    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
+  }
+  @media only screen and (max-width: 869px), only screen and (hover: none) {
+    height: auto;
+    clip-path: none;
+  }
+  @media screen and (max-width: 450px) {
+    background: transparent;
   }
 `;
 
@@ -154,18 +192,18 @@ const ProjectInfo = styled.div`
     font-size: 1.8rem;
     font-weight: 600;
     text-transform: uppercase;
-    text-align: left;
+    text-align: center;
     width: 100%;
-    margin-left: 4.5rem;
   }
   span {
+    font-family: ${props => props.theme.fontDisplay};
     border-radius: 3px;
     padding: 1rem 1.5rem;
     box-decoration-break: clone;
     background-image: linear-gradient(
       to bottom,
-      rgba(247, 223, 30, 0.95),
-      rgba(247, 223, 30, 0.25)
+      rgba(0, 154, 218, 0.25),
+      rgba(0, 154, 218, 0.95)
     );
   }
   ul {
@@ -177,29 +215,91 @@ const ProjectInfo = styled.div`
       font-weight: 400;
       padding: 1.2rem 0;
       &:not(:last-child) {
-        border-bottom: 1px solid ${props => props.theme.yellow};
+        border-bottom: 1px solid ${props => props.theme.blue};
+      }
+    }
+  }
+  img {
+    width: 4.2rem;
+    float: right;
+    margin: 0 1rem;
+  }
+  @media only screen and (max-width: 1650px), only screen and (hover: none) {
+    h4 {
+      font-size: 1.6rem;
+    }
+    ul {
+      li {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  @media only screen and (max-width: 1350px), only screen and (hover: none) {
+    img {
+      width: 3.5rem;
+    }
+    h4 {
+      font-size: 1.3rem;
+    }
+    ul {
+      li {
+        font-size: 1.4rem;
       }
     }
   }
   @media screen and (max-width: 950px) {
+    img {
+      width: 2.5rem;
+    }
     ul {
       li {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         padding: 0.2rem 0;
         margin: 0;
-        &:not(:last-child) {
-          border-bottom: 1px solid ${props => props.theme.yellow};
-        }
+      }
+    }
+  }
+  @media screen and (max-width: 869px) {
+    img {
+      display: none;
+    }
+    h4 {
+      font-size: 1.5rem;
+    }
+    ul {
+      li {
+        font-size: 1.4rem;
+      }
+    }
+  }
+  @media screen and (max-width: 775px) {
+    h4 {
+      font-size: 1.4rem;
+    }
+    ul {
+      li {
+        font-size: 1.3rem;
+        padding: 0;
       }
     }
   }
   @media screen and (max-width: 750px) {
+    h4 {
+      font-size: 1.8rem;
+    }
     ul {
       li {
-        padding: 0;
-        &:not(:last-child) {
-          border-bottom: 1px solid ${props => props.theme.yellow};
-        }
+        font-size: 1.6rem;
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    h4 {
+      font-size: 1.6rem;
+    }
+    ul {
+      li {
+        font-size: 1.4rem;
       }
     }
   }
@@ -212,15 +312,25 @@ const ProjectLink = styled.div`
   justify-content: space-evenly;
   transition: all 0.3s;
   .icon {
-    height: 10rem;
+    height: 9rem;
     transition: all 0.3s;
     transform: translateY(0px) scale(0.9);
     &:hover {
       transform: translateY(-5px) scale(1.04);
     }
   }
-  @media screen and (max-width: 900px) {
-    justify-content: space-between;
+  @media screen and (max-width: 1350px) {
+    .icon {
+      height: 8rem;
+    }
+  }
+  @media screen and (max-width: 950px) {
+    .icon {
+      height: 7rem;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    width: 60%;
   }
 `;
 

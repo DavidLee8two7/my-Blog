@@ -11,9 +11,9 @@ const ALL_BLOGS_QUERY = gql`
     blogs(first: $first, skip: $skip, orderBy: createdAt_DESC) {
       id
       title
-      scientific
-      effect
-      reference
+      subject
+      problem
+      opinion
       image
       largeImage
     }
@@ -22,13 +22,6 @@ const ALL_BLOGS_QUERY = gql`
 
 const Center = styled.div`
   text-align: center;
-  background-size: cover;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(225, 225, 225, 0.5),
-      rgba(237, 237, 237, 0.5)
-    ),
-    url(/static/img/herbalism.jpeg);
 `;
 
 const BlogsList = styled.div`

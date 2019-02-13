@@ -3,8 +3,8 @@ import styled from "styled-components";
 const ResourceDiv = styled.div`
   width: 100%;
   background: linear-gradient(
-      rgba(255, 255, 255, 0.8),
-      rgba(255, 255, 255, 0.8)
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
     ),
     url("/static/img/working_pic.jpg") no-repeat center center fixed;
   background-size: cover;
@@ -62,7 +62,6 @@ const ResourceList = styled.div`
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   align-items: center;
-  background: white;
 `;
 
 const Title = styled.div`

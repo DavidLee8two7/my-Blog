@@ -25,17 +25,12 @@ class Experience extends Component {
             <h4>ERP system specialist</h4>
             <h4>Accomplishments</h4>
             <ul>
-              <li>
-                Implementation of ERP system (Beating the target by 2 weeks)
-              </li>
-              <li>
-                Stabilized the system on time (Accurate monthly closing, manuals
-                made, power users are trained)
-              </li>
-              <li>Productivity increase of 1 ~ 3% for 5 years consecutively</li>
+              <li>Implementation of ERP system</li>
+              <li>Stabilized the system on time</li>
+              <li>Productivity increase of 2 ~ 5% for 3 years consecutively</li>
               <li>Continues improvement of standard operations procedure</li>
             </ul>
-            <h4>2013 - 2016 🗓️ Fullerton, CA</h4>
+            <h4>2013 - 2016 in Fullerton, CA</h4>
           </JobDescription>
         </CompanyDiv>
         <CompanyDiv>
@@ -59,7 +54,7 @@ class Experience extends Component {
               <li>Consolidate vendors and service providers in USA</li>
               <li>$2 million cost saving in year 2018</li>
             </ul>
-            <h4>2017 - 2018 🗓️ Commerce, CA</h4>
+            <h4>2017 - 2018 in Commerce, CA</h4>
           </JobDescription>
         </CompanyDiv>
       </ExperienceDiv>

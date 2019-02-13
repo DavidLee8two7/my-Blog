@@ -1,5 +1,5 @@
-# source: https://david-lee-blogs-9489e960a2.herokuapp.com/blog-prod/prod
-# timestamp: Sun Jan 13 2019 12:16:27 GMT-0800 (Pacific Standard Time)
+# source: https://us1.prisma.sh/david-lee-c070c7/demo-blog/dev
+# timestamp: Sat Feb 02 2019 13:40:16 GMT-0800 (Pacific Standard Time)
 
 type AggregateBlog {
   count: Int!
@@ -17,9 +17,9 @@ type BatchPayload {
 type Blog implements Node {
   id: ID!
   title: String!
-  scientific: String
-  effect: String!
-  reference: String
+  subject: String
+  problem: String
+  opinion: String
   image: String
   largeImage: String
 }
@@ -36,9 +36,9 @@ type BlogConnection {
 
 input BlogCreateInput {
   title: String!
-  scientific: String
-  effect: String!
-  reference: String
+  subject: String
+  problem: String
+  opinion: String
   image: String
   largeImage: String
 }
@@ -57,12 +57,12 @@ enum BlogOrderByInput {
   id_DESC
   title_ASC
   title_DESC
-  scientific_ASC
-  scientific_DESC
-  effect_ASC
-  effect_DESC
-  reference_ASC
-  reference_DESC
+  subject_ASC
+  subject_DESC
+  problem_ASC
+  problem_DESC
+  opinion_ASC
+  opinion_DESC
   image_ASC
   image_DESC
   largeImage_ASC
@@ -76,9 +76,9 @@ enum BlogOrderByInput {
 type BlogPreviousValues {
   id: ID!
   title: String!
-  scientific: String
-  effect: String!
-  reference: String
+  subject: String
+  problem: String
+  opinion: String
   image: String
   largeImage: String
 }
@@ -124,18 +124,18 @@ input BlogSubscriptionWhereInput {
 
 input BlogUpdateInput {
   title: String
-  scientific: String
-  effect: String
-  reference: String
+  subject: String
+  problem: String
+  opinion: String
   image: String
   largeImage: String
 }
 
 input BlogUpdateManyMutationInput {
   title: String
-  scientific: String
-  effect: String
-  reference: String
+  subject: String
+  problem: String
+  opinion: String
   image: String
   largeImage: String
 }
@@ -229,126 +229,126 @@ input BlogWhereInput {
 
   """All values not ending with the given string."""
   title_not_ends_with: String
-  scientific: String
+  subject: String
 
   """All values that are not equal to given value."""
-  scientific_not: String
+  subject_not: String
 
   """All values that are contained in given list."""
-  scientific_in: [String!]
+  subject_in: [String!]
 
   """All values that are not contained in given list."""
-  scientific_not_in: [String!]
+  subject_not_in: [String!]
 
   """All values less than the given value."""
-  scientific_lt: String
+  subject_lt: String
 
   """All values less than or equal the given value."""
-  scientific_lte: String
+  subject_lte: String
 
   """All values greater than the given value."""
-  scientific_gt: String
+  subject_gt: String
 
   """All values greater than or equal the given value."""
-  scientific_gte: String
+  subject_gte: String
 
   """All values containing the given string."""
-  scientific_contains: String
+  subject_contains: String
 
   """All values not containing the given string."""
-  scientific_not_contains: String
+  subject_not_contains: String
 
   """All values starting with the given string."""
-  scientific_starts_with: String
+  subject_starts_with: String
 
   """All values not starting with the given string."""
-  scientific_not_starts_with: String
+  subject_not_starts_with: String
 
   """All values ending with the given string."""
-  scientific_ends_with: String
+  subject_ends_with: String
 
   """All values not ending with the given string."""
-  scientific_not_ends_with: String
-  effect: String
+  subject_not_ends_with: String
+  problem: String
 
   """All values that are not equal to given value."""
-  effect_not: String
+  problem_not: String
 
   """All values that are contained in given list."""
-  effect_in: [String!]
+  problem_in: [String!]
 
   """All values that are not contained in given list."""
-  effect_not_in: [String!]
+  problem_not_in: [String!]
 
   """All values less than the given value."""
-  effect_lt: String
+  problem_lt: String
 
   """All values less than or equal the given value."""
-  effect_lte: String
+  problem_lte: String
 
   """All values greater than the given value."""
-  effect_gt: String
+  problem_gt: String
 
   """All values greater than or equal the given value."""
-  effect_gte: String
+  problem_gte: String
 
   """All values containing the given string."""
-  effect_contains: String
+  problem_contains: String
 
   """All values not containing the given string."""
-  effect_not_contains: String
+  problem_not_contains: String
 
   """All values starting with the given string."""
-  effect_starts_with: String
+  problem_starts_with: String
 
   """All values not starting with the given string."""
-  effect_not_starts_with: String
+  problem_not_starts_with: String
 
   """All values ending with the given string."""
-  effect_ends_with: String
+  problem_ends_with: String
 
   """All values not ending with the given string."""
-  effect_not_ends_with: String
-  reference: String
+  problem_not_ends_with: String
+  opinion: String
 
   """All values that are not equal to given value."""
-  reference_not: String
+  opinion_not: String
 
   """All values that are contained in given list."""
-  reference_in: [String!]
+  opinion_in: [String!]
 
   """All values that are not contained in given list."""
-  reference_not_in: [String!]
+  opinion_not_in: [String!]
 
   """All values less than the given value."""
-  reference_lt: String
+  opinion_lt: String
 
   """All values less than or equal the given value."""
-  reference_lte: String
+  opinion_lte: String
 
   """All values greater than the given value."""
-  reference_gt: String
+  opinion_gt: String
 
   """All values greater than or equal the given value."""
-  reference_gte: String
+  opinion_gte: String
 
   """All values containing the given string."""
-  reference_contains: String
+  opinion_contains: String
 
   """All values not containing the given string."""
-  reference_not_contains: String
+  opinion_not_contains: String
 
   """All values starting with the given string."""
-  reference_starts_with: String
+  opinion_starts_with: String
 
   """All values not starting with the given string."""
-  reference_not_starts_with: String
+  opinion_not_starts_with: String
 
   """All values ending with the given string."""
-  reference_ends_with: String
+  opinion_ends_with: String
 
   """All values not ending with the given string."""
-  reference_not_ends_with: String
+  opinion_not_ends_with: String
   image: String
 
   """All values that are not equal to given value."""

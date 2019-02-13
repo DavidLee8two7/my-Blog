@@ -7,11 +7,10 @@ const StyledBtn = styled.button`
   position: relative;
   overflow: hidden;
   border: none;
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   font-weight: 600;
-  background: black;
-  color: white;
-  box-shadow: ${props => props.theme.sbs};
+  background: ${props => props.theme.blue};
+  color: black;
   font-family: ${props => props.theme.fontDisplay};
   text-transform: uppercase;
   cursor: pointer;
@@ -23,13 +22,13 @@ const StyledBtn = styled.button`
   }
   .visible {
     width: 100%;
-    padding: 2rem 0;
+    padding: 1rem 0;
   }
   .invisible {
-    color: ${props => props.theme.orange};
+    color: black;
     width: 100%;
     position: absolute;
-    padding: 2rem 0;
+    padding: 1rem 0;
     left: 0;
     top: -100%;
   }
@@ -43,20 +42,61 @@ const StyledBtn = styled.button`
     outline: none;
     animation: pulsate 1s infinite;
   }
-  @media (max-width: 1050px) {
-    padding: 0;
+  @media screen and (max-width: 1350px) {
     .visible {
-      font-size: 2.2rem;
-      font-weight: 500;
+      font-size: 2rem;
     }
     .invisible {
-      font-size: 2.2rem;
-      font-weight: 500;
+      font-size: 2rem;
+    }
+    &:hover .visible {
+      font-size: 2rem;
+    }
+    &:hover .invisible {
+      font-size: 2rem;
+    }
+  }
+  @media screen and (max-width: 950px) {
+    padding: 0.8rem 0;
+    .visible {
+      font-size: 1.6rem;
+      padding: 0.8rem 0;
+    }
+    .invisible {
+      font-size: 1.6rem;
+      padding: 0.8rem 0;
+    }
+    &:hover .visible {
+      font-size: 1.6rem;
+      padding: 0.8rem 0;
+    }
+    &:hover .invisible {
+      font-size: 1.6rem;
+      padding: 0.8rem 0;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    background: transparent;
+    .visible {
+      font-size: 1.4rem;
+      padding: 0.6rem 0;
+    }
+    .invisible {
+      font-size: 1.4rem;
+      padding: 0.6rem 0;
+    }
+    &:hover .visible {
+      font-size: 1.4rem;
+      padding: 0.6rem 0;
+    }
+    &:hover .invisible {
+      font-size: 1.4rem;
+      padding: 0.6rem 0;
     }
   }
 `;
 
-const TitleSection = props => {
+const FlipTitle = props => {
   return (
     <StyledBtn>
       <span className="visible">{props.visible}</span>
@@ -65,4 +105,4 @@ const TitleSection = props => {
   );
 };
 
-export default TitleSection;
+export default FlipTitle;

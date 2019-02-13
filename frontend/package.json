@@ -1,12 +1,12 @@
 {
-  "name": "blog-frontend",
+  "name": "website-frontend",
   "version": "1.0.0",
   "description": "updating blog with next.js",
   "main": "index.js",
   "scripts": {
     "dev": "next -p 3333",
     "build": "next build",
-    "start": "next start -p $PORT",
+    "start": "next start",
     "test": "NODE_ENV=test jest --watch",
     "test-win": "SET NODE_ENV=test&& jest --watch",
     "heroku-postbuild": "next build"

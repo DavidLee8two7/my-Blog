@@ -19,15 +19,11 @@ const Logo = styled.div`
   position: relative;
   padding: 2rem;
   a {
+    color: ${props => props.theme.blue};
     padding: 0.5rem 1rem;
-    color: white;
     font-weight: 600;
-    font-family: ${props => props.theme.fontDisplay};
-    font-size: 3.2rem;
+    font-size: 3.3rem;
     text-decoration: none;
-    .javascript {
-      color: ${props => props.theme.orange};
-    }
   }
   @media screen and (max-width: 1350px) {
     margin: 0;
@@ -39,15 +35,25 @@ const Logo = styled.div`
       padding: 0.1rem;
     }
   }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 950px) {
     a {
       font-size: 2.4rem;
     }
   }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 700px) {
+    a {
+      font-size: 2.2rem;
+    }
+  }
+  @media screen and (max-width: 550px) {
     a {
       padding: 0;
       font-size: 2rem;
+    }
+  }
+  @media screen and (max-width: 360px) {
+    a {
+      font-size: 1.8rem;
     }
   }
 `;
@@ -55,31 +61,16 @@ const Logo = styled.div`
 const StyleHeader = styled.header`
   .bar {
     z-index: 5;
-    border-bottom: 2px solid ${props => props.theme.orange};
+    border-bottom: 2.5px solid ${props => props.theme.blue};
     display: inline-block;
     display: grid;
     grid-template-columns: auto 1fr;
     justify-content: space-between;
     align-items: stretch;
-    background: black;
+    background: white;
     @media (max-width: 1350px) {
       grid-template-columns: 1fr;
       justify-content: center;
-    }
-  }
-  .short-text {
-    display: none;
-  }
-  @media (max-width: 1350px) {
-    .short-text {
-      display: inline-block;
-    }
-    .full-text {
-      display: none;
-    }
-  }
-  @media screen and (max-width: 500px) {
-    .bar {
     }
   }
 `;
@@ -90,13 +81,7 @@ const Header = () => (
       <Logo>
         <Link href="/contact">
           <a>
-            <span className="full-text">
-              Full Stack <span className="javascript">JavaScript</span>{" "}
-              Developer
-            </span>
-            <span className="short-text">
-              <span className="javascript">JavaScript</span> Developer
-            </span>
+            <span>Full-Stack Software Developer</span>
           </a>
         </Link>
       </Logo>

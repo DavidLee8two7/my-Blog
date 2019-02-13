@@ -3,9 +3,9 @@
 type Mutation {
   createBlog(
     title: String!
-    scientific: String
-    effect: String!
-    reference: String
+    subject: String
+    problem: String
+    opinion: String
     image: String
     largeImage: String
   ): Blog!

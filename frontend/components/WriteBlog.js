@@ -8,17 +8,17 @@ import Error from "./styles/ErrorMessage";
 const CREATE_BLOG_MUTATION = gql`
   mutation CREATE_BLOG_MUTATION(
     $title: String!
-    $scientific: String
-    $effect: String!
-    $reference: String
+    $subject: String
+    $problem: String
+    $opinion: String
     $image: String
     $largeImage: String
   ) {
     createBlog(
       title: $title
-      scientific: $scientific
-      effect: $effect
-      reference: $reference
+      description: $subject
+      example: $problem
+      solution: $opinion
       image: $image
       largeImage: $largeImage
     ) {
@@ -30,9 +30,9 @@ const CREATE_BLOG_MUTATION = gql`
 class WriteBlog extends Component {
   state = {
     title: "",
-    scientific: "",
-    effect: "",
-    reference: "",
+    subject: "",
+    problem: "",
+    opinion: "",
     image: "",
     largeImage: ""
   };
@@ -109,38 +109,36 @@ class WriteBlog extends Component {
                   onChange={this.handleChange}
                 />
               </label>
-              <label htmlFor="scientific">
-                Scientific Name
-                <input
-                  type="text"
-                  id="scientific"
-                  name="scientific"
-                  placeholder="scientific"
-                  required
-                  value={this.state.scientific}
-                  onChange={this.handleChange}
-                />
-              </label>
-              <label htmlFor="effect">
-                effect
+              <label htmlFor="subject">
+                Subject
                 <textarea
-                  id="effect"
-                  name="effect"
-                  placeholder="Enter effect"
+                  id="subject"
+                  name="subject"
+                  placeholder="Enter subject"
                   required
-                  value={this.state.effect}
+                  value={this.state.subject}
                   onChange={this.handleChange}
                 />
               </label>
-              <label htmlFor="reference">
-                Reference
-                <input
-                  type="text"
-                  id="reference"
-                  name="reference"
-                  placeholder="reference"
+              <label htmlFor="problem">
+                Problem
+                <textarea
+                  id="problem"
+                  name="problem"
+                  placeholder="Enter problem"
                   required
-                  value={this.state.reference}
+                  value={this.state.problem}
+                  onChange={this.handleChange}
+                />
+              </label>
+              <label htmlFor="opinion">
+                Opinion
+                <textarea
+                  id="opinion"
+                  name="opinion"
+                  placeholder="Enter opinion"
+                  required
+                  value={this.state.opinion}
                   onChange={this.handleChange}
                 />
               </label>
