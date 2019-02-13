@@ -26,8 +26,8 @@ class Skills extends Component {
             </svg>
             <TechMessage>
               <p>
-                "Develop a passion for learning. If you do, you will never cease
-                to grow." - Anthony J. D'Angelo
+                "Tell me and I forget. Teach me and I remember. Involve me and I
+                learn." - Benjamin Franklin
               </p>
             </TechMessage>
           </TechIntro>

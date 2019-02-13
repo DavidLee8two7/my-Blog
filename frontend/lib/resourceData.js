@@ -460,11 +460,11 @@ const skillsData = {
     },
     {
       title: "backend",
-      tech: ["node js", "mongodb", "prisma"]
+      tech: ["node js", "sql", "mongodb", "prisma"]
     },
     {
       title: "build tools",
-      tech: ["webpack", "npm", "github", "heroku"]
+      tech: ["webpack", "npm", "github", "Final-Cut-Pro", "photo-shop"]
     }
   ]
 };

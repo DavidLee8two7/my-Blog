@@ -14,7 +14,7 @@ const ResourceStyles = styled.div`
     border-style: none;
   }
   h5 {
-    color: ${props => props.theme.orange};
+    color: ${props => props.theme.black};
     display: block;
     font-size: 1.17em;
     margin-block-start: 1em;
@@ -27,7 +27,7 @@ const ResourceStyles = styled.div`
     background-color: transparent;
   }
   p {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     line-height: 1.8;
     display: block;
     margin-block-start: 1em;
