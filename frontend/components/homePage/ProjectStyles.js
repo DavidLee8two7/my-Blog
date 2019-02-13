@@ -7,11 +7,11 @@ const ProjectDiv = styled.div`
   width: 99%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  @media (max-width: 1200px) {
+  @media (max-width: 869px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  @media (max-width: 800px) {
+  @media (max-width: 750px) {
     display: grid;
     grid-template-columns: 1fr;
   }

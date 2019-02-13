@@ -15,7 +15,7 @@ class FooterSection extends Component {
         <LogoDiv>
           <Link prefetch href="/">
             <a>
-              <img src="/static/img/footerLogo.png" />
+              <img src="/static/img/softwareDev.png" />
             </a>
           </Link>
         </LogoDiv>

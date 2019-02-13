@@ -39,7 +39,7 @@ class Home extends Component {
         <TechTitle>
           <a href="/skills">
             <FlipTitle
-              visible={"Current focus : 💻 React & GraphQL"}
+              visible={"Current focus : 💻 React.js  & Node.js"}
               invisible={"More projects and experiences"}
             />
           </a>

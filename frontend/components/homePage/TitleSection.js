@@ -7,10 +7,10 @@ const StyledBtn = styled.button`
   position: relative;
   overflow: hidden;
   border: none;
-  font-size: 2.3rem;
+  font-size: 2.2rem;
   font-weight: 600;
-  background: black;
-  color: ${props => props.theme.blue};
+  background: ${props => props.theme.blue};
+  color: black;
   font-family: ${props => props.theme.fontDisplay};
   text-transform: uppercase;
   cursor: pointer;
@@ -22,13 +22,13 @@ const StyledBtn = styled.button`
   }
   .visible {
     width: 100%;
-    padding: 2rem 0;
+    padding: 1rem 0;
   }
   .invisible {
-    color: ${props => props.theme.blue};
+    color: black;
     width: 100%;
     position: absolute;
-    padding: 2rem 0;
+    padding: 1rem 0;
     left: 0;
     top: -100%;
   }
@@ -41,6 +41,58 @@ const StyledBtn = styled.button`
   &:focus {
     outline: none;
     animation: pulsate 1s infinite;
+  }
+  @media screen and (max-width: 1350px) {
+    .visible {
+      font-size: 2rem;
+    }
+    .invisible {
+      font-size: 2rem;
+    }
+    &:hover .visible {
+      font-size: 2rem;
+    }
+    &:hover .invisible {
+      font-size: 2rem;
+    }
+  }
+  @media screen and (max-width: 950px) {
+    padding: 0.8rem 0;
+    .visible {
+      font-size: 1.6rem;
+      padding: 0.8rem 0;
+    }
+    .invisible {
+      font-size: 1.6rem;
+      padding: 0.8rem 0;
+    }
+    &:hover .visible {
+      font-size: 1.6rem;
+      padding: 0.8rem 0;
+    }
+    &:hover .invisible {
+      font-size: 1.6rem;
+      padding: 0.8rem 0;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    background: transparent;
+    .visible {
+      font-size: 1.4rem;
+      padding: 0.6rem 0;
+    }
+    .invisible {
+      font-size: 1.4rem;
+      padding: 0.6rem 0;
+    }
+    &:hover .visible {
+      font-size: 1.4rem;
+      padding: 0.6rem 0;
+    }
+    &:hover .invisible {
+      font-size: 1.4rem;
+      padding: 0.6rem 0;
+    }
   }
 `;
 
