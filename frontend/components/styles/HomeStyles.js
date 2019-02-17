@@ -12,51 +12,6 @@ const HomeStyles = styled.div`
     ),
     url("/static/img/galaxy.jpg") no-repeat left top fixed;
   background-size: cover;
-  /* @media screen and (max-width: 1300px) {
-    background-position-x: -3rem;
-  }
-  @media screen and (max-width: 1250px) {
-    background-position-x: -6rem;
-  }
-  @media screen and (max-width: 1200px) {
-    background-position-x: -9rem;
-  }
-  @media screen and (max-width: 1150px) {
-    background-position-x: -12rem;
-  }
-  @media screen and (max-width: 1050px) {
-    background-position-x: -15rem;
-  }
-  @media screen and (max-width: 950px) {
-    background-position-x: -18rem;
-  }
-  @media screen and (max-width: 850px) {
-    background-position-x: -21rem;
-  }
-  @media screen and (max-width: 800px) {
-    background-position-x: -24rem;
-  }
-  @media screen and (max-width: 750px) {
-    background-position-x: -27rem;
-  }
-  @media screen and (max-width: 700px) {
-    background-position-x: -30rem;
-  }
-  @media screen and (max-width: 650px) {
-    background-position-x: -33rem;
-  }
-  @media screen and (max-width: 600px) {
-    background-position-x: -34rem;
-  }
-  @media screen and (max-width: 550px) {
-    background-position-x: -36rem;
-  }
-  @media screen and (max-width: 500px) {
-    background-position-x: -39rem;
-  }
-  @media screen and (max-width: 450px) {
-    background-position-x: -40rem;
-  } */
 `;
 
 const NameDiv = styled.div`
@@ -167,49 +122,6 @@ const NameDiv = styled.div`
   }
 `;
 
-const GreetingDiv = styled.div`
-  z-index: 2;
-  margin-top: 8rem;
-  grid-row: 2;
-  grid-column: 1 / -1;
-  p {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 600;
-  }
-  @media screen and (max-width: 1350px) {
-    margin: 4rem;
-    p {
-      font-size: 1.7rem;
-      margin: 0;
-    }
-  }
-  @media screen and (max-width: 950px) {
-    margin: 2rem;
-    p {
-      font-size: 1.4rem;
-    }
-  }
-  @media screen and (max-width: 750px) {
-    margin: 0.5rem;
-    margin-bottom: 2rem;
-    padding: 0 2rem;
-    p {
-      font-size: 1.3rem;
-    }
-  }
-  @media screen and (max-width: 700px) {
-    p {
-      font-size: 1.2rem;
-    }
-  }
-  @media screen and (max-width: 600px) {
-    p {
-      display: none;
-    }
-  }
-`;
-
 const TechTitle = styled.div`
   z-index: 2;
   width: 97.5%;
@@ -228,4 +140,4 @@ const TechTitle = styled.div`
   }
 `;
 
-export { HomeStyles, NameDiv, GreetingDiv, TechTitle };
+export { HomeStyles, NameDiv, TechTitle };

@@ -4,12 +4,7 @@ import AboutSection from "./homePage/AboutSection";
 import ExperienceSection from "./homePage/ExperienceSection";
 import ProjectSection from "./homePage/ProjectSection";
 import FlipTitle from "./homePage/TitleSection";
-import {
-  HomeStyles,
-  NameDiv,
-  GreetingDiv,
-  TechTitle
-} from "./styles/HomeStyles";
+import { HomeStyles, NameDiv, TechTitle } from "./styles/HomeStyles";
 
 class Home extends Component {
   render() {
@@ -20,7 +15,7 @@ class Home extends Component {
         </Head>
         <NameDiv>
           <div>
-            <img src="/static/img/myLogo.png" />
+            <img src="/static/img/dlLogo.png" />
           </div>
           <div className="messages">
             <p>
@@ -29,12 +24,6 @@ class Home extends Component {
             </p>
           </div>
         </NameDiv>
-        <GreetingDiv>
-          <p>
-            Get to know me as a person. You can find out about my background,
-            experience and more below.
-          </p>
-        </GreetingDiv>
         <AboutSection />
         <TechTitle>
           <a href="/skills">

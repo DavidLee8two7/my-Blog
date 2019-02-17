@@ -222,4 +222,4 @@ const ExpList = styled.div`
   }
 `;
 
-export { Experience, PictureDiv, IntroductionDiv, ExpList, Skills };
+export { Experience, PictureDiv, IntroductionDiv, ExpList };

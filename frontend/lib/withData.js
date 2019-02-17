@@ -3,7 +3,7 @@ import ApolloClient from "apollo-boost";
 import { endpoint, prodEndpoint } from "../config";
 import { LOCAL_STATE_REACT } from "../components/skillsPage/ReactStack";
 import { LOCAL_STATE_NODE } from "../components/skillsPage/NodeStack";
-// endpoint and prodEndpoint check before pushing
+
 function createClient({ headers }) {
   return new ApolloClient({
     uri: process.env.NODE_ENV === "development" ? endpoint : prodEndpoint,
