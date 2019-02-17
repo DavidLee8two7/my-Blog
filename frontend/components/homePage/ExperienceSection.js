@@ -3,8 +3,7 @@ import {
   Experience,
   PictureDiv,
   IntroductionDiv,
-  ExpList,
-  Skills
+  ExpList
 } from "./ExperienceStyles";
 
 class ExperienceSection extends Component {
@@ -19,7 +18,7 @@ class ExperienceSection extends Component {
           />
         </PictureDiv>
         <IntroductionDiv>
-          <h4>I love making people's job eaiser and faster.</h4>
+          <h4>I love making people's job easier and faster.</h4>
           <p>
             Since writing my first website 10 years ago, I’ve been hooked on web
             technologies and all things digital. In my tenure as a freelancer

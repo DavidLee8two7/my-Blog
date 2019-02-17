@@ -16,9 +16,9 @@ const CREATE_BLOG_MUTATION = gql`
   ) {
     createBlog(
       title: $title
-      description: $subject
-      example: $problem
-      solution: $opinion
+      subject: $subject
+      problem: $problem
+      opinion: $opinion
       image: $image
       largeImage: $largeImage
     ) {

@@ -1,10 +1,9 @@
-/* Make clicks pass-through */
 #nprogress {
   pointer-events: none;
 }
 
 #nprogress .bar {
-  background: orange;
+  background: #4fabbd;
   position: fixed;
   z-index: 1031;
   top: 0;
@@ -14,14 +13,13 @@
   height: 5px;
 }
 
-/* Fancy blur effect */
 #nprogress .peg {
   display: block;
   position: absolute;
   right: 0px;
   width: 100px;
   height: 100%;
-  box-shadow: 0 0 10px orange, 0 0 5px orange;
+  box-shadow: 0 0 10px #4fabbd, 0 0 5px #4fabbd;
   opacity: 1;
 
   -webkit-transform: rotate(3deg) translate(0px, -4px);
@@ -29,7 +27,6 @@
   transform: rotate(3deg) translate(0px, -4px);
 }
 
-/* Remove these to get rid of the spinner */
 #nprogress .spinner {
   display: block;
   position: fixed;
@@ -44,8 +41,8 @@
   box-sizing: border-box;
 
   border: solid 2px transparent;
-  border-top-color: orange;
-  border-left-color: orange;
+  border-top-color: #4fabbd;
+  border-left-color: #4fabbd;
   border-radius: 50%;
 
   -webkit-animation: nprogress-spinner 400ms linear infinite;
