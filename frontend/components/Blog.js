@@ -27,14 +27,14 @@ class Blog extends Component {
         </BlogImage>
         <BlogTitle>
           <p>
-            <strong>Title: </strong>
-            <br />
-            {blog.title}
-          </p>
-          <p>
             <strong>Subject: </strong>
             <br />
             {blog.subject}
+          </p>
+          <p>
+            <strong>Description: </strong>
+            <br />
+            {blog.solution}
           </p>
         </BlogTitle>
       </BlogStyles>
