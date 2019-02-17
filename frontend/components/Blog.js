@@ -36,11 +36,6 @@ class Blog extends Component {
             <br />
             {blog.subject}
           </p>
-          <p>
-            <strong>Key: </strong>
-            <br />
-            {blog.title}
-          </p>
         </BlogTitle>
       </BlogStyles>
     );
